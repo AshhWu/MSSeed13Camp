@@ -1,0 +1,23 @@
+body {
+  background-color: #32B16C;
+}
+
+.container {
+	margin-bottom: 2em;
+}
+
+.form-group {
+	font-size: 1em;
+	letter-spacing: 0.4em;
+	margin-bottom: 1.5em;
+	font-family: Microsoft JhengHei;
+}
+
+.form-control {
+	font-size: 0.8em;
+	letter-spacing: 0.4em;
+}
+
+.banner {
+	margin-bottom: 1em;
+}

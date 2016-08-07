@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>微軟13屆領袖營 - 首頁</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- My Scripts -->
+  <script src="#"></script>
+  <!-- CSS Style -->
+  <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <?php
+  include "nav.php";
+  ?>
+
+  <div class="container">
+    
+    <!-- Banner -->
+    <div class="banner col-xs-6 col-xs-offset-3">
+      <img src="png/banner.png" class="img-responsive"/>
+    </div>
+    
+    <!-- Login form-->
+    <form role="form" class="col-xs-6 col-xs-offset-3">
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">MSSeed Email</label>
+        <input type="email" class="form-control" id="email" placeholder="xxx@msseed.idv.tw">
+      </div>
+      <!-- Password -->
+      <div class="form-group">
+        <label for="pwd">Password</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      </div>
+      <!-- Checkbox to remember me
+      <div class="checkbox">
+        <label><input type="checkbox">Remember me</label>
+      </div>
+      -->
+      <button type="submit" class="btn btn-default">Login</button>
+    </form>
+
+  </div>
+
+</body>
+</html>
