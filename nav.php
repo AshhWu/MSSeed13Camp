@@ -18,7 +18,7 @@ include "findActiveClass.php";
     <!-- Navigation Bar Items -->
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li <?=findActiveClass("home")?>><a href="home.php">首頁</a></li> <!-- use findActiveClass to toggle current page-->
+        <li <?=findActiveClass("index")?>><a href="index.php">首頁</a></li> <!-- use findActiveClass to toggle current page-->
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown">台北行 <span class="caret"></span></a>
           <ul class="dropdown-menu">
