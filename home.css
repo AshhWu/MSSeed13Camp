@@ -1,5 +1,5 @@
 body {
-  background-color: #32B16C;
+	background-color: #32B16C;
 }
 
 .container {
@@ -10,7 +10,7 @@ body {
 	font-size: 1em;
 	letter-spacing: 0.4em;
 	margin-bottom: 1.5em;
-	font-family: Microsoft JhengHei;
+	font-family: sans-serif;
 }
 
 .form-control {
