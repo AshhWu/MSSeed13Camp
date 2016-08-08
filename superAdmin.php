@@ -15,7 +15,18 @@
 	*/
 -->
 <head>
-	<title>Database</title>
+<!-- Title -->
+<title>超級管理員</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- CSS Style -->
 	<style type="text/css">
 	body { background-color: #fff; border-top: solid 10px #000;
 		color: #333; font-size: .85em; margin: 20px; padding: 20px;
@@ -41,8 +52,8 @@
 	tr:nth-child(even){background-color: #f2f2f2}
 
 	</style>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
+
 <body>
 <?php
   include "nav.php";
@@ -371,5 +382,11 @@
 		<input type="submit" value="Send SQL"/>
 	</form>
 
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
