@@ -5,12 +5,20 @@
   <title>微軟13屆領袖營 - 首頁</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<<<<<<< HEAD
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
+=======
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="jquery-3.1.0.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- My Scripts -->
+  <script src="#"></script>
+>>>>>>> 83dc012987af3fa00fdc8c26a14e26ca89ceade0
   <!-- CSS Style -->
   <link rel="stylesheet" type="text/css" href="home.css">
 </head>
@@ -22,15 +30,15 @@
   include "nav.php";
   ?>
 
-  <div class="container">
+  <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
     
     <!-- Banner -->
-    <div class="banner col-xs-6 col-xs-offset-3">
+    <div class="banner">
       <img src="png/banner.png" class="img-responsive"/>
     </div>
     
     <!-- Login form-->
-    <form role="form" class="col-xs-6 col-xs-offset-3">
+    <form role="form">
       <!-- Email -->
       <div class="form-group">
         <label for="email">MSSeed Email</label>
@@ -45,11 +53,11 @@
       <div class="checkbox">
         <label><input type="checkbox">Remember me</label>
       </div>
-      -->
-      <button type="submit" class="btn btn-default">Login</button>
-    </form>
+    -->
+    <button type="submit" class="btn btn-default">Login</button>
+  </form>
 
-  </div>
+</div>
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
