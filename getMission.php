@@ -15,21 +15,21 @@
 	
 include_once 'taskmodel.php';
 
-	$code = $_POST['code']
+	$code = $_POST['code'];
 	$items = searchMission($code);
 
 	if(!empty($items))
 	{
 		echo "<table border='1'>
 				<tr>
-					<th>Nnumber:  </th>
-					<th>Name:  </th>
-					<th>產生:</th>
-					<th>產生量:     </th>
-					<th>產生物:  </th>
-					<th>產生時間:    </th>
-					<th>佔領隊伍:</th>
-					<th>Mission Code:    </th>
+					<th>Code:	</th>
+					<th>主題:	</th>
+					<th>內容:									</th>
+					<th>任務人數:	</th>
+					<th>Day1條件:	</th>
+					<th>Day2條件:	</th>
+					<th>Day3條件:	</th>
+					<th>Day4條件:	</th>
 				</tr>";
 		foreach($items as $item)
 		{
@@ -46,8 +46,8 @@ include_once 'taskmodel.php';
 		}
 		
 		echo "</table>";
-	}
-	else
+	} 
+	else 
 	{
 		echo "Wrong code!!!";
 	}
