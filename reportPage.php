@@ -25,7 +25,7 @@
 <h1>Report</h1>
 <br>
 <p style="text-align: center;">
-	<form action="occupyStronghold.php">
+	<form action="occupyStronghold.php" method="post">
 		<table border="1">
 			<tr>
 				<td>Team: </td>
