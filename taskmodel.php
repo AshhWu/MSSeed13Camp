@@ -214,7 +214,7 @@ function prepareMission()
 function occupyStronghold($team, $code)
 {
 	$conn = connect();
-	$sql = "UPDATE stronghold SET team='A' WHERE mission='Ow3vC'";
+	$sql = "UPDATE stronghold SET team='".$team."' WHERE mission='".$code."'";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }

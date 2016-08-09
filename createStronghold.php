@@ -39,5 +39,6 @@ catch(Exception $e){
 }
 
 echo "<h3>Table created.</h3>";
+prepareStronghold();
 
 ?>
