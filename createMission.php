@@ -15,45 +15,30 @@
 	
 include_once 'taskmodel.php';
 
-function getItems()
-{
-  $items = getAllItems();
-  return $items;
+// Assumes database already exists.
+$conn = connect();
+
+$sql = "CREATE TABLE mission(
+			id INT NOT NULL AUTO_INCREMENT, 
+			PRIMARY KEY(id),
+			code VARCHAR(30),
+			topic VARCHAR(30),
+			content VARCHAR(300),
+			number_of_people VARCHAR(3),
+			day1_condition VARCHAR(40),
+			day2_condition VARCHAR(40),
+			day3_condition VARCHAR(40),
+			day4_condition VARCHAR(40)
+			)";
+
+try{
+	$conn->query($sql);
+}
+catch(Exception $e){
+	print_r($e);
 }
 
-function getResources()
-{
-  $items = getAllResources();
-  return $items;
-}
-
-function getMessages()
-{
-  $items = getAllMessages();
-  return $items;
-}
-
-function getStrongholds()
-{
-  $items = getAllStrongholds();
-  return $items;
-}
-
-function getMissions()
-{
-  $items = getAllMissions();
-  return $items;
-}
-
-function prepareResource()
-{
-  prepareResources();
-}
-
-function prepareStronghold()
-{
-  prepareStrongholds();
-}
-
+echo "<h3>Table created.</h3>";
+prepareMission();
 
 ?>

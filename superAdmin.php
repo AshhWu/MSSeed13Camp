@@ -368,6 +368,50 @@
 		echo "</table>";
 	}
 ?>
+
+	<hr/>
+
+	<h1>Mission</h1>
+	<form action="createMission.php" method="post">
+		<input type="submit" value="Create Mission Table"/>
+	</form>
+	
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	#prepareStronghold();
+	$items = getMissions();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>Code:	</th>
+					<th>主題:	</th>
+					<th>內容:									</th>
+					<th>任務人數:	</th>
+					<th>Day1條件:	</th>
+					<th>Day2條件:	</th>
+					<th>Day3條件:	</th>
+					<th>Day4條件:	</th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1 ]."</td>
+						<td>".$item[2 ]."</td>
+						<td>".$item[3 ]."</td>
+						<td>".$item[4 ]."</td>
+						<td>".$item[5 ]."</td>
+						<td>".$item[6 ]."</td>
+						<td>".$item[7 ]."</td>
+						<td>".$item[8 ]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
 	
 	<hr/>
 	
