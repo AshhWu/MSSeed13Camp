@@ -1,0 +1,32 @@
+.map {
+	position: relative;
+}
+
+.stronghold {
+	position: absolute;
+	z-index: 2;
+}
+
+.glyphicon-map-marker {
+	font-size: 5vw;
+}
+
+.tooltip-inner {
+    text-align: left;
+}
+
+#icon1 {
+	top: 78%;
+	left: 27%;
+}
+
+#icon2 {
+	top: 45%;
+	left: 22%;
+}
+
+#icon3 {
+	top: 62%;
+	left: 34%;
+}
+
