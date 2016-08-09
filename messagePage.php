@@ -22,6 +22,37 @@
   include "nav.php";
   ?>
 <h1>Messages</h1>
+
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getMessages();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>Time</th>
+					<th>Client</td>
+					<th>Message</td>
+					<th>Delete?</th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1]."</td>
+						<td>".$item[2]."</td>
+						<td>".$item[3]."</td>";
+							
+			echo "<td><a href='deletemessage.php?id=".$item[0]."'>Delete</a></td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
+
+<!--
 <p>
 	<span style="font-size:14px;">11:50</span></p>
 <h3 style="color:red;">
@@ -31,7 +62,7 @@
 	<span style="font-size:14px;">11:32</span></p>
 <h3 style="color:blue;">
 	礦產大放送：現在只要收集到五個木材就可以到礦場換一個鑽石！</h3>
-
+-->
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
