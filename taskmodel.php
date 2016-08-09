@@ -211,6 +211,13 @@ function prepareMission()
 	$stmt->execute();
 }
 
+function occupyStronghold($team, $code)
+{
+	$sql = "UPDATE stronghold SET team='A' WHERE mission='Ow3vC'";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+}
+
 function addResource($team, $magic_powder, $cloth, $ruby, $shaft, $fire, $seed, $water, $light, $flax, $screw, $plastic, $electron, $ergonomic, $imagine, $metal, $air, $magic_stone, $control_panel, $seat, $wheel, $rope, $cypress, $propeller, $door, $jet, $gun, $elk, $sound, $sd_card, $missile, $miss_air, $led_light)
 {
 	$conn = connect();

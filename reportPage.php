@@ -22,15 +22,15 @@
   include "nav.php";
   ?>
 
-<h1>Mission</h1>
+<h1>Report</h1>
 <br>
 <p style="text-align: center;">
-	<form action="reportPage.html">
+	<form action="occupyStronghold.php">
 		<table border="1">
 			<tr>
-				<td>Group: </td>
+				<td>Team: </td>
 				<td>
-					<select name="name"/>
+					<select name="team"/>
 						<option value="A">A</option>
 						<option value="B">B</option>
 						<option value="C">C</option>
@@ -39,25 +39,30 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Complete mission: </td>
+				<td>完成任務: </td>
 				<td>
-					<select name="source"/>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">8</option>
+					<select name="code"/>
+						<option value="YEyKd">YEyKd</option>
+						<option value="DWVw4">DWVw4</option>
+						<option value="soDJ3">soDJ3</option>
+						<option value="GJPzb">GJPzb</option>
+						<option value="lJAfD">lJAfD</option>
+						<option value="SZ1yG">SZ1yG</option>
+						<option value="y997V">y997V</option>
+						<option value="X02aw">X02aw</option>
+						<option value="Glsx3">Glsx3</option>
+						<option value="YNbMr">YNbMr</option>
+						<option value="KeQW2">KeQW2</option>
+						<option value="vNUEM">vNUEM</option>
+						<option value="5swuv">5swuv</option>
+						<option value="Ao2pa">Ao2pa</option>
+						<option value="uIBpt">uIBpt</option>
+						<option value="Ow3vC">Ow3vC</option>
 					</select>
 				</td>
 			</tr>
-			<tr>
-				<td>Value: </td>
-				<td><input name="value" type="number"/></td>
-			</tr>
 		</table>
-				<input type="submit" value="Send request"/>
+				<input type="submit" value="佔領據點"/>
 		</form>
 </p>
 
