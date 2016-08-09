@@ -4,8 +4,6 @@
   <title>微軟13屆領袖營 - 據點戰 - 據點地圖</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-  <!-- My Scripts -->
-  <script src="map.js"></script>
   <!-- CSS Style -->
   <link rel="stylesheet" type="text/css" href="map.css">
   <!-- Bootstrap Core CSS -->
@@ -55,6 +53,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- My Scripts -->
+  <script src="map.js"></script>
 
 </body>
 </html>
