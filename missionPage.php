@@ -16,6 +16,7 @@
 <!-- CSS Style -->
 <link rel="stylesheet" type="text/css" href="#">
 
+<script>
 function getMission() {
     var x = document.forms["myForm"]["fname"].value;
 	location.href="getMission.php?value=" value;
@@ -24,6 +25,8 @@ function getMission() {
         return false;
     }
 }
+</script>
+
 </head>
 
 <body>
