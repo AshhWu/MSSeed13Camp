@@ -65,7 +65,7 @@ function getAllMissions()
 function searchMission($code)
 {
 	$conn = connect();
-	$sql = "SELECT * FROM mission WHERE code='YEyKd'";
+	$sql = "SELECT * FROM mission WHERE code='".$code."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
