@@ -1,0 +1,49 @@
+a.materials {
+    display: block;
+    margin:auto;
+    
+}
+
+img {
+    width: 3em;
+}
+
+.compose {
+    display:block;
+    margin:auto;
+}
+table {
+  margin: auto;
+  float:none;
+  margin-bottom: 30px;
+ 
+}
+
+td {
+    text-align: left;
+    /*--word-wrap: break-word;*/
+    width: 5em;
+}
+
+
+.compose-title {
+    display: block;
+    clear: both;
+    text-align: center;
+    margin:auto;
+    position: relative;
+    float: none;
+}
+
+input {
+    width: 30px;
+    border: 0.3px solid #c1b3b3;
+}
+
+.ok-btn {
+    background-color: #0b68fd;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 30px;
+    width: 30px;
+}
