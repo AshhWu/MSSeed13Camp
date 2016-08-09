@@ -12,7 +12,7 @@
 	* See the License for the specific language governing permissions and 
 	* limitations under the License. 
 	*/
-	
+
 include_once 'taskmodel.php';
 
 $team = $_POST['team'];
@@ -20,5 +20,5 @@ $code = $_POST['code'];
 
 occupyStronghold($team, $code);
 
-echo "Report success!!";
+#echo "Report success!!";
 ?>
