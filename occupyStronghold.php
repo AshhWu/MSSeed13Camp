@@ -15,10 +15,10 @@
 
 include_once 'taskmodel.php';
 
-$team = $_POST['team'];
-$code = $_POST['code'];
+#$team = $_POST['team'];
+#$code = $_POST['code'];
 
-occupyStronghold($team, $code);
+#occupyStronghold($team, $code);
 
 #echo "Report success!!";
 ?>
