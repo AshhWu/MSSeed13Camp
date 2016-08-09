@@ -16,17 +16,6 @@
 <!-- CSS Style -->
 <link rel="stylesheet" type="text/css" href="#">
 
-<script>
-function getMission() {
-    var x = document.forms["myForm"]["fname"].value;
-	location.href="getMission.php?value=" value;
-    if (x == null || x == "") {
-        alert("Name must be filled out");
-        return false;
-    }
-}
-</script>
-
 </head>
 
 <body>
@@ -34,12 +23,14 @@ function getMission() {
   include "nav.php";
   ?>
 
-<h1>Mission</h1>
-<br>
-<form name="myForm" onsubmit="return getMission()" method="post">
-Code: <input type="text" name="fname">
-<input type="submit" value="Submit">
-</form>
+	<h1>Mission</h1>
+
+	<br>
+
+	<form action="getMission.php" method="post">
+		Code: <input type="text" name="code">
+		<input type="submit" value="Submit">
+	</form>
 
 
 	<!-- jQuery -->
