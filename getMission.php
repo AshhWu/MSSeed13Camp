@@ -15,7 +15,8 @@
 	
 include_once 'taskmodel.php';
 
-	$items=searchMission($_POST['code']);
+	$code = $_POST['code']
+	$items = searchMission($code);
 
 	if(!empty($items))
 	{

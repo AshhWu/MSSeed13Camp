@@ -62,6 +62,14 @@ function getAllMissions()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function searchMission($code)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM mission WHERE code=".$code;
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllMessages()
 {
 	$conn = connect();
