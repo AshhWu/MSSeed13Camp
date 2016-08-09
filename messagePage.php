@@ -34,18 +34,15 @@
 				<tr>
 					<th>Time</th>
 					<th>Client</td>
-					<th>Message</td>
-					<th>Delete?</th>
+					<th>Message</th>
 				</tr>";
 		foreach($items as $item)
 		{
 			echo 	"<tr>
 						<td>".$item[1]."</td>
 						<td>".$item[2]."</td>
-						<td>".$item[3]."</td>";
-							
-			echo "<td><a href='deletemessage.php?id=".$item[0]."'>Delete</a></td>";
-			echo "</tr>";
+						<td>".$item[3]."</td>
+					</tr>";
 		}
 		
 		echo "</table>";
