@@ -15,6 +15,15 @@
 
 <!-- CSS Style -->
 <link rel="stylesheet" type="text/css" href="#">
+
+function getMission() {
+    var x = document.forms["myForm"]["fname"].value;
+	location.href="getMission.php?value=" value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
 </head>
 
 <body>
@@ -24,12 +33,10 @@
 
 <h1>Mission</h1>
 <br>
-<p style="text-align: center;">
-	<form action="missionExample.html">
-		<span style="font-size:16px;">任務代碼：</span>&nbsp;<input name="mission" type="text" value="請輸入代碼" />&nbsp;
-		<input name="submit" type="submit" value="送出" />
-	</form>
-</p>
+<form name="myForm" onsubmit="return getMission()" method="post">
+Code: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
 
 
 	<!-- jQuery -->
