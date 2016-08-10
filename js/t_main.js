@@ -106,7 +106,7 @@ function mrt_route(route){
 	for (i = 0; i < 5; i++){
 		result += '<div class="w3-tag w3-' + lego_color[i] + '"><p>' + cost[i] + '</p></div>'
 	}
-	result += '<button class="w3-btn w3-round w3-margin">Go</button></li>';
+	result += '<button class="w3-btn w3-round w3-margin">«ö§ÚGo</button></li>';
 
 	document.getElementById("route_ul").innerHTML += result;
 }
