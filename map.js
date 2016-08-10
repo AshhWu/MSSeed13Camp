@@ -1,3 +1,6 @@
 $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip({html: true});
+	$('[data-toggle="popover"]').popover({html: true}).click(function(e) { 
+		e.preventDefault(); 
+		$(this).focus(); 
+	});
 });
