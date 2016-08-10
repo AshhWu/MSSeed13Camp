@@ -2,7 +2,8 @@
 <html>
 <head>
     <title>¥x¥_¦æ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
