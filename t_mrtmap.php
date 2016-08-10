@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<script src="jquery-3.1.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>7
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
