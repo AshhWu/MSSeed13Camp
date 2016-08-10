@@ -5,8 +5,8 @@
   <title>微軟13屆領袖營 - 首頁</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-  <!-- My Scripts -->
-  <script src="#"></script>
+  <!-- My Scripts 
+  <script src="#"></script> -->
   <!-- CSS Style -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="home.css">
