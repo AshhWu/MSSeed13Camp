@@ -1,0 +1,140 @@
+/* nav */
+
+#sidemenu {
+	display: none;
+	right: 0;
+}
+
+	#sidemenu a {
+		font-size: 20px;
+		margin-top: 10px;
+		border-bottom: 3px solid;
+	}
+
+#topnav li {
+	width: 100%;
+}
+
+/* MRT */
+
+.middle_part {
+	width: 360px;
+	margin: auto;
+}
+
+.middle_part h5 {
+	display: inline-block;
+	max-width: 18%;
+	text-align: center;
+}
+
+.middle_part .section1 {
+	display: inline-block;
+	max-width: 55%;
+	position: relative;
+	top: 15px;
+	left: 10px;
+}
+
+.middle_part form {
+	display: block;
+	margin-top: 3px;
+}
+
+.middle_part button {
+	display: inline-block;
+	max-width: 18%;
+}
+
+.middle_part .section2 {
+	display: inline-block;
+	max-width: 80%;
+	position: relative;
+	bottom: 15px;
+	left: 15px;
+}
+
+.middle_part div {
+	display: inline-block;
+	text-align: center;
+	padding: 8px;
+	margin-left: 3px;
+}
+
+#bottom_part img {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+/* route_list */
+
+#route_list {
+	width: 350px;
+	margin: auto;
+	display: none;
+	border: solid;
+}
+
+#route_list {
+	text-align: center;
+}
+
+#route_list .w3-card-2 {
+	display: block;
+	width: 100%;
+}
+
+#route_list p {
+	display: inline-block;
+}
+
+/* lego_list */
+
+#lego_list {
+	width: 350px;
+	margin: auto;
+	background-color: grey;
+}
+
+#lego_list h4 {
+	text-align: center;
+}
+
+#lego_list li {
+	margin-bottom: 5px;
+}
+
+#lego_list a {
+	display: inline-block;
+	border: solid 2px;
+	margin-right: 5px;
+}
+
+#lego_list div {
+	display: inline-block;
+}
+
+/* lego_change */
+
+#lego_change {
+	width: 300px;
+	margin: auto;
+	text-align: center;
+}
+
+#change_table {
+	width: 350px;
+	margin: auto;
+	text-align: center;
+}
+
+#change_table input {
+	width: 50px;
+}
+
+#change_btn {
+	width: 100px;
+	margin: auto;
+}
