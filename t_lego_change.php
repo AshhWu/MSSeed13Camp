@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>¥x¥_¦æ</title>
+    <title>å°åŒ—è¡Œ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
@@ -16,17 +17,17 @@
 
 <?php include "nav.php"; ?>
 
-<div id="lego_change" class="w3-container w3-section w3-card-4 w3-padding w3-indigo">©MXX²Õ¥æ©ö</div>
+<div id="lego_change" class="w3-container w3-section w3-card-4 w3-padding w3-indigo">å’ŒXXçµ„äº¤æ˜“</div>
 
 <table id="change_table" class="w3-table w3-sand">
 <tr>
-	<th>¦³</th>
-	<th class="w3-card w3-grey">§Ú¤è</th>
-	<th>µ¹¹ï¤è</th>
+	<th>æœ‰</th>
+	<th class="w3-card w3-grey">æˆ‘æ–¹</th>
+	<th>çµ¦å°æ–¹</th>
 	<th>|</th>
-	<th>¦³</th>
-	<th class="w3-card w3-grey">¹ï¤è</th>
-	<th>µ¹§Ú¤è</th>
+	<th>æœ‰</th>
+	<th class="w3-card w3-grey">å°æ–¹</th>
+	<th>çµ¦æˆ‘æ–¹</th>
 </tr>
 <tr>
 	<th>10</th>
@@ -76,8 +77,8 @@
 </table>
 
 <div id="change_btn" class="w3-container w3-section w3-padding-large">
-<button class="w3-btn w3-padding w3-teal w3-round">½T©w</button><br><br>
-<button class="w3-btn w3-padding w3-teal w3-round">¨ú®ø</button>
+<button class="w3-btn w3-padding w3-teal w3-round">ç¢ºå®š</button><br><br>
+<button class="w3-btn w3-padding w3-teal w3-round">å–æ¶ˆ</button>
 </div>
 
 </body>
