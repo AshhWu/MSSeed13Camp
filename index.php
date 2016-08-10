@@ -14,13 +14,16 @@
 
 <body>
 
-  <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
+  <!-- Navigation Bar -->
+  <?php
+  include "nav.php";
+  ?>
 
+  <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
     <!-- Banner -->
     <div class="banner">
       <img src="png/banner.png" class="img-responsive"/>
-    </div>
-    
+    </div>    
     <!-- Login form-->
     <form role="form">
       <!-- Email -->
@@ -40,7 +43,6 @@
     -->
     <button type="submit" class="btn btn-default">Login</button>
   </form>
-
 </div>
 
 
@@ -49,10 +51,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<!-- Navigation Bar -->
-<?php
-include "nav.php";
-?>
+
 
 </body>
 </html>
