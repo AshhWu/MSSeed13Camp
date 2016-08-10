@@ -56,7 +56,7 @@
 
 <div id="bottom_part" class="w3-container w3-section w3-grey">
 
-<img src="images/MRT.jpg" onclick="pic_switchsize()">
+<img src="png/MRT.jpg" onclick="pic_switchsize()">
 
 </div>
 
