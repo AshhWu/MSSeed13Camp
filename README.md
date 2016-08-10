@@ -3,13 +3,15 @@
 1. Include links to Bootstrap  
 ```  
 <head>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
   ...
-  <script src="jquery-3.1.0.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <!-- jQuery --> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+  <!-- Bootstrap Core JavaScript --> 
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 </body>
 ```
 
