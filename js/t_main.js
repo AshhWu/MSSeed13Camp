@@ -57,7 +57,6 @@ function check_lego(){
 	station_s = start % 100;
 	station_e = end % 100;
 
-	result = "";
 	if (line_s == line_e){
 		mrt_route([start, end]);
 	} else {
@@ -68,22 +67,21 @@ function check_lego(){
 				tmp2 = parseInt(change_line[line_s-1][line_e-1][i]%1000);
 				mrt_route([start, tmp1, tmp2, end]);
 			}
-
-		//change line *2
-		for (i = 1; i <= 5; i++)
-			if (i != line_s && i != line_e)
-				if (change_line[line_s-1][i-1] != 0 && change_line[i-1][line_e-1] != 0)
-					for (j = 0; j < change_line[line_s-1][i-1].length; j++){
-						tmp1 = parseInt(change_line[line_s-1][i-1][j]/1000);
-						tmp2 = parseInt(change_line[line_s-1][i-1][j]%1000);
-						for (k = 0; k < change_line[i-1][line_e-1].length; k++){
-							tmp3 = parseInt(change_line[i-1][line_e-1][k]/1000);
-							tmp4 = parseInt(change_line[i-1][line_e-1][k]%1000);
-							mrt_route([start, tmp1, tmp2, tmp3, tmp4, end]);
-						}
-					}
-
 	}
+	//change line *2
+	for (i = 1; i <= 5; i++)
+		if (i != line_s && i != line_e)
+			if (change_line[line_s-1][i-1] != 0 && change_line[i-1][line_e-1] != 0)
+				for (j = 0; j < change_line[line_s-1][i-1].length; j++){
+					tmp1 = parseInt(change_line[line_s-1][i-1][j]/1000);
+					tmp2 = parseInt(change_line[line_s-1][i-1][j]%1000);
+					for (k = 0; k < change_line[i-1][line_e-1].length; k++){
+						tmp3 = parseInt(change_line[i-1][line_e-1][k]/1000);
+						tmp4 = parseInt(change_line[i-1][line_e-1][k]%1000);
+						mrt_route([start, tmp1, tmp2, tmp3, tmp4, end]);
+					}
+				}
+
 
 	document.getElementById("route_list").style.display = "block";
 }
