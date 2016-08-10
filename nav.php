@@ -22,9 +22,10 @@ include "findActiveClass.php";
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown">台北行 <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">移動迷宮</a></li>
+            <li <?=findActiveClass("t_mrtmap")?>><a href="t_mrtmap.php">移動迷宮</a></li>
             <li><a href="#">任務資訊</a></li>
-            <li><a href="#">樂高交易</a></li>
+            <li <?=findActiveClass("t_lego_list")?>><a href="t_lego_list.php">樂高材料</a></li>
+            <li <?=findActiveClass("t_lego_change")?>><a href="t_lego_change.php">樂高交易</a></li>
             <li><a href="#">求助中心</a></li> 
           </ul>
         </li>
