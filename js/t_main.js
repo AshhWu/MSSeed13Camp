@@ -14,11 +14,9 @@ function pic_switchsize(){
 		p = x[i].style.padding;
 		x[i].style.display = "none";
 		x[x.length-1].style.padding = 0;
-		x[x.length-1].style.transform = "scale(2)";
 		pic_full = 1;
 	} else {
 		x[x.length-1].style.padding = p;
-		x[x.length-1].style.transform = "scale(1)";
 		pic_full = 0;
 	}
 }
