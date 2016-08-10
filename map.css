@@ -11,9 +11,33 @@
 	font-size: 5vw;
 }
 
-.tooltip-inner {
-    text-align: left;
+/* Popover */
+.popover {
+	color: #FFFFFF;
+	background: rgba(0, 0, 0, 0.6);
+	border: transparent;
 }
+
+/* Popover Header */
+.popover-title {
+	background: rgba(0, 0, 0, 0.3);
+	text-align:center;
+}
+
+/* Popover Arrow */
+.popover.top .arrow:after {
+	border-top-color: rgba(0, 0, 0, 0.3);
+}
+.popover.right .arrow:after {
+	border-right-color: rgba(0, 0, 0, 0.3);
+}
+.popover.bottom .arrow:after {
+	border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+.popover.right .arrow:after {
+	border-left-color: rgba(0, 0, 0, 0.3);
+}
+
 
 #icon1 {
 	top: 78%;
