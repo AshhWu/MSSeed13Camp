@@ -40,6 +40,13 @@ function sqlcode($sql)
 }
 
 sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
+$times = getAllTimes();
+foreach($times as $time)
+{
+	$time[3] += 1;
+	$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='1'");
+	sqlcode($sql);
+}
 /**
 	$items = getAllStrongholds();
 	foreach($items as $item)
