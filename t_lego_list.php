@@ -16,15 +16,17 @@
 <body>
 
 <?php include "nav.php"; ?>
+<?php include "t_getitems.php"; ?>
 
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-brown w3-padding w3-round-large">樂高</h5>
 	<section class="section2 w3-container">
-		<div class="w3-tag w3-orange"><p>12</p></div>
-		<div class="w3-tag w3-red"><p>20</p></div>
-		<div class="w3-tag w3-green"><p>23</p></div>
-		<div class="w3-tag w3-yellow"><p>14</p></div>
-		<div class="w3-tag w3-blue"><p>15</p></div>
+		<?php $team=1; ?>
+		<div id="lego1" class="w3-tag w3-orange"><p><?php echo getCubeNum($team, 1)?></p></div>
+		<div id="lego2" class="w3-tag w3-red"><p><?php echo getCubeNum($team, 2)?></p></div>
+		<div id="lego3" class="w3-tag w3-green"><p><?php echo getCubeNum($team, 3)?></p></div>
+		<div id="lego4" class="w3-tag w3-yellow"><p><?php echo getCubeNum($team, 4)?></p></div>
+		<div id="lego5" class="w3-tag w3-blue"><p><?php echo getCubeNum($team, 5)?></p></div>
 	</section>
 </div>
 
@@ -32,7 +34,7 @@
 	<h4 class="w3-card-4 w3-sand w3-round w3-padding">各組樂高(點組別按鈕請求交易)</h4>
 	<ul class="w3-ul w3-hoverable">
 		<li class="w3-container">
-			<a class="w3-btn w3-purple w3-padding w3-round-large" href="./lego_change.html">第一組</a>
+			<a class="w3-btn w3-purple w3-padding w3-round-large" href="./t_lego_change.php">第一組</a>
 			<div class="w3-tag w3-orange"><p>18</p></div>
 			<div class="w3-tag w3-red"><p>25</p></div>
 			<div class="w3-tag w3-green"><p>13</p></div>
@@ -40,7 +42,7 @@
 			<div class="w3-tag w3-blue"><p>10</p></div>
 		</li>
 		<li class="w3-container">
-			<a class="w3-btn w3-purple w3-padding w3-round-large" href="./lego_change.html">第二組</a>
+			<a class="w3-btn w3-purple w3-padding w3-round-large" href="./t_lego_change.php">第二組</a>
 			<div class="w3-tag w3-orange"><p>13</p></div>
 			<div class="w3-tag w3-red"><p>22</p></div>
 			<div class="w3-tag w3-green"><p>24</p></div>
@@ -48,7 +50,7 @@
 			<div class="w3-tag w3-blue"><p>17</p></div>
 		</li>
 		<li class="w3-container">
-			<a class="w3-btn w3-purple w3-padding w3-round-large" href="./lego_change.html">第三組</a>
+			<a class="w3-btn w3-purple w3-padding w3-round-large" href="./t_lego_change.php">第三組</a>
 			<div class="w3-tag w3-orange"><p>26</p></div>
 			<div class="w3-tag w3-red"><p>15</p></div>
 			<div class="w3-tag w3-green"><p>20</p></div>
