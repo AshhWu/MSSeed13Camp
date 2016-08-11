@@ -30,17 +30,17 @@
             <div class="thumbnail">
                 <table cellspacing="20" align="center">
                     <tr>
-                        <td><img class="img-rounded" width="200px" height="200px" src="png/microsoftBuilding.jpg" alt="請重新整理頁面"></td>
-                        <td><img class="img-rounded" width="200px" height="200px" src="png/landscape1.jpg" alt="請重新整理頁面"></td>
-                        <td><img class="img-rounded" width="200px" height="200px" src="png/landscape2.jpg" alt="請重新整理頁面"></td>
+                        <td><img class="img-rounded" width="90px" height="90px" src="png/microsoftBuilding.jpg" alt="請重新整理頁面"></td>
+                        <td><img class="img-rounded" width="90px" height="90px" src="png/landscape1.jpg" alt="請重新整理頁面"></td>
+                        <td><img class="img-rounded" width="90px" height="90px" src="png/landscape2.jpg" alt="請重新整理頁面"></td>
                     </tr>
                     <tr>
-                        <td><img class="img-rounded" width="200px" height="200px" src="png/landscape3.jpg" alt="請重新整理頁面"></td>
-                        <td><img class="img-rounded" width="200px" height="200px" src="png/landscape4.jpg" alt="請重新整理頁面"></td>
-                        <td><img class="img-rounded" width="200px" height="200px" src="png/landscape5.jpg" alt="請重新整理頁面"></td>
+                        <td><img class="img-rounded" width="90px" height="90px" src="png/landscape3.jpg" alt="請重新整理頁面"></td>
+                        <td><img class="img-rounded" width="90px" height="90px" src="png/landscape4.jpg" alt="請重新整理頁面"></td>
+                        <td><img class="img-rounded" width="90px" height="90px" src="png/landscape5.jpg" alt="請重新整理頁面"></td>
                     </tr>
                     <tr>
-                        <td><img class="img-rounded" width="200px" height="200px" src="png/landscape6.jpg" alt="請重新整理頁面"></td>
+                        <td><img class="img-rounded" width="90px" height="90px" src="png/landscape6.jpg" alt="請重新整理頁面"></td>
                     </tr>
                 </table>
             </div>
