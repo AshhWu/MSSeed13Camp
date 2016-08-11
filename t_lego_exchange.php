@@ -17,8 +17,8 @@
 
 <?php include "nav.php"; ?>
 <?php include "t_getitems.php"; ?>
-
-<div id="team_numbers"></div>
+<?php $team=1; ?>
+<?php $team2=2; ?>
 
 <div id="lego_exchange" class="w3-container w3-section w3-card-4 w3-padding w3-indigo"></div>
 
