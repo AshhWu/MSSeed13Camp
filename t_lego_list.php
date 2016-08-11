@@ -34,7 +34,7 @@
 	<h4 class="w3-card-4 w3-sand w3-round w3-padding">各組樂高(點組別按鈕請求交易)</h4>
 	<ul class="w3-ul w3-hoverable">
 		<li class="w3-container">
-			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php" onclick="exchange_lego(1, 2)">第2組</a>
+			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第2組</a>
 			<div class="w3-tag w3-orange"><p>18</p></div>
 			<div class="w3-tag w3-red"><p>25</p></div>
 			<div class="w3-tag w3-green"><p>13</p></div>
@@ -42,7 +42,7 @@
 			<div class="w3-tag w3-blue"><p>10</p></div>
 		</li>
 		<li class="w3-container">
-			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php" onclick="exchange_lego(1, 3)">第3組</a>
+			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第3組</a>
 			<div class="w3-tag w3-orange"><p>13</p></div>
 			<div class="w3-tag w3-red"><p>22</p></div>
 			<div class="w3-tag w3-green"><p>24</p></div>
@@ -50,7 +50,7 @@
 			<div class="w3-tag w3-blue"><p>17</p></div>
 		</li>
 		<li class="w3-container">
-			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php" onclick="exchange_lego(1, 4)">第4組</a>
+			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第4組</a>
 			<div class="w3-tag w3-orange"><p>26</p></div>
 			<div class="w3-tag w3-red"><p>15</p></div>
 			<div class="w3-tag w3-green"><p>20</p></div>

@@ -20,7 +20,7 @@
 <?php $team=1; ?>
 <?php $team2=2; ?>
 
-<div id="lego_exchange" class="w3-container w3-section w3-card-4 w3-padding w3-indigo"></div>
+<div id="lego_exchange" class="w3-container w3-section w3-card-4 w3-padding w3-indigo">和第<?php echo $team2 ?>組交易</div>
 
 <table id="exchange_table" class="w3-table w3-sand">
 <tr>
