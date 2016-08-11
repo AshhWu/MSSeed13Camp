@@ -33,7 +33,7 @@
                 <div class="caption">
                     <h3>題目標題</h3>             <!--題目標題-->
                     <p>與穿營服的關主拍照上傳</p>  <!--題目內容與提示-->
-                    <p>距離關主:</p>            <!--距離關主-->
+                    <!--<p>距離關主:</p>            距離關主-->
                     <p><a href="t_missionSend.php" class="btn btn-success" role="button">照片上傳</a></p>
                 </div>
             </div>
