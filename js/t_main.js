@@ -120,13 +120,13 @@ function mrt_route(route, count){
 
 function lego_refresh(obj){
 	var n = parseInt(obj.id[obj.id.length-1]);
-	var rest_lego = [];
+	var rest_lego;
 	var tmp_str = 't_updateAllCube.php?team=1';
 
 	for (j = 0; j < 5; j++){
-		rest_lego[j] = document.getElementById("lego" + (j+1).toString()).innerText - cost_list[n-1][j];
-		document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego[j].toString() + "</p>"
-		tmp_str += '&cube' + (j+1).toString()
+		rest_lego = document.getElementById("lego" + (j+1).toString()).innerText - cost_list[n-1][j];
+		document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
+		tmp_str += '&cube' + (j+1).toString() + '=' + rest_lego.toString();
 	}
 
 	document.getElementById("route_list").style.display = "none";
