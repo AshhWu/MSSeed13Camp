@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>上傳照片</title>
 
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +30,19 @@
             alert()
         }
     </script>
+    <script type="text/javascript">
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+ 
+                reader.onload = function (e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+ 
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
   </head>
   <body>
     <?php
@@ -41,8 +54,10 @@
       <div class="starter-template">
         <div class=".col-md-10 .col-md-offset-1">
             <div class="thumbnail">
-                <img id="picPreview" class="img-thumbnail" src="png/clickToLoad.jpg" alt="點此上傳圖片" onClick="uploadPic()">    <!--上傳圖片預覽-->
-                <br>
+                <form id="form1" runat="server">
+                    <input type='file' onchange="readURL(this);" />
+                    <img id="blah" src="png/clickToLoad.jpg" alt="your image" />
+                </form>
                 <div class="caption">
                     <p><a class="btn btn-success" role="button" onClick="sendPic()">完成任務</a>
                     <a href="t_missionDetail.php" class="btn btn-danger" role="button">取消</a></p>
