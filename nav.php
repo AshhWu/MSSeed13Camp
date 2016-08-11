@@ -24,9 +24,8 @@ include "findActiveClass.php";
           <ul class="dropdown-menu">
             <li <?=findActiveClass("t_mrtmap")?>><a href="t_mrtmap.php">移動迷宮</a></li>
             <li <?=findActiveClass("t_missionDetail")?>><a href="t_missionDetail.php">任務資訊</a></li>
-            <li <?=findActiveClass("t_missionHint")?>><a href="t_missionHint.php">任務提示</a></li>
-            <li <?=findActiveClass("t_lego_list")?>><a href="t_lego_list.php">樂高材料</a></li>
-            <li <?=findActiveClass("t_lego_change")?>><a href="t_lego_change.php">樂高交易</a></li>
+            <li <?=findActiveClass("t_missionHint")?>><a href="t_missionHint.php">圖片提示</a></li>
+            <li <?=findActiveClass("t_lego_list")?>><a href="t_lego_list.php">樂高交易</a></li>
             <li><a href="#">求助中心</a></li> 
             <li <?=findActiveClass("t_taipeiAdmin")?>><a href="t_taipeiAdmin.php">台北行管理員</a></li>
           </ul>
