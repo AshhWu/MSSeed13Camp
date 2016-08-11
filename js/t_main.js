@@ -131,5 +131,5 @@ function lego_refresh(obj){
 
 	document.getElementById("route_list").style.display = "none";
 
-	window.location = tmp_str;
+	window.location = 't_updateCubeNum.php?team=1&color=2&num=70';
 }
