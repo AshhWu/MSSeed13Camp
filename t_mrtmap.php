@@ -16,6 +16,7 @@
 <body>
 
 <?php include "nav.php"; ?>
+<?php include "t_getitems.php"; ?>
 
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-indigo w3-padding w3-round-large">移動</h5>
@@ -41,11 +42,12 @@
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-brown w3-padding w3-round-large">樂高</h5>
 	<section class="section2 w3-container">
-		<div class="w3-tag w3-orange"><p>12</p></div>
-		<div class="w3-tag w3-red"><p>20</p></div>
-		<div class="w3-tag w3-green"><p>23</p></div>
-		<div class="w3-tag w3-yellow"><p>14</p></div>
-		<div class="w3-tag w3-blue"><p>15</p></div>
+		<?php $team=1; ?>
+		<div class="w3-tag w3-orange"><p><?php getCubeNum($team, 1)?></p></div>
+		<div class="w3-tag w3-red"><p><?php getCubeNum($team, 2)?></p></div>
+		<div class="w3-tag w3-green"><p><?php getCubeNum($team, 3)?></p></div>
+		<div class="w3-tag w3-yellow"><p><?php getCubeNum($team, 4)?></p></div>
+		<div class="w3-tag w3-blue"><p><?php getCubeNum($team, 5)?></p></div>
 	</section>
 </div>
 
