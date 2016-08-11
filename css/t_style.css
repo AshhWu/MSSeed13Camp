@@ -99,25 +99,25 @@
 	display: inline-block;
 }
 
-/* lego_change */
+/* lego_exchange */
 
-#lego_change {
+#lego_exchange {
 	width: 300px;
 	margin: auto;
 	text-align: center;
 }
 
-#change_table {
+#exchange_table {
 	width: 350px;
 	margin: auto;
 	text-align: center;
 }
 
-#change_table input {
+#exchange_table input {
 	width: 50px;
 }
 
-#change_btn {
+#exchange_btn {
 	width: 100px;
 	margin: auto;
 }
