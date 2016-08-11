@@ -39,12 +39,22 @@ function sqlcode($sql)
 	$stmt->execute();
 }
 
-sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
+function getAllTimes()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM auto_time";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+#sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
 $times = getAllTimes();
+$i = 0;
 foreach($times as $time)
 {
+	$i += 1;
 	$time[3] += 1;
-	$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='1'";
+	$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
 	sqlcode($sql);
 }
 /**
