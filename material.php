@@ -26,24 +26,613 @@
     </ul>
 
     <div class="tab-content">
-      <div id="raw" class="tab-pane fade in active col-lg-4 col-lg-offset-4 col-xs-8 col-xs-offset-2">
+      <!-- Raw Materials -->
+      <div id="raw" class="tab-pane fade in active">
         <div class="row">
-          <div class="col-lg-1 col-xs-2">
-            <img src="png/raw/魔法粉末.png" class="img-responsive" alt="魔法粉末">
-            <p>魔法粉末</p>
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/magic_powder.png" class="img-responsive icon-materials" alt="魔法粉末">
+            <p class="name raw-name text-center">魔法粉末</p>
           </div>
-          <div class="col-lg-1 col-xs-2">
-            <img src="png/raw/布.png" class="img-responsive" alt="布">
-            <p>布</p>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/cloth.png" class="img-responsive icon-materials" alt="布">
+            <p class="name raw-name text-center">布</p>
           </div>
-          <div class="col-lg-1 col-xs-2">
-            <img src="png/raw/紅寶石.png" class="img-responsive" alt="紅寶石">
-            <p>紅寶石</p>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/ruby.png" class="img-responsive icon-materials" alt="紅寶石">
+            <p class="name raw-name text-center">紅寶石</p>
           </div>
-          <div class="col-lg-1 col-xs-2">
-            <img src="png/raw/轉軸.png" class="img-responsive" alt="轉軸">
-            <p>轉軸</p>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/shaft.png" class="img-responsive icon-materials" alt="轉軸">
+            <p class="name raw-name text-center">轉軸</p>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/fire.png" class="img-responsive icon-materials" alt="熊熊烈火">
+            <p class="name raw-name text-center">熊熊烈火</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/seed.png" class="img-responsive icon-materials" alt="種子">
+            <p class="name raw-name text-center">種子</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/water.png" class="img-responsive icon-materials" alt="生命之水">
+            <p class="name raw-name text-center">生命之水</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/light.png" class="img-responsive icon-materials" alt="神聖光芒">
+            <p class="name raw-name text-center">神聖光芒</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/flax.png" class="img-responsive icon-materials" alt="麻">
+            <p class="name raw-name text-center">麻</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/screw.png" class="img-responsive icon-materials" alt="螺絲">
+            <p class="name raw-name text-center">螺絲</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/plastic.png" class="img-responsive icon-materials" alt="塑料">
+            <p class="name raw-name text-center">塑料</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/electron.png" class="img-responsive icon-materials" alt="十萬伏特">
+            <p class="name raw-name text-center">十萬伏特</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/ergonomic.png" class="img-responsive icon-materials" alt="人體工學">
+            <p class="name raw-name text-center">人體工學</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/imagine.png" class="img-responsive icon-materials" alt="想像力">
+            <p class="name raw-name text-center">想像力</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/metal.png" class="img-responsive icon-materials" alt="金屬">
+            <p class="name raw-name text-center">金屬</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
+            <div class="count raw-count">3</div>
+            <img src="png/s_raw/air.png" class="img-responsive icon-materials" alt="大地氧氣">
+            <p class="name raw-name text-center">大地氧氣</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Components -->
+      <div id="component" class="tab-pane fade in active">
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/magic_stone.png" class="img-responsive icon-components" alt="魔法石">
+            <p class="name component-name text-center">魔法石</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/control_panel.png" class="img-responsive icon-components" alt="控制面板">
+            <p class="name component-name text-center">控制面板</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/seat.png" class="img-responsive icon-components" alt="座位">
+            <p class="name component-name text-center">座位</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/wheel.png" class="img-responsive icon-components" alt="方向盤">
+            <p class="name component-name text-center">方向盤</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/rope.png" class="img-responsive icon-components" alt="繩子">
+            <p class="name component-name text-center">繩子</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/cypress.png" class="img-responsive icon-components" alt="檜木">
+            <p class="name component-name text-center">檜木</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/propeller.png" class="img-responsive icon-components" alt="螺旋槳">
+            <p class="name component-name text-center">螺旋槳</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/door.png" class="img-responsive icon-components" alt="門">
+            <p class="name component-name text-center">門</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/jet.png" class="img-responsive icon-components" alt="噴射器">
+            <p class="name component-name text-center">噴射器</p>
+          </div>
+          <div class="col-md-2 col-xs-3 wrapper component-wrapper">
+            <div class="count component-count">3</div>
+            <img src="png/s_component/gun.png" class="img-responsive icon-components" alt="機艙">
+            <p class="name component-name text-center">機艙</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compose List -->
+      <div id="compose" class="tab-pane fade in active">
+        <!-- 魔法石 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper ">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/30</div>
+            <img src="png/s_raw/magic_powder.png" class="img-responsive icon-components" alt="魔法粉末">
+            <p class="name raw-name compose-name text-center">魔法粉末</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/18</div>
+            <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
+            <p class="name raw-name compose-name  text-center">神聖光芒</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/36</div>
+            <img src="png/s_raw/imagine.png" class="img-responsive icon-components" alt="想像力">
+            <p class="name raw-name compose-name  text-center">想像力</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">3</div>
+            <img src="png/s_component/magic_stone.png" class="img-responsive icon-components" alt="魔法石">
+            <p class="name component-name compose-name  text-center">魔法石</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 控制面板 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper ">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/24</div>
+            <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+            <p class="name raw-name compose-name text-center">金屬</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/21</div>
+            <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
+            <p class="name raw-name compose-name  text-center">神聖光芒</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/18</div>
+            <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
+            <p class="name raw-name compose-name  text-center">十萬伏特</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/control_panel.png" class="img-responsive icon-components" alt="控制面板">
+            <p class="name component-name compose-name  text-center">控制面板</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 座位 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper ">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/12</div>
+            <img src="png/s_raw/cloth.png" class="img-responsive icon-components" alt="布">
+            <p class="name raw-name compose-name text-center">布</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/30</div>
+            <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
+            <p class="name raw-name compose-name  text-center">塑料</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/24</div>
+            <img src="png/s_raw/ergonomic.png" class="img-responsive icon-components" alt="人體工學">
+            <p class="name raw-name compose-name  text-center">人體工學</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/seat.png" class="img-responsive icon-components" alt="座位">
+            <p class="name component-name compose-name  text-center">座位</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 方向盤 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper ">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/15</div>
+            <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
+            <p class="name raw-name compose-name  text-center">塑料</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/24</div>
+            <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+            <p class="name raw-name compose-name  text-center">螺絲</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/30</div>
+            <img src="png/s_raw/shaft.png" class="img-responsive icon-components" alt="轉軸">
+            <p class="name raw-name compose-name  text-center">轉軸</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/wheel.png" class="img-responsive icon-components" alt="方向盤">
+            <p class="name component-name compose-name  text-center">方向盤</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 繩子 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper ">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/30</div>
+            <img src="png/s_raw/flax.png" class="img-responsive icon-components" alt="麻">
+            <p class="name raw-name compose-name  text-center">麻</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/21</div>
+            <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
+            <p class="name raw-name compose-name  text-center">神聖光芒</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/24</div>
+            <img src="png/s_raw/water.png" class="img-responsive icon-components" alt="生命之水">
+            <p class="name raw-name compose-name  text-center">生命之水</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/rope.png" class="img-responsive icon-components" alt="繩子">
+            <p class="name component-name compose-name  text-center">繩子</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 檜木 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/30</div>
+            <img src="png/s_raw/water.png" class="img-responsive icon-components" alt="生命之水">
+            <p class="name raw-name compose-name  text-center">生命之水</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/18</div>
+            <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
+            <p class="name raw-name compose-name  text-center">神聖光芒</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/10</div>
+            <img src="png/s_raw/seed.png" class="img-responsive icon-components" alt="種子">
+            <p class="name raw-name compose-name  text-center">種子</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/12</div>
+            <img src="png/s_raw/air.png" class="img-responsive icon-components" alt="大地氧氣">
+            <p class="name raw-name compose-name  text-center">大地氧氣</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/cypress.png" class="img-responsive icon-components" alt="檜木">
+            <p class="name component-name compose-name  text-center">檜木</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 螺旋槳 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/21</div>
+            <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
+            <p class="name raw-name compose-name  text-center">塑料</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/21</div>
+            <img src="png/s_raw/shaft.png" class="img-responsive icon-components" alt="轉軸">
+            <p class="name raw-name compose-name  text-center">轉軸</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/12</div>
+            <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+            <p class="name raw-name compose-name  text-center">金屬</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/18</div>
+            <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+            <p class="name raw-name compose-name  text-center">螺絲</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/propeller.png" class="img-responsive icon-components" alt="螺旋槳">
+            <p class="name component-name compose-name  text-center">螺旋槳</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 門 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/15</div>
+            <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+            <p class="name raw-name compose-name  text-center">金屬</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/15</div>
+            <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+            <p class="name raw-name compose-name  text-center">螺絲</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/12</div>
+            <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
+            <p class="name raw-name compose-name  text-center">熊熊烈火</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/21</div>
+            <img src="png/s_raw/ergonomic.png" class="img-responsive icon-components" alt="人體工學">
+            <p class="name raw-name compose-name  text-center">人體工學</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/door.png" class="img-responsive icon-components" alt="門">
+            <p class="name component-name compose-name  text-center">門</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 噴射器 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/9</div>
+            <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+            <p class="name raw-name compose-name  text-center">金屬</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/21</div>
+            <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+            <p class="name raw-name compose-name  text-center">螺絲</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/15</div>
+            <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
+            <p class="name raw-name compose-name  text-center">熊熊烈火</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/24</div>
+            <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
+            <p class="name raw-name compose-name  text-center">十萬伏特</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/jet.png" class="img-responsive icon-components" alt="噴射器">
+            <p class="name component-name compose-name  text-center">噴射器</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
+        </div>
+        <!-- 機艙 -->
+        <div class="row">
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/12</div>
+            <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
+            <p class="name raw-name compose-name  text-center">金屬</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/15</div>
+            <img src="png/s_raw/air.png" class="img-responsive icon-components" alt="大地氧氣">
+            <p class="name raw-name compose-name  text-center">大地氧氣</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/9</div>
+            <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
+            <p class="name raw-name compose-name  text-center">熊熊烈火</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/9</div>
+            <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
+            <p class="name raw-name compose-name  text-center">螺絲</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_plus.png" class="img-responsive icon-plus" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper raw-wrapper">
+            <div class="count raw-count compose-count">3/18</div>
+            <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
+            <p class="name raw-name compose-name  text-center">十萬伏特</p>
+          </div>
+          <div class="col-xs-1 wrapper symbol-wrapper">
+            <img src="png/s_equal.png" class="img-responsive icon-equal" alt="+">
+          </div>
+          <div class="col-xs-1 wrapper component-wrapper">
+            <div class="count component-count compose-count">1</div>
+            <img src="png/s_component/gun.png" class="img-responsive icon-components" alt="機艙">
+            <p class="name component-name compose-name  text-center">機艙</p>
+          </div>
+          <div class="col-xs-1 wrapper">
+            <button type="button" class="btn btn-danger ok-button">OK</button>
+          </div>         
         </div>
       </div>
     </div>
