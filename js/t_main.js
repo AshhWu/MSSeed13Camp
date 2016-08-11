@@ -126,10 +126,10 @@ function lego_refresh(obj){
 	for (j = 0; j < 5; j++){
 		rest_lego = document.getElementById("lego" + (j+1).toString()).innerText - cost_list[n-1][j];
 		document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
-		tmp_str += '&cube' + (j+1).toString() + '=' + rest_lego.toString();
+		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
 
 	document.getElementById("route_list").style.display = "none";
 
-	window.location = 't_updateCubeNum.php?team=1&color=2&num=70';
+	window.location = tmp_str;
 }
