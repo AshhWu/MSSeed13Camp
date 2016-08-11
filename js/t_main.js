@@ -21,7 +21,6 @@ function pic_switchsize(){
 	}
 }
 
-
 //check route & lego cost
 var start, end, line_s, line_e, station_s, station_e;
 var change_line = [[0, [108203], [110303], 0, [109508]], [[203108], 0, [206309, 209305], [205405, 211410], [208511]], [[303110], [309206, 305209], 0, [304407, 310404], [307512]], [0, [405205, 410211], [407304, 404310], 0, [406509]], [[508109], [511208], [512307], [509406], 0]];
@@ -133,3 +132,10 @@ function lego_refresh(obj){
 
 	window.location = tmp_str;
 }
+
+//lego exchange
+function exchange_lego(team_a, team_b){
+	document.getElementById("lego_exchange").innerText = "和第" + team_a.toString() + "組交易";
+	document.getElementById("team_numbers").innerHTML = "<?php $team=" + team_a.toString() + "; ?><?php $team2=" + team_b.toString() + "; ?>";
+}
+
