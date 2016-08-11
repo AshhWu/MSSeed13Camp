@@ -116,9 +116,10 @@ function mrt_route(route, count){
 function lego_refresh(obj){
 	var n = parseInt(obj.id[obj.id.length-1]);
 	var rest_lego;
+	var tmp_list = [15, 77, 17, 20, 11];
 
 	for (j = 0; j < 5; j++){
-		rest_lego = 20 - cost_list[n-1][j];
+		rest_lego = tmp_list[j] - cost_list[n-1][j];
 		document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
 	}
 
