@@ -135,7 +135,7 @@ function lego_refresh(obj){
 
 //lego exchange
 function exchange_lego(team_a, team_b){
-	document.getElementById("lego_exchange").innerText = "和第" + team_a.toString() + "組交易";
-	document.getElementById("team_numbers").innerHTML = "<?php $team=" + team_a.toString() + "; ?><?php $team2=" + team_b.toString() + "; ?>";
+	//document.getElementById("lego_exchange").innerText = "和第" + team_a.toString() + "組交易";
+	//document.getElementById("team_numbers").innerHTML = "<?php $team=" + team_a.toString() + "; ?><?php $team2=" + team_b.toString() + "; ?>";
 }
 
