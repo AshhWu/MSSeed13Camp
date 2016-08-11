@@ -44,7 +44,7 @@ $times = getAllTimes();
 foreach($times as $time)
 {
 	$time[3] += 1;
-	$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='1'");
+	$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='1'";
 	sqlcode($sql);
 }
 /**
