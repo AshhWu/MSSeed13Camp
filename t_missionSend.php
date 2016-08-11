@@ -56,7 +56,7 @@
             <div class="thumbnail">
                 <form id="form1" runat="server">
                     <input type='file' onchange="readURL(this);" />
-                    <img id="blah" src="png/clickToLoad.jpg" alt="your image" />
+                    <img id="blah" src="png/clickToLoad.jpg" height="260px" width="260px" alt="your image" />
                 </form>
                 <div class="caption">
                     <p><a class="btn btn-success" role="button" onClick="sendPic()">完成任務</a>
