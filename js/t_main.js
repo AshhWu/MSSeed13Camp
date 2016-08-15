@@ -128,9 +128,9 @@ function mrt_route(route, count){
 		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
 			result += mrt_value[route[l].toString()] + ' > ';
 			if (parseInt(route[l]/100) == 1)
-				cost[2] += Math.abs(route[l+1]%100 - route[l]%100);
+				cost[3] += Math.abs(route[l+1]%100 - route[l]%100);
 			else
-				cost[parseInt(route[l]/100) - 2] += Math.abs(route[l+1]%100 - route[l]%100);
+				cost[parseInt(route[l]/100) - 1] += Math.abs(route[l+1]%100 - route[l]%100);
 		}
 	}
 	result += mrt_value[route[l].toString()] + '</div>';
