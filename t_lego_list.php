@@ -20,7 +20,6 @@
 	<h5 class="w3-brown w3-padding w3-round-large">樂高</h5>
 	<section class="section2 w3-container">
 		<?php $team=1; ?>
-		<div id="lego1" class="w3-tag w3-orange"><p><?php echo getCubeNum($team, 1)?></p></div>
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo getCubeNum($team, 2)?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo getCubeNum($team, 3)?></p></div>
 		<div id="lego4" class="w3-tag w3-yellow"><p><?php echo getCubeNum($team, 4)?></p></div>
@@ -33,7 +32,6 @@
 	<ul class="w3-ul w3-hoverable">
 		<li class="w3-container">
 			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第2組</a>
-			<div class="w3-tag w3-orange"><p>18</p></div>
 			<div class="w3-tag w3-red"><p>25</p></div>
 			<div class="w3-tag w3-green"><p>13</p></div>
 			<div class="w3-tag w3-yellow"><p>16</p></div>
@@ -41,7 +39,6 @@
 		</li>
 		<li class="w3-container">
 			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第3組</a>
-			<div class="w3-tag w3-orange"><p>13</p></div>
 			<div class="w3-tag w3-red"><p>22</p></div>
 			<div class="w3-tag w3-green"><p>24</p></div>
 			<div class="w3-tag w3-yellow"><p>11</p></div>
@@ -49,7 +46,6 @@
 		</li>
 		<li class="w3-container">
 			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第4組</a>
-			<div class="w3-tag w3-orange"><p>26</p></div>
 			<div class="w3-tag w3-red"><p>15</p></div>
 			<div class="w3-tag w3-green"><p>20</p></div>
 			<div class="w3-tag w3-yellow"><p>23</p></div>

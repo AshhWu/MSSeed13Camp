@@ -31,15 +31,6 @@
 	<th>給我方</th>
 </tr>
 <tr>
-	<th><?php echo getCubeNum($team, 1)?></th>
-	<th class="w3-tag w3-orange"></th>
-	<th><input type="number" name="give_o"></th>
-	<th>|</th>
-	<th><?php echo getCubeNum($team2, 1)?></th>
-	<th class="w3-tag w3-orange"></th>
-	<th><input type="number" name="get_o"></th>
-</tr>
-<tr>
 	<th><?php echo getCubeNum($team, 2)?></th>
 	<th class="w3-tag w3-red"></th>
 	<th><input type="number" name="give_r"></th>

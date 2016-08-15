@@ -41,7 +41,6 @@
 	<h5 class="w3-brown w3-padding w3-round-large">樂高</h5>
 	<section class="section2 w3-container">
 		<?php $team=1; ?>
-		<div id="lego1" class="w3-tag w3-orange"><p><?php echo getCubeNum($team, 1)?></p></div>
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo getCubeNum($team, 2)?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo getCubeNum($team, 3)?></p></div>
 		<div id="lego4" class="w3-tag w3-yellow"><p><?php echo getCubeNum($team, 4)?></p></div>
