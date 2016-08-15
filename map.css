@@ -10,6 +10,7 @@ body {
 
 #map-picture {
 	border: 3px outset #696969;
+	width: 100%;
 }
 
 .stronghold {
