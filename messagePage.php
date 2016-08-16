@@ -34,7 +34,7 @@
   include "nav.php";
   ?>
   
-<div style="text-align:center">
+<div style="text-align:center" align="center">
 	<h1>Messages</h1>
 
 <?php
