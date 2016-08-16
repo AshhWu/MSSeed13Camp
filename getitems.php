@@ -45,6 +45,12 @@ function getMissions()
   return $items;
 }
 
+function getTimes()
+{
+  $items = getAllTimes();
+  return $items;
+}
+
 function prepareResource()
 {
   prepareResources();

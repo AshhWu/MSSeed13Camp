@@ -1,20 +1,3 @@
-/* nav */
-
-#sidemenu {
-	display: none;
-	right: 0;
-}
-
-	#sidemenu a {
-		font-size: 20px;
-		margin-top: 10px;
-		border-bottom: 3px solid;
-	}
-
-#topnav li {
-	width: 100%;
-}
-
 /* MRT */
 
 .middle_part {
@@ -116,25 +99,25 @@
 	display: inline-block;
 }
 
-/* lego_change */
+/* lego_exchange */
 
-#lego_change {
+#lego_exchange {
 	width: 300px;
 	margin: auto;
 	text-align: center;
 }
 
-#change_table {
+#exchange_table {
 	width: 350px;
 	margin: auto;
 	text-align: center;
 }
 
-#change_table input {
+#exchange_table input {
 	width: 50px;
 }
 
-#change_btn {
+#exchange_btn {
 	width: 100px;
 	margin: auto;
 }

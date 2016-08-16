@@ -1,32 +1,126 @@
+body {
+	background-color: #572105;
+}
+
 .map {
+	margin-top: 3em;
+	margin-bottom: 3em;
 	position: relative;
+}
+
+#map-picture {
+	border: 3px outset #696969;
+	width: 100%;
 }
 
 .stronghold {
 	position: absolute;
-	z-index: 2;
 }
 
-.glyphicon-map-marker {
-	font-size: 5vw;
+/* Popover */
+.popover {
+	color: #FFFFFF;
+	background: rgba(0, 0, 0, 0.6);
+	border: transparent;
 }
 
-.tooltip-inner {
-    text-align: left;
+/* Popover Header */
+.popover-title {
+	background: rgba(0, 0, 0, 0.3);
+	text-align:center;
 }
 
-#icon1 {
-	top: 78%;
-	left: 27%;
+/* Popover Arrow */
+.popover.top .arrow:after {
+	border-top-color: rgba(0, 0, 0, 0.3);
+}
+.popover.right .arrow:after {
+	border-right-color: rgba(0, 0, 0, 0.3);
+}
+.popover.bottom .arrow:after {
+	border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+.popover.right .arrow:after {
+	border-left-color: rgba(0, 0, 0, 0.3);
 }
 
-#icon2 {
-	top: 45%;
-	left: 22%;
+/* Strongholds */
+#icon1 {  /* 天使的眼淚 */
+	top: 84%;
+	left: 31%;
 }
-
-#icon3 {
+#icon2 {  /* 神仙山莊 */
+	top: 27%;
+	left: 75%;
+}
+#icon3 {  /* 霍格華茲學院 */
+	top: 66%;
+	left: 29%;
+}
+#icon4 {  /* 布布恰恰 */
+	top: 82%;
+	left: 61%;
+}
+#icon5 {  /* 精靈的礦坑 */
+	top: 15%;
+	left: 63%;
+}
+#icon6 {  /* Brandon工坊 */
+	top: 42%;
+	left: 74%;
+}
+#icon7 {  /* 烈焰火山 */
+	top: 56%;
+	left: 64%;
+}
+#icon8 {  /* 迷幻森林 */
+	top: 86%;
+	left: 74%;
+}
+#icon9 {  /* 陽光田園 */
+	top: 34%;
+	left: 57%;
+}
+#icon10 {  /* Steven加工廠 */
+	top: 68%;
+	left: 60%;
+}
+#icon11 {  /* 統一二山 */
+	top: 75%;
+	left: 82%;
+}
+#icon12 {  /* 皮卡丘發電廠 */
+	top: 60%;
+	left: 73%;
+}
+#icon13 {  /* 德克斯特的實驗室 */
+	top: 26%;
+	left: 85%;
+}
+#icon14 {  /* 彩虹獅動物園 */
+	top: 75%;
+	left: 73%;
+}
+#icon15 {  /* 鍊金小木屋 */
 	top: 62%;
-	left: 34%;
+	left: 80%;
+}
+#icon16 {  /* 千年神木 */
+	top: 54%;
+	left: 29%;
+}
+
+/* Stronghold icon */
+.map-marker-red {
+	width: 4vw;
+	-moz-filter: drop-shadow(5px 5px 5px #8B0000);
+	-webkit-filter: drop-shadow(5px 5px 5px #8B0000);
+	filter: drop-shadow(5px 5px 5px #8B0000);
+}
+.map-marker-green {
+	width: 4vw;
+	-moz-filter: drop-shadow(5px 5px 5px #556B2F);
+	-webkit-filter: drop-shadow(5px 5px 5px #556B2F);
+	filter: drop-shadow(5px 5px 5px #556B2F);
 }
 

@@ -15,6 +15,18 @@
 
 <!-- CSS Style -->
 <link rel="stylesheet" type="text/css" href="#">
+<style type="text/css">
+	table { margin-top: 0.75em;}
+
+	th { font-size: 1.2em; text-align: center; border: none 0px; padding-right: 15px;
+		background-color: #4CAF50;
+		color: white; }
+
+	td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
+	
+	tr:nth-child(even){background-color: #f2f2f2}
+</style>
+
 </head>
 
 <body>

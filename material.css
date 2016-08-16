@@ -1,49 +1,82 @@
-a.materials {
-    display: block;
-    margin:auto;
-    
+.nav-tabs {
+    margin-bottom: 0;
 }
 
-img {
-    width: 3em;
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd; 
+    border-bottom: 1px solid #ddd; 
+    padding: 0.5em;
 }
 
-.compose {
-    display:block;
-    margin:auto;
-}
-table {
-  margin: auto;
-  float:none;
-  margin-bottom: 30px;
- 
+.tab-pane {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    padding: 1em;
 }
 
-td {
-    text-align: left;
-    /*--word-wrap: break-word;*/
-    width: 5em;
-}
-
-
-.compose-title {
-    display: block;
-    clear: both;
-    text-align: center;
-    margin:auto;
+/* Block */
+.wrapper {   
+    border-radius: 30px;   
+    padding: 1em;
+    padding-bottom: 0.5em;
     position: relative;
-    float: none;
+}
+.raw-wrapper {
+    border: 0.5em solid white;
+    background: #73AD21;
+}
+.component-wrapper {
+    border: 0.5em solid white;
+    background: #F3F781;
+}
+.symbol-wrapper {
 }
 
-input {
-    width: 30px;
-    border: 0.3px solid #c1b3b3;
+/* Image */
+.icon-materials {
+    width: 100%;
+    height: 100%
+}
+.icon-components {
+    width: 100%;
+    height: 100%
+}
+.icon-equal {
+    margin-top: 0.5em;
+    height: 4em;
 }
 
-.ok-btn {
-    background-color: #0b68fd;
-    color: aliceblue;
-    text-align: center;
-    border-radius: 30px;
-    width: 30px;
+
+/* Number Count */
+.count {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-size: 2em;
 }
+.compose-count {
+    font-size: 1em;
+}
+.raw-count {
+    color: blue;
+}
+.component-count {
+    color: orange;
+}
+
+/* Name */
+.name {
+    padding-top: 0.5em;
+    font-weight: bold;
+    font-size: 1em;
+}
+.compose-name {
+    font-size: 0.9em;
+}
+
+.ok-button {
+    margin-top: 2em;
+}
+
+

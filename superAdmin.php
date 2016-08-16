@@ -414,7 +414,39 @@
 ?>
 	
 	<hr/>
-	
+	<h1>Time Table</h1>
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getTimes();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>據點:  </th>
+					<th>需要的時間:  </th>
+					<th>現在的時間:  </th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1 ]."</td>
+						<td>".$item[2 ]."</td>
+						<td>".$item[3 ]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
+
+	<form action="auto_add.php">
+		<input type="submit" value="Add time"/>
+	</form>
+
+	<hr/>
+
 	<h1>SQL</h1>
 	<form action="usesqlcode.php" method="post">
 		<table border="1">

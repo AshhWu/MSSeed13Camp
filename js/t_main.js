@@ -1,19 +1,4 @@
-
-
-var menu_open = 0;
-function menu_action(){
-	if (menu_open == 0){
-		document.getElementById("topnav").style.width = "50%";
-		document.getElementById("sidemenu").style.width = "50%";
-		document.getElementById("sidemenu").style.display = "block";
-		menu_open = 1;
-	} else {
-		document.getElementById("topnav").style.width = "100%";
-		document.getElementById("sidemenu").style.display = "none";
-		menu_open = 0;
-	}
-}
-
+// mrt picture size switch
 var pic_full = 0;
 var p;
 function pic_switchsize(){
@@ -36,77 +21,148 @@ function pic_switchsize(){
 	}
 }
 
-
 //check route & lego cost
-var start, end, line_s, line_e, station_s, station_e;
 var change_line = [[0, [108203], [110303], 0, [109508]], [[203108], 0, [206309, 209305], [205405, 211410], [208511]], [[303110], [309206, 305209], 0, [304407, 310404], [307512]], [0, [405205, 410211], [407304, 404310], 0, [406509]], [[508109], [511208], [512307], [509406], 0]];
-var result, cost, tmp1, tmp2, tmp3, tmp4, i, j, k;
+var change_point = [108, 110, 109, 206, 209, 205, 211, 208, 304, 310, 307, 406, 509, 512, 404, 407, 511, 410, 405, 305, 309, 508, 303, 203];
+var result, cost_list, tmp1, tmp2, tmp3, tmp4, count;
 function check_lego(){
+	var i, j, k, l;
 	document.getElementById("route_ul").innerHTML = "";
 	document.getElementById("route_list").style.display = "none";
 
+	var start, end, line_s, line_e;
 	start = parseInt(document.getElementById("sstation").value);
 	end = parseInt(document.getElementById("estation").value);
 	if (!Number.isInteger(start) || !Number.isInteger(end)){
 		alert("Error!");
 		return;
 	}
-
 	line_s = parseInt(start / 100);
 	line_e = parseInt(end / 100);
-	station_s = start % 100;
-	station_e = end % 100;
 
-	result = "";
-	if (line_s == line_e){
-		mrt_route([start, end]);
-	} else {
-		//change line *1
-		if (change_line[line_s-1][line_e-1] != 0)
-			for (i = 0; i < change_line[line_s-1][line_e-1].length; i++){
-				tmp1 = parseInt(change_line[line_s-1][line_e-1][i]/1000);
-				tmp2 = parseInt(change_line[line_s-1][line_e-1][i]%1000);
-				mrt_route([start, tmp1, tmp2, end]);
-			}
+	cost_list = [];
+	count = 0;
 
-		//change line *2
-		for (i = 1; i <= 5; i++)
-			if (i != line_s && i != line_e)
-				if (change_line[line_s-1][i-1] != 0 && change_line[i-1][line_e-1] != 0)
-					for (j = 0; j < change_line[line_s-1][i-1].length; j++){
-						tmp1 = parseInt(change_line[line_s-1][i-1][j]/1000);
-						tmp2 = parseInt(change_line[line_s-1][i-1][j]%1000);
-						for (k = 0; k < change_line[i-1][line_e-1].length; k++){
-							tmp3 = parseInt(change_line[i-1][line_e-1][k]/1000);
-							tmp4 = parseInt(change_line[i-1][line_e-1][k]%1000);
-							mrt_route([start, tmp1, tmp2, tmp3, tmp4, end]);
-						}
-					}
+	change_once(start, line_s, line_e, end);
+	change_twice(start, line_s, line_e, end);
+	l = change_point.length - 1;
+	var a = 0, b = 0;
+	for (i = 0; i < l; i++)
+		if (start == change_point[i])
+			a = change_point[l - i];
+	for (j = 0; j < l; j++)
+		if (end == change_point[j])
+			b = change_point[l - j];
 
+	if (a > 0){
+		change_once(a, parseInt(a/100), line_e, end);
+		change_twice(a, parseInt(a/100), line_e, end);
+		if (b > 0){
+			change_once(start, line_s, parseInt(b/100), b);
+			change_twice(start, line_s, parseInt(b/100), b);
+			change_once(a, parseInt(a/100), parseInt(b/100), b);
+			change_twice(a, parseInt(a/100), parseInt(b/100), b);
+		}
+	} else if (b > 0){
+		change_once(start, line_s, parseInt(b/100), b);
+		change_twice(start, line_s, parseInt(b/100), b);
 	}
+	
 
 	document.getElementById("route_list").style.display = "block";
 }
 
-var lego_color = ["orange", "red", "green", "yellow", "blue"];
-var mrt_value = {'100':'°Êª«¶é', '101':'¤ì¬]', '102':'¸UªÚªÀ°Ï', '103':'¸UªÚÂå°|', '104':'¨¯¥è', '105':'Åï¥ú', '106':'¤»±i²p', '107':'¬ì§Ş¤j¼Ó', '108':'¤j¦w', '109':'©¾§µ´_¿³', '110':'«n¨Ê´_¿³', '111':'¤¤¤s°ê¤¤', '112':'ªQ¤s¾÷³õ', '113':'¤jª½', '114':'¼C«n¸ô', '115':'¦è´ò', '116':'´äáY', '117':'¤å¼w', '118':'¤º´ò', '119':'¤j´ò¤½¶é', '120':'¸¬¬w', '121':'ªF´ò', '122':'«n´ä³nÅé¶é°Ï', '123':'«n´ä®iÄıÀ]', '226':'²H¤ô', '225':'¬õ¾ğªL', '224':'¦Ë³ò', '223':'Ãö´ç', '222':'©¾¸q', '221':'´_¿³±^', '220':'·s¥_§ë', '220':'¥_§ë', '219':'©_©¥', '218':'Ô§­ù©¤', '217':'¥ÛµP', '216':'©ú¼w', '215':'ªÛ¤s', '214':'¤hªL', '213':'¼C¼æ', '212':'¶ê¤s', '211':'¥ÁÅv¦è¸ô', '210':'Âù³s', '209':'¤¤¤s', '208':'¥x¥_¨®¯¸', '207':'¥x¤jÂå°|', '206':'¤¤¥¿¬ö©À°ó', '205':'ªFªù', '204':'¤j¦w´ËªL¤½¶é', '203':'¤j¦w', '202':'«H¸q¦w©M', '201':'¥x¥_101/¥@¶T', '200':'¶H¤s', '300':'ªQ¤s', '301':'«n¨Ê¤T¥Á', '302':'¥x¥_¤p¥¨³J', '303':'«n¨Ê´_¿³', '304':'ªQ¦¿«n¨Ê', '305':'¤¤¤s', '306':'¥_ªù', '307':'¦èªù', '308':'¤p«nªù', '309':'¤¤¥¿¬ö©À°ó', '310':'¥j«F', '311':'¥x¹q¤j¼Ó', '312':'¤½À]', '313':'¸U¶©', '314':'´º¬ü', '315':'¤j©WªL', '316':'¤C±i', '316':'¤pºÑ¼æ', '317':'·s©±°Ï¤½©Ò', '318':'·s©±', '400':'«n¶Õ¨¤', '401':'´º¦w', '402':'¥Ã¦w¥«³õ', '403':'³»·Ë', '404':'¥j«F', '405':'ªFªù', '406':'©¾§µ·s¥Í', '407':'ªQ¦¿«n¨Ê', '408':'¦æ¤Ñ®c', '409':'¤¤¤s°ê¤p', '410':'¥ÁÅv¦è¸ô', '411':'¤j¾ôÀY', '412':'¥x¥_¾ô', '413':'µæ¼d', '414':'¤T­«', '415':'¥ı¶Ş®c', '416':'ÀY«eÉÜ', '417':'·s²ø', '418':'»²¤j', '419':'¤¦»ñ', '420':'°jÀs', '412':'¤T­«°ê¤p', '413':'¤T©M°ê¤¤', '414':'®}¶×¤¤¾Ç', '415':'¤T¥Á°ª¤¤', '416':'Äª¬w', '523':'³»®H', '521':'¥Ã¹ç', '520':'¤g«°', '519':'®ü¤s', '518':'¨ÈªFÂå°|', '517':'©²¤¤', '516':'ªO¾ô', '515':'·s®H', '514':'¦¿¤l»A', '513':'Às¤s¦x', '512':'¦èªù', '511':'¥x¥_¨®¯¸', '510':'µ½¾É¦x', '509':'©¾§µ·s¥Í', '508':'©¾§µ´_¿³', '507':'©¾§µ´°¤Æ', '506':'°ê¤÷¬ö©ÀÀ]', '505':'¥«¬F©²', '504':'¥Ã¬K', '503':'«á¤s°ñ', '502':'©ø¶§', '501':'«n´ä', '500':'«n´ä®iÄıÀ]'};
-function mrt_route(route){
-	var cost = [0, 0, 0, 0, 0];
+function change_once(start, line_s, line_e, end){
 	var i;
+	if (line_s == line_e){
+		count++;
+		mrt_route([start, end], count);
+		return;
+	}
+	if (change_line[line_s-1][line_e-1] != 0)
+		for (i = 0; i < change_line[line_s-1][line_e-1].length; i++){
+			tmp1 = parseInt(change_line[line_s-1][line_e-1][i]/1000);
+			tmp2 = parseInt(change_line[line_s-1][line_e-1][i]%1000);
+			if (start == tmp1 || tmp2 == end)
+				continue;
+			else {
+				count++;
+				mrt_route([start, tmp1, tmp2, end], count);
+			}
+		}
+}
+
+function change_twice(start, line_s, line_e, end){
+	var i, j, k;
+	for (i = 1; i <= 5; i++)
+		if (i != line_s && i != line_e)
+			if (change_line[line_s-1][i-1] != 0 && change_line[i-1][line_e-1] != 0)
+				for (j = 0; j < change_line[line_s-1][i-1].length; j++){
+					tmp1 = parseInt(change_line[line_s-1][i-1][j]/1000);
+					tmp2 = parseInt(change_line[line_s-1][i-1][j]%1000);
+					if (start == tmp1 || tmp1 == end)
+						continue;
+					else
+						for (k = 0; k < change_line[i-1][line_e-1].length; k++){
+							tmp3 = parseInt(change_line[i-1][line_e-1][k]/1000);
+							tmp4 = parseInt(change_line[i-1][line_e-1][k]%1000);
+							if (tmp4 == end || tmp2 == tmp3)
+								continue;
+							else {
+								count++;
+								mrt_route([start, tmp1, tmp2, tmp3, tmp4, end], count);
+							}
+						}
+				}
+}
+
+
+var lego_color = ["orange", "red", "green", "yellow", "blue"];
+var mrt_value = {'100':'å‹•ç‰©åœ’', '101':'æœ¨æŸµ', '102':'è¬èŠ³ç¤¾å€', '103':'è¬èŠ³é†«é™¢', '104':'è¾›äº¥', '105':'éºŸå…‰', '106':'å…­å¼µçŠ', '107':'ç§‘æŠ€å¤§æ¨“', '108':'å¤§å®‰', '109':'å¿ å­å¾©èˆˆ', '110':'å—äº¬å¾©èˆˆ', '111':'ä¸­å±±åœ‹ä¸­', '112':'æ¾å±±æ©Ÿå ´', '113':'å¤§ç›´', '114':'åŠå—è·¯', '115':'è¥¿æ¹–', '116':'æ¸¯å¢˜', '117':'æ–‡å¾·', '118':'å…§æ¹–', '119':'å¤§æ¹–å…¬åœ’', '120':'è‘«æ´²', '121':'æ±æ¹–', '122':'å—æ¸¯è»Ÿé«”åœ’å€', '123':'å—æ¸¯å±•è¦½é¤¨', '226':'æ·¡æ°´', '225':'ç´…æ¨¹æ—', '224':'ç«¹åœ', '223':'é—œæ¸¡', '222':'å¿ ç¾©', '221':'å¾©èˆˆå´—', '220':'æ–°åŒ—æŠ•', '220':'åŒ—æŠ•', '219':'å¥‡å²©', '218':'å”­å“©å²¸', '217':'çŸ³ç‰Œ', '216':'æ˜å¾·', '215':'èŠå±±', '214':'å£«æ—', '213':'åŠæ½­', '212':'åœ“å±±', '211':'æ°‘æ¬Šè¥¿è·¯', '210':'é›™é€£', '209':'ä¸­å±±', '208':'å°åŒ—è»Šç«™', '207':'å°å¤§é†«é™¢', '206':'ä¸­æ­£ç´€å¿µå ‚', '205':'æ±é–€', '204':'å¤§å®‰æ£®æ—å…¬åœ’', '203':'å¤§å®‰', '202':'ä¿¡ç¾©å®‰å’Œ', '201':'å°åŒ—101/ä¸–è²¿', '200':'è±¡å±±', '300':'æ¾å±±', '301':'å—äº¬ä¸‰æ°‘', '302':'å°åŒ—å°å·¨è›‹', '303':'å—äº¬å¾©èˆˆ', '304':'æ¾æ±Ÿå—äº¬', '305':'ä¸­å±±', '306':'åŒ—é–€', '307':'è¥¿é–€', '308':'å°å—é–€', '309':'ä¸­æ­£ç´€å¿µå ‚', '310':'å¤äº­', '311':'å°é›»å¤§æ¨“', '312':'å…¬é¤¨', '313':'è¬éš†', '314':'æ™¯ç¾', '315':'å¤§åªæ—', '316':'ä¸ƒå¼µ', '316':'å°ç¢§æ½­', '317':'æ–°åº—å€å…¬æ‰€', '318':'æ–°åº—', '400':'å—å‹¢è§’', '401':'æ™¯å®‰', '402':'æ°¸å®‰å¸‚å ´', '403':'é ‚æºª', '404':'å¤äº­', '405':'æ±é–€', '406':'å¿ å­æ–°ç”Ÿ', '407':'æ¾æ±Ÿå—äº¬', '408':'è¡Œå¤©å®®', '409':'ä¸­å±±åœ‹å°', '410':'æ°‘æ¬Šè¥¿è·¯', '411':'å¤§æ©‹é ­', '412':'å°åŒ—æ©‹', '413':'èœå¯®', '414':'ä¸‰é‡', '415':'å…ˆå—‡å®®', '416':'é ­å‰åº„', '417':'æ–°èŠ', '418':'è¼”å¤§', '419':'ä¸¹é³³', '420':'è¿´é¾', '412':'ä¸‰é‡åœ‹å°', '413':'ä¸‰å’Œåœ‹ä¸­', '414':'å¾åŒ¯ä¸­å­¸', '415':'ä¸‰æ°‘é«˜ä¸­', '416':'è˜†æ´²', '523':'é ‚åŸ”', '521':'æ°¸å¯§', '520':'åœŸåŸ', '519':'æµ·å±±', '518':'äºæ±é†«é™¢', '517':'åºœä¸­', '516':'æ¿æ©‹', '515':'æ–°åŸ”', '514':'æ±Ÿå­ç¿ ', '513':'é¾å±±å¯º', '512':'è¥¿é–€', '511':'å°åŒ—è»Šç«™', '510':'å–„å°å¯º', '509':'å¿ å­æ–°ç”Ÿ', '508':'å¿ å­å¾©èˆˆ', '507':'å¿ å­æ•¦åŒ–', '506':'åœ‹çˆ¶ç´€å¿µé¤¨', '505':'å¸‚æ”¿åºœ', '504':'æ°¸æ˜¥', '503':'å¾Œå±±åŸ¤', '502':'æ˜†é™½', '501':'å—æ¸¯', '500':'å—æ¸¯å±•è¦½é¤¨'};
+function mrt_route(route, count){
+	var cost = [0, 0, 0, 0, 0];
+	var l, disable = 0;
 	result ='<li class="w3-container"><div class="w3-card-2 w3-purple w3-padding-small w3-round-large">'
 
-	for (i = 0; i < route.length-1; i++){
-		if (parseInt(route[i]/100) == parseInt(route[i+1]/100)){
-			result += mrt_value[route[i].toString()] + ' > ';
-			cost[parseInt(route[i]/100) - 1] += Math.abs(route[i+1]%100 - route[i]%100);
+	for (l = 0; l < route.length-1; l++){
+		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
+			result += mrt_value[route[l].toString()] + ' > ';
+			if (parseInt(route[l]/100) == 1)
+				cost[3] += Math.abs(route[l+1]%100 - route[l]%100);
+			else
+				cost[parseInt(route[l]/100) - 1] += Math.abs(route[l+1]%100 - route[l]%100);
 		}
 	}
-	result += mrt_value[route[i].toString()] + '</div>';
+	result += mrt_value[route[l].toString()] + '</div>';
 
-	for (i = 0; i < 5; i++){
-		result += '<div class="w3-tag w3-' + lego_color[i] + '"><p>' + cost[i] + '</p></div>'
+	for (l = 1; l < 5; l++){
+		result += '<div class="w3-tag w3-' + lego_color[l] + '"><p>' + cost[l] + '</p></div>'
+		if (cost[l] > document.getElementById("lego" + (l+1).toString()).innerText)
+			disable = 1;
 	}
-	result += '<button class="w3-btn w3-round w3-margin">«ö§ÚGo</button></li>';
+	if (disable == 1)
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-margin w3-teal w3-disabled">Legoä¸å¤ </button></li>';
+	else
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-margin w3-teal" onclick="lego_refresh(this)">æŒ‰æˆ‘Go</button></li>';
 
 	document.getElementById("route_ul").innerHTML += result;
+
+	cost_list.push(cost);
 }
+
+function lego_refresh(obj){
+	var n = parseInt(obj.id[obj.id.length-1]);
+	var rest_lego;
+	var tmp_str = 't_updateAllCube.php?team=1';
+
+	for (j = 1; j < 5; j++){
+		rest_lego = document.getElementById("lego" + (j+1).toString()).innerText - cost_list[n-1][j];
+		document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
+		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
+	}
+
+	document.getElementById("route_list").style.display = "none";
+
+	window.location = tmp_str;
+}
+
