@@ -67,8 +67,8 @@ function updateGroupResource($team, $value, $resource)
 {
 	$conn = connect();
 	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
-	$stmt = $conn->query($sql);
-	return $stmt->fetchAll(PDO::FETCH_NUM);
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
 }
 
 #sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
@@ -94,7 +94,7 @@ while($x <= 10)
 				$resourceItem = $Strongholds[$i - 1][5];
 				$preResource = getGroupAllResources($team);
 				$resourceValue += $preResource[0][$resourceItem];
-				updateGroupResource($team, $resourceValue, $resourceItem)
+				updateGroupResource($team, $resourceValue, $resourceItem);
 			}
 			else
 			{
