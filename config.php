@@ -27,9 +27,7 @@
 	function OpenConnection()  
     {
     	$connArr = connStrToArray(connstr);
-    	echo connArr[Data Source];
-    	echo connArr[Initial Catalog];
-    	echo connArr[User ID];
+
         try  
         {  
             $serverName = connArr[Data Source];  
