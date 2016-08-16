@@ -491,6 +491,7 @@
 ?>
 
 	<a href="auto_add.php" target=_new>自動加時頁面</a>
+	<a href="auto_reset.php" target=_new>Reset time</a>
 
           </div>
         </div>
