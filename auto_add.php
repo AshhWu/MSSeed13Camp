@@ -55,10 +55,26 @@ function getAllStrongholds()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getGroupAllResources($team)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM resource WHERE team='".$team."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+function updateGroupResource($team, $value, $resource)
+{
+	$conn = connect();
+	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 #sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
 echo "Start time" . date('h:i:s') . "<br>";
 $x = 1;
-while($x <= 20)
+while($x <= 10)
 {
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
@@ -66,12 +82,26 @@ while($x <= 20)
 	foreach($times as $time)
 	{
 		$i += 1;
-		//if($Strongholds[$i - 1][7] != "0")
-		//{
+		$team = $Strongholds[$i - 1][7];
+		if($team != "0")
+		{
 			$time[3] += 1;
-			$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
-			sqlcode($sql);
-		//}
+			if($time[3] >= $time[2])
+			{
+				$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
+				sqlcode($sql);
+				$resourceValue = $Strongholds[$i - 1][4];
+				$resourceItem = $Strongholds[$i - 1][5];
+				$preResource = getGroupAllResources($team);
+				$resourceValue += $preResource[0][$resourceItem];
+				updateGroupResource($team, $resourceValue, $resourceItem)
+			}
+			else
+			{
+				$sql = "UPDATE auto_time SET time_now='0' WHERE point='".$i."'";
+				sqlcode($sql);
+			}
+		}
 	}
 	//sleep(1);
 	$x += 1;
