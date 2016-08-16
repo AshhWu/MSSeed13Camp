@@ -27,6 +27,12 @@ function getResources()
   return $items;
 }
 
+function getGroupResources($team)
+{
+  $items = getGroupAllResources($team);
+  return $items;
+}
+
 function getMessages()
 {
   $items = getAllMessages();
