@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+  <html>
+  <body>
 <?php
 	
 	$connstr = getenv('SQLAZURECONNSTR_MS_TableConnectionString');
@@ -47,4 +50,5 @@
 
     OpenConnection();
 ?>
-
+ </body>
+ </html>
