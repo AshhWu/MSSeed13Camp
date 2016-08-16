@@ -5,7 +5,7 @@
 	
 	$connstr = getenv('SQLAZURECONNSTR_MS_TableConnectionString');
 
-	function connStrToArray($conn_str){
+	//function connStrToArray($conn_str){
  
     	// Initialize array.
     	$conn_array = array();
@@ -24,31 +24,31 @@
         	$conn_array[$temp[0]] = $temp[1];
     	}
  	
-    	return $conn_array;
-	}
+    	//return $conn_array;
+	//}
 
-	function OpenConnection()  
-    {  
-    	$connArr = connStrToArray(connstr);
+	//function OpenConnection()  
+    //{  
+    	$connArr = conn_array;
     	echo connArr[Data Source];
     	echo connArr[Initial Catalog];
     	echo connArr[User ID];
-        try  
-        {  
-            $serverName = connArr[Data Source];  
-            $connectionOptions = array("Database"=>connArr[Initial Catalog],  
-                "Uid"=>connArr[User ID], "PWD"=>connArr[Password]);  
-            $conn = sqlsrv_connect($serverName, $connectionOptions);  
-            if($conn == false)  
-                die(FormatErrors(sqlsrv_errors()));  
-        }  
-        catch(Exception $e)  
+        try
+        {
+            $serverName = connArr[Data Source];
+            $connectionOptions = array("Database"=>connArr[Initial Catalog],
+                "Uid"=>connArr[User ID], "PWD"=>connArr[Password]);
+            $conn = sqlsrv_connect($serverName, $connectionOptions);
+            if($conn == false)
+                die(FormatErrors(sqlsrv_errors()));
+        }
+        catch(Exception $e)
         {  
             echo("Error!");  
         }  
-    }
+    //}
 
-    OpenConnection();
+    //OpenConnection();
 ?>
  </body>
  </html>
