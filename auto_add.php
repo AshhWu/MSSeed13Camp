@@ -58,7 +58,7 @@ function getAllStrongholds()
 #sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
 echo "Start time" . date('h:i:s') . "<br>";
 $x = 1;
-while($x <= 10)
+while($x <= 20)
 {
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
@@ -73,7 +73,7 @@ while($x <= 10)
 			sqlcode($sql);
 		//}
 	}
-	sleep(1);
+	//sleep(1);
 	$x += 1;
 }
 echo "End time" . date('h:i:s') . "<br>";
