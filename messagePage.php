@@ -33,7 +33,9 @@
 <?php
   include "nav.php";
   ?>
-<h1>Messages</h1>
+  
+<div style="text-align:center">
+	<h1>Messages</h1>
 
 <?php
 	header('Cache-Control: no-cache');
@@ -61,6 +63,7 @@
 	}
 ?>
 
+</div>
 <!--
 <p>
 	<span style="font-size:14px;">11:50</span></p>
