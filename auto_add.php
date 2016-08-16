@@ -48,14 +48,20 @@ function getAllTimes()
 }
 
 #sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
-$times = getAllTimes();
-$i = 0;
-foreach($times as $time)
+$x = 1;
+while($x <= 100)
 {
-	$i += 1;
-	$time[3] += 1;
-	$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
-	sqlcode($sql);
+	$times = getAllTimes();
+	$i = 0;
+	foreach($times as $time)
+	{
+		$i += 1;
+		$time[3] += 1;
+		$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
+		sqlcode($sql);
+	}
+	sleep(1);
+	$x += 1;
 }
 /**
 	$items = getAllStrongholds();
@@ -75,6 +81,5 @@ foreach($times as $time)
 		}
 	}
 */
-header('Location: superAdmin.php');
 
 ?>
