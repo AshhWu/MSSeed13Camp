@@ -72,7 +72,7 @@ while($x <= 10)
 			sqlcode($sql);
 		}
 	}
-	echo $x" time done<br>";
+	echo $x." time done<br>";
 	sleep(1);
 	$x += 1;
 }
