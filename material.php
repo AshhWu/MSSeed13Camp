@@ -30,7 +30,22 @@
       <div id="raw" class="tab-pane fade in active">
         <div class="row">
           <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count">3</div>
+            <div class="count raw-count">
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	#prepareResource();
+	$items = getGroupResources('A');
+	if(!empty($items))
+	{
+		foreach($items as $item)
+		{
+			echo $item[2];
+		}
+	}
+?>
+			</div>
             <img src="png/s_raw/magic_powder.png" class="img-responsive icon-materials" alt="魔法粉末">
             <p class="name raw-name text-center">魔法粉末</p>
           </div>
