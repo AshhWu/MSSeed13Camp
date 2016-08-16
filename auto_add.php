@@ -47,19 +47,32 @@ function getAllTimes()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getAllStrongholds()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM stronghold";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 #sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
 $x = 1;
-while($x <= 100)
+while($x <= 10)
 {
 	$times = getAllTimes();
+	$Strongholds = getAllStrongholds();
 	$i = 0;
 	foreach($times as $time)
 	{
 		$i += 1;
-		$time[3] += 1;
-		$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
-		sqlcode($sql);
+		if($Strongholds[$i][7] != "0")
+		{
+			$time[3] += 1;
+			$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
+			sqlcode($sql);
+		}
 	}
+	echo $x" time done<br>";
 	sleep(1);
 	$x += 1;
 }
