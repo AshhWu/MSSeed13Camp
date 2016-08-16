@@ -23,7 +23,7 @@
   include "nav.php";
   ?>
 
-<div style="text-align:center">
+<div style="text-align:center" align="center">
 	<h1>Mission</h1><br>
 	<form action="getMission.php" method="post">
 		Code: <input type="text" name="code">
