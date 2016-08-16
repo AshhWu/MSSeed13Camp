@@ -490,9 +490,7 @@
 	}
 ?>
 
-	<form action="auto_add.php">
-		<input type="submit" value="Add time"/>
-	</form>
+	<a href="auto_add.php" target=_new>自動加時頁面</a>
 
           </div>
         </div>
