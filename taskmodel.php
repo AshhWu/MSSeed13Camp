@@ -49,7 +49,7 @@ function getAllResources()
 function getGroupAllResources($team)
 {
 	$conn = connect();
-	$sql = "SELECT * FROM resource WHERE team='A'";
+	$sql = "SELECT * FROM resource WHERE team='".$team."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -90,6 +90,14 @@ function getAllMessages()
 {
 	$conn = connect();
 	$sql = "SELECT * FROM message";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+function updateGroupResource($team, $value, $resource)
+{
+	$conn = connect();
+	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
