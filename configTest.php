@@ -2,7 +2,7 @@
   <html>
   <body>
 <?php
-	require_once "getitems.php";
+	require_once "config.php";
 	OpenConnection();
 ?>
  </body>
