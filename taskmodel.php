@@ -46,6 +46,14 @@ function getAllResources()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getGroupAllResources($team)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM resource WHERE team='A'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllStrongholds()
 {
 	$conn = connect();
