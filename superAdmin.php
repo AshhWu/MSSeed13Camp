@@ -50,15 +50,24 @@
 	td { padding: 0.25em 2em 0.25em 0em; border: 0 none; }
 	
 	tr:nth-child(even){background-color: #f2f2f2}
-
 	</style>
+	
+	<link rel="stylesheet" type="text/css" href="rules.css">
 </head>
 
 <body>
 <?php
   include "nav.php";
   ?>
-	<h1>Account</h1>
+
+  <div class="container">
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-success">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+          <h4 class="panel-title">Account</h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-body">
 
 <?php
 	header('Cache-Control: no-cache');
@@ -100,8 +109,16 @@
 		</table>
 		<input type="submit" value="Add item"/>
 	</form>
-	<hr/>	
-	<h1>Resource</h1>
+			  
+		  </div>
+        </div>
+      </div>
+      <div class="panel panel-info">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+          <h4 class="panel-title">Resource</h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">
 
 <?php
 	header('Cache-Control: no-cache');
@@ -265,8 +282,12 @@
 		<input type="submit" value="Add resource"/>
 	</form>
 -->
+		  
+          </div>
+        </div>
+      </div>
+	
 
-	<hr/>
 	
 	<h1>Message</h1>
 
