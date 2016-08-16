@@ -441,6 +441,10 @@
 	}
 ?>
 
+	<form action="auto_add.php">
+		<input type="submit" value="Add time"/>
+	</form>
+
 	<hr/>
 
 	<h1>SQL</h1>

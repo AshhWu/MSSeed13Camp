@@ -21,75 +21,104 @@ function pic_switchsize(){
 	}
 }
 
-
 //check route & lego cost
-var start, end, line_s, line_e, station_s, station_e;
 var change_line = [[0, [108203], [110303], 0, [109508]], [[203108], 0, [206309, 209305], [205405, 211410], [208511]], [[303110], [309206, 305209], 0, [304407, 310404], [307512]], [0, [405205, 410211], [407304, 404310], 0, [406509]], [[508109], [511208], [512307], [509406], 0]];
-var result, cost_list, tmp1, tmp2, tmp3, tmp4, i, j, k, count;
+var change_point = [108, 110, 109, 206, 209, 205, 211, 208, 304, 310, 307, 406, 509, 512, 404, 407, 511, 410, 405, 305, 309, 508, 303, 203];
+var result, cost_list, tmp1, tmp2, tmp3, tmp4, count;
 function check_lego(){
+	var i, j, k, l;
 	document.getElementById("route_ul").innerHTML = "";
 	document.getElementById("route_list").style.display = "none";
 
+	var start, end, line_s, line_e;
 	start = parseInt(document.getElementById("sstation").value);
 	end = parseInt(document.getElementById("estation").value);
 	if (!Number.isInteger(start) || !Number.isInteger(end)){
 		alert("Error!");
 		return;
 	}
-
 	line_s = parseInt(start / 100);
 	line_e = parseInt(end / 100);
-	station_s = start % 100;
-	station_e = end % 100;
 
 	cost_list = [];
 	count = 0;
 
-	if (line_s == line_e){
-		count++;
-		mrt_route([start, end], count);
-		//change line *2
-		for (i = 1; i <= 5; i++)
-			if (i != line_s && change_line[line_s-1][i-1] != 0 && change_line[line_s-1][i-1].length == 2){
-				for (j = 0; j <= 1; j++){
-					tmp1 = parseInt(change_line[line_s-1][i-1][j]/1000);
-					tmp2 = parseInt(change_line[line_s-1][i-1][j]%1000);
-					tmp3 = parseInt(change_line[i-1][line_e-1][1-j]/1000);
-					tmp4 = parseInt(change_line[i-1][line_e-1][1-j]%1000);
-					count++;
-					mrt_route([start, tmp1, tmp2, tmp3, tmp4, end], count);
-				}
-			}
-	} else {
-		//change line *1
-		if (change_line[line_s-1][line_e-1] != 0)
-			for (i = 0; i < change_line[line_s-1][line_e-1].length; i++){
-				tmp1 = parseInt(change_line[line_s-1][line_e-1][i]/1000);
-				tmp2 = parseInt(change_line[line_s-1][line_e-1][i]%1000);
-				count++;
-				mrt_route([start, tmp1, tmp2, end], count);
-			}
-		//change line *2
-		for (i = 1; i <= 5; i++)
-			if (i != line_s && i != line_e)
-				if (change_line[line_s-1][i-1] != 0 && change_line[i-1][line_e-1] != 0)
-					for (j = 0; j < change_line[line_s-1][i-1].length; j++){
-						tmp1 = parseInt(change_line[line_s-1][i-1][j]/1000);
-						tmp2 = parseInt(change_line[line_s-1][i-1][j]%1000);
-						for (k = 0; k < change_line[i-1][line_e-1].length; k++){
-							tmp3 = parseInt(change_line[i-1][line_e-1][k]/1000);
-							tmp4 = parseInt(change_line[i-1][line_e-1][k]%1000);
-							count++;
-							mrt_route([start, tmp1, tmp2, tmp3, tmp4, end], count);
-						}
-					}
+	change_once(start, line_s, line_e, end);
+	change_twice(start, line_s, line_e, end);
+	l = change_point.length - 1;
+	var a = 0, b = 0;
+	for (i = 0; i < l; i++)
+		if (start == change_point[i])
+			a = change_point[l - i];
+	for (j = 0; j < l; j++)
+		if (end == change_point[j])
+			b = change_point[l - j];
+
+	if (a > 0){
+		change_once(a, parseInt(a/100), line_e, end);
+		change_twice(a, parseInt(a/100), line_e, end);
+		if (b > 0){
+			change_once(start, line_s, parseInt(b/100), b);
+			change_twice(start, line_s, parseInt(b/100), b);
+			change_once(a, parseInt(a/100), parseInt(b/100), b);
+			change_twice(a, parseInt(a/100), parseInt(b/100), b);
+		}
+	} else if (b > 0){
+		change_once(start, line_s, parseInt(b/100), b);
+		change_twice(start, line_s, parseInt(b/100), b);
 	}
+	
 
 	document.getElementById("route_list").style.display = "block";
 }
 
+function change_once(start, line_s, line_e, end){
+	var i;
+	if (line_s == line_e){
+		count++;
+		mrt_route([start, end], count);
+		return;
+	}
+	if (change_line[line_s-1][line_e-1] != 0)
+		for (i = 0; i < change_line[line_s-1][line_e-1].length; i++){
+			tmp1 = parseInt(change_line[line_s-1][line_e-1][i]/1000);
+			tmp2 = parseInt(change_line[line_s-1][line_e-1][i]%1000);
+			if (start == tmp1 || tmp2 == end)
+				continue;
+			else {
+				count++;
+				mrt_route([start, tmp1, tmp2, end], count);
+			}
+		}
+}
+
+function change_twice(start, line_s, line_e, end){
+	var i, j, k;
+	for (i = 1; i <= 5; i++)
+		if (i != line_s && i != line_e)
+			if (change_line[line_s-1][i-1] != 0 && change_line[i-1][line_e-1] != 0)
+				for (j = 0; j < change_line[line_s-1][i-1].length; j++){
+					tmp1 = parseInt(change_line[line_s-1][i-1][j]/1000);
+					tmp2 = parseInt(change_line[line_s-1][i-1][j]%1000);
+					if (start == tmp1 || tmp1 == end)
+						continue;
+					else
+						for (k = 0; k < change_line[i-1][line_e-1].length; k++){
+							tmp3 = parseInt(change_line[i-1][line_e-1][k]/1000);
+							tmp4 = parseInt(change_line[i-1][line_e-1][k]%1000);
+							if (tmp4 == end || tmp2 == tmp3)
+								continue;
+							else {
+								count++;
+								mrt_route([start, tmp1, tmp2, tmp3, tmp4, end], count);
+							}
+						}
+				}
+}
+
+
 var lego_color = ["orange", "red", "green", "yellow", "blue"];
-var mrt_value = {'100':'動物園', '101':'木柵', '102':'萬芳社區', '103':'萬芳醫院', '104':'辛亥', '105':'麟光', '106':'六張犁', '107':'科技大樓', '108':'大安(1)', '109':'忠孝復興(1)', '110':'南京復興(1)', '111':'中山國中', '112':'松山機場', '113':'大直', '114':'劍南路', '115':'西湖', '116':'港墘', '117':'文德', '118':'內湖', '119':'大湖公園', '120':'葫洲', '121':'東湖', '122':'南港軟體園區', '123':'南港展覽館', '226':'淡水', '225':'紅樹林', '224':'竹圍', '223':'關渡', '222':'忠義', '221':'復興崗', '220':'新北投', '220':'北投', '219':'奇岩', '218':'唭哩岸', '217':'石牌', '216':'明德', '215':'芝山', '214':'士林', '213':'劍潭', '212':'圓山', '211':'民權西路(2)', '210':'雙連', '209':'中山(2)', '208':'台北車站(2)', '207':'台大醫院', '206':'中正紀念堂(2)', '205':'東門(2)', '204':'大安森林公園', '203':'大安(2)', '202':'信義安和', '201':'台北101/世貿', '200':'象山', '300':'松山', '301':'南京三民', '302':'台北小巨蛋', '303':'南京復興(3)', '304':'松江南京(3)', '305':'中山(3)', '306':'北門', '307':'西門(3)', '308':'小南門', '309':'中正紀念堂(3)', '310':'古亭(3)', '311':'台電大樓', '312':'公館', '313':'萬隆', '314':'景美', '315':'大坪林', '316':'七張', '316':'小碧潭', '317':'新店區公所', '318':'新店', '400':'南勢角', '401':'景安', '402':'永安市場', '403':'頂溪', '404':'古亭(4)', '405':'東門(4)', '406':'忠孝新生(4)', '407':'松江南京(4)', '408':'行天宮', '409':'中山國小', '410':'民權西路(4)', '411':'大橋頭', '412':'台北橋', '413':'菜寮', '414':'三重', '415':'先嗇宮', '416':'頭前庄', '417':'新莊', '418':'輔大', '419':'丹鳳', '420':'迴龍', '412':'三重國小', '413':'三和國中', '414':'徐匯中學', '415':'三民高中', '416':'蘆洲', '523':'頂埔', '521':'永寧', '520':'土城', '519':'海山', '518':'亞東醫院', '517':'府中', '516':'板橋', '515':'新埔', '514':'江子翠', '513':'龍山寺', '512':'西門(5)', '511':'台北車站(5)', '510':'善導寺', '509':'忠孝新生(5)', '508':'忠孝復興(5)', '507':'忠孝敦化', '506':'國父紀念館', '505':'市政府', '504':'永春', '503':'後山埤', '502':'昆陽', '501':'南港', '500':'南港展覽館'};
+var mrt_value = {'100':'動物園', '101':'木柵', '102':'萬芳社區', '103':'萬芳醫院', '104':'辛亥', '105':'麟光', '106':'六張犁', '107':'科技大樓', '108':'大安', '109':'忠孝復興', '110':'南京復興', '111':'中山國中', '112':'松山機場', '113':'大直', '114':'劍南路', '115':'西湖', '116':'港墘', '117':'文德', '118':'內湖', '119':'大湖公園', '120':'葫洲', '121':'東湖', '122':'南港軟體園區', '123':'南港展覽館', '226':'淡水', '225':'紅樹林', '224':'竹圍', '223':'關渡', '222':'忠義', '221':'復興崗', '220':'新北投', '220':'北投', '219':'奇岩', '218':'唭哩岸', '217':'石牌', '216':'明德', '215':'芝山', '214':'士林', '213':'劍潭', '212':'圓山', '211':'民權西路', '210':'雙連', '209':'中山', '208':'台北車站', '207':'台大醫院', '206':'中正紀念堂', '205':'東門', '204':'大安森林公園', '203':'大安', '202':'信義安和', '201':'台北101/世貿', '200':'象山', '300':'松山', '301':'南京三民', '302':'台北小巨蛋', '303':'南京復興', '304':'松江南京', '305':'中山', '306':'北門', '307':'西門', '308':'小南門', '309':'中正紀念堂', '310':'古亭', '311':'台電大樓', '312':'公館', '313':'萬隆', '314':'景美', '315':'大坪林', '316':'七張', '316':'小碧潭', '317':'新店區公所', '318':'新店', '400':'南勢角', '401':'景安', '402':'永安市場', '403':'頂溪', '404':'古亭', '405':'東門', '406':'忠孝新生', '407':'松江南京', '408':'行天宮', '409':'中山國小', '410':'民權西路', '411':'大橋頭', '412':'台北橋', '413':'菜寮', '414':'三重', '415':'先嗇宮', '416':'頭前庄', '417':'新莊', '418':'輔大', '419':'丹鳳', '420':'迴龍', '412':'三重國小', '413':'三和國中', '414':'徐匯中學', '415':'三民高中', '416':'蘆洲', '523':'頂埔', '521':'永寧', '520':'土城', '519':'海山', '518':'亞東醫院', '517':'府中', '516':'板橋', '515':'新埔', '514':'江子翠', '513':'龍山寺', '512':'西門', '511':'台北車站', '510':'善導寺', '509':'忠孝新生', '508':'忠孝復興', '507':'忠孝敦化', '506':'國父紀念館', '505':'市政府', '504':'永春', '503':'後山埤', '502':'昆陽', '501':'南港', '500':'南港展覽館'};
 function mrt_route(route, count){
 	var cost = [0, 0, 0, 0, 0];
 	var l, disable = 0;
@@ -98,12 +127,15 @@ function mrt_route(route, count){
 	for (l = 0; l < route.length-1; l++){
 		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
 			result += mrt_value[route[l].toString()] + ' > ';
-			cost[parseInt(route[l]/100) - 1] += Math.abs(route[l+1]%100 - route[l]%100);
+			if (parseInt(route[l]/100) == 1)
+				cost[3] += Math.abs(route[l+1]%100 - route[l]%100);
+			else
+				cost[parseInt(route[l]/100) - 1] += Math.abs(route[l+1]%100 - route[l]%100);
 		}
 	}
 	result += mrt_value[route[l].toString()] + '</div>';
 
-	for (l = 0; l < 5; l++){
+	for (l = 1; l < 5; l++){
 		result += '<div class="w3-tag w3-' + lego_color[l] + '"><p>' + cost[l] + '</p></div>'
 		if (cost[l] > document.getElementById("lego" + (l+1).toString()).innerText)
 			disable = 1;
@@ -123,7 +155,7 @@ function lego_refresh(obj){
 	var rest_lego;
 	var tmp_str = 't_updateAllCube.php?team=1';
 
-	for (j = 0; j < 5; j++){
+	for (j = 1; j < 5; j++){
 		rest_lego = document.getElementById("lego" + (j+1).toString()).innerText - cost_list[n-1][j];
 		document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
@@ -133,3 +165,4 @@ function lego_refresh(obj){
 
 	window.location = tmp_str;
 }
+
