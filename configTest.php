@@ -3,7 +3,7 @@
 <body>
 
 <?php
-$connstr = getenv('SQLAZURECONNSTR_db_conf');
+$connstr = getenv('SQLAZURECONNSTR_MS_TableConnectionString');
 echo $connstr;
 echo "Hello";
 ?>
