@@ -79,15 +79,19 @@ while($x <= 10)
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
 	$i = 0;
+	echo "CP1";
 	foreach($times as $time)
 	{
+		echo "CP2";
 		$i += 1;
 		$team = $Strongholds[$i - 1][7];
 		if($team != "0")
 		{
+			echo "CP3";
 			$time[3] += 1;
 			if($time[3] >= $time[2])
 			{
+				echo "CP4";
 				$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
 				sqlcode($sql);
 				$resourceValue = $Strongholds[$i - 1][4];
