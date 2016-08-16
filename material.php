@@ -36,10 +36,13 @@
 	header('Pragma: no-cache');
 	require_once "getitems.php";
 	#prepareResource();
-	$item = getGroupResources('A');
-	if(!empty($item))
+	$items = getGroupResources('A');
+	if(!empty($items))
 	{
-		echo $item[2];
+		foreach($items as $item)
+		{
+			echo $item[2];
+		}
 	}
 ?>
 			</div>
