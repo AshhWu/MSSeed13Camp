@@ -98,8 +98,8 @@ function updateGroupResource($team, $value, $resource)
 {
 	$conn = connect();
 	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
-	$stmt = $conn->query($sql);
-	return $stmt->fetchAll(PDO::FETCH_NUM);
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
 }
 
 function addAccount($account, $password)
