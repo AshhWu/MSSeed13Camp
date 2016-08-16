@@ -56,6 +56,7 @@ function getAllStrongholds()
 }
 
 #sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
+echo "Start time" . date('h:i:s') . "<br>";
 $x = 1;
 while($x <= 10)
 {
@@ -65,17 +66,17 @@ while($x <= 10)
 	foreach($times as $time)
 	{
 		$i += 1;
-		if($Strongholds[$i][7] != "0")
+		if($Strongholds[$i - 1][7] != "0")
 		{
 			$time[3] += 1;
 			$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
 			sqlcode($sql);
 		}
 	}
-	echo $x." time done<br>";
 	sleep(1);
 	$x += 1;
 }
+echo "End time" . date('h:i:s') . "<br>";
 /**
 	$items = getAllStrongholds();
 	foreach($items as $item)
