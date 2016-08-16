@@ -288,10 +288,10 @@
       </div>
 
       <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
           <h4 class="panel-title">Message</h4>
         </div>
-        <div id="collapse2" class="panel-collapse collapse">
+        <div id="collapse3" class="panel-collapse collapse">
           <div class="panel-body">	
 
 <?php
@@ -354,10 +354,10 @@
       </div>
 
       <div class="panel panel-info">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
           <h4 class="panel-title">Stronghold</h4>
         </div>
-        <div id="collapse1" class="panel-collapse collapse in">
+        <div id="collapse4" class="panel-collapse collapse in">
           <div class="panel-body">
 
 	<form action="createStronghold.php" method="post">
@@ -406,10 +406,10 @@
       </div>
 
 	  <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
           <h4 class="panel-title">Mission</h4>
         </div>
-        <div id="collapse2" class="panel-collapse collapse">
+        <div id="collapse5" class="panel-collapse collapse">
           <div class="panel-body">	
 		  
 	<form action="createMission.php" method="post">
@@ -458,10 +458,10 @@
       </div>
 
       <div class="panel panel-info">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
           <h4 class="panel-title">Time Table</h4>
         </div>
-        <div id="collapse1" class="panel-collapse collapse in">
+        <div id="collapse6" class="panel-collapse collapse in">
           <div class="panel-body">
 
 <?php
@@ -499,10 +499,10 @@
       </div>
 
 	  <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
           <h4 class="panel-title">SQL</h4>
         </div>
-        <div id="collapse2" class="panel-collapse collapse">
+        <div id="collapse7" class="panel-collapse collapse">
           <div class="panel-body">	
 		  
 	<form action="usesqlcode.php" method="post">
