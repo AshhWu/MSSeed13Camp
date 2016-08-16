@@ -66,12 +66,12 @@ while($x <= 10)
 	foreach($times as $time)
 	{
 		$i += 1;
-		if($Strongholds[$i - 1][7] != "0")
-		{
+		//if($Strongholds[$i - 1][7] != "0")
+		//{
 			$time[3] += 1;
 			$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
 			sqlcode($sql);
-		}
+		//}
 	}
 	sleep(1);
 	$x += 1;
