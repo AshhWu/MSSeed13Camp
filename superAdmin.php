@@ -286,10 +286,13 @@
           </div>
         </div>
       </div>
-	
 
-	
-	<h1>Message</h1>
+      <div class="panel panel-success">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+          <h4 class="panel-title">Message</h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">	
 
 <?php
 	header('Cache-Control: no-cache');
@@ -346,9 +349,17 @@
 		<input type="submit" value="Add message"/>
 	</form>
 	
-	<hr/>
+          </div>
+        </div>
+      </div>
 
-	<h1>Stronghold</h1>
+      <div class="panel panel-info">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+          <h4 class="panel-title">Stronghold</h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-body">
+
 	<form action="createStronghold.php" method="post">
 		<input type="submit" value="Create Stronghold Table"/>
 	</form>
@@ -390,9 +401,17 @@
 	}
 ?>
 
-	<hr/>
+          </div>
+        </div>
+      </div>
 
-	<h1>Mission</h1>
+	  <div class="panel panel-success">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+          <h4 class="panel-title">Mission</h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">	
+		  
 	<form action="createMission.php" method="post">
 		<input type="submit" value="Create Mission Table"/>
 	</form>
@@ -434,8 +453,17 @@
 	}
 ?>
 	
-	<hr/>
-	<h1>Time Table</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel-info">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+          <h4 class="panel-title">Time Table</h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-body">
+
 <?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
@@ -466,9 +494,17 @@
 		<input type="submit" value="Add time"/>
 	</form>
 
-	<hr/>
+          </div>
+        </div>
+      </div>
 
-	<h1>SQL</h1>
+	  <div class="panel panel-success">
+        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+          <h4 class="panel-title">SQL</h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">	
+		  
 	<form action="usesqlcode.php" method="post">
 		<table border="1">
 			<tr>
@@ -478,7 +514,11 @@
 		</table>
 		<input type="submit" value="Send SQL"/>
 	</form>
-
+          </div>
+        </div>
+      </div>
+      </div>
+	</div>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
