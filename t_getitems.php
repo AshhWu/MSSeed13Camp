@@ -2,17 +2,15 @@
 
 include_once 'taskmodel.php';
  
-function getAllTaipei()
-{
-	$conn = connect();
-	$sql = "SELECT * FROM taipeiRun";
-	$stmt = $conn->query($sql);
-	return $stmt->fetchAll(PDO::FETCH_NUM);
-}
-
 function getTaipeiRun()
 {
   $items = getAllTaipei();
+  return $items;
+}
+
+function getMissionPics()
+{
+  $items = getAllPics();
   return $items;
 }
 
@@ -24,5 +22,23 @@ function getCubeNum($team, $cubeColor){
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items[0][$cubeColorR];
 }
+
+function getAllTaipei()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM taipeiRun";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+function getAllPics()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM t_missionReport";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+
 
 ?>
