@@ -36,14 +36,10 @@
     ?>
 
     <h1>taipeiRun</h1>
-
     <?php
         header('Cache-Control: no-cache');
         header('Pragma: no-cache');
         require_once "t_getitems.php";
-        $items = getTaipeiRun();
-        if(!empty($items))
-        {
             echo "<table border='1'>
                     <tr>
                         <th>Team</th>
@@ -58,6 +54,9 @@
                         <th>mission</th>
                         <th>Pass</th>
                     </tr>";
+        $items = getTaipeiRun();
+        if(!empty($items))
+        {
             foreach($items as $item)
             {
                 echo 	"<tr>
@@ -125,16 +124,16 @@
         header('Cache-Control: no-cache');
         header('Pragma: no-cache');
         require_once "t_getitems.php";
-        $items = getMissionPics();
-        if(!empty($items))
-        {
-            echo "<table border='1'>
+        echo "<table border='1'>
                     <tr>
                         <th>id</th>
                         <th>team</th>
                         <th>mission</th>
                         <th>picture</th>
                     </tr>";
+        $items = getMissionPics();
+        if(!empty($items))
+        {
             foreach($items as $item)
             {
                 echo 	"<tr>
