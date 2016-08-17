@@ -55,10 +55,10 @@ function getAllStrongholds()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
-function getGroupAllResources($team)
+function getGroupAllResources($resource, $team)
 {
 	$conn = connect();
-	$sql = "SELECT * FROM resource WHERE team='".$team."'";
+	$sql = "SELECT ".$resource." FROM resource WHERE team='".$team."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -96,8 +96,8 @@ while($x <= 10)
 				sqlcode($sql);
 				$resourceValue = $Strongholds[$i - 1][4];
 				$resourceItem = $Strongholds[$i - 1][5];
-				$preResource = getGroupAllResources($team);
-				$resourceValue += $preResource[0][$resourceItem];
+				$preResource = getGroupAllResources($resourceItem, $team);
+				$resourceValue += $preResource[0][0];
 				updateGroupResource($team, $resourceValue, $resourceItem);
 			}
 			else
