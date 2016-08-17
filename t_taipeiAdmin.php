@@ -119,7 +119,8 @@
 
         <hr/>
     
-<!--MissionPics-->    
+<!--MissionPics--> 
+    <h1>missionPics</h1>
     <?php
         header('Cache-Control: no-cache');
         header('Pragma: no-cache');
