@@ -15,13 +15,15 @@
 	
 # this file automatically execute by windows every minute
 
+
+$host = "ap-cdbr-azure-east-c.cloudapp.net";
+$user = "b37f8ddf38d21d";
+$pwd = "1e72c81e";
+$db = "stronghold";
+	
 function connect()
 {
 	// DB connection info
-	$host = "ap-cdbr-azure-east-c.cloudapp.net";
-	$user = "b37f8ddf38d21d";
-	$pwd = "1e72c81e";
-	$db = "stronghold";
 	try{
 		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
