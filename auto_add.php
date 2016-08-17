@@ -15,13 +15,15 @@
 	
 # this file automatically execute by windows every minute
 
+
+$host = "ap-cdbr-azure-east-c.cloudapp.net";
+$user = "b37f8ddf38d21d";
+$pwd = "1e72c81e";
+$db = "stronghold";
+	
 function connect()
 {
 	// DB connection info
-	$host = "ap-cdbr-azure-east-c.cloudapp.net";
-	$user = "b37f8ddf38d21d";
-	$pwd = "1e72c81e";
-	$db = "stronghold";
 	try{
 		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -55,10 +57,10 @@ function getAllStrongholds()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
-function getGroupAllResources($team)
+function getGroupAllResources($resource, $team)
 {
 	$conn = connect();
-	$sql = "SELECT * FROM resource WHERE team='".$team."'";
+	$sql = "SELECT ".$resource." FROM resource WHERE team='".$team."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -96,8 +98,8 @@ while($x <= 10)
 				sqlcode($sql);
 				$resourceValue = $Strongholds[$i - 1][4];
 				$resourceItem = $Strongholds[$i - 1][5];
-				$preResource = getGroupAllResources($team);
-				$resourceValue += $preResource[0][$resourceItem];
+				$preResource = getGroupAllResources($resourceItem, $team);
+				$resourceValue += $preResource[0][0];
 				updateGroupResource($team, $resourceValue, $resourceItem);
 			}
 			else
