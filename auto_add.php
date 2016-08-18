@@ -65,6 +65,9 @@ function getGroupAllResources($resource, $team)
 function updateGroupResource($team, $value, $resource)
 {
 	$conn = connect();
+	echo "team:".$team."<br>";
+	echo "value:".$value."<br>";
+	echo "resource:".$resource."<br>";
 	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
@@ -94,7 +97,7 @@ while($x <= 10)
 				$resourceItem = $Strongholds[$i - 1][5];
 				echo "resourceItem:".$resourceItem."<br>";
 				$preResource = getGroupAllResources($resourceItem, $team);
-				echo "preResource:".$preResource."<br>";
+				echo "preResource:".$preResource[0][0]."<br>";
 				$resourceValue += $preResource[0][0];
 				echo "resourceValue(new):".$resourceValue."<br>";
 				updateGroupResource($team, $resourceValue, $resourceItem);
