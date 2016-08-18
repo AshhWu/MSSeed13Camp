@@ -74,7 +74,7 @@ function updateGroupResource($team, $value, $resource)
 #sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
 echo "Start time" . date('h:i:s') . "<br>";
 $x = 1;
-while($x <= 10)
+while($x <= 1)
 {
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
