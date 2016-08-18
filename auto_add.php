@@ -40,7 +40,9 @@ function sqlcode($sql)
 
 function getAllTimes()
 {
+	echo "CP2<br>";
 	$conn = connect();
+	echo "CP3<br>";
 	$sql = "SELECT * FROM auto_time";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
@@ -75,18 +77,16 @@ echo "Start time" . date('h:i:s') . "<br>";
 $x = 1;
 while($x <= 10)
 {
+	echo "CP1<br>";
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
 	$i = 0;
-	echo "CP1";
 	foreach($times as $time)
 	{
-		echo "CP2";
 		$i += 1;
 		$team = $Strongholds[$i - 1][7];
 		if($team != "0")
 		{
-			echo "CP3";
 			$time[3] += 1;
 			if($time[3] >= $time[2])
 			{
