@@ -89,15 +89,14 @@ while($x <= 10)
 			{
 				$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
 				sqlcode($sql);
-				echo "CP1<br>";
 				$resourceValue = $Strongholds[$i - 1][4];
-				echo "CP2<br>";
+				echo "resourceValue:".$resourceValue."<br>";
 				$resourceItem = $Strongholds[$i - 1][5];
-				echo "CP3<br>";
+				echo "resourceItem:".$resourceItem."<br>";
 				$preResource = getGroupAllResources($resourceItem, $team);
-				echo "CP4<br>";
+				echo "preResource:".$preResource."<br>";
 				$resourceValue += $preResource[0][0];
-				echo "CP5<br>";
+				echo "resourceValue(new):".$resourceValue."<br>";
 				updateGroupResource($team, $resourceValue, $resourceItem);
 			}
 			else
