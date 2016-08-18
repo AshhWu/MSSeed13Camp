@@ -78,6 +78,14 @@ function getAllTimes()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getAllDay()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM day";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function searchMission($code)
 {
 	$conn = connect();

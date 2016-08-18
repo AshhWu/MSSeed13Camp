@@ -57,6 +57,12 @@ function getTimes()
   return $items;
 }
 
+function getDay()
+{
+  $items = getAllDay();
+  return $items;
+}
+
 function prepareResource()
 {
   prepareResources();
