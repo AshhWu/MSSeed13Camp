@@ -527,6 +527,28 @@
 	<a href="auto_add.php" target=_new>自動加時頁面</a>
 	<a href="auto_reset.php" target=_new>Reset time</a>
 
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getDay();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>Day:</th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo "<tr>
+						<td>".$item[1 ]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
+
           </div>
         </div>
       </div>
