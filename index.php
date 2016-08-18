@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,16 +26,16 @@
       <img src="png/banner.png" class="img-responsive"/>
     </div>    
     <!-- Login form-->
-    <form role="form">
+    <form role="form" action="login.php" method='post' accept-charset='UTF-8' autocomplete="on">
       <!-- Email -->
       <div class="form-group">
         <label for="email">MSSeed Email</label>
-        <input type="email" class="form-control" id="email" placeholder="xxx@msseed.idv.tw">
+        <input type="email" class="form-control" id="email" placeholder="xxx@msseed.idv.tw" required>
       </div>
       <!-- Password -->
       <div class="form-group">
         <label for="pwd">Password</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+        <input type="password" class="form-control" id="password" placeholder="Enter password" required>
       </div>
       <!-- Checkbox to remember me
       <div class="checkbox">
