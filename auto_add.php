@@ -68,7 +68,7 @@ function updateGroupResource($team, $value, $resource)
 	echo "team:".$team."<br>";
 	echo "value:".$value."<br>";
 	echo "resource:".$resource."<br>";
-	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
+	$sql = "UPDATE resource SET ".$resource."='".$value."' WHERE team='".$team."'";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
