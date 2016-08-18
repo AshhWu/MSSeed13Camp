@@ -6,28 +6,34 @@
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd; 
     border-bottom: 1px solid #ddd; 
-    padding: 0.5em;
+    padding: 8px;
+    margin-bottom: 16px
 }
 
 .tab-pane {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    padding: 1em;
+    margin-top: 48px;
+    margin-bottom: 48px;
+    padding: 16px;
+}
+
+/* Modal */
+.modal-body {
+    padding: 2px;
 }
 
 /* Block */
 .wrapper {   
     border-radius: 30px;   
-    padding: 1em;
-    padding-bottom: 0.5em;
+    padding: 16px;
+    padding-bottom: 4px;
     position: relative;
 }
 .raw-wrapper {
-    border: 0.5em solid white;
+    border: 8px solid white;
     background: #73AD21;
 }
 .component-wrapper {
-    border: 0.5em solid white;
+    border: 8px solid white;
     background: #F3F781;
 }
 .symbol-wrapper {
@@ -43,8 +49,8 @@
     height: 100%
 }
 .icon-equal {
-    margin-top: 0.5em;
-    height: 4em;
+    margin-top: 8px;
+    height: 64px;
 }
 
 
@@ -53,13 +59,10 @@
     position: absolute;
     top: 5%;
     left: 10%;
-    font-size: 2em;
-}
-.compose-count {
-    font-size: 1em;
+    font-size: 32px;
 }
 .raw-count {
-    color: blue;
+    color: #0f6537;
 }
 .component-count {
     color: orange;
@@ -67,16 +70,121 @@
 
 /* Name */
 .name {
-    padding-top: 0.5em;
+    padding-top: 12px;
     font-weight: bold;
-    font-size: 1em;
-}
-.compose-name {
-    font-size: 0.9em;
+    font-size: 16px;
 }
 
 .ok-button {
-    margin-top: 2em;
+    margin-top: 32px;
 }
 
+@media screen and (max-width: 499px){
+.nav-tabs > li > a {
+    padding: 10px;
+}
+
+.tab-content {
+    padding: 4px;
+}
+
+.tab-pane {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 12px;
+}
+
+/* Block */
+.wrapper {   
+    border-radius: 15px;   
+    padding: 8px;
+    padding-bottom: 0px;
+}
+.raw-wrapper {
+    border: 4px solid white;
+}
+.component-wrapper {
+    border: 4px solid white;
+}
+.symbol-wrapper {
+}
+
+/* Image */
+.icon-equal {
+    margin-top: 4px;
+    height: 32px;
+}
+
+
+/* Number Count */
+.count {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-size: 14px;
+}
+
+/* Name */
+.name {
+    padding-top: 6px;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.ok-button {
+    margin-top: 16px;
+}
+}
+@media screen and (min-width: 500px) and (max-width: 800){
+.tab-content {
+    padding: 4px;
+}
+
+.tab-pane {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: 16px;
+}
+
+/* Block */
+.wrapper {   
+    border-radius: 18px;   
+    padding: 12px;
+    padding-bottom: 0px;
+}
+.raw-wrapper {
+    border: 6px solid white;
+}
+.component-wrapper {
+    border: 6px solid white;
+}
+.symbol-wrapper {
+}
+
+/* Image */
+.icon-equal {
+    margin-top: 4px;
+    height: 32px;
+}
+
+
+/* Number Count */
+.count {
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-size: 14px;
+}
+
+/* Name */
+.name {
+    padding-top: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.ok-button {
+    margin-top: 16px;
+}
+}
 
