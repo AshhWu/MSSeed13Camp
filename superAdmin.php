@@ -128,6 +128,7 @@
 	$items = getResources();
 	if(!empty($items))
 	{
+		echo "原料<br>";
 		echo "<table border='1'>
 				<tr>
 					<th>Group:  </th>
@@ -147,23 +148,6 @@
 					<th>想像力:  </th>
 					<th>金屬:    </th>
 					<th>大地氧氣:</th>
-					<th>魔法石:  </th>
-					<th>控制面板:</th>
-					<th>座位:    </th>
-					<th>方向盤:  </th>
-					<th>繩子:    </th>
-					<th>檜木:    </th>
-					<th>螺旋槳:  </th>
-					<th>門:     </th>
-					<th>噴射器:  </th>
-					<th>機艙:    </th>
-					<th>麋鹿:    </th>
-					<th>叫聲:    </th>
-					<th>SD卡:   </th>
-					<th>飛彈:    </th>
-					<th>空姐:    </th>
-					<th>LED燈:  </th>
-					<th></th>
 				</tr>";
 		foreach($items as $item)
 		{
@@ -184,7 +168,33 @@
 						<td>".$item[14]."</td>
 						<td>".$item[15]."</td>
 						<td>".$item[16]."</td>
-						<td>".$item[17]."</td>
+						<td>".$item[17]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+	if(!empty($items))
+	{
+		echo "零件<br>";
+		echo "<table border='1'>
+				<tr>
+					<th>Group:  </th>
+					<th>魔法石:  </th>
+					<th>控制面板:</th>
+					<th>座位:    </th>
+					<th>方向盤:  </th>
+					<th>繩子:    </th>
+					<th>檜木:    </th>
+					<th>螺旋槳:  </th>
+					<th>門:     </th>
+					<th>噴射器:  </th>
+					<th>機艙:    </th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1 ]."</td>
 						<td>".$item[18]."</td>
 						<td>".$item[19]."</td>
 						<td>".$item[20]."</td>
@@ -194,13 +204,37 @@
 						<td>".$item[24]."</td>
 						<td>".$item[25]."</td>
 						<td>".$item[26]."</td>
-						<td>".$item[27]."</td>
+						<td>".$item[27]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+	if(!empty($items))
+	{
+		echo "特殊原料<br>";
+		echo "<table border='1'>
+				<tr>
+					<th>Group:  </th>
+					<th>麋鹿:    </th>
+					<th>叫聲:    </th>
+					<th>SD卡:   </th>
+					<th>飛彈:    </th>
+					<th>空姐:    </th>
+					<th>LED燈:  </th>
+					<th>S logo:  </th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1 ]."</td>
 						<td>".$item[28]."</td>
 						<td>".$item[29]."</td>
 						<td>".$item[30]."</td>
 						<td>".$item[31]."</td>
 						<td>".$item[32]."</td>
-						<td>".$item[33]."</td>";
+						<td>".$item[33]."</td>
+						<td></td>";
 			echo "</tr>";
 		}
 		
