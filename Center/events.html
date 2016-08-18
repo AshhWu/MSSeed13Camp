@@ -14,8 +14,9 @@
      white-space: nowrap;
    }
  </style>
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHZc-_tEA40YGT3q4f9vkB-IM0khoyyBk"
-  type="text/javascript"></script>
+ <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHZc-_tEA40YGT3q4f9vkB-IM0khoyyBk"
+  type="text/javascript"></script>-->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
  <script type="text/javascript" src="src/markerwithlabel.js"></script>
  <script type="text/javascript">
    function initMap() {
@@ -27,9 +28,10 @@
        center: latLng,
        mapTypeId: google.maps.MapTypeId.ROADMAP
      });
+
      var image = "flag2.png";
      var marker1 = new MarkerWithLabel({
-       position: (25.027127027027028, 121.55736810913098),
+       position: new google.maps.LatLng(25.037027027027028, 121.57736810913098),
        draggable: false,
        raiseOnDrag: false,
        map: map,
@@ -38,6 +40,7 @@
        labelAnchor: new google.maps.Point(22, 0),
        labelClass: "labels" // the CSS class for the label
      });
+
     var marker2 = new MarkerWithLabel({
        position: homeLatLng,
        draggable: true,
@@ -48,6 +51,8 @@
        labelAnchor: new google.maps.Point(22, 0),
        labelClass: "labels" // the CSS class for the label
      });
+
+
      var iw = new google.maps.InfoWindow({
        content: "Home For Sale"
      });
@@ -62,6 +67,13 @@
      google.maps.event.addListener(marker, "dragstart", function (mEvent) { log("Drag Start: " + mEvent.latLng.toString()); });
      google.maps.event.addListener(marker, "drag", function (mEvent) { log("Drag: " + mEvent.latLng.toString()); });
      google.maps.event.addListener(marker, "dragend", function (mEvent) { log("Drag End: " + mEvent.latLng.toString()); });
+
+     map.data.loadGeoJson('http://msseed13camp.azurewebsites.net/Center/MSSEED.json');
+     map.data.setStyle({
+      fillColor: 'green',
+      strokeWeight: 1
+    });
+
    }
    
    function log(h) {
