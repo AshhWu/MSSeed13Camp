@@ -91,13 +91,13 @@ include_once 'taskmodel.php';
 
 	if(!empty($items))
 	{
-		echo "Code: ".$item[1 ]."<br>主題: ".$item[2 ]."<br>內容: ".$item[3 ]."<br>任務人數: ".$item[4 ];
+		echo "<br>Code: ".$items[0][1]."<br>主題: ".$items[0][2]."<br>內容: ".$items[0][3]."<br>任務人數: ".$items[0][4];
 		switch($time[0][0])
 		{
-			case "1": echo "<br>Day1條件: ".$item[5 ]; break;
-			case "2": echo "<br>Day2條件: ".$item[6 ]; break;
-			case "3": echo "<br>Day3條件: ".$item[7 ]; break;
-			case "4": echo "<br>Day4條件: ".$item[8 ]; break;
+			case "1": echo "<br>Day1條件: ".$items[0][5]; break;
+			case "2": echo "<br>Day2條件: ".$items[0][6]; break;
+			case "3": echo "<br>Day3條件: ".$items[0][7]; break;
+			case "4": echo "<br>Day4條件: ".$items[0][8]; break;
 			default: echo "Error";
 		}
 	} 
