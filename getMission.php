@@ -80,7 +80,6 @@ include_once 'taskmodel.php';
 	$code = $_POST['code'];
 	$items = searchMission($code);
 
-<?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
@@ -89,7 +88,6 @@ include_once 'taskmodel.php';
 	{
 		echo "Day: ".$time[0][0];
 	}
-?>
 
 	if(!empty($items))
 	{
