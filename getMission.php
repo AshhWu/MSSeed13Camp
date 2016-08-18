@@ -80,7 +80,6 @@ include_once 'taskmodel.php';
 	$code = $_POST['code'];
 	$items = searchMission($code);
 
-<?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
@@ -89,20 +88,16 @@ include_once 'taskmodel.php';
 	{
 		echo "Day: ".$time[0][0];
 	}
-?>
 
 	if(!empty($items))
 	{
-		echo "Code: ".$item[1 ].
-				"<br>主題: ".$item[2 ].
-				"<br>內容: ".$item[3 ].
-				"<br>任務人數: ".$item[4 ];
+		echo "Code: ".$item[1 ]."<br>主題: ".$item[2 ]."<br>內容: ".$item[3 ]."<br>任務人數: ".$item[4 ];
 		switch($time[0][0])
 		{
-			case "1": echo "<br>Day1條件: ".$item[5 ];
-			case "2": echo "<br>Day2條件: ".$item[6 ];
-			case "3": echo "<br>Day3條件: ".$item[7 ];
-			case "4": echo "<br>Day4條件: ".$item[8 ];
+			case "1": echo "<br>Day1條件: ".$item[5 ]; break;
+			case "2": echo "<br>Day2條件: ".$item[6 ]; break;
+			case "3": echo "<br>Day3條件: ".$item[7 ]; break;
+			case "4": echo "<br>Day4條件: ".$item[8 ]; break;
 			default: echo "Error";
 		}
 	} 
