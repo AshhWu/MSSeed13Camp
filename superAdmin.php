@@ -61,9 +61,9 @@
   ?>
 
   <div class="container">
-    <div class="panel-group" id="accordion">
+    <div class="panel-group">
       <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        <div class="panel-heading" data-toggle="collapse" href="#collapse1">
           <h4 class="panel-title">Account</h4>
         </div>
         <div id="collapse1" class="panel-collapse collapse in">
@@ -114,7 +114,7 @@
         </div>
       </div>
       <div class="panel panel-info">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+        <div class="panel-heading" data-toggle="collapse" href="#collapse2">
           <h4 class="panel-title">Resource</h4>
         </div>
         <div id="collapse2" class="panel-collapse collapse">
@@ -128,6 +128,7 @@
 	$items = getResources();
 	if(!empty($items))
 	{
+		echo "原料<br>";
 		echo "<table border='1'>
 				<tr>
 					<th>Group:  </th>
@@ -147,23 +148,6 @@
 					<th>想像力:  </th>
 					<th>金屬:    </th>
 					<th>大地氧氣:</th>
-					<th>魔法石:  </th>
-					<th>控制面板:</th>
-					<th>座位:    </th>
-					<th>方向盤:  </th>
-					<th>繩子:    </th>
-					<th>檜木:    </th>
-					<th>螺旋槳:  </th>
-					<th>門:     </th>
-					<th>噴射器:  </th>
-					<th>機艙:    </th>
-					<th>麋鹿:    </th>
-					<th>叫聲:    </th>
-					<th>SD卡:   </th>
-					<th>飛彈:    </th>
-					<th>空姐:    </th>
-					<th>LED燈:  </th>
-					<th></th>
 				</tr>";
 		foreach($items as $item)
 		{
@@ -184,7 +168,33 @@
 						<td>".$item[14]."</td>
 						<td>".$item[15]."</td>
 						<td>".$item[16]."</td>
-						<td>".$item[17]."</td>
+						<td>".$item[17]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+	if(!empty($items))
+	{
+		echo "零件<br>";
+		echo "<table border='1'>
+				<tr>
+					<th>Group:  </th>
+					<th>魔法石:  </th>
+					<th>控制面板:</th>
+					<th>座位:    </th>
+					<th>方向盤:  </th>
+					<th>繩子:    </th>
+					<th>檜木:    </th>
+					<th>螺旋槳:  </th>
+					<th>門:     </th>
+					<th>噴射器:  </th>
+					<th>機艙:    </th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1 ]."</td>
 						<td>".$item[18]."</td>
 						<td>".$item[19]."</td>
 						<td>".$item[20]."</td>
@@ -194,13 +204,37 @@
 						<td>".$item[24]."</td>
 						<td>".$item[25]."</td>
 						<td>".$item[26]."</td>
-						<td>".$item[27]."</td>
+						<td>".$item[27]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+	if(!empty($items))
+	{
+		echo "特殊原料<br>";
+		echo "<table border='1'>
+				<tr>
+					<th>Group:  </th>
+					<th>麋鹿:    </th>
+					<th>叫聲:    </th>
+					<th>SD卡:   </th>
+					<th>飛彈:    </th>
+					<th>空姐:    </th>
+					<th>LED燈:  </th>
+					<th>S logo:  </th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1 ]."</td>
 						<td>".$item[28]."</td>
 						<td>".$item[29]."</td>
 						<td>".$item[30]."</td>
 						<td>".$item[31]."</td>
 						<td>".$item[32]."</td>
-						<td>".$item[33]."</td>";
+						<td>".$item[33]."</td>
+						<td></td>";
 			echo "</tr>";
 		}
 		
@@ -288,7 +322,7 @@
       </div>
 
       <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        <div class="panel-heading" data-toggle="collapse" href="#collapse3">
           <h4 class="panel-title">Message</h4>
         </div>
         <div id="collapse3" class="panel-collapse collapse">
@@ -354,7 +388,7 @@
       </div>
 
       <div class="panel panel-info">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+        <div class="panel-heading" data-toggle="collapse" href="#collapse4">
           <h4 class="panel-title">Stronghold</h4>
         </div>
         <div id="collapse4" class="panel-collapse collapse in">
@@ -406,7 +440,7 @@
       </div>
 
 	  <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+        <div class="panel-heading" data-toggle="collapse" href="#collapse5">
           <h4 class="panel-title">Mission</h4>
         </div>
         <div id="collapse5" class="panel-collapse collapse">
@@ -458,7 +492,7 @@
       </div>
 
       <div class="panel panel-info">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
+        <div class="panel-heading" data-toggle="collapse" href="#collapse6">
           <h4 class="panel-title">Time Table</h4>
         </div>
         <div id="collapse6" class="panel-collapse collapse in">
@@ -493,12 +527,34 @@
 	<a href="auto_add.php" target=_new>自動加時頁面</a>
 	<a href="auto_reset.php" target=_new>Reset time</a>
 
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getDay();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>Day:</th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo "<tr>
+						<td>".$item[0 ]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
+
           </div>
         </div>
       </div>
 
 	  <div class="panel panel-success">
-        <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
+        <div class="panel-heading" data-toggle="collapse" href="#collapse7">
           <h4 class="panel-title">SQL</h4>
         </div>
         <div id="collapse7" class="panel-collapse collapse">

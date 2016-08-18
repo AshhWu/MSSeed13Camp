@@ -36,14 +36,10 @@
     ?>
 
     <h1>taipeiRun</h1>
-
     <?php
         header('Cache-Control: no-cache');
         header('Pragma: no-cache');
         require_once "t_getitems.php";
-        $items = getTaipeiRun();
-        if(!empty($items))
-        {
             echo "<table border='1'>
                     <tr>
                         <th>Team</th>
@@ -58,6 +54,9 @@
                         <th>mission</th>
                         <th>Pass</th>
                     </tr>";
+        $items = getTaipeiRun();
+        if(!empty($items))
+        {
             foreach($items as $item)
             {
                 echo 	"<tr>
@@ -115,6 +114,60 @@
                 </tr>
             </table>
             <input type="submit" value="Add taipei"/>
+        </form>
+
+        <hr/>
+    
+<!--MissionReport--> 
+    <h1>missionReports</h1>
+    <?php
+        header('Cache-Control: no-cache');
+        header('Pragma: no-cache');
+        require_once "t_getitems.php";
+        echo "<table border='1'>
+                    <tr>
+                        <th>id</th>
+                        <th>team</th>
+                        <th>mission</th>
+                        <th>picture</th>
+                    </tr>";
+        $items = getMissionPics();
+        if(!empty($items))
+        {
+            foreach($items as $item)
+            {
+                echo 	"<tr>
+                            <td>".$item[0]."</td>
+                            <td>".$item[1]."</td>
+                            <td>".$item[2]."</td>
+                            <td>".$item[3]."</td>
+                        </tr>";
+            }
+
+            echo "</table>";
+        }
+    ?>
+
+        <form action="t_addMissionPic.php" method="post">
+            <table border="1">
+                <tr>
+                    <td>Id: </td>
+                    <td><input name="id" type="number"/></td>
+                </tr>
+                <tr>
+                    <td>Team: </td>
+                    <td><input name="team" type="number"/></td>
+                </tr>
+                <tr>
+                    <td>Mission: </td>
+                    <td><input name="mission" type="number"/></td>
+                </tr>
+                <tr>
+                    <td>Picture: </td>
+                    <td><input name="picture" type="varchar"/></td>
+                </tr>
+            </table>
+            <input type="submit" value="Add Mission Picture"/>
         </form>
 
         <hr/>
