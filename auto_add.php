@@ -65,9 +65,7 @@ function getGroupAllResources($resource, $team)
 function updateGroupResource($team, $value, $resource)
 {
 	$conn = connect();
-	echo "team:".$team."<br>";
-	echo "value:".$value."<br>";
-	echo "resource:".$resource."<br>";
+	echo "team:".$team."	value:".$value."	resource:".$resource."<br>";
 	$sql = "UPDATE resource SET ".$resource."='".$value."' WHERE team='".$team."'";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
@@ -90,21 +88,17 @@ while($x <= 10)
 			$time[3] += 1;
 			if($time[3] >= $time[2])
 			{
-				$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
+				$sql = "UPDATE auto_time SET time_now='0' WHERE point='".$i."'";
 				sqlcode($sql);
 				$resourceValue = $Strongholds[$i - 1][4];
-				echo "resourceValue:".$resourceValue."<br>";
 				$resourceItem = $Strongholds[$i - 1][5];
-				echo "resourceItem:".$resourceItem."<br>";
 				$preResource = getGroupAllResources($resourceItem, $team);
-				echo "preResource:".$preResource[0][0]."<br>";
 				$resourceValue += $preResource[0][0];
-				echo "resourceValue(new):".$resourceValue."<br>";
 				updateGroupResource($team, $resourceValue, $resourceItem);
 			}
 			else
 			{
-				$sql = "UPDATE auto_time SET time_now='0' WHERE point='".$i."'";
+				$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
 				sqlcode($sql);
 			}
 		}
@@ -113,23 +107,5 @@ while($x <= 10)
 	$x += 1;
 }
 echo "End time" . date('h:i:s') . "<br>";
-/**
-	$items = getAllStrongholds();
-	foreach($items as $item)
-	{
-		if($item[7] != 0)
-		{
-			# add time
-			# check generate time
-			if(time == $item[6])
-			{
-				time = 0;
-				use $item[5] $item[7] get team resource
-				resource = resource + $item[4];
-				store
-			}
-		}
-	}
-*/
 
 ?>
