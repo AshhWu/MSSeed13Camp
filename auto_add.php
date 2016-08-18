@@ -31,10 +31,12 @@ function connect()
 	return $conn;
 }
 
+$conne = connect();
+
 function sqlcode($sql)
 {
-	$conn = connect();
-	$stmt = $conn->prepare($sql);
+	#$conn = connect();
+	$stmt = $conne->prepare($sql);
 	$stmt->execute();
 }
 
