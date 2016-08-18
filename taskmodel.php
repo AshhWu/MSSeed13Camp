@@ -241,6 +241,12 @@ function prepareMission()
 	$sql = "INSERT INTO mission (code, topic, content, number_of_people, day1_condition, day2_condition, day3_condition, day4_condition) VALUES ('Ow3vC', '甩便利貼', '6位隊員分別在身上黏便利貼（額頭一張、雙臂四張、雙腳四張、腹部三張、背部三張），限時９０秒內甩掉較多便利貼的隊伍即可佔領該據點。', '6', '穿短褲x5', '穿耳洞x3', '瀏海在眉毛上x2', '鞋子有紅色x2')";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
+	$sql = "INSERT INTO mission (code, topic, content, number_of_people, day1_condition, day2_condition, day3_condition, day4_condition) VALUES ('iVw1L', '喝水唱歌', '一次派出一人，到前方清單中選出一首歌，嘴巴含著水將這首歌唱出來，其他隊員要猜出歌名，猜中後便可換另一位隊員去唱歌。用較少時間猜完6首歌的陣營即可佔領此部落', '8', '戴眼鏡x3', '拿iphonex2', '3男5女', '綁雙馬尾x3')";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+	$sql = "INSERT INTO mission (code, topic, content, number_of_people, day1_condition, day2_condition, day3_condition, day4_condition) VALUES ('ol7wr', '天旋地轉', '隊伍中一次派出一人，先抓著智慧之杖轉１０圈，接著運球至前方終點線後，回到隊伍中才可換下一個人出發。全部人完成後遊戲才可結束，花費時間比上一陣營少即可佔領此部落。', '6', '紮衣服x4', '穿高腰褲x3', '穿長褲x3', '沒鞋帶x2')";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
 }
 
 function occupyStronghold($team, $code)
