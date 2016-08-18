@@ -524,6 +524,21 @@
 	}
 ?>
 
+<button onclick="timedText()">Start timer</button>
+<input type="text" id="txt">
+
+<script>
+function timedText() {
+    var x = document.getElementById("txt");
+	while(1){
+		for(i = 0; i < 60; i++){
+			setTimeout(function(){ x.value= i + " seconds" }, 1000);
+		}
+	}
+
+}
+</script>
+
 	<a href="auto_add.php" target=_new>自動加時頁面</a>
 	<a href="auto_reset.php" target=_new>Reset time</a>
 
