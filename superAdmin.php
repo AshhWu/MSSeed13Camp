@@ -525,14 +525,14 @@
 ?>
 
 <button onclick="timedText()">Start timer</button>
-<input type="text" id="txt">
+<input type="text" id="txt">s<br>
 
 <script>
 function timedText() {
     var x = document.getElementById("txt");
 	while(1){
 		for(i = 0; i < 60; i++){
-			setTimeout(function(){ x.value= i + " seconds" }, 1000);
+			setTimeout(function(){ x.value= i }, 1000);
 		}
 	}
 
