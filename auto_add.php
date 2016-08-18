@@ -107,5 +107,6 @@ while($x <= 1)
 	$x += 1;
 }
 echo "End time" . date('h:i:s') . "<br>";
+echo "<script>window.close();</script>";
 
 ?>
