@@ -40,9 +40,7 @@ function sqlcode($sql)
 
 function getAllTimes()
 {
-	echo "CP2<br>";
 	$conn = connect();
-	echo "CP3<br>";
 	$sql = "SELECT * FROM auto_time";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
@@ -77,7 +75,6 @@ echo "Start time" . date('h:i:s') . "<br>";
 $x = 1;
 while($x <= 10)
 {
-	echo "CP1<br>";
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
 	$i = 0;
@@ -90,13 +87,17 @@ while($x <= 10)
 			$time[3] += 1;
 			if($time[3] >= $time[2])
 			{
-				echo "CP4";
 				$sql = "UPDATE auto_time SET time_now='".$time[3]."' WHERE point='".$i."'";
 				sqlcode($sql);
+				echo "CP1<br>";
 				$resourceValue = $Strongholds[$i - 1][4];
+				echo "CP2<br>";
 				$resourceItem = $Strongholds[$i - 1][5];
+				echo "CP3<br>";
 				$preResource = getGroupAllResources($resourceItem, $team);
+				echo "CP4<br>";
 				$resourceValue += $preResource[0][0];
+				echo "CP5<br>";
 				updateGroupResource($team, $resourceValue, $resourceItem);
 			}
 			else
