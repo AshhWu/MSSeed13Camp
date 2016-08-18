@@ -32,8 +32,8 @@
      var image = "flag2.png";
      var marker1 = new MarkerWithLabel({
        position: new google.maps.LatLng(25.037027027027028, 121.57736810913098),
-       draggable: false,
-       raiseOnDrag: false,
+       draggable: true,
+       raiseOnDrag: true,
        map: map,
        icon: image,
        labelContent: "Taiwan 1",
@@ -68,7 +68,7 @@
      google.maps.event.addListener(marker, "drag", function (mEvent) { log("Drag: " + mEvent.latLng.toString()); });
      google.maps.event.addListener(marker, "dragend", function (mEvent) { log("Drag End: " + mEvent.latLng.toString()); });
 
-     map.data.loadGeoJson('http://msseed13camp.azurewebsites.net/Center/MSSEED.json');
+     map.data.loadGeoJson('https://storage.googleapis.com/maps-devrel/google.json');
      map.data.setStyle({
       fillColor: 'green',
       strokeWeight: 1
