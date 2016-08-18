@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+ <title>MarkerWithLabel Example</title>
+ <style type="text/css">
+   .labels {
+     color: red;
+     background-color: white;
+     font-family: "Lucida Grande", "Arial", sans-serif;
+     font-size: 10px;
+     font-weight: bold;
+     text-align: center;
+     width: 40px;
+     border: 2px solid black;
+     white-space: nowrap;
+   }
+ </style>
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+ <script type="text/javascript">
+   function initMap() {
+     var latLng = new google.maps.LatLng(25.07815, 121.54716);
+     var homeLatLng = new google.maps.LatLng(25.07805, 121.54716);
+
+     var map = new google.maps.Map(document.getElementById('map_canvas'), {
+       zoom: 12,
+       center: latLng,
+       mapTypeId: google.maps.MapTypeId.ROADMAP
+     });
+
+     
+
+    var myLatLng1 = {lat: 25.05815, lng: 121.54716};
+var image1 = {
+  url: 'flag1.jpg',
+  size: new google.maps.Size(20, 32)
+};
+  var marker1 = new google.maps.Marker({
+    position: myLatLng1,
+    map: map,
+    title: 'Hello World!',
+    icon: image1
+  });
+
+  //var myLatLng2 = {lat: 25.06815, lng: 121.54716};
+ var image2 = 'flag1.jpg';
+   var marker2 = new google.maps.Marker({
+     position: myLatLng1,
+     map: map,
+    title: 'Hello World!',
+    icon: image2
+  });
+
+
+     var iw1 = new google.maps.InfoWindow({
+       content: "Home For Sale"
+     });
+     var iw2 = new google.maps.InfoWindow({
+       content: "Another Home For Sale"
+     });
+     google.maps.event.addListener(marker1, "click", function (e) { iw1.open(map, this); });
+     google.maps.event.addListener(marker2, "click", function (e) { iw2.open(map, this); });
+   }
+ </script>
+</head>
+<body onload="initMap()">
+<h1 >MSSeed 13 Camp</h1>
+ <div id="map_canvas" style="height: 500px; width: 100%;"></div>
+ <div id="log"></div>
+</body>
+</html>
