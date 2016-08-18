@@ -541,7 +541,7 @@
 		foreach($items as $item)
 		{
 			echo "<tr>
-						<td>".$item[1 ]."</td>";
+						<td>".$item[0 ]."</td>";
 			echo "</tr>";
 		}
 		
