@@ -7,9 +7,6 @@
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" href="css/w3.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="jquery-3.1.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -17,10 +14,7 @@
 <?php include "t_getitems.php"; ?>
 <?php $team=1; ?>
 <div id="teamb"></div>
-<script type="text/javascript">
-	document.getElementById("teamb").innerHTML = "<?php $team2=" + team_b + "; ?>";
-	window.reload();
-</script>
+<script src="js/t_exchange.js"></script>
 
 <div id="lego_exchange" class="w3-container w3-section w3-card-4 w3-padding w3-indigo">和第<?php echo $team2 ?>組交易</div>
 
