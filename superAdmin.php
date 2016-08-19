@@ -152,6 +152,7 @@
 		foreach($items as $item)
 		{
 			echo 	"<tr>
+						<td>".$item[0 ]."</td>
 						<td>".$item[1 ]."</td>
 						<td>".$item[2 ]."</td>
 						<td>".$item[3 ]."</td>
@@ -160,15 +161,14 @@
 						<td>".$item[6 ]."</td>
 						<td>".$item[7 ]."</td>
 						<td>".$item[8 ]."</td>
-						<td>".$item[9 ]."</td>
+						<td>".$item[9]."</td>
 						<td>".$item[10]."</td>
 						<td>".$item[11]."</td>
 						<td>".$item[12]."</td>
 						<td>".$item[13]."</td>
 						<td>".$item[14]."</td>
 						<td>".$item[15]."</td>
-						<td>".$item[16]."</td>
-						<td>".$item[17]."</td>";
+						<td>".$item[16]."</td>";
 			echo "</tr>";
 		}
 		
@@ -194,7 +194,8 @@
 		foreach($items as $item)
 		{
 			echo 	"<tr>
-						<td>".$item[1 ]."</td>
+						<td>".$item[0 ]."</td>
+						<td>".$item[17]."</td>
 						<td>".$item[18]."</td>
 						<td>".$item[19]."</td>
 						<td>".$item[20]."</td>
@@ -203,8 +204,7 @@
 						<td>".$item[23]."</td>
 						<td>".$item[24]."</td>
 						<td>".$item[25]."</td>
-						<td>".$item[26]."</td>
-						<td>".$item[27]."</td>";
+						<td>".$item[26]."</td>";
 			echo "</tr>";
 		}
 		
@@ -217,23 +217,23 @@
 				<tr>
 					<th>Group:  </th>
 					<th>麋鹿:    </th>
+					<th>S logo:  </th>
 					<th>叫聲:    </th>
 					<th>SD卡:   </th>
 					<th>飛彈:    </th>
 					<th>空姐:    </th>
-					<th>LED燈:  </th>
-					<th>S logo:  </th>
+					<th>LED燈:  </th>				
 				</tr>";
 		foreach($items as $item)
 		{
 			echo 	"<tr>
 						<td>".$item[1 ]."</td>
+						<td>".$item[27]."</td>
 						<td>".$item[28]."</td>
 						<td>".$item[29]."</td>
 						<td>".$item[30]."</td>
 						<td>".$item[31]."</td>
 						<td>".$item[32]."</td>
-						<td>".$item[33]."</td>
 						<td></td>";
 			echo "</tr>";
 		}
