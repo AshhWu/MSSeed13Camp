@@ -31,7 +31,7 @@ include "findActiveClass.php";
           </ul>
         </li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">據點戰<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown">據點戰 <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li <?=findActiveClass("map")?>><a href="map.php">據點地圖</a></li>
             <li <?=findActiveClass("rules")?>><a href="rules.php">遊戲規則</a></li>
