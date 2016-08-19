@@ -1,7 +1,3 @@
-body {
-	background-color: #572105;
-}
-
 .map {
 	margin-top: 3em;
 	margin-bottom: 3em;
@@ -46,81 +42,98 @@ body {
 
 /* Strongholds */
 #icon1 {  /* 天使的眼淚 */
-	top: 84%;
+	top: 88%;
 	left: 31%;
 }
 #icon2 {  /* 神仙山莊 */
-	top: 27%;
-	left: 75%;
+	top: 50%;
+	left: 45%;
 }
 #icon3 {  /* 霍格華茲學院 */
-	top: 66%;
-	left: 29%;
+	top: 77%;
+	left: 33%;
 }
 #icon4 {  /* 布布恰恰 */
-	top: 82%;
-	left: 61%;
+	top: 17%;
+	left: 75%;
 }
 #icon5 {  /* 精靈的礦坑 */
-	top: 15%;
-	left: 63%;
+	top: 17%;
+	left: 65%;
 }
 #icon6 {  /* Brandon工坊 */
-	top: 42%;
-	left: 74%;
+	top: 38%;
+	left: 86%;
 }
 #icon7 {  /* 烈焰火山 */
 	top: 56%;
 	left: 64%;
 }
 #icon8 {  /* 迷幻森林 */
-	top: 86%;
-	left: 74%;
+	top: 87%;
+	left: 89%;
 }
 #icon9 {  /* 陽光田園 */
-	top: 34%;
-	left: 57%;
+	top: 72%;
+	left: 9%;
 }
 #icon10 {  /* Steven加工廠 */
-	top: 68%;
-	left: 60%;
+	top: 35%;
+	left: 65%;
 }
 #icon11 {  /* 統一二山 */
-	top: 75%;
-	left: 82%;
+	top: 50%;
+	left: 52%;
 }
 #icon12 {  /* 皮卡丘發電廠 */
-	top: 60%;
+	top: 57%;
 	left: 73%;
 }
 #icon13 {  /* 德克斯特的實驗室 */
-	top: 26%;
-	left: 85%;
-}
-#icon14 {  /* 彩虹獅動物園 */
-	top: 75%;
+	top: 76%;
 	left: 73%;
 }
+#icon14 {  /* 彩虹獅動物園 */
+	top: 90%;
+	left: 57%;
+}
 #icon15 {  /* 鍊金小木屋 */
-	top: 62%;
-	left: 80%;
+	top: 44%;
+	left: 76%;
 }
 #icon16 {  /* 千年神木 */
-	top: 54%;
+	top: 59%;
 	left: 29%;
 }
+#icon17 {  /* 監獄 */
+	top: 30%;
+	left: 33%;
+}
+
 
 /* Stronghold icon */
 .map-marker-red {
 	width: 4vw;
-	-moz-filter: drop-shadow(5px 5px 5px #8B0000);
-	-webkit-filter: drop-shadow(5px 5px 5px #8B0000);
-	filter: drop-shadow(5px 5px 5px #8B0000);
+	-moz-filter: drop-shadow(5px 5px 5px #511010);
+	-webkit-filter: drop-shadow(5px 5px 5px #511010);
+	filter: drop-shadow(5px 5px 5px #511010);
 }
 .map-marker-green {
 	width: 4vw;
 	-moz-filter: drop-shadow(5px 5px 5px #556B2F);
 	-webkit-filter: drop-shadow(5px 5px 5px #556B2F);
 	filter: drop-shadow(5px 5px 5px #556B2F);
+}
+.map-marker-orange {
+	width: 4vw;
+	-moz-filter: drop-shadow(5px 5px 5px #69400c);
+	-webkit-filter: drop-shadow(5px 5px 5px #69400c);
+	filter: drop-shadow(5px 5px 5px #69400c);
+}
+.map-marker-brown {
+	width: 4vw;
+	-moz-filter: drop-shadow(5px 5px 5px #0e272a);
+	-webkit-filter: drop-shadow(5px 5px 5px #0e272a);
+	filter: drop-shadow(5px 5px 5px #0e272a);
 }
 
