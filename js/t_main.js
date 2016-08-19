@@ -126,7 +126,7 @@ function mrt_route(route, count){
 
 	for (l = 0; l < route.length-1; l++){
 		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
-			result += mrt_value[route[l].toString()] + ' <p style="color:' + lego_color[parseInt(route[l]/100)-1] + '">-></p> ';
+			result += mrt_value[route[l].toString()] + ' <p style="font-size:20px;color:' + lego_color[parseInt(route[l]/100)-1] + '">-></p> ';
 			if (parseInt(route[l]/100) == 1)
 				cost[3] += Math.abs(route[l+1]%100 - route[l]%100);
 			else
