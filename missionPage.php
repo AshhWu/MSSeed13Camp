@@ -22,15 +22,13 @@
 <?php
   include "nav.php";
   ?>
-<center>
-<div style="text-align:center" align="center">
+<div style="text-align:center" align="middle">
 	<h1>Mission</h1><br>
 	<form action="getMission.php" method="post">
 		Code: <input type="text" name="code">
 		<input type="submit" value="Submit">
 	</form>
 </div>
-</center>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
