@@ -35,7 +35,7 @@
         include "nav.php";
     ?>
 
-    <h1>taipeiRun</h1>
+<h1>taipeiRun</h1>
     <?php
         header('Cache-Control: no-cache');
         header('Pragma: no-cache');
@@ -52,7 +52,7 @@
                         <th>cube4</th>
                         <th>cube5</th>
                         <th>mission</th>
-                        <th>Pass</th>
+                        <th>mState</th>
                     </tr>";
         $items = getTaipeiRun();
         if(!empty($items))
@@ -70,7 +70,7 @@
                             <td>".$item[7]."</td>
                             <td>".$item[8]."</td>
                             <td>".$item[9]."</td>
-                            <td><a href='t_missionComplete.php?team=".$item[0]."'>Complete</a></td>
+                            <td>".$item[10]."</td>
                             </tr>";
             }
 
@@ -118,8 +118,8 @@
 
         <hr/>
     
-<!--MissionReport--> 
-    <h1>missionReports</h1>
+
+<h1>missionReports</h1>
     <?php
         header('Cache-Control: no-cache');
         header('Pragma: no-cache');
@@ -130,8 +130,9 @@
                         <th>team</th>
                         <th>mission</th>
                         <th>picture</th>
+                        <th>state</th>
                     </tr>";
-        $items = getMissionPics();
+        $items = getMissionReport();
         if(!empty($items))
         {
             foreach($items as $item)
@@ -139,21 +140,29 @@
                 echo 	"<tr>
                             <td>".$item[0]."</td>
                             <td>".$item[1]."</td>
-                            <td>".$item[2]."</td>
-                            <td>".$item[3]."</td>
-                        </tr>";
+                            <td>".$item[2]."</td>";
+                if(!empty($item[3])){
+                    echo    "<td><img src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
+                }else{
+                    echo    "<td>無圖片</td>";
+                }
+                if($item[4]==0){
+                    echo    "<td><a href='t_missionComplete.php?id=".$item[0]."'>OK</a> or 
+                                 <a href='t_missionFail.php?id=".$item[0]."'>NOT</a></td>";
+                }else if($item[4]==1){
+                    echo    "<td>Fail</td>";
+                }else{
+                    echo    "<td>Complete</td>";
+                }
+                echo    "</tr>";
             }
 
             echo "</table>";
         }
     ?>
 
-        <form action="t_addMissionPic.php" method="post">
+        <form action="t_addMissionReport.php" method="post" enctype="multipart/form-data">
             <table border="1">
-                <tr>
-                    <td>Id: </td>
-                    <td><input name="id" type="number"/></td>
-                </tr>
                 <tr>
                     <td>Team: </td>
                     <td><input name="team" type="number"/></td>
@@ -164,21 +173,74 @@
                 </tr>
                 <tr>
                     <td>Picture: </td>
-                    <td><input name="picture" type="varchar"/></td>
+                    <td><input name="picture" type="file"/></td>
                 </tr>
             </table>
-            <input type="submit" value="Add Mission Picture"/>
+            <input type="submit" value="Add Mission Report"/>
         </form>
 
         <hr/>
         
-
         
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- My Scripts -->
-    <script src="js/nav.js"></script>
+<h1>missionInfo</h1>
+    <?php
+        header('Cache-Control: no-cache');
+        header('Pragma: no-cache');
+        require_once "t_getitems.php";
+        echo "<table border='1'>
+                    <tr>
+                        <th>id</th>
+                        <th>position</th>
+                        <th>title</th>
+                        <th>content</th>
+                        <th>picture</th>
+                    </tr>";
+        $items = getMissionInfo();
+        if(!empty($items))
+        {
+            foreach($items as $item)
+            {
+                echo 	"<tr>
+                            <td>".$item[0]."</td>
+                            <td>".$item[4]."</td>
+                            <td>".$item[1]."</td>
+                            <td>".$item[2]."</td>";
+                if(!empty($item[3])){
+                    echo    "<td><img src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
+                }else{
+                    echo    "<td>無圖片</td>";
+                }
+                echo    "</tr>";
+            }
+                
+            echo "</table>";
+        }
+    ?>
+
+        <form action="t_addMissionInfo.php" method="post" enctype="multipart/form-data">
+            <table border="1">
+                <tr>
+                    <td>Id: </td>
+                    <td><input name="id" type="number"/></td>
+                </tr>
+                <tr>
+                    <td>Position: </td>
+                    <td><input name="position" type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Title: </td>
+                    <td><input name="title" type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Content: </td>
+                    <td><input name="content" type="text"/></td>
+                </tr>
+                <tr>
+                    <td>Picture: </td>
+                    <td><input name="picture" type="file"/></td>
+                </tr>
+            </table>
+            <input type="submit" value="Add Mission Info"/>
+        </form>
     </body>
 </html>
