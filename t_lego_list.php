@@ -7,6 +7,7 @@
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" href="css/w3.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
