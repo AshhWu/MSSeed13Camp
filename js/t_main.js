@@ -167,5 +167,4 @@ function lego_refresh(obj){
 }
 
 //exchange legos
-var team_a, team_b = 3;
-document.getElementById("exchange_teamb").innerHTML = "<?php $team2=" + team_b + "; ?>";
+var team_b = 4;
