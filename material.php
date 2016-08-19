@@ -137,42 +137,42 @@
       <!-- Special Materials -->
       <div id="special" class="tab-pane fade">
         <div class="row">
-          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][27]; } ?></div>
-            <img src="png/s_raw/magic_powder.png" class="img-responsive icon-materials" alt="魔法粉末">
-            <p class="name raw-name text-center">麋鹿</p>
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper special-wrapper">
+            <div class="count special-count"><?php if(!empty($items)) { echo $items[0][27]; } ?></div>
+            <img src="png/s_special/elk.png" class="img-responsive icon-special" alt="麋鹿">
+            <p class="name special-name text-center">麋鹿</p>
           </div>
-          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][28]; } ?></div>
-            <img src="png/s_raw/cloth.png" class="img-responsive icon-materials" alt="布">
-            <p class="name raw-name text-center">S logo</p>
+          <div class="col-md-2 col-xs-3 wrapper special-wrapper">
+            <div class="count special-count"><?php if(!empty($items)) { echo $items[0][28]; } ?></div>
+            <img src="png/s_special/s_logo.png" class="img-responsive icon-special" alt="S logo">
+            <p class="name special-name text-center">S logo</p>
           </div>
-          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][29]; } ?></div>
-            <img src="png/s_raw/ruby.png" class="img-responsive icon-materials" alt="紅寶石">
-            <p class="name raw-name text-center">叫聲</p>
+          <div class="col-md-2 col-xs-3 wrapper special-wrapper">
+            <div class="count special-count"><?php if(!empty($items)) { echo $items[0][29]; } ?></div>
+            <img src="png/s_special/sound.png" class="img-responsive icon-special" alt="叫聲">
+            <p class="name special-name text-center">叫聲</p>
           </div>
-          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][30]; } ?></div>
-            <img src="png/s_raw/shaft.png" class="img-responsive icon-materials" alt="轉軸">
-            <p class="name raw-name text-center">SD卡</p>
+          <div class="col-md-2 col-xs-3 wrapper special-wrapper">
+            <div class="count special-count"><?php if(!empty($items)) { echo $items[0][30]; } ?></div>
+            <img src="png/s_special/sd_card.png" class="img-responsive icon-special" alt="SD卡">
+            <p class="name special-name text-center">SD卡</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][31]; } ?></div>
-            <img src="png/s_raw/fire.png" class="img-responsive icon-materials" alt="熊熊烈火">
-            <p class="name raw-name text-center">飛彈</p>
+          <div class="col-md-offset-2 col-xs-offset-0 col-md-2 col-xs-3 wrapper special-wrapper">
+            <div class="count special-count"><?php if(!empty($items)) { echo $items[0][31]; } ?></div>
+            <img src="png/s_special/missile.png" class="img-responsive icon-special" alt="飛彈">
+            <p class="name special-name text-center">飛彈</p>
           </div>
-          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][32]; } ?></div>
-            <img src="png/s_raw/seed.png" class="img-responsive icon-materials" alt="種子">
-            <p class="name raw-name text-center">空姐</p>
+          <div class="col-md-2 col-xs-3 wrapper special-wrapper">
+            <div class="count special-count"><?php if(!empty($items)) { echo $items[0][32]; } ?></div>
+            <img src="png/s_special/miss_air.jpg" class="img-responsive icon-special" alt="空姐">
+            <p class="name special-name text-center">空姐</p>
           </div>
-          <div class="col-md-2 col-xs-3 wrapper raw-wrapper">
-            <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][33]; } ?></div>
-            <img src="png/s_raw/water.png" class="img-responsive icon-materials" alt="生命之水">
-            <p class="name raw-name text-center">LED燈</p>
+          <div class="col-md-2 col-xs-3 wrapper special-wrapper">
+            <div class="count special-count"><?php if(!empty($items)) { echo $items[0][33]; } ?></div>
+            <img src="png/s_special/led_light.png" class="img-responsive icon-special" alt="LED燈">
+            <p class="name special-name text-center">LED燈</p>
           </div>
           <div class="col-md-2 col-xs-3">
           </div>
