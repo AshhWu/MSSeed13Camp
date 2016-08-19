@@ -154,7 +154,7 @@ function lego_refresh(obj){
 	var n = parseInt(obj.id[obj.id.length-1]);
 	var rest_lego;
 	var tmp_str = 't_updateAllCube.php?team=1';
-
+	var j;
 	for (j = 1; j < 5; j++){
 		rest_lego = document.getElementById("lego" + (j+1).toString()).innerText - cost_list[n-1][j];
 		document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
@@ -165,4 +165,20 @@ function lego_refresh(obj){
 
 	window.location = tmp_str;
 }
+
+//lego_exchnge
+function send_request(){
+	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4';
+	var i, tmp_value;
+	for (i = 0; i < 4; i++){
+		tmp_value = document.getElementByTagName("input")[2*i].value;
+		tmp_str += '&c' + (i+2).toString() + '=' + tmp_value;
+		tmp_value = document.getElementByTagName("input")[2*i+1].value;
+		tmp_str += '&fc' + (i+2).toString() + '=' + tmp_value;
+	}
+
+	window.location = tmp_str;
+}
+
+
 
