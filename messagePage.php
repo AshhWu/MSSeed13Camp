@@ -44,22 +44,13 @@
 	$items = getMessages();
 	if(!empty($items))
 	{
-		echo "<table border='1'>
-				<tr>
-					<th>Time</th>
-					<th>Client</td>
-					<th>Message</th>
-				</tr>";
 		foreach($items as $item)
 		{
-			echo 	"<tr>
-						<td>".$item[1]."</td>
-						<td>".$item[2]."</td>
-						<td>".$item[3]."</td>
-					</tr>";
+			echo 	"<p>
+			<span style=\"font-size:14px;\">".$item[1]."</span></p>
+				<h3 style=\"color:red;\">".$item[3]."</h3>
+			<hr />";
 		}
-		
-		echo "</table>";
 	}
 ?>
 
