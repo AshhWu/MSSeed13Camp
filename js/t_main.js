@@ -178,7 +178,7 @@ function send_request(){
 		tmp_str += '&fc' + (i+2).toString() + '=' + tmp_value;
 	}
 
-	window.location = "t_addTradeRequest.php?sender=1&receiver=4&c1=0&c2=1&c3=0&c4=0&c5=0&fc1=0&fc2=0&fc3=0&fc4=0&fc5=1";
+	window.location = tmp_str;
 }
 
 
