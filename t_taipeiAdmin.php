@@ -147,12 +147,12 @@
                     echo    "<td>無圖片</td>";
                 }
                 if($item[4]==0){
-                    echo    "<td><a href='t_missionComplete.php?id=".$item[0]."'>OK</a> or 
-                                 <a href='t_missionFail.php?id=".$item[0]."'>NOT</a></td>";
+                    echo    "<td><a href='t_missionComplete.php?id=".$item[0]."&team=".$item[1]."'>OK</a> or 
+                                 <a href='t_missionFail.php?id=".$item[0]."&team=".$item[1]."'>NOT</a></td>";
                 }else if($item[4]==1){
-                    echo    "<td>Fail</td>";
-                }else{
                     echo    "<td>Complete</td>";
+                }else{
+                    echo    "<td>Fail</td>";
                 }
                 echo    "</tr>";
             }

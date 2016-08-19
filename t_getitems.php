@@ -44,7 +44,13 @@ function getMissionByTeam($team){
     $sql = "SELECT * FROM taipeiRun where team=".$team;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
-    return $items[0][9];
+    $missionRank = $items[0][9];
+    
+    $sql = "SELECT * FROM t_missionOrder where team=".$team;
+    $stmt = $conn->query($sql);
+    $allMission = $stmt->fetchAll(PDO::FETCH_NUM);
+    $mission = $allMission[0][$missionRank];
+    return $mission;
 }
 
 function getMissionTitle($id){

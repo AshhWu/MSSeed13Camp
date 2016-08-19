@@ -60,7 +60,7 @@
                                     <script language="javascript">setTimeout("self.location.reload();",5000);</script>';
                         }else if($mState==2){
                             echo    '<p><h1><span class="label label-success">任務完成</span></h1></p><br>
-                                    <p><a href="t_missionDetail.php" class="btn btn-danger" role="button">獲得新任務</a></p>';
+                                    <p><a href="t_newMission.php?team='.$team.'" class="btn btn-danger" role="button">獲得新任務</a></p>';
                         }else{
                             echo    '<p><h1><span class="label label-success">任務已全部完成</span></h1></p>';
                         }

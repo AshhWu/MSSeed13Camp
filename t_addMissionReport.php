@@ -11,7 +11,7 @@ if(isset($_POST['team'])){
     $mission = getMissionByTeam($team);
 }
 
-if(getMissionState($team)!=0 && !isset(isset($_POST['team']))){
+if(getMissionState($team)!=0){
     header('Location: t_missionSend.php');
 }
 

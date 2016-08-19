@@ -11,7 +11,7 @@ $cube5 = $_POST['cube5'];
 $mission = $_POST['mission'];
 
 $conn = connect();
-$sql = "INSERT INTO taipeiRun (team, position, gpsX, gpsY, cube1, cube2, cube3, cube4, cube5, mission) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO taipeiRun (team, position, gpsX, gpsY, cube1, cube2, cube3, cube4, cube5, mission, mState) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)";
 $stmt = $conn->prepare($sql);
 $stmt->bindValue(1, $team);
 $stmt->bindValue(2, $position);
