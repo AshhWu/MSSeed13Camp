@@ -57,7 +57,7 @@
 	width: 350px;
 	margin: auto;
 	display: none;
-	background-color: plum;
+	border: solid grey;
 }
 
 #route_list {
