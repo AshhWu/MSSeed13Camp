@@ -2,10 +2,6 @@ body {
 	background-color: #32B16C;
 }
 
-.dropdown-backdrop {
-    position: static;
-}
-
 .container {
 	margin-bottom: 2em;
 }

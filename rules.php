@@ -9,7 +9,7 @@
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <!-- CSS Style -->
-  <link rel="stylesheet" type="text/css" href="rules.css">
+  <link rel="stylesheet" type="text/css" href="css/rules.css">
 </head>
 
 <body>
@@ -122,6 +122,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Navbar Dropdown -->
+    <script src="js/nav.js"></script>
 
   </body>
   </html>

@@ -31,11 +31,11 @@ include "findActiveClass.php";
           </ul>
         </li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown">據點戰<span class="caret"></span></a>
+          <a class="dropdown-toggle" data-toggle="dropdown">據點戰 <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li <?=findActiveClass("map")?>><a href="map.php">據點地圖</a></li>
             <li <?=findActiveClass("rules")?>><a href="rules.php">遊戲規則</a></li>
-            <li><a href="missionPage.php">遊戲關卡</a></li>
+            <li <?=findActiveClass("missionPage.php")?>><a href="missionPage.php">遊戲關卡</a></li>
             <li <?=findActiveClass("material")?>><a href="material.php">材料表</a></li>
             <li <?=findActiveClass("messagePage")?>><a href="messagePage.php">消息公告</a></li>  
             <li <?=findActiveClass("reportPage")?>><a href="reportPage.php">回報成果</a></li>  

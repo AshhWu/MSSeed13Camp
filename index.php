@@ -10,7 +10,7 @@
   <script src="#"></script> -->
   <!-- CSS Style -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="home.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body>
@@ -51,7 +51,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<!-- Navbar Dropdown -->
+<script src="js/nav.js"></script>
+<!-- My Scripts -->
+<script src="js/nav.js"></script>
 
 
 </body>
