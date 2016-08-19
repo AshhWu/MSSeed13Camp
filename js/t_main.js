@@ -166,5 +166,3 @@ function lego_refresh(obj){
 	window.location = tmp_str;
 }
 
-//exchange legos
-var team_b = 4;
