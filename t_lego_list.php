@@ -7,8 +7,9 @@
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" href="css/w3.css">
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="jquery-3.1.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -30,37 +31,32 @@
 	<h4 class="w3-card-4 w3-sand w3-round w3-padding">各組樂高(點組別按鈕請求交易)</h4>
 	<ul class="w3-ul w3-hoverable">
 		<li class="w3-container">
+			<?php $team=2; ?>
 			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第2組</a>
-			<div class="w3-tag w3-red"><p>25</p></div>
-			<div class="w3-tag w3-green"><p>13</p></div>
-			<div class="w3-tag w3-yellow"><p>16</p></div>
-			<div class="w3-tag w3-blue"><p>10</p></div>
+			<div class="w3-tag w3-red"><p><?php echo getCubeNum($team, 2)?></p></div>
+			<div class="w3-tag w3-green"><p><?php echo getCubeNum($team, 3)?></p></div>
+			<div class="w3-tag w3-yellow"><p><?php echo getCubeNum($team, 4)?></p></div>
+			<div class="w3-tag w3-blue"><p><?php echo getCubeNum($team, 5)?></p></div>
 		</li>
 		<li class="w3-container">
+			<?php $team=3; ?>
 			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第3組</a>
-			<div class="w3-tag w3-red"><p>22</p></div>
-			<div class="w3-tag w3-green"><p>24</p></div>
-			<div class="w3-tag w3-yellow"><p>11</p></div>
-			<div class="w3-tag w3-blue"><p>17</p></div>
+			<div class="w3-tag w3-red"><p><?php echo getCubeNum($team, 2)?></p></div>
+			<div class="w3-tag w3-green"><p><?php echo getCubeNum($team, 3)?></p></div>
+			<div class="w3-tag w3-yellow"><p><?php echo getCubeNum($team, 4)?></p></div>
+			<div class="w3-tag w3-blue"><p><?php echo getCubeNum($team, 5)?></p></div>
 		</li>
 		<li class="w3-container">
+			<?php $team=4; ?>
 			<a class="w3-btn w3-purple w3-padding w3-round-large" href="t_lego_exchange.php">第4組</a>
-			<div class="w3-tag w3-red"><p>15</p></div>
-			<div class="w3-tag w3-green"><p>20</p></div>
-			<div class="w3-tag w3-yellow"><p>23</p></div>
-			<div class="w3-tag w3-blue"><p>14</p></div>
+			<div class="w3-tag w3-red"><p><?php echo getCubeNum($team, 2)?></p></div>
+			<div class="w3-tag w3-green"><p><?php echo getCubeNum($team, 3)?></p></div>
+			<div class="w3-tag w3-yellow"><p><?php echo getCubeNum($team, 4)?></p></div>
+			<div class="w3-tag w3-blue"><p><?php echo getCubeNum($team, 5)?></p></div>
 		</li>
 	</ul>
 </div>
 
-
-
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!-- My Scripts -->
-<script src="js/nav.js"></script>
 
 </body>
 </html>

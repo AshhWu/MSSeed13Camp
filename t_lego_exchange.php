@@ -16,7 +16,7 @@
 <?php include "nav.php"; ?>
 <?php include "t_getitems.php"; ?>
 <?php $team=1; ?>
-<?php $team2=2; ?>
+<div id="exchange_teamb"></div>
 
 <div id="lego_exchange" class="w3-container w3-section w3-card-4 w3-padding w3-indigo">和第<?php echo $team2 ?>組交易</div>
 
@@ -29,7 +29,7 @@
 	<th>有</th>
 	<th class="w3-card w3-grey">對方</th>
 	<th>給我方</th>
-</tr>
+</tr>	
 <tr>
 	<th><?php echo getCubeNum($team, 2)?></th>
 	<th class="w3-tag w3-red"></th>
