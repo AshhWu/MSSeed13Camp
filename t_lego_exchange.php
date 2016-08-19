@@ -33,38 +33,38 @@
 <tr>
 	<th><?php echo getCubeNum($team, 2)?></th>
 	<th class="w3-tag w3-red"></th>
-	<th><input type="number" name="give_r"></th>
+	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team, 2)?>></th>
 	<th>|</th>
 	<th><?php echo getCubeNum($team2, 2)?></th>
 	<th class="w3-tag w3-red"></th>
-	<th><input type="number" name="get_r"></th>
+	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team2, 2)?>></th>
 </tr>
 <tr>
 	<th><?php echo getCubeNum($team, 3)?></th>
 	<th class="w3-tag w3-green"></th>
-	<th><input type="number" name="give_g"></th>
+	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team, 3)?>></th>
 	<th>|</th>
 	<th><?php echo getCubeNum($team2, 3)?></th>
 	<th class="w3-tag w3-green"></th>
-	<th><input type="number" name="get_g"></th>
+	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team2, 3)?>></th>
 </tr>
 <tr>
 	<th><?php echo getCubeNum($team, 4)?></th>
 	<th class="w3-tag w3-yellow"></th>
-	<th><input type="number" name="give_y"></th>
+	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team, 4)?>></th>
 	<th>|</th>
 	<th><?php echo getCubeNum($team2, 4)?></th>
 	<th class="w3-tag w3-yellow"></th>
-	<th><input type="number" name="get_y"></th>
+	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team2, 4)?>></th>
 </tr>
 <tr>
 	<th><?php echo getCubeNum($team, 5)?></th>
 	<th class="w3-tag w3-blue"></th>
-	<th><input type="number" name="give_b"></th>
+	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team, 5)?>></th>
 	<th>|</th>
 	<th><?php echo getCubeNum($team2, 5)?></th>
 	<th class="w3-tag w3-blue"></th>
-	<th><input type="number" name="get_b"></th>
+	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team2, 5)?>></th>
 </tr>
 </table>
 
