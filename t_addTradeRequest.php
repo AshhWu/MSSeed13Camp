@@ -1,26 +1,26 @@
 <?php
-header('Content-type: text/plain; charset=md5');
+
 include_once 'taskmodel.php';
 include_once 't_getitems.php';
 
-if(isset($_POST['sender'])){
-    $sender = $_POST['sender'];
-    $receiver = $_POST['receiver'];
+if(isset($_GET['sender'])){
+    $sender = $_GET['sender'];
+    $receiver = $_GET['receiver'];
 }else{
     $sender = 20;
     $receiver = 21;
 }
 
-$c1 = $_POST['c1'];
-$c2 = $_POST['c2'];
-$c3 = $_POST['c3'];
-$c4 = $_POST['c4'];
-$c5 = $_POST['c5'];
-$fc1 = $_POST['fc1'];
-$fc2 = $_POST['fc2'];
-$fc3 = $_POST['fc3'];
-$fc4 = $_POST['fc4'];
-$fc5 = $_POST['fc5'];
+$c1 = $_GET['c1'];
+$c2 = $_GET['c2'];
+$c3 = $_GET['c3'];
+$c4 = $_GET['c4'];
+$c5 = $_GET['c5'];
+$fc1 = $_GET['fc1'];
+$fc2 = $_GET['fc2'];
+$fc3 = $_GET['fc3'];
+$fc4 = $_GET['fc4'];
+$fc5 = $_GET['fc5'];
 
 $conn = connect();
 $sql = "INSERT INTO t_tradeRequest (sender, receiver, c1, c2, c3, c4, c5, fc1, fc2, fc3, fc4, fc5, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0)";
@@ -39,7 +39,7 @@ $stmt->bindValue(11, $fc4);
 $stmt->bindValue(12, $fc5);
 $stmt->execute();
 
-if(isset($_POST['sender'])){
+if(isset($_GET['sender'])){
     header('Location: t_taipeiAdmin.php');
 }else{
     header('Location: index.php');
