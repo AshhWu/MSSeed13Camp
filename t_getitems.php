@@ -20,6 +20,16 @@ function getMissionInfo()
   return $items;
 }
 
+function getMissionOrder(){
+  $items = getAllMissionOrder();
+  return $items;
+}
+
+function getTradeRequest(){
+  $items = getAllTradeRequest();
+  return $items;
+}
+
 function getCubeNum($team, $cubeColor){
     $cubeColorR = $cubeColor + 3;
     $conn = connect();
@@ -77,6 +87,13 @@ function getMissionReportPic($team){
     return $items[0][3];
 }
 
+function getAllMissionOrder(){
+    $conn = connect();
+	$sql = "SELECT * FROM t_missionOrder";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllTaipei()
 {
 	$conn = connect();
@@ -101,5 +118,11 @@ function getAllInfo()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getAllTradeRequest(){
+    $conn = connect();
+	$sql = "SELECT * FROM t_tradeRequest";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
 
 ?>
