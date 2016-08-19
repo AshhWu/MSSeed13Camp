@@ -125,4 +125,28 @@ function getAllTradeRequest(){
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getTradeRequestByTeam($team){
+    $conn = connect();
+	$sql = "SELECT * FROM t_tradeRequest where receiver=".$team." ORDER BY id DESC";
+	$stmt = $conn->query($sql);
+	$items = $stmt->fetchAll(PDO::FETCH_NUM);
+    
+    $sql = "UPDATE t_tradeRequest SET state=1 where id=".$items[0][0];
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $items[0];
+}
+
+function isTradeRequest($team){
+    $conn = connect();
+	$sql = "SELECT * FROM t_tradeRequest where state=1, receiver=".$team;
+	$stmt = $conn->query($sql);
+	$items = $stmt->fetchAll(PDO::FETCH_NUM);
+    if(empty($items)){
+        return false;
+    }else{
+        return true;
+    }
+}
+
 ?>
