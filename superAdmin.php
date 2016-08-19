@@ -524,20 +524,21 @@
 	}
 ?>
 
-<button onclick="timedText()">Start timer</button>
-<input type="text" id="txt">s<br>
-
-<script>
-function timedText() {
-    var x = document.getElementById("txt");
-	while(1){
-		for(i = 0; i < 60; i++){
-			setTimeout(function(){ x.value= i }, 1000);
-		}
+<script type="text/javascript">
+function GetTime(){
+	var d=new Date();
+	var nsec=d.getSeconds();
+	if(nsec==0){
+		// place to trigger php
 	}
-
+	document.getElementById('clockbox').innerHTML=nsec;
+}
+window.onload=function(){
+	GetTime();
+	setInterval(GetTime, 1000);
 }
 </script>
+<div id="clockbox"></div>
 
 	<a href="auto_add.php" target=_new>自動加時頁面</a>
 	<a href="auto_reset.php" target=_new>Reset time</a>

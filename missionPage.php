@@ -22,7 +22,7 @@
 <?php
   include "nav.php";
   ?>
-
+<center>
 <div style="text-align:center" align="center">
 	<h1>Mission</h1><br>
 	<form action="getMission.php" method="post">
@@ -30,6 +30,7 @@
 		<input type="submit" value="Submit">
 	</form>
 </div>
+</center>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
