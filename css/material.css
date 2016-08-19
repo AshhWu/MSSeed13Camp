@@ -40,6 +40,11 @@
     border: 8px solid white;
     background: #58D3F7;
 }
+.transport-wrapper {
+    border: 8px solid white;
+    background: #F5A9A9;
+    padding-bottom: 16px;
+}
 
 /* Image */
 .icon-materials {
@@ -80,7 +85,14 @@
     font-weight: bold;
     font-size: 16px;
 }
+.transport-name {
+    font-size: 17px;
+}
 
+.hint {
+    padding: 8px;
+    font-size: 16px;
+}
 
 @media screen and (max-width: 499px){
 .nav-tabs > li > a {
@@ -112,6 +124,10 @@
 .special-wrapper {
     border: 4px solid white;
 }
+.transport-wrapper {
+    border: 4px solid white;
+    padding-bottom: 8px;
+}
 
 /* Number Count */
 .count {
@@ -125,6 +141,14 @@
 .name {
     padding-top: 6px;
     font-weight: bold;
+    font-size: 10px;
+}
+.transport-name {
+    font-size: 10px;
+}
+
+.hint {
+    padding: 4px;
     font-size: 10px;
 }
 }
@@ -155,6 +179,10 @@
 .special-wrapper {
     border: 6px solid white;
 }
+.transport-wrapper {
+    border: 6px solid white;
+    padding-bottom: 12px;
+}
 
 /* Number Count */
 .count {
@@ -168,6 +196,14 @@
 .name {
     padding-top: 6px;
     font-weight: bold;
+    font-size: 14px;
+}
+.transport-name {
+    font-size: 16px;
+}
+
+.hint {
+    padding: 6px;
     font-size: 14px;
 }
 }
