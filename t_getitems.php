@@ -125,6 +125,14 @@ function getAllTradeRequest(){
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getTradeRequestById($id){
+    $conn = connect();
+	$sql = "SELECT * FROM t_tradeRequest where id=".$id;
+	$stmt = $conn->query($sql);
+	$items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $items[0];
+}
+
 function getTradeRequestByTeam($team){
     $conn = connect();
 	$sql = "SELECT * FROM t_tradeRequest where state=0, receiver=".$team." ORDER BY id DESC";
