@@ -168,7 +168,7 @@ function lego_refresh(obj){
 
 //lego_exchnge
 function send_request(){
-	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4';
+	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4&c1=0&fc1=0';
 	var i, tmp_value;
 	var inputs = document.getElementsByTagName("input");
 	for (i = 0; i < 4; i++){
