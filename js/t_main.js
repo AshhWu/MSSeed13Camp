@@ -170,10 +170,11 @@ function lego_refresh(obj){
 function send_request(){
 	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4';
 	var i, tmp_value;
+	var inputs = document.getElementsByTagName("input");
 	for (i = 0; i < 4; i++){
-		tmp_value = document.getElementByTagName("input")[2*i].value;
+		tmp_value = inputs[2*i].value;
 		tmp_str += '&c' + (i+2).toString() + '=' + tmp_value;
-		tmp_value = document.getElementByTagName("input")[2*i+1].value;
+		tmp_value = inputs[2*i+1].value;
 		tmp_str += '&fc' + (i+2).toString() + '=' + tmp_value;
 	}
 
