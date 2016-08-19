@@ -595,5 +595,8 @@ function timedText() {
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Navbar Dropdown -->
+	<script src="js/nav.js"></script>
 </body>
 </html>

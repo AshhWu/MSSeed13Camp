@@ -208,6 +208,7 @@ else { $_SESSION["day"] = 1; }
 <!-- Bootstrap Core JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- My Scripts -->
+<script src="js/nav.js"></script>
 <script src="map.js"></script>
 
 </body>
