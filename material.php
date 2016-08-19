@@ -621,9 +621,9 @@
   <!-- Navbar Dropdown -->
   <script src="js/nav.js"></script>
   <!-- My Scripts -->
-  <script src="material.js"></script>
+  <script src="js/material.js"></script>
   <!-- CSS Style -->
-  <link rel="stylesheet" type="text/css" href="material.css">
+  <link rel="stylesheet" type="text/css" href="css/material.css">
 
 </body>
 </html>
