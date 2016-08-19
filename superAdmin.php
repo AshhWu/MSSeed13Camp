@@ -228,13 +228,13 @@
 		{
 			echo 	"<tr>
 						<td>".$item[0 ]."</td>
-						<td>".$item[26]."</td>
 						<td>".$item[27]."</td>
 						<td>".$item[28]."</td>
 						<td>".$item[29]."</td>
 						<td>".$item[30]."</td>
 						<td>".$item[31]."</td>
 						<td>".$item[32]."</td>
+						<td>".$item[33]."</td>
 						<td></td>";
 			echo "</tr>";
 		}
