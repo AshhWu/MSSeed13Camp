@@ -227,7 +227,8 @@
 		foreach($items as $item)
 		{
 			echo 	"<tr>
-						<td>".$item[1 ]."</td>
+						<td>".$item[0 ]."</td>
+						<td>".$item[26]."</td>
 						<td>".$item[27]."</td>
 						<td>".$item[28]."</td>
 						<td>".$item[29]."</td>
