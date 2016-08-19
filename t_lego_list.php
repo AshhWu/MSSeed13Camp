@@ -7,9 +7,6 @@
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" href="css/w3.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="jquery-3.1.0.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
