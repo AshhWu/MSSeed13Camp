@@ -166,3 +166,6 @@ function lego_refresh(obj){
 	window.location = tmp_str;
 }
 
+//exchange legos
+var team_a, team_b = 3;
+document.getElementById("exchange_teamb").innerHTML = "<?php $team2=" + team_b + "; ?>";
