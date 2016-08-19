@@ -341,6 +341,7 @@
 					<th>Time</th>
 					<th>Client</td>
 					<th>Message</td>
+					<th>Color</td>
 					<th>Delete?</th>
 				</tr>";
 		foreach($items as $item)
@@ -348,6 +349,7 @@
 			echo 	"<tr>
 						<td>".$item[1]."</td>
 						<td>".$item[2]."</td>
+						<td>Red</td>
 						<td>".$item[3]."</td>";
 							
 			echo "<td><a href='deletemessage.php?id=".$item[0]."'>Delete</a></td>";
@@ -379,6 +381,16 @@
 			<tr>
 				<td>Message: </td>
 				<td><textarea name="content" rows="4" cols="40"></textarea></td>
+			</tr>
+			<tr>
+				<td>Color: </td>
+				<td>
+					<select name="color"/>
+						<option value="black">黑色</option>
+						<option value="blue">藍色</option>
+						<option value="red">紅色</option>
+					</select>
+				</td>
 			</tr>
 		</table>
 		<input type="submit" value="Add message"/>
