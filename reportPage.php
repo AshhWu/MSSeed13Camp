@@ -26,6 +26,7 @@
 	<h1>Report</h1><br>
 	<p style="text-align: center;">
 		<form action="occupyStronghold.php" method="post">
+		<center>
 			<table border="1">
 				<tr>
 					<td>Team: </td>
@@ -62,6 +63,7 @@
 					</td>
 				</tr>
 			</table>
+			</center>
 					<input type="submit" value="佔領據點"/>
 			</form>
 	</p>
