@@ -54,6 +54,20 @@ function getGroupAllResources($team)
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getGroupOneResource($conn, $team, $material)
+{
+	$sql = "SELECT ".$material." FROM resource WHERE team='".$team."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+function getComposeFunction($conn, $component)
+{
+	$sql = "SELECT * FROM component_function WHERE component='".$component."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllStrongholds()
 {
 	$conn = connect();
@@ -102,12 +116,60 @@ function getAllMessages()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
-function updateGroupResource($team, $value, $resource)
+function updateGroupResource($conn, $team, $value, $resource) // private function
+{
+	$sql = "UPDATE resource SET ".$resource."='".$value."' WHERE team='".$team."'";
+	$stmt = $conn->prepare($sql);
+	return $stmt->execute();
+}
+
+function makeComponent($team, $component)
 {
 	$conn = connect();
-	$sql = "UPDATE resource SET '".$resource."'='".$value."' WHERE team='".$team."'";
-	$stmt = $conn->prepare($sql);
-	$stmt->execute();
+	if (!$conn->beginTransaction()) { return "FAIL"; }
+	try 
+	{
+		$compose_function = getComposeFunction($conn, $component);
+		if(!empty($compose_function)) 
+		{
+			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
+			{
+				$material = $compose_function[0][$i];
+				$i++;
+				$amount = $compose_function[0][$i];
+				$current_amount = getGroupOneResource($conn, $team, $material);
+				if(empty($current_amount)) { return "FAIL"; }
+
+				// Check amount
+				if ($current_amount[0][0] < $amount) 
+				{ 
+					$conn->rollBack();
+					return "FAIL";
+				}
+				else 
+				{
+					$value = $current_amount[0][0] - $amount;
+					if (!updateGroupResource($conn, $team, $value, $material)) { return "FAIL"; }
+				}
+			}
+		}
+		else { return "FAIL"; }
+
+		// Update Component
+		$current_component = getGroupOneResource($conn, $team, $component);
+		if(empty($current_component)) { return "FAIL"; }
+		$value = $current_component[0][0] + 1;
+		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL"; }
+		$conn->commit();
+		return "SUCCESS";
+	}
+	catch (PDOException $e)
+	{
+		$conn->rollBack();
+		echo "Query Failed!\n\n";
+		echo "DBA FAIL:" . $e->getMessage();
+		return "FAIL";
+	}
 }
 
 function addAccount($account, $password)
