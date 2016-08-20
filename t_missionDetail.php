@@ -7,9 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>任務資訊</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="jquery-3.1.0.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       
     <?php
       include_once 'taskmodel.php';
@@ -43,5 +42,13 @@
       </div>
 
     </div><!-- /.container -->
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- My Scripts -->
+    <script src="js/nav.js"></script>
   </body>
 </html>

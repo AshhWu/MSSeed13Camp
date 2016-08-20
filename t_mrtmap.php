@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script src="js/t_main.js"></script>
-    <link rel="stylesheet" href="css/t_style.css">
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/w3.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="jquery-3.1.0.min.js"></script>	
-	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -59,6 +58,13 @@
 <img src="png/MRT.jpg" onclick="pic_switchsize()">
 
 </div>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- My Scripts -->
+<script src="js/nav.js"></script>
 
 </body>
 </html>
