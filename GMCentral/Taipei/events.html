@@ -22,13 +22,27 @@
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
 
   <link rel="stylesheet" href="CSS/style.css">
+<script>
+setTimeout(
+  function() 
+  {
+    $(".init-animation").fadeOut(5000);
+  }, 6000);
+
+$(document).ready(function() {
+ 
+  $("#owl-example").owlCarousel();
+ 
+});
+
+</script>
 
 </head>
   <body>
 
   <div class="init-animation">
-  <p class="split">Animation is the process of creating the illusion of motion and shape change by means of the rapid display of a sequence of static images that minimally differ from each other. The illusion—as in motion pictures in general—is thought to rely on the phi phenomenon. Animators are artists who specialize in the creation of animation.
-  </p>
+ <p>Microsoft Seed 13th Camp</p>
+<p>台北行<span>_</span></p> 
   
   </div>
 
@@ -62,7 +76,5 @@
 
   <script type="text/javascript" src="scripts/markerwithlabel.js"></script>
   <script type="text/javascript" src="scripts/myLabel.js"></script>
-  <script type="text/javascript" src="scripts/split.js"></script>
-  <script type="text/javascript" src="scripts/splitText.js"></script>
 </body>
 </html>

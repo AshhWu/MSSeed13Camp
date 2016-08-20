@@ -12,18 +12,62 @@ body {
 	overflow: hidden;
 }
 
+
 .init-animation {
-	max-width: 70vw;
-	padding: 30px;
-	margin: 0 auto;
-	position: relative;
-	top: 50%;
-	font-size: 30px;
-	line-height: 1.5;
-	transform: translateY(-50%);
-	perspective: 400px;
+	z-index: 1;
+	height: 100%;	
+	background: url("/Users/Ashley/GitHub/MSSeed13Camp/GMCentral/Taipei/background_blur.jpg") no-repeat center center fixed !important;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
+.init-animation p{
+  margin: 0px auto;
+  padding-top: 300px;
+  align:center;
+  padding-left:25%;
+  color: white; 
+  font-family: "Courier";
+  font-size: 46px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: type 5s steps(60, end); 
+}
+
+.init-animation p:nth-child(2){
+	padding-top: 70px;
+	font-size: 64px;
+	padding-left:42%;
+	color:white;
+	font-family: "Courier";
+  	animation: type2 7s steps(60, end);
+}
+
+
+
+.init-animation span{
+  animation: blink 1s infinite;
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+} 
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
+} 
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+ 
 .title{
 	background-color: black;
 	color: #1b7db6;
@@ -32,7 +76,7 @@ body {
 }
 
 .title h1{
-	font-size: 24px;
+	font-size: 30px;
 	height: 35px;
 }
 
