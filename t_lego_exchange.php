@@ -21,48 +21,38 @@
 
 <table id="exchange_table" class="w3-table w3-sand">
 <tr>
-	<th>有</th>
 	<th class="w3-card w3-grey">我方</th>
 	<th>給對方</th>
 	<th>|</th>
-	<th>有</th>
 	<th class="w3-card w3-grey">對方</th>
 	<th>給我方</th>
 </tr>	
 <tr>
-	<th><?php echo getCubeNum($team, 2)?></th>
-	<th class="w3-tag w3-red"></th>
+	<th class="w3-tag w3-red"><?php echo getCubeNum($team, 2)?></th>
 	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team, 2)?>></th>
 	<th>|</th>
-	<th><?php echo getCubeNum($team2, 2)?></th>
-	<th class="w3-tag w3-red"></th>
+	<th class="w3-tag w3-red"><?php echo getCubeNum($team2, 2)?></th>
 	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team2, 2)?>></th>
 </tr>
 <tr>
-	<th><?php echo getCubeNum($team, 3)?></th>
-	<th class="w3-tag w3-green"></th>
+	<th class="w3-tag w3-green"><?php echo getCubeNum($team, 3)?></th>
 	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team, 3)?>></th>
 	<th>|</th>
-	<th><?php echo getCubeNum($team2, 3)?></th>
-	<th class="w3-tag w3-green"></th>
+	<th class="w3-tag w3-green"><?php echo getCubeNum($team2, 3)?></th>
 	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team2, 3)?>></th>
 </tr>
 <tr>
-	<th><?php echo getCubeNum($team, 4)?></th>
-	<th class="w3-tag w3-yellow"></th>
+	<th class="w3-tag w3-yellow"><?php echo getCubeNum($team, 4)?></th>
 	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team, 4)?>></th>
 	<th>|</th>
-	<th><?php echo getCubeNum($team2, 4)?></th>
-	<th class="w3-tag w3-yellow"></th>
+	<th class="w3-tag w3-yellow"><?php echo getCubeNum($team2, 4)?></th>
 	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team2, 4)?>></th>
 </tr>
 <tr>
-	<th><?php echo getCubeNum($team, 5)?></th>
-	<th class="w3-tag w3-blue"></th>
+	<th class="w3-tag w3-blue"><?php echo getCubeNum($team, 5)?></th>
 	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team, 5)?>></th>
 	<th>|</th>
-	<th><?php echo getCubeNum($team2, 5)?></th>
-	<th class="w3-tag w3-blue"></th>
+	<th class="w3-tag w3-blue"><?php echo getCubeNum($team2, 5)?></th>
 	<th><input type="number" value="0" min="0" max=<?php echo getCubeNum($team2, 5)?>></th>
 </tr>
 </table>
@@ -71,7 +61,6 @@
 <button class="w3-btn w3-padding w3-teal w3-round" onclick="send_request()">確定</button><br><br>
 <a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">取消</a>
 </div>
-
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
