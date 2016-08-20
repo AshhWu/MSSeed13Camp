@@ -40,7 +40,7 @@ function getAllCubeNum($team){
 
 function getAllTeamCubeNum(){
     $conn = connect();
-    $sql = "SELECT cube1, cube2, cube3, cube4, cube5 FROM taipeiRun ORDER BY team ASC";
+    $sql = "SELECT team, cube1, cube2, cube3, cube4, cube5 FROM taipeiRun ORDER BY team ASC";
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items;
