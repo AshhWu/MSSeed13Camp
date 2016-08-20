@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <script src="js/t_main.js"></script>
+    <link rel="stylesheet" href="css/t_style.css">
+    <link rel="stylesheet" href="css/w3.css">
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/w3.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 

@@ -7,9 +7,8 @@
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" href="css/w3.css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="jquery-3.1.0.min.js"></script>	
-	<script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body onload="trade_init()">
 
@@ -72,6 +71,14 @@
 <button class="w3-btn w3-padding w3-teal w3-round" onclick="send_request()">確定</button><br><br>
 <a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">取消</a>
 </div>
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- My Scripts -->
+<script src="js/nav.js"></script>
 
 </body>
 </html>
