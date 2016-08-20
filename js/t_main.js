@@ -163,7 +163,8 @@ function lego_refresh(obj){
 
 	document.getElementById("route_list").style.display = "none";
 
-	window.location = tmp_str;
+	//window.location = tmp_str;
+	window.location.reload();
 }
 
 //lego_exchnge/trade
