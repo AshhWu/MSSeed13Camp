@@ -166,7 +166,12 @@ function lego_refresh(obj){
 	window.location = tmp_str;
 }
 
-//lego_exchnge
+//lego_exchnge/trade
+var team_a, team_b = 3;
+function trade_init(){
+	document.body.innerHTML = "<?php $team2=" + tram_b + "; ?>" + document.body.innerHTML;
+}
+
 function send_request(){
 	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4&c1=0&fc1=0';
 	var i, tmp_value;
