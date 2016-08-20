@@ -34,6 +34,9 @@
     <?php
         include "nav.php";
     ?>
+    <script>
+        setTimeout("self.location.reload();",10000);
+    </script>
 
 <h1>taipeiRun</h1>
     <?php
