@@ -1,7 +1,7 @@
 /* MRT */
 
 .middle_part {
-	width: 360px;
+	width: 320px;
 	margin: auto;
 }
 
@@ -54,7 +54,7 @@
 /* route_list */
 
 #route_list {
-	width: 350px;
+	width: 320px;
 	margin: auto;
 	display: none;
 	border: solid grey;
@@ -76,7 +76,7 @@
 /* lego_list */
 
 #lego_list {
-	width: 350px;
+	width: 320px;
 	margin: auto;
 	background-color: grey;
 }
@@ -108,7 +108,7 @@
 }
 
 #exchange_table {
-	width: 350px;
+	width: 320px;
 	margin: auto;
 	text-align: center;
 }
