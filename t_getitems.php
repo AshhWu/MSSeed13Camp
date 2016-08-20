@@ -30,6 +30,14 @@ function getTradeRequest(){
   return $items;
 }
 
+function getAllCubeNum($team){
+    $conn = connect();
+    $sql = "SELECT cube1, cube2, cube3, cube4, cube5 FROM taipeiRun where team=".$team;
+	$stmt = $conn->query($sql);
+    $items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $items[0];
+}
+
 function getCubeNum($team, $cubeColor){
     $cubeColorR = $cubeColor + 3;
     $conn = connect();
