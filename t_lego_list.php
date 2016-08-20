@@ -7,9 +7,8 @@
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" href="css/w3.css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<script src="jquery-3.1.0.min.js"></script>	
-	<script src="js/bootstrap.min.js"></script>
+	<!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -57,6 +56,14 @@
 	</ul>
 </div>
 
+
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- My Scripts -->
+<script src="js/nav.js"></script>
 
 </body>
 </html>
