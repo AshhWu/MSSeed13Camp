@@ -27,6 +27,7 @@
 .middle_part button {
 	display: inline-block;
 	max-width: 18%;
+	text-align: center;
 }
 
 .middle_part .section2 {
