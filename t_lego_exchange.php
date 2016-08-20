@@ -21,10 +21,10 @@
 
 <table id="exchange_table" class="w3-table w3-sand">
 <tr>
-	<th class="w3-card w3-grey">我方</th>
+	<th class="w3-tag">我方</th>
 	<th>給對方</th>
 	<th>|</th>
-	<th class="w3-card w3-grey">對方</th>
+	<th class="w3-tag">對方</th>
 	<th>給我方</th>
 </tr>	
 <tr>
