@@ -13,10 +13,10 @@
 
 .middle_part .section1 {
 	display: inline-block;
-	max-width: 55%;
+	max-width: 50%;
 	position: relative;
 	top: 15px;
-	left: 10px;
+	left: 8px;
 }
 
 .middle_part form {
