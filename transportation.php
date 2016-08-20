@@ -75,8 +75,7 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-offset-2 col-xs-offset-0"><p class="hint">※ 合成請點選零件圖示，只有一次機會喔！</p></div>
-</div>
+  <div class="col-md-offset-2 col-xs-offset-0"><p class="hint">※ 合成請點選交通工具，只有一次機會喔！</p></div>
 </div>
 
 <!-- Transportation Modal -->

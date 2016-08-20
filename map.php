@@ -249,14 +249,13 @@ else { $_SESSION["day"] = 1; }
       <?php if (!empty($condition)) { echo $condition[15][0]; } ?><br />
       <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
-      </a>
-    </div>
-
+    </a>
+   
     <!-- 監獄-->
     <a class="stronghold" id="icon17" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="監獄" data-content="快來拯救被苦力怕抓走的隊友吧！">
       <img src="png/s_map/mark/mark_red.png" class="img-responsive map-marker-red">
-      </a>
-    </div>
+    </a>
+  </div>
 
     <!-- Materials Summary -->
     <section class="container">
