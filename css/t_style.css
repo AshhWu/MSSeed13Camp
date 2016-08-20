@@ -113,9 +113,14 @@
 	text-align: center;
 }
 
-#exchange_table .w3-tag {
+#exchange_table th {
 	width: 50px;
 	margin-top: 8px;
+	margin-left: 5px;
+}
+
+#exchange_table .w3-tag {
+	width: 50px;
 	text-align: center;
 }
 
