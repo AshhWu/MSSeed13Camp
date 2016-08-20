@@ -4,7 +4,6 @@
     <title>台北行</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" href="css/w3.css">
     <!-- Bootstrap Core CSS -->
@@ -63,6 +62,7 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- My Scripts -->
 <script src="js/nav.js"></script>
+<script src="js/t_main.js"></script>
 
 </body>
 </html>
