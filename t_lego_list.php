@@ -7,7 +7,7 @@
     <script src="js/t_main.js"></script>
     <link rel="stylesheet" href="css/t_style.css">
     <link rel="stylesheet" href="css/w3.css">
-	<!-- Bootstrap Core CSS -->
+    <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
@@ -55,7 +55,6 @@
 		</li>
 	</ul>
 </div>
-
 
 
 <!-- jQuery -->
