@@ -45,17 +45,23 @@ function getStrongholds()
   return $items;
 }
 
-function getOccupyTeam($code)
+function getOccupyTeam()
 {
   // Get occupying team
-  $team = getOneOccupyTeam($code);
-  
-  // Return Chinese team name
-  if ($team[0][0] == 'A') { return "美洲"; }
-  else if ($team[0][0] == 'B') { return "歐洲"; }
-  else if ($team[0][0] == 'C') { return "亞洲"; }
-  else if ($team[0][0] == 'D') { return "非洲"; }
-  else { return "無"; }
+  $team = getAllOccupyTeam();
+  if (!empty($team))
+  { 
+    // Return Chinese team name
+    for ($i = 0; $i < 16; $i++) 
+    {
+      if ($team[$i][0] == 'A') { $team[$i][0] = "美洲"; }
+      else if ($team[$i][0] == 'B') { $team[$i][0] = "歐洲"; }
+      else if ($team[$i][0] == 'C') { $team[$i][0] = "亞洲"; }
+      else if ($team[$i][0] == 'D') { $team[$i][0] = "非洲"; }
+      else { $team[$i][0] = "無"; }
+    }
+  }
+  return $team;
 }
 
 function getMissions()

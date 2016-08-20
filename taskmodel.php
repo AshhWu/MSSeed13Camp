@@ -339,10 +339,10 @@ function occupyStronghold($team, $code)
 	$stmt->execute();
 }
 
-function getOneOccupyTeam($code)
+function getAllOccupyTeam()
 {
 	$conn = connect();
-	$sql = "SELECT team FROM stronghold WHERE mission='".$code."'";
+	$sql = "SELECT team FROM stronghold";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
