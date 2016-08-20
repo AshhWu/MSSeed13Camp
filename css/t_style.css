@@ -113,6 +113,12 @@
 	text-align: center;
 }
 
+#exchange_table .w3-tag {
+	width: 50px;
+	margin-top: 8px;
+	text-align: center;
+}
+
 #exchange_table input {
 	width: 50px;
 }
