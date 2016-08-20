@@ -20,6 +20,7 @@ function connect()
 	$user = "b37f8ddf38d21d";
 	$pwd = "1e72c81e";
 	$db = "stronghold";
+
 	try{
 		$conn = new PDO( "mysql:host=$host;dbname=$db", $user, $pwd);
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
@@ -61,9 +62,9 @@ function getGroupOneResource($conn, $team, $material)
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
-function getComposeFunction($conn, $component)
+function getComposeFunction($conn, $component, $table)
 {
-	$sql = "SELECT * FROM component_function WHERE component='".$component."'";
+	$sql = "SELECT * FROM ".$table." WHERE component='".$component."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -132,13 +133,15 @@ function updateGroupResource($conn, $team, $value, $resource) // private functio
 	return $stmt->execute();
 }
 
-function makeComponent($team, $component)
+function makeComponent($team, $component, $isTrans)
 {
 	$conn = connect();
-	if (!$conn->beginTransaction()) { return "FAIL"; }
+	if (!$conn->beginTransaction()) { return "FAIL0"; }
 	try 
 	{
-		$compose_function = getComposeFunction($conn, $component);
+		if ($isTrans == "true") { $table = "transport_function"; }
+		else { $table = "component_function"; }
+		$compose_function = getComposeFunction($conn, $component, $table);
 		if(!empty($compose_function)) 
 		{
 			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
@@ -147,28 +150,36 @@ function makeComponent($team, $component)
 				$i++;
 				$amount = $compose_function[0][$i];
 				$current_amount = getGroupOneResource($conn, $team, $material);
-				if(empty($current_amount)) { return "FAIL"; }
+				if(empty($current_amount)) { return "FAIL1"; }
 
 				// Check amount
 				if ($current_amount[0][0] < $amount) 
 				{ 
 					$conn->rollBack();
-					return "FAIL";
+					return "FAIL2";
 				}
 				else 
 				{
 					$value = $current_amount[0][0] - $amount;
-					if (!updateGroupResource($conn, $team, $value, $material)) { return "FAIL"; }
+					if (!updateGroupResource($conn, $team, $value, $material)) { return "FAIL3"; }
 				}
 			}
 		}
-		else { return "FAIL"; }
+		else { return "FAIL4"; }
 
 		// Update Component
-		$current_component = getGroupOneResource($conn, $team, $component);
-		if(empty($current_component)) { return "FAIL"; }
-		$value = $current_component[0][0] + 1;
-		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL"; }
+		if ($isTrans == "false")
+		{
+			$current_component = getGroupOneResource($conn, $team, $component);
+			if(empty($current_component)) { return "FAIL5"; }
+			$value = $current_component[0][0] + 1;
+		}
+		else
+		{
+			$value = $component;
+			$component = "transportation";
+		}
+		if (!updateGroupResource($conn, $team, $value, $component)) { return "FAIL6"; }
 		$conn->commit();
 		return "SUCCESS";
 	}
@@ -177,7 +188,7 @@ function makeComponent($team, $component)
 		$conn->rollBack();
 		echo "Query Failed!\n\n";
 		echo "DBA FAIL:" . $e->getMessage();
-		return "FAIL";
+		return "FAIL7";
 	}
 }
 
