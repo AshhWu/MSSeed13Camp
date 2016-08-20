@@ -339,6 +339,14 @@ function occupyStronghold($team, $code)
 	$stmt->execute();
 }
 
+function getOneOccupyTeam($code)
+{
+	$conn = connect();
+	$sql = "SELECT team FROM stronghold WHERE mission='".$code."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function addResource($team, $magic_powder, $cloth, $ruby, $shaft, $fire, $seed, $water, $light, $flax, $screw, $plastic, $electron, $ergonomic, $imagine, $metal, $air, $magic_stone, $control_panel, $seat, $wheel, $rope, $cypress, $propeller, $door, $jet, $gun, $elk, $sound, $sd_card, $missile, $miss_air, $led_light)
 {
 	$conn = connect();
