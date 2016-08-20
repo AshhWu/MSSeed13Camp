@@ -167,9 +167,9 @@ function lego_refresh(obj){
 }
 
 //lego_exchnge/trade
-var team_a, team_b = 3;
+var team_a, team_b;
 function trade_init(){
-	document.body.innerHTML = "<?php $team2=" + team_b + "; ?>" + document.body.innerHTML;
+	
 }
 
 function send_request(){
