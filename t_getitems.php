@@ -38,6 +38,14 @@ function getAllCubeNum($team){
     return $items[0];
 }
 
+function getAllTeamCubeNum(){
+    $conn = connect();
+    $sql = "SELECT cube1, cube2, cube3, cube4, cube5 FROM taipeiRun ORDER BY team ASC";
+	$stmt = $conn->query($sql);
+    $items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $items;
+}
+
 function getCubeNum($team, $cubeColor){
     $cubeColorR = $cubeColor + 3;
     $conn = connect();
