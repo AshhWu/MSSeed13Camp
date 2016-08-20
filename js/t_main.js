@@ -153,7 +153,7 @@ function mrt_route(route, count){
 function lego_refresh(obj){
 	var n = parseInt(obj.id[obj.id.length-1]);
 	var rest_lego;
-	var tmp_str = 't_updateAllCube.php?team=1';
+	var tmp_str = 't_updateAllCube.php?team=1&c1=0';
 	var j;
 	for (j = 1; j < 5; j++){
 		rest_lego = document.getElementById("lego" + (j+1).toString()).innerText - cost_list[n-1][j];
@@ -163,10 +163,16 @@ function lego_refresh(obj){
 
 	document.getElementById("route_list").style.display = "none";
 
-	window.location = tmp_str;
+	//window.location = tmp_str;
+	window.location.reload();
 }
 
-//lego_exchnge
+//lego_exchnge/trade
+var team_a, team_b;
+function trade_init(){
+	
+}
+
 function send_request(){
 	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4&c1=0&fc1=0';
 	var i, tmp_value;
