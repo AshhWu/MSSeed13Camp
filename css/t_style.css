@@ -15,8 +15,7 @@
 	display: inline-block;
 	max-width: 50%;
 	position: relative;
-	top: 15px;
-	left: 8px;
+	top: 10px;
 }
 
 .middle_part form {
@@ -26,8 +25,10 @@
 
 .middle_part button {
 	display: inline-block;
-	max-width: 18%;
-	text-align: center;
+	max-width: 20%;
+	position: relative;
+	left: 20px;
+	bottom: 10px;
 }
 
 .middle_part .section2 {
@@ -114,14 +115,9 @@
 	text-align: center;
 }
 
-#exchange_table th {
-	width: 50px;
-	margin-top: 8px;
-	margin-left: 5px;
-}
-
 #exchange_table .w3-tag {
-	width: 50px;
+	height: 60px;
+	width: 60px;
 	text-align: center;
 }
 
