@@ -139,12 +139,20 @@ function makeComponent($team, $component, $isTrans)
 	if (!$conn->beginTransaction()) { return "FAIL0"; }
 	try 
 	{
-		if ($isTrans == "true") { $table = "transport_function"; }
-		else { $table = "component_function"; }
+		if ($isTrans == "true") 
+		{ 
+			$table = "transport_function";
+			$compose_count = 19;
+		}
+		else 
+		{ 
+			$table = "component_function";
+			$compose_count = 11;
+		}
 		$compose_function = getComposeFunction($conn, $component, $table);
 		if(!empty($compose_function)) 
 		{
-			for ($i = 1; $compose_function[0][$i] !== '0'; $i++) 
+			for ($i = 1; ($compose_function[0][$i] !== '0') && ($i < $compose_count); $i++) 
 			{
 				$material = $compose_function[0][$i];
 				$i++;
