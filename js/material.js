@@ -1,4 +1,14 @@
 var main = function(){
+	// Reload Current Tab
+	$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        localStorage.setItem('activeTab', $(this).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+        $('[href="' + activeTab + '"]').tab('show');
+    }
+
+
 	$('.modal .btn-components').click(function(){
 		// Get resource name
 		var data = { component: $(this).parent().closest('.modal').attr('id'), isTrans: false };
