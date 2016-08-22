@@ -74,12 +74,13 @@
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
-/*
+
 	$items = getItems();
 	if(!empty($items))
 	{
 		echo "<table border='1'>
 				<tr>
+					<th>pid</th>
 					<th>Account</th>
 					<th>Password</td>
 					<th>Authority</td>
@@ -90,7 +91,8 @@
 			echo 	"<tr>
 						<td>".$item[0]."</td>
 						<td>".$item[1]."</td>
-						<td>".$item[2]."</td>";
+						<td>".$item[2]."</td>
+						<td>".$item[3]."</td>";
 							
 			echo "<td><a href='deleteitem.php?id=".$item[0]."'>Delete</a></td>";
 			echo "</tr>";
@@ -102,7 +104,7 @@
 	{
 		prepareAccount();
 	}
-*/
+
 ?>
 
 	<form action="additem.php" method="post">
