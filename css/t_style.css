@@ -140,6 +140,12 @@
 	height: 50px;
 	width: 50px;
 	text-align: center;
+	margin: 3px;
+}
+
+#trade_table .w3-tag p {
+	position: relative;
+	top: 10px;
 }
 
 #trade_table input {
