@@ -17,7 +17,7 @@
 <?php $lego = getAllCubeNum(1); ?>
 
 <div class="middle_part w3-container w3-section">
-	<h5 class="w3-indigo w3-padding w3-round-large">移動</h5>
+	<h5 class="w3-indigo w3-padding">移動</h5>
 	<section class="section1 w3-container">
 	<form>
 		<label for="sstation">起站: </label>
@@ -38,7 +38,7 @@
 </div>
 
 <div class="middle_part w3-container w3-section">
-	<h5 class="w3-brown w3-padding w3-round-large">樂高</h5>
+	<h5 class="w3-brown w3-padding">樂高</h5>
 	<section class="section2 w3-container">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $lego[1]?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo $lego[2]?></p></div>
@@ -47,9 +47,9 @@
 	</section>
 </div>
 
-<div id="route_list" class="w3-container w3-section w3-round w3-padding">
-	<h4 class="w3-card-4 w3-pink w3-round w3-padding">路線選擇</h4>
-	<ul id="route_ul" class="w3-ul w3-hoverable">
+<div id="route_list" class="w3-container w3-section w3-padding">
+	<h4 class="w3-card-4 w3-pink w3-padding">路線選擇</h4>
+	<ul id="route_ul" class="w3-ul">
 	</ul>
 </div>
 
