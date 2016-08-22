@@ -1,3 +1,28 @@
+
+renew = function(){
+	/* Test */
+	var http = require("http");
+	var mysql = require('mysql');
+	var connection = mysql.createConnection({
+    	host: 'ap-cdbr-azure-east-c.cloudapp.net',
+    	user: 'b37f8ddf38d21d',
+    	password: '1e72c81e',
+    	database: 'stronghold'
+	});
+	connection.connect();
+	connection.query('SELECT 12 + 34 AS result', function(err, rows, fields) {
+    if (err) throw err;
+    console.log('The result is: ', rows[0].result);
+	connection.end();
+  
+  //顯示撈取資料
+  		console.log(results[0]);
+	});
+}
+/* Set json in each graph */
+
+
+/* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {
 
         var jssor_2_options = {
@@ -15,7 +40,7 @@ jssor_2_slider_init = function() {
                 $Align: 260
               }
         };
-            
+
             var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_2_options);
             
             //responsive code begin
@@ -39,7 +64,7 @@ jssor_2_slider_init = function() {
             var chart = AmCharts.makeChart("chartdiv3", {
                 "theme": "black",
                 "type": "serial",
-                "startDuration": 0.5,
+                "startDuration": 0,
                 "dataProvider": [{
                     "country": "1",
                     "visits": 40205,
@@ -121,7 +146,7 @@ jssor_2_slider_init = function() {
             var chart = AmCharts.makeChart("chartdiv4", {
                 "theme": "black",
                 "type": "serial",
-                "startDuration": 2,
+                "startDuration": 0,
                 "dataProvider": [{
                     "country": "1",
                     "visits": 4025,
@@ -244,7 +269,7 @@ jssor_1_slider_init = function() {
             var chart = AmCharts.makeChart("chartdiv2", {
 			"theme": "black",
 			"type": "serial",
-			"startDuration": 0.5,
+			"startDuration": 0,
 			"dataProvider": [{
 				"country": "1",
 				"visits": 40205,
@@ -327,7 +352,7 @@ jssor_1_slider_init = function() {
         var chart = AmCharts.makeChart("chartdiv1", {
 			"theme": "black",
 			"type": "serial",
-			"startDuration": 2,
+			"startDuration": 0,
 			"dataProvider": [{
 				"country": "1",
 				"visits": 4025,
@@ -448,7 +473,7 @@ jssor_0_slider_init = function() {
             var chart = AmCharts.makeChart("chartdiv01", {
 			"theme": "black",
 			"type": "serial",
-			"startDuration": 0.5,
+			"startDuration": 0,
 			"dataProvider": [{
 				"country": "1",
 				"visits": 40205,
@@ -531,7 +556,7 @@ jssor_0_slider_init = function() {
         var chart = AmCharts.makeChart("chartdiv02", {
 			"theme": "black",
 			"type": "serial",
-			"startDuration": 2,
+			"startDuration": 0,
 			"dataProvider": [{
 				"country": "1",
 				"visits": 4025,
