@@ -46,6 +46,11 @@
 	bottom: 15px;
 }
 
+.middle_part .w3-tag p {
+	position: relative;
+	top: 5px;
+}
+
 #bottom_part img {
 	display: block;
 	margin-top: 20px;
