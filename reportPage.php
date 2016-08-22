@@ -32,10 +32,10 @@
 					<td>Team: </td>
 					<td>
 						<select name="team"/>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
+							<option value="A">美洲</option>
+							<option value="B">歐洲</option>
+							<option value="C">亞洲</option>
+							<option value="D">非洲</option>
 						</select>
 					</td>
 				</tr>
@@ -43,22 +43,24 @@
 					<td>完成任務: </td>
 					<td>
 						<select name="code"/>
-							<option value="YEyKd">YEyKd</option>
-							<option value="DWVw4">DWVw4</option>
-							<option value="soDJ3">soDJ3</option>
-							<option value="GJPzb">GJPzb</option>
-							<option value="lJAfD">lJAfD</option>
-							<option value="SZ1yG">SZ1yG</option>
-							<option value="y997V">y997V</option>
-							<option value="X02aw">X02aw</option>
-							<option value="Glsx3">Glsx3</option>
-							<option value="YNbMr">YNbMr</option>
-							<option value="KeQW2">KeQW2</option>
-							<option value="vNUEM">vNUEM</option>
-							<option value="5swuv">5swuv</option>
-							<option value="Ao2pa">Ao2pa</option>
-							<option value="uIBpt">uIBpt</option>
-							<option value="Ow3vC">Ow3vC</option>
+							<option value="YEyKd">YEyKd 灌籃高手</option>
+							<option value="DWVw4">DWVw4 乒乓傳情</option>
+							<option value="soDJ3">soDJ3 Flip-Flop</option>
+							<option value="GJPzb">GJPzb 呼啦抓小雞</option>
+							<option value="lJAfD">lJAfD 頭好撞撞</option>
+							<option value="SZ1yG">SZ1yG 打水瓢</option>
+							<option value="y997V">y997V 巧拼渡河</option>
+							<option value="X02aw">X02aw 撲克牌好手</option>
+							<option value="Glsx3">Glsx3 斷開魂結</option>
+							<option value="YNbMr">YNbMr 拍拍羽毛球</option>
+							<option value="KeQW2">KeQW2 比手畫腳</option>
+							<option value="vNUEM">vNUEM 翻轉地面</option>
+							<option value="5swuv">5swuv 平衡感王</option>
+							<option value="Ao2pa">Ao2pa 一路橡吸</option>
+							<option value="uIBpt">uIBpt 金雞獨立</option>
+							<option value="Ow3vC">Ow3vC 甩便利貼</option>
+							<option value="iVw1L">iVw1L 喝水唱歌</option>
+							<option value="ol7wr">ol7wr 天旋地轉</option>
 						</select>
 					</td>
 				</tr>

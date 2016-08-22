@@ -126,6 +126,14 @@
 	require_once "getitems.php";
 	#prepareResource();
 	$items = getResources();
+	switch($items[0][0])
+	{
+		case "A": $items[0][0] = "美洲"; break;
+		case "B": $items[0][0] = "歐洲"; break;
+		case "C": $items[0][0] = "亞洲"; break;
+		case "D": $items[0][0] = "非洲"; break;
+		default: break;
+	}
 	if(!empty($items))
 	{
 		echo "原料<br>";
@@ -341,6 +349,7 @@
 					<th>Time</th>
 					<th>Client</td>
 					<th>Message</td>
+					<th>Color</td>
 					<th>Delete?</th>
 				</tr>";
 		foreach($items as $item)
@@ -348,6 +357,7 @@
 			echo 	"<tr>
 						<td>".$item[1]."</td>
 						<td>".$item[2]."</td>
+						<td>Red</td>
 						<td>".$item[3]."</td>";
 							
 			echo "<td><a href='deletemessage.php?id=".$item[0]."'>Delete</a></td>";
@@ -368,10 +378,10 @@
 				<td>client: </td>
 				<td>
 					<select name="client"/>
-						<option value="A">A</option>
-						<option value="B">B</option>
-						<option value="C">C</option>
-						<option value="D">D</option>
+						<option value="A">美洲</option>
+						<option value="B">歐洲</option>
+						<option value="C">亞洲</option>
+						<option value="D">非洲</option>
 						<option value="All">All</option>
 					</select>
 				</td>
@@ -379,6 +389,16 @@
 			<tr>
 				<td>Message: </td>
 				<td><textarea name="content" rows="4" cols="40"></textarea></td>
+			</tr>
+			<tr>
+				<td>Color: </td>
+				<td>
+					<select name="color"/>
+						<option value="black">黑色</option>
+						<option value="blue">藍色</option>
+						<option value="red">紅色</option>
+					</select>
+				</td>
 			</tr>
 		</table>
 		<input type="submit" value="Add message"/>
