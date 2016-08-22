@@ -105,12 +105,14 @@
 
 .tab-pane li {
 	margin-bottom: 5px;
-	border-bottom: solid 1px grey;
+	border-bottom: solid 1px black;
 }
 
 .tab-pane a {
 	display: inline-block;
 	margin-right: 5px;
+	position: relative;
+	top: 8px;
 }
 
 .tab-pane .w3-tag {
