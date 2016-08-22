@@ -91,7 +91,7 @@
 #lego_list {
 	width: 320px;
 	margin: auto;
-	background-color: grey;
+	border: solid black;
 }
 
 #lego_list h4 {
