@@ -142,7 +142,7 @@
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
                 if(!empty($item[4])){
-                    echo    "<td><img width='300px' src='data:image/jpeg;base64,".base64_encode($item[4])."' /></td>";
+                    echo    "<td><img height='200px' src='data:image/jpeg;base64,".base64_encode($item[4])."' /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
                 }
