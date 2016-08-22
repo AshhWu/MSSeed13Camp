@@ -96,7 +96,7 @@ include_once 'taskmodel.php';
 
 	if(!empty($items))
 	{
-		echo "<p><br>Code: ".$items[0][1]."<br>主題: ".$items[0][2]."<br><h2>內容: ".$items[0][3]."</h2><br>任務人數: ".$items[0][4];
+		echo "<p><br>Code: ".$items[0][1]."<br>主題: ".$items[0][2]."<br></p><h2>內容: ".$items[0][3]."</h2><p><br>任務人數: ".$items[0][4];
 		switch($time[0][0])
 		{
 			case "1": echo "<br>Day1條件: ".$items[0][5]; break;

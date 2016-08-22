@@ -18,8 +18,9 @@ include_once 'taskmodel.php';
 $time = $_POST['time'];
 $client = $_POST['client'];
 $content = $_POST['content'];
+$color = $_POST['color'];
 
-addMessage($time, $client, $content);
+addMessage($time, $client, $content, $color);
 
 header('Location: superAdmin.php');
 ?>

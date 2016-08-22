@@ -396,14 +396,15 @@ function addResource($team, $magic_powder, $cloth, $ruby, $shaft, $fire, $seed, 
 	$stmt->execute();
 }
 
-function addMessage($time, $client, $content)
+function addMessage($time, $client, $content, $color)
 {
 	$conn = connect();
-	$sql = "INSERT INTO message (time, client, content) VALUES (?, ?, ?)";
+	$sql = "INSERT INTO message (time, client, content, color) VALUES (?, ?, ?, ?)";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $time);
 	$stmt->bindValue(2, $client);
 	$stmt->bindValue(3, $content);
+	$stmt->bindValue(3, $color);
 	$stmt->execute();
 }
 
