@@ -98,7 +98,7 @@
 	}
 	else
 	{
-		prepareAccount();
+		#prepareAccount();
 	}
 ?>
 
