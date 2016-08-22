@@ -404,7 +404,7 @@ function addMessage($time, $client, $content, $color)
 	$stmt->bindValue(1, $time);
 	$stmt->bindValue(2, $client);
 	$stmt->bindValue(3, $content);
-	$stmt->bindValue(3, $color);
+	$stmt->bindValue(4, $color);
 	$stmt->execute();
 }
 
