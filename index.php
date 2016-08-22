@@ -30,12 +30,12 @@
       <!-- Email -->
       <div class="form-group">
         <label for="email">MSSeed Email</label>
-        <input type="email" class="form-control" name="email" placeholder="xxx@msseed.idv.tw" required>
+        <input type="text" class="form-control" name="email" placeholder="xxx@msseed.idv.tw">
       </div>
       <!-- Password -->
       <div class="form-group">
         <label for="pwd">Password</label>
-        <input type="password" class="form-control" name="password" placeholder="Enter password" required>
+        <input type="password" class="form-control" name="password" placeholder="Enter password">
       </div>
       <!-- Checkbox to remember me
       <div class="checkbox">
