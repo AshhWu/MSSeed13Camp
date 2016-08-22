@@ -75,6 +75,11 @@
 	text-align: center;
 }
 
+#route_list .w3-tag p {
+	position: relative;
+	top: 5px;
+}
+
 #route_list button {
 	display: inline-block;
 	margin-top: 3px;
