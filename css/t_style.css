@@ -96,16 +96,11 @@
 .tab-pane {
 	width: 320px;
 	margin: auto;
-	background-color: gainsboro;
+	background-color: darkgrey;
 }
 
 .tab-pane h4 {
 	text-align: center;
-}
-
-.tab-pane li {
-	margin-bottom: 5px;
-	border-bottom: solid 1px black;
 }
 
 .tab-pane a {
