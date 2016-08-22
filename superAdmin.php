@@ -440,6 +440,7 @@
 					<th>產生時間:    </th>
 					<th>佔領隊伍:</th>
 					<th>Mission Code:    </th>
+					<th>最高紀錄:    </th>
 				</tr>";
 		foreach($items as $item)
 		{
@@ -451,7 +452,8 @@
 						<td>".$item[5 ]."</td>
 						<td>".$item[6 ]."</td>
 						<td>".$item[7 ]."</td>
-						<td>".$item[8 ]."</td>";
+						<td>".$item[8 ]."</td>
+						<td>".$item[9 ]."</td>";
 			echo "</tr>";
 		}
 		
