@@ -19,9 +19,9 @@
 <?php $lego = getAllCubeNum(1); ?>
 <?php $lego2 = getAllCubeNum($team2); ?>
 
-<div id="lego_exchange" class="w3-container w3-section w3-card w3-padding w3-indigo">和第<?php echo $team2 ?>組交易</div>
+<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-indigo">和第<?php echo $team2 ?>組交易</div>
 
-<table id="exchange_table" class="w3-table w3-sand">
+<table id="trade_table" class="w3-table w3-sand">
 <tr>
 	<th class="w3-tag">我方</th>
 	<th>給對方</th>
