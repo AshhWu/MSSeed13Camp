@@ -611,6 +611,9 @@ window.onload=function(){
 		</table>
 		<input type="submit" value="Send SQL"/>
 	</form>
+	<br>reference:<br>
+	UPDATE resource SET magic_powder='0', cloth='0', ruby='0', shaft='0', fire='0', seed='0', water='0', light='0', flax='0', screw='0', plastic='0', electron='0', ergonomic='0', imagine='0', metal='0', air='0', magic_stone='0', control_panel='0', seat='0', wheel='0', rope='0', cypress='0', propeller='0', door='0', jet='0', gun='0', elk='0', sound='0', sd_card='0', missile='0', miss_air='0', led_light='0', s_logo='0'<br>
+	UPDATE stronghold SET team='0', highest_score='0'<br>
           </div>
         </div>
       </div>
