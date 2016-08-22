@@ -100,7 +100,7 @@
 	}
 	else
 	{
-		#prepareAccount();
+		prepareAccount();
 	}
 ?>
 
