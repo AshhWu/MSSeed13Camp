@@ -14,7 +14,7 @@
 
 <?php include "nav.php"; ?>
 <?php include "t_getitems.php"; ?>
-<?php include getPosition(1); ?>
+<?php $sstation = getPosition(1); ?>
 <?php $lego = getAllCubeNum(1); ?>
 
 <div class="middle_part w3-container w3-section">
@@ -28,7 +28,7 @@
 		</select>
 	</form>
 	</section>
-	<button class="w3-btn w3-khaki w3-round" onclick="check_lego()">確定</button>
+	<button class="w3-btn w3-khaki w3-round" onclick="check_lego(<?php echo $sstation?>)">確定</button>
 </div>
 
 <div class="middle_part w3-container w3-section">
