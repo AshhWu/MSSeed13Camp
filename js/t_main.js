@@ -168,7 +168,7 @@ function lego_refresh(obj){
 }
 
 function init(sstation){
-	document.getElementById("start").innerHTML += mrt_value[sstation];
+	document.getElementById("start").innerHTML += mrt_value[sstation.toString()];
 }
 
 //lego_exchnge/trade
