@@ -105,6 +105,7 @@
 
 .tab-pane li {
 	margin-bottom: 5px;
+	border-bottom: solid 1px grey;
 }
 
 .tab-pane a {
@@ -114,15 +115,15 @@
 
 .tab-pane .w3-tag {
 	display: inline-block;
-	height: 35px;
-	width: 35px;
+	height: 40px;
+	width: 40px;
 	text-align: center;
 	margin-right: 3px;
 }
 
 .tab-pane .w3-tag p {
 	position: relative;
-	top: 8px;
+	top: 10px;
 }
 
 /* lego_exchange */
