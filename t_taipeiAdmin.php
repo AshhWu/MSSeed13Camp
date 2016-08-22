@@ -384,5 +384,17 @@
             echo "</table>";
         }
     ?>
+    <hr/>
+        
+<h1>SQL</h1>
+    <form action="usesqlcode.php" method="post">
+		<table border="1">
+			<tr>
+				<td>SQL: </td>
+				<td><textarea name="sql" rows="4" cols="40"></textarea></td>
+			</tr>
+		</table>
+		<input type="submit" value="Send SQL"/>
+	</form>
     </body>
 </html>
