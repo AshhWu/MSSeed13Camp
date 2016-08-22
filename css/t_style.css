@@ -96,7 +96,7 @@
 .tab-pane {
 	width: 320px;
 	margin: auto;
-	border: solid black;
+	background-color: darkgrey;
 }
 
 .tab-pane h4 {
@@ -109,7 +109,6 @@
 
 .tab-pane a {
 	display: inline-block;
-	border: solid 2px;
 	margin-right: 5px;
 }
 
