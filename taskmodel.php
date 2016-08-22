@@ -735,7 +735,7 @@ function addMessage($time, $client, $content, $color)
 function deleteItem($item_id)
 {
 	$conn = connect();
-	$sql = "DELETE FROM account WHERE id = ?";
+	$sql = "DELETE FROM account WHERE email = ?";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $item_id);
 	$stmt->execute();
