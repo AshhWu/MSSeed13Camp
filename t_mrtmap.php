@@ -10,7 +10,7 @@
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<body>
+<body onload="init(<?php echo $sstation?>)">
 
 <?php include "nav.php"; ?>
 <?php include "t_getitems.php"; ?>
@@ -20,6 +20,7 @@
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-indigo w3-padding">移動</h5>
 	<section class="section1 w3-container">
+	<p id="start">起站: </p>
 	<form>
 		<label for="estation">訖站: </label>
 		<select id="estation" size="1">
