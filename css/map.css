@@ -118,6 +118,12 @@
 	-webkit-filter: drop-shadow(5px 5px 5px #511010);
 	filter: drop-shadow(5px 5px 5px #511010);
 }
+.map-marker-blue {
+	width: 4vw;
+	-moz-filter: drop-shadow(5px 5px 5px #0B2161);
+	-webkit-filter: drop-shadow(5px 5px 5px #0B2161);
+	filter: drop-shadow(5px 5px 5px #0B2161);
+}
 .map-marker-green {
 	width: 4vw;
 	-moz-filter: drop-shadow(5px 5px 5px #556B2F);
@@ -132,8 +138,8 @@
 }
 .map-marker-brown {
 	width: 4vw;
-	-moz-filter: drop-shadow(5px 5px 5px #0e272a);
-	-webkit-filter: drop-shadow(5px 5px 5px #0e272a);
-	filter: drop-shadow(5px 5px 5px #0e272a);
+	-moz-filter: drop-shadow(5px 5px 5px #000000);
+	-webkit-filter: drop-shadow(5px 5px 5px #000000);
+	filter: drop-shadow(5px 5px 5px #000000);
 }
 

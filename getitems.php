@@ -92,5 +92,15 @@ function prepareStronghold()
   prepareStrongholds();
 }
 
+function getStrongholdColor($team) 
+{
+  if ($team == '美洲') { $color = 'red'; }
+  else if ($team == '歐洲') { $color = 'orange'; }
+  else if ($team == '亞洲') { $color = 'blue'; }
+  else if ($team == '非洲') { $color = 'green'; }
+  else { $color = 'brown'; }
+  echo '<img src="png/s_map/mark/mark_'.$color.'.png" class="img-responsive map-marker-'.$color.'">';
+
+}
 
 ?>
