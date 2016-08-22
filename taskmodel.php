@@ -339,10 +339,13 @@ function prepareMission()
 	$stmt->execute();
 }
 
-function occupyStronghold($team, $code)
+function occupyStronghold($team, $code, $record)
 {
 	$conn = connect();
 	$sql = "UPDATE stronghold SET team='".$team."' WHERE mission='".$code."'";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+	$sql = "UPDATE stronghold SET highest_score='".$record."' WHERE mission='".$code."'";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
