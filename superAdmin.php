@@ -126,7 +126,7 @@
 	require_once "getitems.php";
 	#prepareResource();
 	$items = getResources();
-	for(int i = 0; i < 4; i++)
+	/*for(int i = 0; i < 4; i++)
 	{
 		switch($items[i][0])
 		{
@@ -136,7 +136,7 @@
 			case "D": $items[i][0] = "非洲"; break;
 			default: break;
 		}
-	}
+	}*/
 	if(!empty($items))
 	{
 		echo "原料<br>";
