@@ -74,7 +74,7 @@
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
-
+/*
 	$items = getItems();
 	if(!empty($items))
 	{
@@ -104,7 +104,7 @@
 	{
 		prepareAccount();
 	}
-
+*/
 ?>
 
 	<form action="additem.php" method="post">
