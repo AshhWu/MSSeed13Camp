@@ -80,19 +80,25 @@
 				<tr>
 					<th>Account</th>
 					<th>Password</td>
+					<th>Authority</td>
 					<th>Delete?</th>
 				</tr>";
 		foreach($items as $item)
 		{
 			echo 	"<tr>
 						<td>".$item[1]."</td>
-						<td>".$item[2]."</td>";
+						<td>".$item[2]."</td>
+						<td>".$item[3]."</td>";
 							
 			echo "<td><a href='deleteitem.php?id=".$item[0]."'>Delete</a></td>";
 			echo "</tr>";
 		}
 		
 		echo "</table>";
+	}
+	else
+	{
+		prepareAccount();
 	}
 ?>
 

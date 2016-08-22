@@ -92,6 +92,11 @@ function prepareStronghold()
   prepareStrongholds();
 }
 
+function prepareAccount()
+{
+  prepareAccounts();
+}
+
 function getStrongholdColor($team) 
 {
   if ($team == '美洲') { $color = 'red'; }
