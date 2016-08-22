@@ -30,31 +30,31 @@
 	<th>給我方</th>
 </tr>	
 <tr>
-	<th><div class="w3-tag w3-red"><?php echo $lego[1]?></div></th>
+	<th><div class="w3-tag w3-red"><p><?php echo $lego[1]?></p></div></th>
 	<th><input type="number" value="0" min="0" max=<?php echo $lego[1]?>></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-red"><?php echo $lego2[1]?></div></th>
+	<th><div class="w3-tag w3-red"><p><?php echo $lego2[1]?></p></div></th>
 	<th><input type="number" value="0" min="0" max=<?php echo $lego2[1]?>></th>
 </tr>
 <tr>
-	<th><div class="w3-tag w3-green"><?php echo $lego[2]?></div></th>
+	<th><div class="w3-tag w3-green"><p><?php echo $lego[2]?></p></div></th>
 	<th><input type="number" value="0" min="0" max=<?php echo $lego[2]?>></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-green"><?php echo $lego2[2]?></div></th>
+	<th><div class="w3-tag w3-green"><p><?php echo $lego2[2]?></p></div></th>
 	<th><input type="number" value="0" min="0" max=<?php echo $lego2[2]?>></th>
 </tr>
 <tr>
-	<th><div class="w3-tag w3-yellow"><?php echo $lego[3]?></div></th>
+	<th><div class="w3-tag w3-yellow"><p><?php echo $lego[3]?></p></div></th>
 	<th><input type="number" value="0" min="0" max=<?php echo $lego[3]?>></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-yellow"><?php echo $lego2[3]?></div></th>
+	<th><div class="w3-tag w3-yellow"><p><?php echo $lego2[3]?></p></div></th>
 	<th><input type="number" value="0" min="0" max=<?php echo $lego2[3]?>></th>
 </tr>
 <tr>
-	<th><div class="w3-tag w3-blue"><?php echo $lego[4]?></div></th>
+	<th><div class="w3-tag w3-blue"><p><?php echo $lego[4]?></p></div></th>
 	<th><input type="number" value="0" min="0" max=<?php echo $lego[4]?>></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-blue"><?php echo $lego2[4]?></div></th>
+	<th><div class="w3-tag w3-blue"><p><?php echo $lego2[4]?></p></div></th>
 	<th><input type="number" value="0" min="0" max=<?php echo $lego2[4]?>></th>
 </tr>
 </table>
