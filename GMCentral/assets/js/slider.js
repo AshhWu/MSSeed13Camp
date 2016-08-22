@@ -1,7 +1,6 @@
 
 renew = function(){
 	/* Test */
-	var http = require("http");
 	var mysql = require('mysql');
 	var connection = mysql.createConnection({
     	host: 'ap-cdbr-azure-east-c.cloudapp.net',
