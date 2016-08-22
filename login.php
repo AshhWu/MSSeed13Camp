@@ -8,32 +8,31 @@
     $pw = isset($_POST['password']) ? $_POST['password'] : null;
     $sql = "SELECT * FROM account where email = '$id'";
     $stmt = $conn->query($sql);
-	$result = $stmt->fetchAll(PDO::FETCH_NUM);
-    $row = @mysql_fetch_row($result);
+	$row = $stmt->fetchAll(PDO::FETCH_NUM);
     
 	echo "id: ".$id."<br>";
 	echo "pw: ".$pw."<br>";
-	echo "row[0]: ".$row[0]."<br>";
-	echo "row[1]: ".$row[1]."<br>";
-	echo "row[2]: ".$row[2]."<br>";
+	echo "row[0][0]: ".$row[0][0]."<br>";
+	echo "row[0][1]: ".$row[0][1]."<br>";
+	echo "row[0][2]: ".$row[0][2]."<br>";
 	
-    if($id !== null && $pw !== null && $row[1] == $id && $row[2] == $pw)
+    if($id !== null && $pw !== null && $row[0][1] == $id && $row[0][2] == $pw)
     {
-        if($row[2] == '1')
+        if($row[0][2] == '1')
         {
 			echo "normal uesr<br>";
             $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 1;
             #header('Location: Student_login.php');
         }
-        elseif($row[2] == '2')
+        elseif($row[0][2] == '2')
         {
             $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 2;
 			echo "隨輔<br>";
             #header('Location: Prof_login.php');
         }
-        elseif($row[2] == '3')
+        elseif($row[0][2] == '3')
         {
             $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 3;
