@@ -34,9 +34,6 @@
     <?php
         include "nav.php";
     ?>
-    <script>
-        setTimeout("self.location.reload();",10000);
-    </script>
 
 <h1>taipeiRun</h1>
     <?php
@@ -144,15 +141,15 @@
                             <td>".$item[0]."</td>
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
-                if(!empty($item[3])){
-                    echo    "<td><img src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
+                if(!empty($item[4])){
+                    echo    "<td><img src='data:image/jpeg;base64,".base64_encode($item[4])."' /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
                 }
-                if($item[4]==0){
+                if($item[3]==0){
                     echo    "<td><a href='t_missionComplete.php?id=".$item[0]."&team=".$item[1]."'>OK</a> or 
                                  <a href='t_missionFail.php?id=".$item[0]."&team=".$item[1]."'>NOT</a></td>";
-                }else if($item[4]==1){
+                }else if($item[3]==1){
                     echo    "<td>Complete</td>";
                 }else{
                     echo    "<td>Fail</td>";
@@ -387,13 +384,5 @@
             echo "</table>";
         }
     ?>
-
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- My Scripts -->
-    <script src="js/nav.js"></script>
     </body>
 </html>
