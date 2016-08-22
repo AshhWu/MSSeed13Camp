@@ -186,4 +186,12 @@ function getLatestReport($num){
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getPosition($team){
+    $conn = connect();
+	$sql = "SELECT position FROM taipeiRun where team=".$team;
+	$stmt = $conn->query($sql);
+    $items = $stmt->fetchAll(PDO::FETCH_NUM);
+	return $items[0][0];
+}
+
 ?>
