@@ -64,6 +64,10 @@
 						</select>
 					</td>
 				</tr>
+				<tr>
+					<td>紀錄: </td>
+					<td><input name="record" type="text"/></td>
+				</tr>
 			</table>
 			</center>
 					<input type="submit" value="佔領據點"/>

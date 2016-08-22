@@ -105,7 +105,7 @@ include_once 'taskmodel.php';
 			case "4": echo "<br>Day4條件: ".$items[0][8]; break;
 			default: echo "Error";
 		}
-		echo "</p>";
+		echo "<br>目前最高紀錄: ".$items[0][9]."</p>";
 	} 
 	else 
 	{

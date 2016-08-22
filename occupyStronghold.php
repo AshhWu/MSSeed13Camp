@@ -78,10 +78,13 @@ include_once 'taskmodel.php';
 
 $team = $_POST['team'];
 $code = $_POST['code'];
+$record = $_POST['record'];
 
-occupyStronghold($team, $code);
+occupyStronghold($team, $code, $record);
 
 echo "Report success!!";
+sleep(3);
+header('Location: reportPage.php');
 ?>
 
 
