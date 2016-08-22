@@ -11,6 +11,12 @@
 	$result = $stmt->fetchAll(PDO::FETCH_NUM);
     $row = @mysql_fetch_row($result);
     
+	echo "id: ".$id."<br>";
+	echo "pw: ".$pw."<br>";
+	echo "row[0]: ".$row[0]."<br>";
+	echo "row[1]: ".$row[1]."<br>";
+	echo "row[2]: ".$row[2]."<br>";
+	
     if($id !== null && $pw !== null && $row[1] == $id && $row[2] == $pw)
     {
         if($row[2] == '1')
@@ -37,6 +43,6 @@
     }
     else
     {
-        header('Location: index.php');
+        echo "wrong password!!";
     }
 ?>
