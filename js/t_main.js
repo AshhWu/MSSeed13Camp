@@ -164,11 +164,7 @@ function lego_refresh(obj){
 
 	//window.location = tmp_str;
 	window.location.reload();
-	alert("移動成功!");
-}
-
-function init(sstation){
-	document.getElementById("start").innerHTML += mrt_value[sstation.toString()];
+	alert("移動成功! 請向終點站前進~");
 }
 
 //lego_exchnge/trade
