@@ -24,13 +24,13 @@ function pic_switchsize(){
 //check route & lego cost
 var change_line = [[0, [108203], [110303], 0, [109508]], [[203108], 0, [206309, 209305], [205405, 211410], [208511]], [[303110], [309206, 305209], 0, [304407, 310404], [307512]], [0, [405205, 410211], [407304, 404310], 0, [406509]], [[508109], [511208], [512307], [509406], 0]];
 var change_point = [108, 110, 109, 206, 209, 205, 211, 208, 304, 310, 307, 406, 509, 512, 404, 407, 511, 410, 405, 305, 309, 508, 303, 203];
-var result, cost_list, tmp1, tmp2, tmp3, tmp4, count;
+var end, result, cost_list, tmp1, tmp2, tmp3, tmp4, count;
 function check_lego(start){
 	var i, j, k, l;
 	document.getElementById("route_ul").innerHTML = "";
 	document.getElementById("route_list").style.display = "none";
 
-	var end, line_s, line_e;
+	var line_s, line_e;
 	//start = parseInt(document.getElementById("sstation").value);
 	end = parseInt(document.getElementById("estation").value);
 	if (!Number.isInteger(start) || !Number.isInteger(end)){
@@ -150,7 +150,8 @@ function mrt_route(route, count){
 }
 
 function lego_refresh(obj){
-	var n = parseInt(obj.id[obj.id.length-1]);
+
+	/* var n = parseInt(obj.id[obj.id.length-1]);
 	var rest_lego;
 	var tmp_str = 't_updateAllCube.php?team=1&c1=0';
 	var j;
@@ -160,11 +161,11 @@ function lego_refresh(obj){
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
 
-	document.getElementById("route_list").style.display = "none";
+	document.getElementById("route_list").style.display = "none"; */
 
-	//window.location = tmp_str;
-	window.location.reload();
-	alert("移動成功! 請向終點站前進~");
+	var tmp_str = 't_updatePosition.php?team=1&position=' + end.toString();
+	window.location = tmp_str;
+	alert("移動成功! 請向" + mrt_value[end.toString()] + "站前進~");
 }
 
 //lego_exchnge/trade
