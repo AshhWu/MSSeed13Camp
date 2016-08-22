@@ -2,7 +2,7 @@
 session_start();
 header('Cache-Control: no-cache');
 header('Pragma: no-cache');
-//$_SESSION["s_team"] = 'B'; //testing
+$_SESSION["s_team"] = 'B'; //testing
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +14,8 @@ header('Pragma: no-cache');
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- CSS Style -->
+  <link rel="stylesheet" type="text/css" href="css/material.css">
 </head>
 
 <body>
@@ -640,8 +642,7 @@ header('Pragma: no-cache');
   <script src="js/nav.js"></script>
   <!-- My Scripts -->
   <script src="js/material.js"></script>
-  <!-- CSS Style -->
-  <link rel="stylesheet" type="text/css" href="css/material.css">
+  
 
 </body>
 </html>
