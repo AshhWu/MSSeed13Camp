@@ -69,10 +69,13 @@
         <div id="collapse1" class="panel-collapse collapse">
           <div class="panel-body">
 
+		  
 <?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
+	
+/*
 	$items = getItems();
 	if(!empty($items))
 	{
@@ -100,6 +103,7 @@
 	{
 		#prepareAccount();
 	}
+*/
 ?>
 
 	<form action="additem.php" method="post">
