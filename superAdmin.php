@@ -66,33 +66,43 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse1">
           <h4 class="panel-title">Account</h4>
         </div>
-        <div id="collapse1" class="panel-collapse collapse in">
+        <div id="collapse1" class="panel-collapse collapse">
           <div class="panel-body">
 
+		  
 <?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
+
 	$items = getItems();
 	if(!empty($items))
 	{
 		echo "<table border='1'>
 				<tr>
+					<th>pid</th>
 					<th>Account</th>
 					<th>Password</td>
+					<th>Authority</td>
 					<th>Delete?</th>
 				</tr>";
 		foreach($items as $item)
 		{
 			echo 	"<tr>
+						<td>".$item[0]."</td>
 						<td>".$item[1]."</td>
-						<td>".$item[2]."</td>";
+						<td>".$item[2]."</td>
+						<td>".$item[3]."</td>";
 							
 			echo "<td><a href='deleteitem.php?id=".$item[0]."'>Delete</a></td>";
 			echo "</tr>";
 		}
 		
 		echo "</table>";
+	}
+	else
+	{
+		prepareAccount();
 	}
 ?>
 
@@ -126,6 +136,17 @@
 	require_once "getitems.php";
 	#prepareResource();
 	$items = getResources();
+	/*for(int i = 0; i < 4; i++)
+	{
+		switch($items[i][0])
+		{
+			case "A": $items[i][0] = "美洲"; break;
+			case "B": $items[i][0] = "歐洲"; break;
+			case "C": $items[i][0] = "亞洲"; break;
+			case "D": $items[i][0] = "非洲"; break;
+			default: break;
+		}
+	}*/
 	if(!empty($items))
 	{
 		echo "原料<br>";
@@ -340,8 +361,8 @@
 				<tr>
 					<th>Time</th>
 					<th>Client</td>
-					<th>Message</td>
 					<th>Color</td>
+					<th>Message</td>
 					<th>Delete?</th>
 				</tr>";
 		foreach($items as $item)
@@ -349,7 +370,7 @@
 			echo 	"<tr>
 						<td>".$item[1]."</td>
 						<td>".$item[2]."</td>
-						<td>Red</td>
+						<td>".$item[4]."</td>
 						<td>".$item[3]."</td>";
 							
 			echo "<td><a href='deletemessage.php?id=".$item[0]."'>Delete</a></td>";
@@ -370,10 +391,10 @@
 				<td>client: </td>
 				<td>
 					<select name="client"/>
-						<option value="A">A</option>
-						<option value="B">B</option>
-						<option value="C">C</option>
-						<option value="D">D</option>
+						<option value="A">美洲</option>
+						<option value="B">歐洲</option>
+						<option value="C">亞洲</option>
+						<option value="D">非洲</option>
 						<option value="All">All</option>
 					</select>
 				</td>
@@ -404,7 +425,7 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse4">
           <h4 class="panel-title">Stronghold</h4>
         </div>
-        <div id="collapse4" class="panel-collapse collapse in">
+        <div id="collapse4" class="panel-collapse collapse">
           <div class="panel-body">
 
 	<form action="createStronghold.php" method="post">
@@ -429,6 +450,7 @@
 					<th>產生時間:    </th>
 					<th>佔領隊伍:</th>
 					<th>Mission Code:    </th>
+					<th>最高紀錄:    </th>
 				</tr>";
 		foreach($items as $item)
 		{
@@ -440,7 +462,8 @@
 						<td>".$item[5 ]."</td>
 						<td>".$item[6 ]."</td>
 						<td>".$item[7 ]."</td>
-						<td>".$item[8 ]."</td>";
+						<td>".$item[8 ]."</td>
+						<td>".$item[9 ]."</td>";
 			echo "</tr>";
 		}
 		
@@ -508,7 +531,7 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse6">
           <h4 class="panel-title">Time Table</h4>
         </div>
-        <div id="collapse6" class="panel-collapse collapse in">
+        <div id="collapse6" class="panel-collapse collapse">
           <div class="panel-body">
 
 <?php
@@ -598,6 +621,9 @@ window.onload=function(){
 		</table>
 		<input type="submit" value="Send SQL"/>
 	</form>
+	<br>reference:<br>
+	UPDATE resource SET magic_powder='0', cloth='0', ruby='0', shaft='0', fire='0', seed='0', water='0', light='0', flax='0', screw='0', plastic='0', electron='0', ergonomic='0', imagine='0', metal='0', air='0', magic_stone='0', control_panel='0', seat='0', wheel='0', rope='0', cypress='0', propeller='0', door='0', jet='0', gun='0', elk='0', sound='0', sd_card='0', missile='0', miss_air='0', led_light='0', s_logo='0'<br>
+	UPDATE stronghold SET team='0', highest_score='0'<br>
           </div>
         </div>
       </div>

@@ -14,22 +14,14 @@
     
     <?php
       include_once 'taskmodel.php';
+      include_once 't_getitems.php';
+      $team = 20;
+      $mState = getMissionState($team);
+      $mission = getMissionByTeam($team);
     ?>
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
     
-      
-    <!-- My js -->
-    <script>
-        function sendPic(){
-            alert("圖片上傳囉");
-            <!-- 跳回任務頁 -->
-        }
-        
-        function uploadPic(){
-            alert()
-        }
-    </script>
     <script type="text/javascript">
         function readURL(input) {
             if (input.files && input.files[0]) {
@@ -54,14 +46,27 @@
       <div class="starter-template">
         <div class=".col-md-10 .col-md-offset-1">
             <div class="thumbnail">
-                <form id="form1" runat="server">
-                    <input type='file' onchange="readURL(this);" />
-                    <img id="blah" src="png/clickToLoad.jpg" height="260px" width="260px" alt="your image" />
+                <form action="t_addMissionReport.php" method="post" runat="server" enctype="multipart/form-data">
+                    <div class="caption">
+                    <?php 
+                        if($mState==0){
+                            echo    '<input type="file" name="picture" onchange="readURL(this);" />
+                                    <img id="blah" src="" height="260px" width="260px" alt="預覽區" />
+                                    <p><input class="btn btn-success" type="submit" value="完成任務">
+                                    <a href="t_missionDetail.php" class="btn btn-danger" role="button">取消</a></p>';
+                        }else if($mState==1){
+                            echo    '<p><h1><span class="label label-success">Judging</span></h1></p>
+                                    <img src="data:image/jpeg;base64,'.base64_encode(getMissionReportPic($team)).'" width="250px"/>
+                                    <script language="javascript">setTimeout("self.location.reload();",5000);</script>';
+                        }else if($mState==2){
+                            echo    '<p><h1><span class="label label-success">任務完成</span></h1></p><br>
+                                    <p><a href="t_newMission.php?team='.$team.'" class="btn btn-danger" role="button">獲得新任務</a></p>';
+                        }else{
+                            echo    '<p><h1><span class="label label-success">任務已全部完成</span></h1></p>';
+                        }
+                    ?>
+                    </div>
                 </form>
-                <div class="caption">
-                    <p><a class="btn btn-success" role="button" onClick="sendPic()">完成任務</a>
-                    <a href="t_missionDetail.php" class="btn btn-danger" role="button">取消</a></p>
-                </div>
             </div>
         </div>
       </div>

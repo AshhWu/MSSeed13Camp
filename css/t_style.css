@@ -1,7 +1,8 @@
+
 /* MRT */
 
 .middle_part {
-	width: 360px;
+	width: 320px;
 	margin: auto;
 }
 
@@ -13,10 +14,9 @@
 
 .middle_part .section1 {
 	display: inline-block;
-	max-width: 55%;
+	max-width: 50%;
 	position: relative;
-	top: 15px;
-	left: 10px;
+	top: 10px;
 }
 
 .middle_part form {
@@ -26,22 +26,29 @@
 
 .middle_part button {
 	display: inline-block;
-	max-width: 18%;
+	max-width: 20%;
+	position: relative;
+	left: 20px;
+	bottom: 10px;
 }
 
 .middle_part .section2 {
 	display: inline-block;
-	max-width: 80%;
-	position: relative;
-	bottom: 15px;
-	left: 15px;
+	width: 80%;
 }
 
-.middle_part div {
+.middle_part .w3-tag {
+	height: 40px;
+	width: 40px;
 	display: inline-block;
 	text-align: center;
-	padding: 8px;
-	margin-left: 3px;
+	position: relative;
+	bottom: 15px;
+}
+
+.middle_part .w3-tag p {
+	position: relative;
+	top: 8px;
 }
 
 #bottom_part img {
@@ -54,29 +61,35 @@
 /* route_list */
 
 #route_list {
-	width: 350px;
+	width: 320px;
 	margin: auto;
 	display: none;
-	border: solid;
-}
-
-#route_list {
+	border: solid black;
 	text-align: center;
 }
 
-#route_list .w3-card-2 {
-	display: block;
-	width: 100%;
+#route_list .w3-tag {
+	height: 35px;
+	width: 35px;
+	margin-right: 3px;
+	text-align: center;
+}
+
+#route_list button {
+	display: inline-block;
+	margin-top: 3px;
+	text-align: center;
 }
 
 #route_list p {
 	display: inline-block;
+	margin: 3px;
 }
 
 /* lego_list */
 
 #lego_list {
-	width: 350px;
+	width: 320px;
 	margin: auto;
 	background-color: grey;
 }
@@ -102,14 +115,20 @@
 /* lego_exchange */
 
 #lego_exchange {
-	width: 300px;
+	width: 280px;
 	margin: auto;
 	text-align: center;
 }
 
 #exchange_table {
-	width: 350px;
+	width: 280px;
 	margin: auto;
+	text-align: center;
+}
+
+#exchange_table .w3-tag {
+	height: 30px;
+	width: 60px;
 	text-align: center;
 }
 

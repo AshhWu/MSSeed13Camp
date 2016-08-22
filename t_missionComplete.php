@@ -1,15 +1,17 @@
 <?php
 include_once 'taskmodel.php';
+$id = $_GET['id'];
 $team = $_GET['team'];
+
 $conn = connect();
-$sql = "SELECT * FROM taipeiRun where team=".$team;
-$stmt = $conn->query($sql);
-$items = $stmt->fetchAll(PDO::FETCH_NUM);
-foreach($items as $item){
-    $newMissionRank = $item[9]+1;
-}
-$sql = "UPDATE taipeiRun SET mission=".$newMissionRank." where team=".$team;
+$sql = "UPDATE t_missionReport SET state=1 where id=".$id;
 $stmt = $conn->prepare($sql);
 $stmt->execute();
+
+$sql = "UPDATE taipeiRun SET mState=2 where team=?";
+$stmt = $conn->prepare($sql);
+$stmt->bindValue(1, $team);
+$stmt->execute();
+
 header('Location: t_taipeiAdmin.php');
 ?>

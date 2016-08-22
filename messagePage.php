@@ -44,11 +44,12 @@
 	$items = getMessages();
 	if(!empty($items))
 	{
+		$items = array_reverse($items); // try 反向
 		foreach($items as $item)
-		{
+		{	
 			echo 	"<p>
 			<span style=\"font-size:14px;\">".$item[1]."</span></p>
-				<h3 style=\"color:red;\">".$item[3]."</h3>
+				<h3 style=\"color:".$item[4].";\">".$item[3]."</h3>
 			<hr />";
 		}
 	}

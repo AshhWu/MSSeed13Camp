@@ -33,11 +33,11 @@
 		font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
 	}
 
-	h1, h2, h3 { color: #000; margin-bottom: 0; padding-bottom: 0; }
+	h1, h2, h3 { margin-bottom: 0; padding-bottom: 0; }
 
-	h1 { font-size: 2em; }
+	h1 { font-size: 3em; }
 
-	h2 { font-size: 1.75em; }
+	h2 { font-size: 2.5em; color: rgb(107, 137, 255); }
 
 	h3 { font-size: 1.2em; }
 
@@ -54,6 +54,10 @@
 	body {
 		text-align: center;
 		word-spacing: 10px;
+	}
+
+	p {
+		font-size: 2em;
 	}
 
 	</style>
@@ -89,14 +93,10 @@ include_once 'taskmodel.php';
 	header('Pragma: no-cache');
 	require_once "getitems.php";
 	$time = getDay();
-	if(!empty($time))
-	{
-		echo "Day: ".$time[0][0];
-	}
 
 	if(!empty($items))
 	{
-		echo "<br>Code: ".$items[0][1]."<br>主題: ".$items[0][2]."<br>內容: ".$items[0][3]."<br>任務人數: ".$items[0][4];
+		echo "<p><br>Code: ".$items[0][1]."<br>主題: ".$items[0][2]."<br></p><h2>內容: ".$items[0][3]."</h2><p><br>任務人數: ".$items[0][4];
 		switch($time[0][0])
 		{
 			case "1": echo "<br>Day1條件: ".$items[0][5]; break;
@@ -105,6 +105,7 @@ include_once 'taskmodel.php';
 			case "4": echo "<br>Day4條件: ".$items[0][8]; break;
 			default: echo "Error";
 		}
+		echo "<br>目前最高紀錄: ".$items[0][9]."</p>";
 	} 
 	else 
 	{

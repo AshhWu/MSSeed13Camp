@@ -1,8 +1,8 @@
 <?php
-  session_start();
-  header('Cache-Control: no-cache');
-  header('Pragma: no-cache');
-  $_SESSION["s_team"] = 'B'; //testing
+session_start();
+header('Cache-Control: no-cache');
+header('Pragma: no-cache');
+//$_SESSION["s_team"] = 'B'; //testing
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +11,7 @@
   <title>微軟13屆領袖營 - 據點戰 - 據點地圖</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-  
+
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
@@ -31,7 +31,6 @@
       <li><a data-toggle="tab" href="#special">特殊原料</a></li>
       <li><a data-toggle="tab" href="#component">零件</a></li>
       <li><a data-toggle="tab" href="#transport">交通工具</a></li>
-      
     </ul>
 
     <div class="tab-content">
@@ -42,7 +41,7 @@
             <div class="count raw-count">
               <?php  
               require_once "getitems.php";
-              #prepareResource();
+            #prepareResource();
               $items = getGroupResources($_SESSION["s_team"]);
               if(!empty($items)) { echo $items[0][1]; }
               ?>
@@ -166,7 +165,7 @@
           </div>
           <div class="col-md-2 col-xs-3 wrapper special-wrapper">
             <div class="count special-count"><?php if(!empty($items)) { echo $items[0][32]; } ?></div>
-            <img src="png/s_special/miss_air.jpg" class="img-responsive icon-special" alt="空姐">
+            <img src="png/s_special/miss_air.png" class="img-responsive icon-special" alt="空姐">
             <p class="name special-name text-center">空姐</p>
           </div>
           <div class="col-md-2 col-xs-3 wrapper special-wrapper">
@@ -237,7 +236,12 @@
             <p class="name component-name text-center">機艙</p>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-offset-2 col-xs-offset-0"><p class="hint">※ 合成請點選零件圖示</p></div>
+        </div>
       </div>
+
+      
 
 
       <!-- Compose Modal -->
@@ -269,7 +273,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -302,7 +306,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -335,7 +339,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -368,7 +372,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -401,7 +405,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -439,7 +443,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -477,7 +481,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -515,7 +519,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -553,7 +557,7 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
@@ -598,20 +602,34 @@
               </div>
             </div>
             <div class="modal-footer">※確定後無法更改
-              <button type="button" class="btn btn-danger" data-dismiss="modal">確定合成？</button>
+              <button type="button" class="btn btn-danger btn-components" data-dismiss="modal">確定合成？</button>
             </div>
           </div>
         </div>
       </div>
 
-
-      <!-- Transportation -->
+      <!-- Transportation Tab -->
       <div id="transport" class="tab-pane fade">
+        <?php 
+        if((!empty($items)) && ($items[0][34] != '0') && ($items[0][34] != NULL)) { echo '<img src="png/s_transport/'.$items[0][34].'.png" class="img-responsive icon-components" alt="'.$items[0][34].'">'; } 
+        else { require_once "transportation.php"; }
+        ?>
       </div>
+
+      <!-- Transportation Modal -->
+      <?php
+      require_once "taskmodel.php";
+      $day = getAllDay();
+      if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
+      else { $_SESSION["day"] = 1; }
+
+      if ($_SESSION["day"] == 4) { require_once "transportation_modal.php"; }
+      ?>
+      
 
     </div>
   </div>
-  
+
 
 
   <!-- jQuery -->
