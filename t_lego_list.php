@@ -16,7 +16,7 @@
 <?php $all_lego = getAllTeamCubeNum() ?>
 
 <div class="middle_part w3-container w3-section">
-	<h5 class="w3-brown w3-padding w3-round-large">樂高</h5>
+	<h5 class="w3-brown w3-padding">樂高</h5>
 	<section class="section2 w3-container">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $all_lego[0][2]?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo $all_lego[0][3]?></p></div>
@@ -32,7 +32,7 @@
 	</ul>
 
 	<div class="tab-content">
-		<div id="lego_list" class="tab-pane fade in active w3-container w3-section w3-round w3-padding">
+		<div id="lego_list" class="tab-pane fade in active">
 			<h4 class="w3-card-4 w3-sand w3-round w3-padding">各組樂高(點組別按鈕請求交易)</h4>
 			<ul class="w3-ul">
 				<li class="w3-container">
