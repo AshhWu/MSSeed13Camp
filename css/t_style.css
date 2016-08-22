@@ -43,12 +43,7 @@
 	display: inline-block;
 	text-align: center;
 	position: relative;
-	bottom: 12px;
-}
-
-.middle_part .w3-tag p {
-	position: relative;
-	bottom: 5px;
+	bottom: 15px;
 }
 
 #bottom_part img {
