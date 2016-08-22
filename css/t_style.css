@@ -48,7 +48,7 @@
 
 .middle_part .w3-tag p {
 	position: relative;
-	top: 8px;
+	top: 10px;
 }
 
 #bottom_part img {
@@ -114,6 +114,11 @@
 	width: 35px;
 	text-align: center;
 	margin-right: 3px;
+}
+
+#lego_list .w3-tag p {
+	position: relative;
+	top: 8px;
 }
 
 /* lego_exchange */
