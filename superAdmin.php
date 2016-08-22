@@ -66,7 +66,7 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse1">
           <h4 class="panel-title">Account</h4>
         </div>
-        <div id="collapse1" class="panel-collapse collapse in">
+        <div id="collapse1" class="panel-collapse collapse">
           <div class="panel-body">
 
 <?php
@@ -415,7 +415,7 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse4">
           <h4 class="panel-title">Stronghold</h4>
         </div>
-        <div id="collapse4" class="panel-collapse collapse in">
+        <div id="collapse4" class="panel-collapse collapse">
           <div class="panel-body">
 
 	<form action="createStronghold.php" method="post">
@@ -521,7 +521,7 @@
         <div class="panel-heading" data-toggle="collapse" href="#collapse6">
           <h4 class="panel-title">Time Table</h4>
         </div>
-        <div id="collapse6" class="panel-collapse collapse in">
+        <div id="collapse6" class="panel-collapse collapse">
           <div class="panel-body">
 
 <?php
