@@ -93,27 +93,27 @@
 
 /* lego_list */
 
-#lego_list {
+.tab-pane {
 	width: 320px;
 	margin: auto;
 	border: solid black;
 }
 
-#lego_list h4 {
+.tab-pane h4 {
 	text-align: center;
 }
 
-#lego_list li {
+.tab-pane li {
 	margin-bottom: 5px;
 }
 
-#lego_list a {
+.tab-pane a {
 	display: inline-block;
 	border: solid 2px;
 	margin-right: 5px;
 }
 
-#lego_list .w3-tag {
+.tab-pane .w3-tag {
 	display: inline-block;
 	height: 35px;
 	width: 35px;
@@ -121,7 +121,7 @@
 	margin-right: 3px;
 }
 
-#lego_list .w3-tag p {
+.tab-pane .w3-tag p {
 	position: relative;
 	top: 8px;
 }
