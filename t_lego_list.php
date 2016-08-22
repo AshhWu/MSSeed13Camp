@@ -32,7 +32,7 @@
 	</ul>
 
 	<div class="tab-content">
-		<div id="lego_list" class="tab-pane fade in active">
+		<div id="lego_list" class="tab-pane fade in active w3-container w3-section w3-padding">
 			<h4 class="w3-card-4 w3-sand w3-round w3-padding">各組樂高(點組別按鈕請求交易)</h4>
 			<ul class="w3-ul">
 				<li class="w3-container">
