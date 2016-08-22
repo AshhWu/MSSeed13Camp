@@ -35,9 +35,9 @@
 
 	h1, h2, h3 { margin-bottom: 0; padding-bottom: 0; }
 
-	h1 { font-size: 2em; }
+	h1 { font-size: 3em; }
 
-	h2 { font-size: 1.75em; color: rgb(107, 137, 255); }
+	h2 { font-size: 2.5em; color: rgb(107, 137, 255); }
 
 	h3 { font-size: 1.2em; }
 
@@ -57,7 +57,7 @@
 	}
 
 	p {
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 
 	</style>
