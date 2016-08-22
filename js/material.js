@@ -1,7 +1,33 @@
 var main = function(){
-	$('.modal .btn-danger').click(function(){
+	// Reload Current Tab
+	$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+        localStorage.setItem('activeTab', $(this).attr('href'));
+    });
+    var activeTab = localStorage.getItem('activeTab');
+    if(activeTab){
+        $('[href="' + activeTab + '"]').tab('show');
+    }
+
+
+	$('.modal .btn-components').click(function(){
 		// Get resource name
-		var data = { component: $(this).parent().closest('.modal').attr('id') };
+		var data = { component: $(this).parent().closest('.modal').attr('id'), isTrans: false };
+		// Update team resource
+		$.post("composeResource.php", data)
+		.done(function( result ) {
+			if (result == "SUCCESS") { 
+				alert("合成成功！");
+				location.reload(true);
+			}
+			else {
+				alert("合成失敗，請確認原料數量後再試一次！ (" + result + ")");
+			}
+		});
+	});
+
+	$('.modal .btn-transport').click(function(){
+		// Get resource name
+		var data = { component: $(this).parent().closest('.modal').attr('id'), isTrans: true };
 
 		// Update team resource
 		$.post("composeResource.php", data)
@@ -11,7 +37,7 @@ var main = function(){
 				location.reload(true);
 			}
 			else {
-				alert("請確認原料數量後再試一次！");
+				alert("合成失敗，請確認原料數量後再試一次！ (" + result + ")");
 			}
 		});
 	});

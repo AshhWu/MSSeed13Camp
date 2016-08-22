@@ -1,0 +1,97 @@
+<html>
+<!--
+/** * Copyright 2013 Microsoft Corporation
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+<head>
+<!-- Title -->
+<title>超級管理員</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Bootstrap Core CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- CSS Style -->
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="label-marker.js"></script>
+    <script>
+        $(function() {
+
+            var mapCanvas = document.getElementById('map');
+            var mapOptions = {
+                center: new google.maps.LatLng(25.027027027027028, 121.55736810913098),
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+            var markers = [];
+
+
+
+            function reloadTeamStatus(){
+                $.ajax({
+                    url: '{{ route('api.v1.team.index') }}',
+                    method: 'GET',
+                    success: function(data){
+                        console.log(data);
+                        for(var index in data)
+                        {
+
+                            var team = data[index];
+                            console.log(team);
+                            console.log(markers[team['id']]);
+                            if(team['location'] != 'null'){
+                                if(markers[team['id']] == undefined){
+                                    console.log('new, create');
+                                    var array = team['location'].split(',');
+                                    markers[team['id']] = new MarkerWithLabel({
+                                        position: new google.maps.LatLng(array[0], array[1]),
+                                        map: map,
+                                        title: team['name'],
+                                        label: team['name'],
+                                        labelContent: team['name'],
+                                        labelAnchor: new google.maps.Point(22, 0),
+                                        labelClass: "labels", // the CSS class for the label
+                                        labelStyle: {opacity: 0.75}
+                                    });
+
+                                }else{
+                                    console.log('old, move');
+                                    var array = team['location'].split(',');
+//                                    markers[team['id']].setMap(null);
+                                    markers[team['id']].setPosition(new google.maps.LatLng(array[0], array[1]))
+                                }
+
+                            }
+                        }
+                    }
+                });
+            }
+
+            setTimeout(function(){ location.reload(); }, 10000);
+
+            reloadTeamStatus();
+
+        });
+    </script>
+<body>
+    <div id="map"></div>
+    <h1 style="font-size: 40px">書瑞哥哥好帥 (嗎?</h1>
+</body>
+</html>

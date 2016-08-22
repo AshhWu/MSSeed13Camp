@@ -1,7 +1,7 @@
 /* MRT */
 
 .middle_part {
-	width: 360px;
+	width: 320px;
 	margin: auto;
 }
 
@@ -13,10 +13,9 @@
 
 .middle_part .section1 {
 	display: inline-block;
-	max-width: 55%;
+	max-width: 50%;
 	position: relative;
-	top: 15px;
-	left: 10px;
+	top: 10px;
 }
 
 .middle_part form {
@@ -26,7 +25,10 @@
 
 .middle_part button {
 	display: inline-block;
-	max-width: 18%;
+	max-width: 20%;
+	position: relative;
+	left: 20px;
+	bottom: 10px;
 }
 
 .middle_part .section2 {
@@ -54,10 +56,10 @@
 /* route_list */
 
 #route_list {
-	width: 350px;
+	width: 320px;
 	margin: auto;
 	display: none;
-	border: solid;
+	border: solid grey;
 }
 
 #route_list {
@@ -76,7 +78,7 @@
 /* lego_list */
 
 #lego_list {
-	width: 350px;
+	width: 320px;
 	margin: auto;
 	background-color: grey;
 }
@@ -102,14 +104,20 @@
 /* lego_exchange */
 
 #lego_exchange {
-	width: 300px;
+	width: 280px;
 	margin: auto;
 	text-align: center;
 }
 
 #exchange_table {
-	width: 350px;
+	width: 280px;
 	margin: auto;
+	text-align: center;
+}
+
+#exchange_table .w3-tag {
+	height: 60px;
+	width: 60px;
 	text-align: center;
 }
 

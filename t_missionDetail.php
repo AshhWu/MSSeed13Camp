@@ -12,6 +12,9 @@
       
     <?php
       include_once 'taskmodel.php';
+      include_once 't_getitems.php';
+      $team = 20;
+      $mission = getMissionByTeam($team);
     ?>
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
@@ -25,14 +28,13 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1><span class="label label-primary">任務一</span></h1>   <!--任務次序-->
+        <h1><span class="label label-primary">任務資訊</span></h1>
         <div class=".col-md-10 .col-md-offset-1">
             <div class="thumbnail">
-                <img class="img-rounded" src="png/microsoftBuilding.jpg" alt="請重新整理頁面">    <!--題目圖片-->
+                <img class="img-rounded" width="250px" src="data:image/jpeg;base64,<?echo base64_encode(getMissionPic($mission))?>" alt="請重新整理頁面">    <!--題目圖片-->
                 <div class="caption">
-                    <h3>題目標題</h3>             <!--題目標題-->
-                    <p>與穿營服的關主拍照上傳</p>  <!--題目內容與提示-->
-                    <!--<p>距離關主:</p>            距離關主-->
+                    <h3><?echo getMissionTitle($mission)?></h3>             <!--題目標題-->
+                    <p><?echo getMissionContent($mission)?></p>  <!--題目內容與提示-->
                     <p><a href="t_missionSend.php" class="btn btn-success" role="button">照片上傳</a></p>
                 </div>
             </div>
@@ -40,7 +42,6 @@
       </div>
 
     </div><!-- /.container -->
-  
 
 
     <!-- jQuery -->
@@ -49,6 +50,5 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- My Scripts -->
     <script src="js/nav.js"></script>
-
   </body>
 </html>

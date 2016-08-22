@@ -14,6 +14,7 @@
 
 <?php include "nav.php"; ?>
 <?php include "t_getitems.php"; ?>
+<?php $lego = getAllCubeNum(1); ?>
 
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-indigo w3-padding w3-round-large">移動</h5>
@@ -39,11 +40,10 @@
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-brown w3-padding w3-round-large">樂高</h5>
 	<section class="section2 w3-container">
-		<?php $team=1; ?>
-		<div id="lego2" class="w3-tag w3-red"><p><?php echo getCubeNum($team, 2)?></p></div>
-		<div id="lego3" class="w3-tag w3-green"><p><?php echo getCubeNum($team, 3)?></p></div>
-		<div id="lego4" class="w3-tag w3-yellow"><p><?php echo getCubeNum($team, 4)?></p></div>
-		<div id="lego5" class="w3-tag w3-blue"><p><?php echo getCubeNum($team, 5)?></p></div>
+		<div id="lego2" class="w3-tag w3-red"><p><?php echo $lego[1]?></p></div>
+		<div id="lego3" class="w3-tag w3-green"><p><?php echo $lego[2]?></p></div>
+		<div id="lego4" class="w3-tag w3-yellow"><p><?php echo $lego[3]?></p></div>
+		<div id="lego5" class="w3-tag w3-blue"><p><?php echo $lego[4]?></p></div>
 	</section>
 </div>
 
@@ -59,12 +59,12 @@
 
 </div>
 
-
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- My Scripts -->
 <script src="js/nav.js"></script>
+
 </body>
 </html>
