@@ -44,7 +44,7 @@
 	$items = getMessages();
 	if(!empty($items))
 	{
-		$items = array_flip($items); // try 反向
+		$items = array_reverse($items); // try 反向
 		foreach($items as $item)
 		{	
 			echo 	"<p>

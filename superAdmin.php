@@ -126,13 +126,16 @@
 	require_once "getitems.php";
 	#prepareResource();
 	$items = getResources();
-	switch($items[0][0])
+	for(int i = 0; i < 4; i++)
 	{
-		case "A": $items[0][0] = "美洲"; break;
-		case "B": $items[0][0] = "歐洲"; break;
-		case "C": $items[0][0] = "亞洲"; break;
-		case "D": $items[0][0] = "非洲"; break;
-		default: break;
+		switch($items[i][0])
+		{
+			case "A": $items[i][0] = "美洲"; break;
+			case "B": $items[i][0] = "歐洲"; break;
+			case "C": $items[i][0] = "亞洲"; break;
+			case "D": $items[i][0] = "非洲"; break;
+			default: break;
+		}
 	}
 	if(!empty($items))
 	{
