@@ -125,29 +125,28 @@
 
 /* lego_exchange */
 
-#lego_exchange {
+#trade_with {
 	width: 280px;
 	margin: auto;
 	text-align: center;
 }
 
-#exchange_table {
+#trade_table {
 	width: 280px;
 	margin: auto;
+}
+
+#trade_table .w3-tag {
+	height: 50px;
+	width: 50px;
 	text-align: center;
 }
 
-#exchange_table .w3-tag {
-	height: 30px;
-	width: 60px;
-	text-align: center;
-}
-
-#exchange_table input {
+#trade_table input {
 	width: 50px;
 }
 
-#exchange_btn {
+#trade_btn {
 	width: 100px;
 	margin: auto;
 }
