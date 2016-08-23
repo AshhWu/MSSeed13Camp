@@ -1,34 +1,6 @@
 <?php
 
 include_once 'backend/taskmodel.php';
- 
-function getTaipeiRun()
-{
-  $items = getAllTaipei();
-  return $items;
-}
-
-function getMissionReport()
-{
-  $items = getAllReport();
-  return $items;
-}
-
-function getMissionInfo()
-{
-  $items = getAllInfo();
-  return $items;
-}
-
-function getMissionOrder(){
-  $items = getAllMissionOrder();
-  return $items;
-}
-
-function getTradeRequest(){
-  $items = getAllTradeRequest();
-  return $items;
-}
 
 function getAllCubeNum($team){
     $conn = connect();
@@ -223,4 +195,33 @@ function getReportCount(){
     $items = $stmt->fetchColumn();
 	return $items;
 }
+
+function getTaipeiRun()
+{
+  $items = getAllTaipei();
+  return $items;
+}
+
+function getMissionReport()
+{
+  $items = getAllReport();
+  return $items;
+}
+
+function getMissionInfo()
+{
+  $items = getAllInfo();
+  return $items;
+}
+
+function getMissionOrder(){
+  $items = getAllMissionOrder();
+  return $items;
+}
+
+function getTradeRequest(){
+  $items = getAllTradeRequest();
+  return $items;
+}
+
 ?>
