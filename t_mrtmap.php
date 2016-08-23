@@ -15,10 +15,12 @@ session_start();
 </head>
 <body>
 
-<?php include "backend/navbar/nav.php"; ?>
-<?php include "t_getitems.php"; ?>
-<?php $sstation = getPosition(1); ?>
-<?php $lego = getAllCubeNum(1); ?>
+<?php 	include "backend/navbar/nav.php"; 
+		header('Cache-Control: no-cache');
+		header('Pragma: no-cache');
+		require_once "t_getitems.php";
+		$sstation = getPosition(1);
+		$lego = getAllCubeNum(1); ?>
 
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-indigo w3-padding">移動</h5>
