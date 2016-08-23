@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       
     <?php
-      include_once 'taskmodel.php';
+      include_once 'backend/taskmodel.php';
       include_once 't_getitems.php';
       $team = 20;
       $mission = getMissionByTeam($team);

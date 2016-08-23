@@ -14,7 +14,7 @@
 
   <!-- Navigation Bar -->
   <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
 
   <!-- Rules -->

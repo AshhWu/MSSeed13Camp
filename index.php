@@ -19,11 +19,11 @@ session_start();
 
   <!-- Navigation Bar -->
   <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
 
   <?php
-  if ($_SESSION['ID'] != null) { include 'planeTicket.php'; }
+  if ($_SESSION['ID'] != null) { include 'backend/login/planeTicket.php'; }
   else 
   { 
     echo '  
@@ -33,7 +33,7 @@ session_start();
         <img src="png/banner.png" class="img-responsive"/>
       </div>    
       <!-- Login form-->
-      <form role="form" action="login.php" method="post" accept-charset="UTF-8" autocomplete="on">
+      <form role="form" action="backend/login/login.php" method="post" accept-charset="UTF-8" autocomplete="on">
         <!-- Email -->
         <div class="form-group">
           <label for="email">MSSeed Email</label>

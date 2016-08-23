@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<?php include "nav.php"; ?>
+<?php include "backend/navbar/nav.php"; ?>
 <?php include "t_getitems.php"; ?>
 <?php $team=1; ?>
 <?php $team2=$_GET['teamb']; ?>

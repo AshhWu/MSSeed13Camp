@@ -65,7 +65,7 @@
 
 <body>
 <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
 	<h1>Mission</h1>
 
@@ -84,7 +84,7 @@
 	* limitations under the License. 
 	*/
 	
-include_once 'taskmodel.php';
+include_once 'backend/taskmodel.php';
 
 	$code = $_POST['code'];
 	$items = searchMission($code);

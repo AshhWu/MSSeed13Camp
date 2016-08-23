@@ -13,7 +13,7 @@
     <script src="js/bootstrap.min.js"></script>
     
     <?php
-      include_once 'taskmodel.php';
+      include_once 'backend/taskmodel.php';
       include_once 't_getitems.php';
       $team = 20;
       $mState = getMissionState($team);
@@ -38,7 +38,7 @@
   </head>
   <body>
     <?php
-      include "nav.php";
+      include "backend/navbar/nav.php";
     ?>
 
     <div class="container">

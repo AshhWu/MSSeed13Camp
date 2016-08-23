@@ -56,7 +56,7 @@
 
 <body>
 <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
   
 <?php
@@ -74,7 +74,7 @@
 	* limitations under the License. 
 	*/
 
-include_once 'taskmodel.php';
+include_once 'backend/taskmodel.php';
 
 $team = $_POST['team'];
 $code = $_POST['code'];

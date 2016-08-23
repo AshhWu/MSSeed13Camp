@@ -1,6 +1,6 @@
 <?php  
 session_start();
-require_once "taskmodel.php";
+require_once "backend/taskmodel.php";
 $day = getAllDay();
 if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
 else { $_SESSION["day"] = 1; }
@@ -27,7 +27,7 @@ else { $_SESSION["day"] = 1; }
 
   <!-- Navigation Bar -->
   <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
 
   <!-- Map -->

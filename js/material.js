@@ -13,7 +13,7 @@ var main = function(){
 		// Get resource name
 		var data = { component: $(this).parent().closest('.modal').attr('id'), isTrans: false };
 		// Update team resource
-		$.post("composeResource.php", data)
+		$.post("backend/stronghold/composeResource.php", data)
 		.done(function( result ) {
 			if (result == "SUCCESS") { 
 				alert("合成成功！");
@@ -30,7 +30,7 @@ var main = function(){
 		var data = { component: $(this).parent().closest('.modal').attr('id'), isTrans: true };
 
 		// Update team resource
-		$.post("composeResource.php", data)
+		$.post("backend/stronghold/composeResource.php", data)
 		.done(function( result ) {
 			if (result == "SUCCESS") { 
 				alert("合成成功！");

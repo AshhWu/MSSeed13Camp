@@ -22,7 +22,7 @@ $_SESSION["s_team"] = 'B'; //testing
 
   <!-- Navigation Bar -->
   <?php
-  include "nav.php";
+  include "backend/navbar/nav.php";
   ?>
 
 
@@ -614,18 +614,18 @@ $_SESSION["s_team"] = 'B'; //testing
       <div id="transport" class="tab-pane fade">
         <?php 
         if((!empty($items)) && ($items[0][34] != '0') && ($items[0][34] != NULL)) { echo '<img src="png/s_transport/'.$items[0][34].'.png" class="img-responsive icon-components" alt="'.$items[0][34].'">'; } 
-        else { require_once "transportation.php"; }
+        else { require_once "backend/stronghold/transportation.php"; }
         ?>
       </div>
 
       <!-- Transportation Modal -->
       <?php
-      require_once "taskmodel.php";
+      require_once "backend/taskmodel.php";
       $day = getAllDay();
       if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
       else { $_SESSION["day"] = 1; }
 
-      if ($_SESSION["day"] == 4) { require_once "transportation_modal.php"; }
+      if ($_SESSION["day"] == 4) { require_once "backend/stronghold/transportation_modal.php"; }
       ?>
       
 
