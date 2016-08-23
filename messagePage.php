@@ -35,6 +35,7 @@ session_start();
 <body>
 <?php
   include "backend/navbar/nav.php";
+if($_SESSION['ID'] != null){ 
   ?>
   
 <div style="text-align:center" align="center">
@@ -59,6 +60,14 @@ session_start();
 ?>
 
 </div>
+
+<?php
+}
+else{
+	echo "<script> alert('您無權觀看此頁面喔')</script>";
+	echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+}
+?>
 <!--
 <p>
 	<span style="font-size:14px;">11:50</span></p>

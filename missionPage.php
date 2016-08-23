@@ -24,6 +24,7 @@ session_start();
 <body>
 <?php
   include "backend/navbar/nav.php";
+if($_SESSION['ID'] != null){ 
   ?>
 <div style="text-align:center" align="middle">
 	<h1>Mission</h1><br>
@@ -32,6 +33,14 @@ session_start();
 		<input type="submit" value="Submit">
 	</form>
 </div>
+
+<?php
+}
+else{
+	echo "<script> alert('您無權觀看此頁面喔')</script>";
+	echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+}
+?>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
