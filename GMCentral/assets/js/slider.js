@@ -36,7 +36,7 @@ function callPage(url, div){
 }
 
 function getAllResources() {
-    callPage('getitems.php',document.getElementById(targetId));
+    callPage('getitems.php',document.getElementById('Response'));
 }
 
 /* Set json in each graph */
