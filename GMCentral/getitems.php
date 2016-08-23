@@ -17,10 +17,12 @@ include_once 'taskmodel.php';
 
 function getResources()
 {
+	$aResult = array();
   $items = getAllResources();
-  return json_encode($items);
+	$aResult['result']=$items;
+  echo json_encode($aResult);
 }
-echo getAllResources();
+echo getResources();
 /*
 function getGroupResources($team)
 {

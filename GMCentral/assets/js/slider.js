@@ -36,7 +36,15 @@ function callPage(url, div){
 }
 
 function getAllResources() {
-    callPage('getitems.php',document.getElementById('Response'));
+	$.ajax({
+  		type: "GET",
+  		url: "getitems.php",
+ 		datatype: "html",
+ 		data: {},
+  		success: function(data) {
+    		console.log(data.result);
+    	}
+	});
 }
 
 /* Set json in each graph */
