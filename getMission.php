@@ -108,7 +108,7 @@ include_once 'backend/taskmodel.php';
 			case "4": echo "<br>Day4條件: ".$items[0][8]; break;
 			default: echo "Error";
 		}
-		$Stronghold = searchStronghold($items[0][1]);
+		$Stronghold = searchStronghold($code);
 		echo "<br>目前最高紀錄: ".$Stronghold[0][9]."</p>";
 	} 
 	else 
