@@ -1,6 +1,6 @@
 <?php
 
-include "t_getitems";
+include_once 'taskmodel.php';
 
 $team = $_GET['team'];
 $position = $_GET['position'];
