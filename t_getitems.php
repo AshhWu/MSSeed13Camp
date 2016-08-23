@@ -147,6 +147,20 @@ function getAllTradeRequest(){
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getTradeRequestBySender($sender){
+    $conn = connect();
+	$sql = "SELECT * FROM t_tradeRequest where sender=".$sender;
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+function getTradeRequestByReceiver($receiver){
+    $conn = connect();
+	$sql = "SELECT * FROM t_tradeRequest where receiver=".$receiver;
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getTradeRequestById($id){
     $conn = connect();
 	$sql = "SELECT * FROM t_tradeRequest where id=".$id;
