@@ -20,7 +20,7 @@ function getResources()
 	$aResult = array();
   $items = getAllResources();
 	$aResult['result']=$items;
-  echo json_encode($aResult);
+  return json_encode($aResult);
 }
 echo getResources();
 /*
