@@ -216,11 +216,4 @@ function getPosition($team){
 	return $items[0][0];
 }
 
-function getReportCount(){
-    $conn = connect();
-	$sql = "SELECT COUNT(id) FROM t_missionReport";
-	$stmt = $conn->query($sql);
-    $items = $stmt->fetchColumn();
-	return $items;
-}
 ?>
