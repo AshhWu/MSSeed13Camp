@@ -11,9 +11,12 @@
 </head>
 <body>
 
-<?php include "backend/navbar/nav.php"; ?>
+<?php include "nav.php"; ?>
 <?php include "t_getitems.php"; ?>
 <?php $all_lego = getAllTeamCubeNum() ?>
+<?php $team = 1 ?>
+<?php $wait = getTradeRequestBySender($team) ?>
+<?php $trade = getTradeRequestByReceiver($team) ?>
 
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-brown w3-padding">樂高</h5>
@@ -28,15 +31,15 @@
 <div class="container">
 	<ul class="nav nav-tabs">
 		<li class="active"><a data-toggle="tab" href="#lego_list">樂高列表</a></li>
-		<li><a data-toggle="tab" href="#trade_list">交易請求</a></li>
+		<li><a data-toggle="tab" href="#trade_list" onclick="trade_init(<?php echo $trade?>)">交易請求</a></li>
+		<li><a data-toggle="tab" href="#wait_list" onclick="wait_init(<?php echo $wait?>)">已提交易</a></li>
 	</ul>
 
 	<div class="tab-content">
 		<div id="lego_list" class="tab-pane fade in active w3-container w3-section w3-padding">
 			<h4 class="w3-card w3-pink w3-padding">點組別按鈕請求交易</h4>
-			<ul class="w3-ul">
+			<ul id="lego_list" class="w3-ul">
 				<li class="w3-container">
-					<?php $team=2; ?>
 					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第2組</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[1][2]?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[1][3]?></p></div>
@@ -44,7 +47,6 @@
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[1][5]?></p></div>
 				</li>
 				<li class="w3-container">
-					<?php $team=3; ?>
 					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=3">第3組</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[2][2]?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[2][3]?></p></div>
@@ -52,7 +54,6 @@
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[2][5]?></p></div>
 				</li>
 				<li class="w3-container">
-					<?php $team=4; ?>
 					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=4">第4組</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[3][2]?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[3][3]?></p></div>
@@ -63,6 +64,11 @@
 		</div>
 		<div id="trade_list" class="tab-pane fade w3-container w3-section w3-padding">
 			<h4 class="w3-card w3-pink w3-padding">別組向你提出的交易</h4>
+			<ul class="w3-ul">
+			</ul>
+		</div>
+		<div id="wait_list" class="tab-pane fade w3-container w3-section w3-padding">
+			<h4 class="w3-card w3-pink w3-padding">你向別組提出的交易</h4>
 			<ul class="w3-ul">
 			</ul>
 		</div>

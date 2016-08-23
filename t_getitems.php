@@ -1,6 +1,6 @@
 <?php
 
-include_once 'backend/taskmodel.php';
+include_once 'taskmodel.php';
  
 function getTaipeiRun()
 {
@@ -200,6 +200,14 @@ function getLatestReport($num){
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getSingleLatestReport($num){
+    $conn = connect();
+	$sql = "SELECT * FROM t_missionReport ORDER BY id DESC LIMIT ".$num;
+	$stmt = $conn->query($sql);
+	$items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return items[$num-1];
+}
+
 function getPosition($team){
     $conn = connect();
 	$sql = "SELECT position FROM taipeiRun where team=".$team;
@@ -208,4 +216,11 @@ function getPosition($team){
 	return $items[0][0];
 }
 
+function getReportCount(){
+    $conn = connect();
+	$sql = "SELECT COUNT(id) FROM t_missionReport";
+	$stmt = $conn->query($sql);
+    $items = $stmt->fetchColumn();
+	return $items;
+}
 ?>
