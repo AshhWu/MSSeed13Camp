@@ -197,21 +197,6 @@ else { $_SESSION["day"] = 1; }
     </a>
   </div>
 
-  <!-- Temp Login -->
-  <form class="form-inline" action="tmpTeam.php" method="post">
-    <div class="form-group">
-    <label for="exampleSelect1">我要當____組</label>
-      <select class="form-control" id="exampleSelect1" name="team">
-        <option>美洲</option>
-        <option>歐洲</option>
-        <option>亞洲</option>
-        <option>非洲</option>
-      </select>
-    </div>
-    <button type="submit" class="btn btn-primary">確定</button>
-  </form>
-
-
 
 
 <!-- jQuery -->

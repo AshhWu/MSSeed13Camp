@@ -1,5 +1,12 @@
+<html>
+    <head>
+        <title>圖片上傳中</title>
+    </head>
+    <body>
+        圖片上傳中
+    </body>
+</html>
 <?php
-header('Content-type: text/plain; charset=md5');
 include_once 'taskmodel.php';
 include_once 't_getitems.php';
 

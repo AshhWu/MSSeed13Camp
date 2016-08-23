@@ -24,13 +24,13 @@ function pic_switchsize(){
 //check route & lego cost
 var change_line = [[0, [108203], [110303], 0, [109508]], [[203108], 0, [206309, 209305], [205405, 211410], [208511]], [[303110], [309206, 305209], 0, [304407, 310404], [307512]], [0, [405205, 410211], [407304, 404310], 0, [406509]], [[508109], [511208], [512307], [509406], 0]];
 var change_point = [108, 110, 109, 206, 209, 205, 211, 208, 304, 310, 307, 406, 509, 512, 404, 407, 511, 410, 405, 305, 309, 508, 303, 203];
-var result, cost_list, tmp1, tmp2, tmp3, tmp4, count;
+var end, result, cost_list, tmp1, tmp2, tmp3, tmp4, count;
 function check_lego(start){
 	var i, j, k, l;
 	document.getElementById("route_ul").innerHTML = "";
 	document.getElementById("route_list").style.display = "none";
 
-	var end, line_s, line_e;
+	var line_s, line_e;
 	//start = parseInt(document.getElementById("sstation").value);
 	end = parseInt(document.getElementById("estation").value);
 	if (!Number.isInteger(start) || !Number.isInteger(end)){
@@ -116,7 +116,6 @@ function change_twice(start, line_s, line_e, end){
 				}
 }
 
-
 var lego_color = ["yellow", "red", "green", "yellow", "blue"];
 var mrt_value = {'100':'動物園', '101':'木柵', '102':'萬芳社區', '103':'萬芳醫院', '104':'辛亥', '105':'麟光', '106':'六張犁', '107':'科技大樓', '108':'大安', '109':'忠孝復興', '110':'南京復興', '111':'中山國中', '112':'松山機場', '113':'大直', '114':'劍南路', '115':'西湖', '116':'港墘', '117':'文德', '118':'內湖', '119':'大湖公園', '120':'葫洲', '121':'東湖', '122':'南港軟體園區', '123':'南港展覽館', '226':'淡水', '225':'紅樹林', '224':'竹圍', '223':'關渡', '222':'忠義', '221':'復興崗', '220':'新北投', '220':'北投', '219':'奇岩', '218':'唭哩岸', '217':'石牌', '216':'明德', '215':'芝山', '214':'士林', '213':'劍潭', '212':'圓山', '211':'民權西路', '210':'雙連', '209':'中山', '208':'台北車站', '207':'台大醫院', '206':'中正紀念堂', '205':'東門', '204':'大安森林公園', '203':'大安', '202':'信義安和', '201':'台北101/世貿', '200':'象山', '300':'松山', '301':'南京三民', '302':'台北小巨蛋', '303':'南京復興', '304':'松江南京', '305':'中山', '306':'北門', '307':'西門', '308':'小南門', '309':'中正紀念堂', '310':'古亭', '311':'台電大樓', '312':'公館', '313':'萬隆', '314':'景美', '315':'大坪林', '316':'七張', '316':'小碧潭', '317':'新店區公所', '318':'新店', '400':'南勢角', '401':'景安', '402':'永安市場', '403':'頂溪', '404':'古亭', '405':'東門', '406':'忠孝新生', '407':'松江南京', '408':'行天宮', '409':'中山國小', '410':'民權西路', '411':'大橋頭', '412':'台北橋', '413':'菜寮', '414':'三重', '415':'先嗇宮', '416':'頭前庄', '417':'新莊', '418':'輔大', '419':'丹鳳', '420':'迴龍', '412':'三重國小', '413':'三和國中', '414':'徐匯中學', '415':'三民高中', '416':'蘆洲', '523':'頂埔', '521':'永寧', '520':'土城', '519':'海山', '518':'亞東醫院', '517':'府中', '516':'板橋', '515':'新埔', '514':'江子翠', '513':'龍山寺', '512':'西門', '511':'台北車站', '510':'善導寺', '509':'忠孝新生', '508':'忠孝復興', '507':'忠孝敦化', '506':'國父紀念館', '505':'市政府', '504':'永春', '503':'後山埤', '502':'昆陽', '501':'南港', '500':'南港展覽館'};
 function mrt_route(route, count){
@@ -151,7 +150,8 @@ function mrt_route(route, count){
 }
 
 function lego_refresh(obj){
-	var n = parseInt(obj.id[obj.id.length-1]);
+
+	/* var n = parseInt(obj.id[obj.id.length-1]);
 	var rest_lego;
 	var tmp_str = 't_updateAllCube.php?team=1&c1=0';
 	var j;
@@ -161,10 +161,11 @@ function lego_refresh(obj){
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
 
-	document.getElementById("route_list").style.display = "none";
+	document.getElementById("route_list").style.display = "none"; */
 
-	//window.location = tmp_str;
-	window.location.reload();
+	var tmp_str = 't_updatePosition.php?team=1&position=' + end.toString();
+	window.location = tmp_str;
+	alert("移動成功! 請向" + mrt_value[end.toString()] + "站前進~");
 }
 
 //lego_exchnge/trade

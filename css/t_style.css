@@ -46,6 +46,11 @@
 	bottom: 15px;
 }
 
+.middle_part .w3-tag p {
+	position: relative;
+	top: 10px;
+}
+
 #bottom_part img {
 	display: block;
 	margin-top: 20px;
@@ -70,6 +75,11 @@
 	text-align: center;
 }
 
+#route_list .w3-tag p {
+	position: relative;
+	top: 5px;
+}
+
 #route_list button {
 	display: inline-block;
 	margin-top: 3px;
@@ -83,55 +93,67 @@
 
 /* lego_list */
 
-#lego_list {
+.tab-pane {
 	width: 320px;
 	margin: auto;
-	background-color: grey;
+	background-color: darkgrey;
 }
 
-#lego_list h4 {
+.tab-pane h4 {
 	text-align: center;
 }
 
-#lego_list li {
-	margin-bottom: 5px;
-}
-
-#lego_list a {
+.tab-pane a {
 	display: inline-block;
-	border: solid 2px;
 	margin-right: 5px;
+	position: relative;
+	top: 8px;
 }
 
-#lego_list div {
+.tab-pane .w3-tag {
 	display: inline-block;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	margin-right: 3px;
+}
+
+.tab-pane .w3-tag p {
+	position: relative;
+	top: 10px;
 }
 
 /* lego_exchange */
 
-#lego_exchange {
+#trade_with {
 	width: 280px;
 	margin: auto;
 	text-align: center;
 }
 
-#exchange_table {
+#trade_table {
 	width: 280px;
 	margin: auto;
-	text-align: center;
 }
 
-#exchange_table .w3-tag {
-	height: 30px;
-	width: 60px;
+#trade_table .w3-tag {
+	height: 40px;
+	width: 40px;
 	text-align: center;
+	margin-top: 2px;
 }
 
-#exchange_table input {
+#trade_table .w3-tag p {
+	position: relative;
+	top: 10px;
+}
+
+#trade_table input {
 	width: 50px;
+	margin-top: 10px;
 }
 
-#exchange_btn {
+#trade_btn {
 	width: 100px;
 	margin: auto;
 }

@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,31 +22,33 @@
   include "nav.php";
   ?>
 
-  <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
-    <!-- Banner -->
-    <div class="banner">
-      <img src="png/banner.png" class="img-responsive"/>
-    </div>    
-    <!-- Login form-->
-    <form role="form" action="login.php" method='post' accept-charset='UTF-8' autocomplete="on">
-      <!-- Email -->
-      <div class="form-group">
-        <label for="email">MSSeed Email</label>
-        <input type="email" class="form-control" id="email" placeholder="xxx@msseed.idv.tw" required>
-      </div>
-      <!-- Password -->
-      <div class="form-group">
-        <label for="pwd">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter password" required>
-      </div>
-      <!-- Checkbox to remember me
-      <div class="checkbox">
-        <label><input type="checkbox">Remember me</label>
-      </div>
-    -->
-    <button type="submit" class="btn btn-default">Login</button>
-  </form>
-</div>
+  <?php
+  if ($_SESSION['ID'] != null) { include 'planeTicket.php'; }
+  else 
+  { 
+    echo '  
+    <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
+      <!-- Banner -->
+      <div class="banner">
+        <img src="png/banner.png" class="img-responsive"/>
+      </div>    
+      <!-- Login form-->
+      <form role="form" action="login.php" method="post" accept-charset="UTF-8" autocomplete="on">
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">MSSeed Email</label>
+          <input type="text" class="form-control" name="email" placeholder="xxx@msseed.idv.tw">
+        </div>
+        <!-- Password -->
+        <div class="form-group">
+          <label for="pwd">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Enter password">
+        </div>
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+    </div>';
+  }
+?>
 
 
 <!-- jQuery -->
