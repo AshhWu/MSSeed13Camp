@@ -99,17 +99,3 @@
 
 </div>
 
-
-
-
-
-<?php
-echo '  
-<div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
-	<!-- Logout form-->
-	<form role="form" action="backend/login/logout.php" method="post" accept-charset="UTF-8" autocomplete="on">
-		<button type="submit" class="btn btn-default">Logout</button>
-	</form>
-</div>';
-
-?>
