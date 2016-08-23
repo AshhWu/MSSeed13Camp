@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once '/backend/taskmodel.php';
+include_once ($_SERVER['DOCUMENT_ROOT'].'/backend/taskmodel.php');
 
 // Get component name
 $component = $_POST['component'];
