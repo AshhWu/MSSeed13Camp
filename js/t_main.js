@@ -168,7 +168,7 @@ function lego_refresh(obj){
 	alert("移動成功! 請向" + mrt_value[end.toString()] + "站前進~");
 }
 
-//lego_exchnge/trade
+//lego_trade
 function send_request(){
 	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4&c1=0&fc1=0';
 	var i, tmp_value;
@@ -183,5 +183,23 @@ function send_request(){
 	window.location = tmp_str;
 }
 
+function trade_init(trade){
+	var i, sender;
+	var tmp_str;
+	for (i = 0; i < trade.length; i++){
+		sender = trade[i][1];
+		tmp_str = '<li class="w3-container"><a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第' + sneder.toString() + '組</a><p>向你提出交易</p></li>';
+		document.getElementById("trade_list").getElementsByTagName("ul")[0].innerHTML += tmp_str;
+	}
+}
 
+function wait_init(wait){
+	var i, sender;
+	var tmp_str;
+	for (i = 0; i < trade.length; i++){
+		sender = trade[i][2];
+		tmp_str = '<li class="w3-container"><p>你向第' + sneder.toString() + '組提出的交易</p></li>';
+		document.getElementById("wait_list").getElementsByTagName("ul")[0].innerHTML += tmp_str;
+	}
+}
 
