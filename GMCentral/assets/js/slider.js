@@ -14,6 +14,7 @@ function getAllResources() {
  		datatype: "json",
  		data: {},
   		success: function(response) {
+			console.log(response);
 			var obj = JSON.parse(response);
     		return obj;
     	}
@@ -23,7 +24,7 @@ function getAllResources() {
 var x2 = [10,10,10,10];
 /* Set json in each graph */
 setNewGraph = function(obj){
-	x2[0] = obj.result[1];
+	x2[0] = x2[0]+5;
 }
 /* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {
