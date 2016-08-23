@@ -1,10 +1,38 @@
 <?php
 
 include_once 'backend/taskmodel.php';
+ 
+function getTaipeiRun()
+{
+  $items = getAllTaipei();
+  return $items;
+}
+
+function getMissionReport()
+{
+  $items = getAllReport();
+  return $items;
+}
+
+function getMissionInfo()
+{
+  $items = getAllInfo();
+  return $items;
+}
+
+function getMissionOrder(){
+  $items = getAllMissionOrder();
+  return $items;
+}
+
+function getTradeRequest(){
+  $items = getAllTradeRequest();
+  return $items;
+}
 
 function getAllCubeNum($team){
     $conn = connect();
-    $sql = "SELECT cube1, cube2, cube3, cube4, cube5 FROM taipeiRun WHERE team=".$team;
+    $sql = "SELECT cube1, cube2, cube3, cube4, cube5 FROM taipeiRun where team=".$team;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items[0];
@@ -21,7 +49,7 @@ function getAllTeamCubeNum(){
 function getCubeNum($team, $cubeColor){
     $cubeColorR = $cubeColor + 3;
     $conn = connect();
-    $sql = "SELECT * FROM taipeiRun WHERE team=".$team;
+    $sql = "SELECT * FROM taipeiRun where team=".$team;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items[0][$cubeColorR];
@@ -29,12 +57,12 @@ function getCubeNum($team, $cubeColor){
 
 function getMissionByTeam($team){
     $conn = connect();
-    $sql = "SELECT * FROM taipeiRun WHERE team=".$team;
+    $sql = "SELECT * FROM taipeiRun where team=".$team;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     $missionRank = $items[0][9];
     
-    $sql = "SELECT * FROM t_missionOrder WHERE team=".$team;
+    $sql = "SELECT * FROM t_missionOrder where team=".$team;
     $stmt = $conn->query($sql);
     $allMission = $stmt->fetchAll(PDO::FETCH_NUM);
     $mission = $allMission[0][$missionRank];
@@ -43,7 +71,7 @@ function getMissionByTeam($team){
 
 function getMissionTitle($id){
     $conn = connect();
-    $sql = "SELECT * FROM t_missionInfo WHERE id=".$id;
+    $sql = "SELECT * FROM t_missionInfo where id=".$id;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items[0][1];
@@ -51,7 +79,7 @@ function getMissionTitle($id){
 
 function getMissionContent($id){
     $conn = connect();
-    $sql = "SELECT * FROM t_missionInfo WHERE id=".$id;
+    $sql = "SELECT * FROM t_missionInfo where id=".$id;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items[0][2];
@@ -59,7 +87,7 @@ function getMissionContent($id){
 
 function getMissionPic($id){
     $conn = connect();
-    $sql = "SELECT * FROM t_missionInfo WHERE id=".$id;
+    $sql = "SELECT * FROM t_missionInfo where id=".$id;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items[0][3];
@@ -67,7 +95,7 @@ function getMissionPic($id){
 
 function getMissionState($team){
     $conn = connect();
-    $sql = "SELECT * FROM taipeiRun WHERE team=".$team;
+    $sql = "SELECT * FROM taipeiRun where team=".$team;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items[0][10];
@@ -121,21 +149,21 @@ function getAllTradeRequest(){
 
 function getTradeRequestBySender($sender){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest WHERE sender=".$sender;
+	$sql = "SELECT * FROM t_tradeRequest where sender=".$sender;
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
 function getTradeRequestByReceiver($receiver){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest WHERE receiver=".$receiver;
+	$sql = "SELECT * FROM t_tradeRequest where receiver=".$receiver;
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
 function getTradeRequestById($id){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest WHERE id=".$id;
+	$sql = "SELECT * FROM t_tradeRequest where id=".$id;
 	$stmt = $conn->query($sql);
 	$items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items[0];
@@ -143,11 +171,11 @@ function getTradeRequestById($id){
 
 function getTradeRequestByTeam($team){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest WHERE state=0, receiver=".$team." ORDER BY id DESC";
+	$sql = "SELECT * FROM t_tradeRequest where state=0, receiver=".$team." ORDER BY id DESC";
 	$stmt = $conn->query($sql);
 	$items = $stmt->fetchAll(PDO::FETCH_NUM);
     
-    $sql = "UPDATE t_tradeRequest SET state=1 WHERE id=".$items[0][0];
+    $sql = "UPDATE t_tradeRequest SET state=1 where id=".$items[0][0];
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     return $items[0];
@@ -155,7 +183,7 @@ function getTradeRequestByTeam($team){
 
 function isTradeRequest($team){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest WHERE state=0, receiver=".$team;
+	$sql = "SELECT * FROM t_tradeRequest where state=0, receiver=".$team;
 	$stmt = $conn->query($sql);
 	$items = $stmt->fetchAll(PDO::FETCH_NUM);
     if(empty($items)){
@@ -182,7 +210,7 @@ function getSingleLatestReport($num){
 
 function getPosition($team){
     $conn = connect();
-	$sql = "SELECT position FROM taipeiRun WHERE team=".$team;
+	$sql = "SELECT position FROM taipeiRun where team=".$team;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
 	return $items[0][0];
@@ -195,33 +223,4 @@ function getReportCount(){
     $items = $stmt->fetchColumn();
 	return $items;
 }
-
-function getTaipeiRun()
-{
-  $items = getAllTaipei();
-  return $items;
-}
-
-function getMissionReport()
-{
-  $items = getAllReport();
-  return $items;
-}
-
-function getMissionInfo()
-{
-  $items = getAllInfo();
-  return $items;
-}
-
-function getMissionOrder(){
-  $items = getAllMissionOrder();
-  return $items;
-}
-
-function getTradeRequest(){
-  $items = getAllTradeRequest();
-  return $items;
-}
-
 ?>
