@@ -18,9 +18,9 @@ session_start();
 <body>
 
   <?php
-  if($_SESSION['ID'] != null){ 
   #<!-- Navigation Bar -->
-    include "backend/navbar/nav.php";
+  include "backend/navbar/nav.php";
+  if($_SESSION['ID'] != null){ 
 	include 'backend/login/planeTicket.php'; 
 	echo "Hello ".$_SESSION['ID']."<br>";
 	echo "Your authority is  ".$_SESSION['authority']."<br>";
