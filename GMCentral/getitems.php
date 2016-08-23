@@ -23,12 +23,12 @@ include 'ChromePhp.php';
 	$aResult = array();
   $items = getAllResources();
 	$aResult['result']=$items;
-	
+
 	// Debugger //
 	ChromePhp::log($items);
 	// Debugger //
 
-  echo $items;
+  echo $aResult;
 
 /*
 function getGroupResources($team)
