@@ -25,13 +25,13 @@ function pic_switchsize(){
 var change_line = [[0, [108203], [110303], 0, [109508]], [[203108], 0, [206309, 209305], [205405, 211410], [208511]], [[303110], [309206, 305209], 0, [304407, 310404], [307512]], [0, [405205, 410211], [407304, 404310], 0, [406509]], [[508109], [511208], [512307], [509406], 0]];
 var change_point = [108, 110, 109, 206, 209, 205, 211, 208, 304, 310, 307, 406, 509, 512, 404, 407, 511, 410, 405, 305, 309, 508, 303, 203];
 var result, cost_list, tmp1, tmp2, tmp3, tmp4, count;
-function check_lego(){
+function check_lego(start){
 	var i, j, k, l;
 	document.getElementById("route_ul").innerHTML = "";
 	document.getElementById("route_list").style.display = "none";
 
-	var start, end, line_s, line_e;
-	start = parseInt(document.getElementById("sstation").value);
+	var end, line_s, line_e;
+	//start = parseInt(document.getElementById("sstation").value);
 	end = parseInt(document.getElementById("estation").value);
 	if (!Number.isInteger(start) || !Number.isInteger(end)){
 		alert("Error!");
@@ -122,11 +122,11 @@ var mrt_value = {'100':'動物園', '101':'木柵', '102':'萬芳社區', '103':
 function mrt_route(route, count){
 	var cost = [0, 0, 0, 0, 0];
 	var l, disable = 0;
-	result ='<li class="w3-container"><div class="w3-card-2 w3-black w3-padding-small w3-round-large">'
+	result ='<li><div class="w3-grey">'
 
 	for (l = 0; l < route.length-1; l++){
 		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
-			result += mrt_value[route[l].toString()] + ' <p style="font-size:20px;color:' + lego_color[parseInt(route[l]/100)-1] + '">-></p> ';
+			result += '<p>' + mrt_value[route[l].toString()] + ' </p><p style="font-size:20px;color:' + lego_color[parseInt(route[l]/100)-1] + '">-></p> ';
 			if (parseInt(route[l]/100) == 1)
 				cost[3] += Math.abs(route[l+1]%100 - route[l]%100);
 			else
@@ -141,9 +141,9 @@ function mrt_route(route, count){
 			disable = 1;
 	}
 	if (disable == 1)
-		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-margin w3-teal w3-disabled">Lego不夠</button></li>';
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple w3-disabled">Lego不夠</button></li>';
 	else
-		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-margin w3-teal" onclick="lego_refresh(this)">按我Go</button></li>';
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(this)">按我Go</button></li>';
 
 	document.getElementById("route_ul").innerHTML += result;
 
@@ -168,11 +168,6 @@ function lego_refresh(obj){
 }
 
 //lego_exchnge/trade
-var team_a, team_b;
-function trade_init(){
-	
-}
-
 function send_request(){
 	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4&c1=0&fc1=0';
 	var i, tmp_value;
