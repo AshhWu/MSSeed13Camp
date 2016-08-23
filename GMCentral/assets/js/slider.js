@@ -1,39 +1,11 @@
 
 renew = function(){
-	getAllResources();
+	var resourcesObj = getAllResources();
+	setNewGraph(resourcesObj);
+	$("Seconddiv").load(location.href + " Seconddiv");
 }
 
 ///  Ajax TODO  ///
-function AjaxCaller(){
-    var xmlhttp=false;
-    try{
-        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-    }catch(e){
-        try{
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }catch(E){
-            xmlhttp = false;
-        }
-    }
-
-    if(!xmlhttp && typeof XMLHttpRequest!='undefined'){
-        xmlhttp = new XMLHttpRequest();
-    }
-    return xmlhttp;
-}
-
-function callPage(url, div){
-    ajax=AjaxCaller(); 
-    ajax.open("GET", url, true); 
-    ajax.onreadystatechange=function(){
-        if(ajax.readyState==4){
-            if(ajax.status==200){
-                console.log (ajax.responseText);
-            }
-        }
-    }
-    ajax.send(null);
-}
 
 function getAllResources() {
 	$.ajax({
@@ -42,13 +14,17 @@ function getAllResources() {
  		datatype: "json",
  		data: {},
   		success: function(response) {
-    		console.log(response);
+			var obj = JSON.parse(response);
+    		return obj;
     	}
 	});
 }
 
+var x2 = [10,10,10,10];
 /* Set json in each graph */
-
+setNewGraph = function(obj){
+	x2[0] = obj.result[1];
+}
 /* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {
 
@@ -94,19 +70,19 @@ jssor_2_slider_init = function() {
                 "startDuration": 0,
                 "dataProvider": [{
                     "country": "1",
-                    "visits": 40205,
+                    "visits": x2[0],
                     "color": "#FF0F00"
                 }, {
                     "country": "2",
-                    "visits": 1882,
+                    "visits": x2[1],
                     "color": "#FF6600"
                 }, {
                     "country": "3",
-                    "visits": 1809,
+                    "visits": x2[2],
                     "color": "#FF9E01"
                 }, {
                     "country": "4",
-                    "visits": 1322,
+                    "visits": x2[3],
                     "color": "#FCD202"
 
                 }],
