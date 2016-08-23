@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <html>
 <!--
 /** * Copyright 2013 Microsoft Corporation 
