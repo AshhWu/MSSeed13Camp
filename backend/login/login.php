@@ -24,21 +24,21 @@
 			echo "normal uesr<br>";
             $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 1;
-            #header('Location: Student_login.php');
+            header('Location: ../../index.php');
         }
         elseif($row[0][3] == '2')
         {
             $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 2;
 			echo "隨輔<br>";
-            #header('Location: Prof_login.php');
+            header('Location: ../../index.php');
         }
         elseif($row[0][3] == '3')
         {
             $_SESSION['ID'] = $id;
             $_SESSION['authority'] = 3;
 			echo "Admin<br>";
-            #header('Location: admin.php');
+            header('Location: ../../index.php');
         }
     }
     else
