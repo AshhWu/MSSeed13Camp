@@ -15,11 +15,16 @@
 	
 include_once 'taskmodel.php';
 
+//Debugger//
+include 'ChromePhp.php';
+//Debugger//
+
 function getResources()
 {
 	$aResult = array();
   $items = getAllResources();
 	$aResult['result']=$items;
+	ChromePhp::log($items);
   return json_encode($aResult);
 }
 echo getResources();
