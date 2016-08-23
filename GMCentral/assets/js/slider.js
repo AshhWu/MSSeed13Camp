@@ -39,7 +39,7 @@ function getAllResources() {
 	$.ajax({
   		type: "GET",
   		url: "getitems.php",
- 		datatype: "html",
+ 		datatype: "json",
  		data: {},
   		success: function(data) {
     		console.log(data.result);
