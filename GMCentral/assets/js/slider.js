@@ -41,8 +41,8 @@ function getAllResources() {
   		url: "getitems.php",
  		datatype: "json",
  		data: {},
-  		success: function(data) {
-    		console.log(data.result);
+  		success: function(response) {
+    		console.log(response);
     	}
 	});
 }
