@@ -194,6 +194,7 @@ function trade_init(trade){
 }
 
 function wait_init(wait){
+	alert(wait);
 	var i, sender;
 	var tmp_str;
 	for (i = 0; i < wait.length; i++){
