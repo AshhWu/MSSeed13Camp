@@ -1,25 +1,45 @@
-var mysql = require('mysql');
-renew = function(){
-	/* Test */
-	
-	var connection = mysql.createConnection({
-    	host: 'ap-cdbr-azure-east-c.cloudapp.net',
-    	user: 'b37f8ddf38d21d',
-    	password: '1e72c81e',
-    	database: 'stronghold'
-	});
-	connection.connect();
-	connection.query('SELECT 12 + 34 AS result', function(err, rows, fields) {
-    if (err) throw err;
-    console.log('The result is: ', rows[0].result);
-	connection.end();
-  
-  //顯示撈取資料
-  		console.log(results[0]);
-	});
-}
-/* Set json in each graph */
 
+renew = function(){
+	getAllResources();
+}
+
+///  Ajax TODO  ///
+function AjaxCaller(){
+    var xmlhttp=false;
+    try{
+        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+    }catch(e){
+        try{
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }catch(E){
+            xmlhttp = false;
+        }
+    }
+
+    if(!xmlhttp && typeof XMLHttpRequest!='undefined'){
+        xmlhttp = new XMLHttpRequest();
+    }
+    return xmlhttp;
+}
+
+function callPage(url, div){
+    ajax=AjaxCaller(); 
+    ajax.open("GET", url, true); 
+    ajax.onreadystatechange=function(){
+        if(ajax.readyState==4){
+            if(ajax.status==200){
+                div.innerHTML = ajax.responseText;
+            }
+        }
+    }
+    ajax.send(null);
+}
+
+function getAllResources() {
+    callPage('getitems.php',document.getElementById(targetId));
+}
+
+/* Set json in each graph */
 
 /* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {
@@ -80,38 +100,7 @@ jssor_2_slider_init = function() {
                     "country": "4",
                     "visits": 1322,
                     "color": "#FCD202"
-                }, {
-                    "country": "5",
-                    "visits": 1122,
-                    "color": "#F8FF01"
-                }, {
-                    "country": "6",
-                    "visits": 1114,
-                    "color": "#B0DE09"
-                }, {
-                    "country": "7",
-                    "visits": 984,
-                    "color": "#04D215"
-                }, {
-                    "country": "8",
-                    "visits": 711,
-                    "color": "#0D8ECF"
-                }, {
-                    "country": "9",
-                    "visits": 665,
-                    "color": "#0D52D1"
-                }, {
-                    "country": "10",
-                    "visits": 580,
-                    "color": "#2A0CD0"
-                }, {
-                    "country": "11",
-                    "visits": 443,
-                    "color": "#8A0CCF"
-                }, {
-                    "country": "12",
-                    "visits": 441,
-                    "color": "#CD0D74"
+
                 }],
                 "valueAxes": [{
                     "position": "left",
@@ -162,38 +151,7 @@ jssor_2_slider_init = function() {
                     "country": "4",
                     "visits": 1322,
                     "color": "#FCD202"
-                }, {
-                    "country": "5",
-                    "visits": 1122,
-                    "color": "#F8FF01"
-                }, {
-                    "country": "6",
-                    "visits": 1114,
-                    "color": "#B0DE09"
-                }, {
-                    "country": "7",
-                    "visits": 984,
-                    "color": "#04D215"
-                }, {
-                    "country": "8",
-                    "visits": 711,
-                    "color": "#0D8ECF"
-                }, {
-                    "country": "9",
-                    "visits": 665,
-                    "color": "#0D52D1"
-                }, {
-                    "country": "10",
-                    "visits": 580,
-                    "color": "#2A0CD0"
-                }, {
-                    "country": "11",
-                    "visits": 443,
-                    "color": "#8A0CCF"
-                }, {
-                    "country": "12",
-                    "visits": 441,
-                    "color": "#CD0D74"
+                
                 }],
                 "valueAxes": [{
                     "position": "left",
@@ -285,42 +243,7 @@ jssor_1_slider_init = function() {
 				"country": "4",
 				"visits": 1322,
 				"color": "#FCD202"
-			}, {
-				"country": "5",
-				"visits": 1122,
-				"color": "#F8FF01"
-			}, {
-				"country": "6",
-				"visits": 1114,
-				"color": "#B0DE09"
-			}, {
-				"country": "7",
-				"visits": 984,
-				"color": "#04D215"
-			}, {
-				"country": "8",
-				"visits": 711,
-				"color": "#0D8ECF"
-			}, {
-				"country": "9",
-				"visits": 665,
-				"color": "#0D52D1"
-			}, {
-				"country": "10",
-				"visits": 580,
-				"color": "#2A0CD0"
-			}, {
-				"country": "11",
-				"visits": 443,
-				"color": "#8A0CCF"
-			}, {
-				"country": "12",
-				"visits": 441,
-				"color": "#CD0D74"
-			}],
-			"valueAxes": [{
-				"position": "left",
-				"title": "Visitors"
+			
 			}],
 			"graphs": [{
 				"balloonText": "[[category]]: <b>[[value]]</b>",
@@ -368,38 +291,7 @@ jssor_1_slider_init = function() {
 				"country": "4",
 				"visits": 1322,
 				"color": "#FCD202"
-			}, {
-				"country": "5",
-				"visits": 1122,
-				"color": "#F8FF01"
-			}, {
-				"country": "6",
-				"visits": 1114,
-				"color": "#B0DE09"
-			}, {
-				"country": "7",
-				"visits": 984,
-				"color": "#04D215"
-			}, {
-				"country": "8",
-				"visits": 711,
-				"color": "#0D8ECF"
-			}, {
-				"country": "9",
-				"visits": 665,
-				"color": "#0D52D1"
-			}, {
-				"country": "10",
-				"visits": 580,
-				"color": "#2A0CD0"
-			}, {
-				"country": "11",
-				"visits": 443,
-				"color": "#8A0CCF"
-			}, {
-				"country": "12",
-				"visits": 441,
-				"color": "#CD0D74"
+			
 			}],
 			"valueAxes": [{
 				"position": "left",
@@ -489,42 +381,7 @@ jssor_0_slider_init = function() {
 				"country": "4",
 				"visits": 18022,
 				"color": "#FCD202"
-			}, {
-				"country": "5",
-				"visits": 12222,
-				"color": "#F8FF01"
-			}, {
-				"country": "6",
-				"visits": 20055,
-				"color": "#B0DE09"
-			}, {
-				"country": "7",
-				"visits": 31201,
-				"color": "#04D215"
-			}, {
-				"country": "8",
-				"visits": 8879,
-				"color": "#0D8ECF"
-			}, {
-				"country": "9",
-				"visits": 5665,
-				"color": "#0D52D1"
-			}, {
-				"country": "10",
-				"visits": 4580,
-				"color": "#2A0CD0"
-			}, {
-				"country": "11",
-				"visits": 4443,
-				"color": "#8A0CCF"
-			}, {
-				"country": "12",
-				"visits": 78441,
-				"color": "#CD0D74"
-			}],
-			"valueAxes": [{
-				"position": "left",
-				"title": "Visitors"
+			
 			}],
 			"graphs": [{
 				"balloonText": "[[category]]: <b>[[value]]</b>",
@@ -572,38 +429,7 @@ jssor_0_slider_init = function() {
 				"country": "4",
 				"visits": 1322,
 				"color": "#FCD202"
-			}, {
-				"country": "5",
-				"visits": 1122,
-				"color": "#F8FF01"
-			}, {
-				"country": "6",
-				"visits": 1114,
-				"color": "#B0DE09"
-			}, {
-				"country": "7",
-				"visits": 984,
-				"color": "#04D215"
-			}, {
-				"country": "8",
-				"visits": 711,
-				"color": "#0D8ECF"
-			}, {
-				"country": "9",
-				"visits": 665,
-				"color": "#0D52D1"
-			}, {
-				"country": "10",
-				"visits": 580,
-				"color": "#2A0CD0"
-			}, {
-				"country": "11",
-				"visits": 443,
-				"color": "#8A0CCF"
-			}, {
-				"country": "12",
-				"visits": 441,
-				"color": "#CD0D74"
+			
 			}],
 			"valueAxes": [{
 				"position": "left",
