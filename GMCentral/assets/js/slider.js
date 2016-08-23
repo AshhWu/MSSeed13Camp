@@ -2,7 +2,9 @@
 renew = function(){
 	var resourcesObj = getAllResources();
 	setNewGraph(resourcesObj);
-	$("#Seconddiv").load(location.href + " #Seconddiv");
+	$("#Seconddiv").load(location.href + " #Seconddiv",function () {
+         $(this).unwrap();
+    });
 }
 
 ///  Ajax TODO  ///

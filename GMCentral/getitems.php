@@ -28,7 +28,7 @@ include 'ChromePhp.php';
 	ChromePhp::log($items);
 	// Debugger //
 
-  echo json_encode($aResult);
+  echo json_encode($items);
 
 /*
 function getGroupResources($team)
