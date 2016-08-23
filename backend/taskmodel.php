@@ -121,7 +121,7 @@ function searchMission($code)
 function searchStronghold($code)
 {
 	$conn = connect();
-	$sql = "SELECT * FROM stronghold WHERE code='".$code."'";
+	$sql = "SELECT * FROM stronghold WHERE mission_code='".$code."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
