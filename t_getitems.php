@@ -193,7 +193,7 @@ function isTradeRequest($team){
     }
 }
 
-function getLatestReport($num){
+/*function getLatestReport($num){
     $conn = connect();
 	$sql = "SELECT * FROM t_missionReport LIMIT ".$num." ORDER BY id DESC";
 	$stmt = $conn->query($sql);
@@ -206,7 +206,7 @@ function getSingleLatestReport($num){
 	$stmt = $conn->query($sql);
 	$items = $stmt->fetchAll(PDO::FETCH_NUM);
     return items[$num-1];
-}
+}*/
 
 function getPosition($team){
     $conn = connect();
