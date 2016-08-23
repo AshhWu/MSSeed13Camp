@@ -22,13 +22,16 @@ session_start();
   #<!-- Navigation Bar -->
     include "backend/navbar/nav.php";
 	include 'backend/login/planeTicket.php'; 
+	echo "Hello ".$_SESSION['ID']."<br>";
+	echo "Your authority is  ".$_SESSION['authority']."<br>";
 	echo '  
     <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
       <!-- Logout form-->
       <form role="form" action="backend/login/logout.php" method="post" accept-charset="UTF-8" autocomplete="on">
-        <button type="submit" class="btn btn-default">Login</button>
+        <button type="submit" class="btn btn-default">Logout</button>
       </form>
     </div>';
+	
   }
   else 
   { 
