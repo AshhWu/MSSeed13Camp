@@ -1,6 +1,3 @@
-<?php 
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,12 +64,12 @@ session_start();
 		</div>
 		<div id="trade_list" class="tab-pane fade w3-container w3-section w3-padding">
 			<h4 class="w3-card w3-pink w3-padding">別組向你提出的交易</h4>
-			<ul class="w3-ul">
+			<ul id="trade_ul" class="w3-ul">
 			</ul>
 		</div>
 		<div id="wait_list" class="tab-pane fade w3-container w3-section w3-padding">
 			<h4 class="w3-card w3-pink w3-padding">你向別組提出的交易</h4>
-			<ul class="w3-ul">
+			<ul id="wait_ul" class="w3-ul">
 			</ul>
 		</div>
 	</div>
