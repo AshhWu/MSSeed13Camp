@@ -118,6 +118,14 @@ function searchMission($code)
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function searchStronghold($code)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM stronghold WHERE code='".$code."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllMessages()
 {
 	$conn = connect();
