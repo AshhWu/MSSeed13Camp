@@ -2,7 +2,6 @@
 session_start();
 header('Cache-Control: no-cache');
 header('Pragma: no-cache');
-$_SESSION["s_team"] = 'B'; //testing
 ?>
 
 <!DOCTYPE html>
