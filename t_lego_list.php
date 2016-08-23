@@ -71,7 +71,7 @@ session_start();
 			</ul>
 		</div>
 		<div id="wait_list" class="tab-pane fade w3-container w3-section w3-padding">
-			<h4 class="w3-card w3-pink w3-padding">你向別組提出的交易<?php echo $wait;?></h4>
+			<h4 class="w3-card w3-pink w3-padding">你向別組提出的交易<?php foreach($wait as $value){echo $value;}?></h4>
 			<ul id="wait_ul" class="w3-ul">
 			</ul>
 		</div>
