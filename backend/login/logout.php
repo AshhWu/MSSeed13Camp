@@ -5,6 +5,4 @@
 unset($_SESSION['ID']);
 unset($_SESSION['authority']);
 session_unset();
-echo '登出中......';
-echo '<meta http-equiv=REFRESH CONTENT=1;url=../../index.php>';
 ?>
