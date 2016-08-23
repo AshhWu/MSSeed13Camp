@@ -3,12 +3,13 @@
 
 <head>
 <!-- Title -->
-<title>消息公告</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 <meta name="description" content="">
 <meta name="author" content="">
+
+<title>消息公告</title>
 
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

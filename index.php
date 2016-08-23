@@ -1,5 +1,5 @@
 <?php 
-session_start();
+	session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,13 +17,19 @@ session_start();
 
 <body>
 
-  <!-- Navigation Bar -->
   <?php
-  include "nav.php";
-  ?>
-
-  <?php
-  if ($_SESSION['ID'] != null) { include 'planeTicket.php'; }
+  if ($_SESSION['ID'] != null){ 
+  # Navigation Bar
+    include "nav.php";
+	include 'planeTicket.php'; 
+	echo "ID: ".$_SESSION['ID']."<br>";
+	echo "authority: ".$_SESSION['authority']."<br>";
+	echo '
+      <!-- Logout form-->
+      <form role="form" action="logout.php" method="post" accept-charset="UTF-8" autocomplete="on">
+        <button type="submit" class="btn btn-default">Logout</button>
+      </form>';
+  }
   else 
   { 
     echo '  
