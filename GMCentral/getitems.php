@@ -18,7 +18,7 @@ include_once 'taskmodel.php';
 function getResources()
 {
   $items = getAllResources();
-  return $items;
+  return json_encode($items);
 }
 echo getAllResources();
 /*
