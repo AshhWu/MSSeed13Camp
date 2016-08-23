@@ -17,13 +17,19 @@ session_start();
 
 <body>
 
-  <!-- Navigation Bar -->
   <?php
-  include "backend/navbar/nav.php";
-  ?>
-
-  <?php
-  if ($_SESSION['ID'] != null) { include 'backend/login/planeTicket.php'; }
+  if($_SESSION['ID'] != null){ 
+  #<!-- Navigation Bar -->
+    include "backend/navbar/nav.php";
+	include 'backend/login/planeTicket.php'; 
+	echo '  
+    <div class="container col-lg-6 col-lg-offset-3 col-xs-8 col-xs-offset-2">
+      <!-- Logout form-->
+      <form role="form" action="backend/login/logout.php" method="post" accept-charset="UTF-8" autocomplete="on">
+        <button type="submit" class="btn btn-default">Login</button>
+      </form>
+    </div>';
+  }
   else 
   { 
     echo '  
