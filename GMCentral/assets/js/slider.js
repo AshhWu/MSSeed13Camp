@@ -28,7 +28,7 @@ function callPage(url, div){
     ajax.onreadystatechange=function(){
         if(ajax.readyState==4){
             if(ajax.status==200){
-                div.innerHTML = ajax.responseText;
+                console.log (ajax.responseText);
             }
         }
     }
