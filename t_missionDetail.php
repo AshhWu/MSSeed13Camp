@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       
     <?php
-      include_once 'backend/taskmodel.php';
+      include "backend/navbar/nav.php";
       include_once 't_getitems.php';
       $team = 20;
       $mission = getMissionByTeam($team);
@@ -24,9 +24,6 @@ session_start();
     
   </head>
   <body>
-    <?php
-      include "backend/navbar/nav.php";
-    ?>
 
     <div class="container">
 
