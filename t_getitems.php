@@ -195,7 +195,7 @@ function isTradeRequest($team){
 
 function getLatestReport($num){
     $conn = connect();
-	$sql = "SELECT * FROM t_missionReport LIMIT ".$num." ORDER BY id DESC";
+	$sql = "SELECT * FROM t_missionReport ORDER BY id DESC LIMIT ".$num;
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
