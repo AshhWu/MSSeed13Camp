@@ -123,8 +123,10 @@
 	top: 10px;
 }
 
-.tab-pane .w3-card {
+.tab-pane ul .w3-card {
 	display: inline-block;
+	margin-right: 8px;
+	text-align: center;
 }
 
 /* lego_exchange */
