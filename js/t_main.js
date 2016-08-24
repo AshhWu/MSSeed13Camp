@@ -153,15 +153,17 @@ function mrt_route(route, count){
 }
 
 function lego_refresh(obj){
+	var tmp_str = 't_updatePosition.php?team=' + current_team + '&position=' + end.toString();
+	window.location = tmp_str;
+
 	var n = parseInt(obj.id[obj.id.length-1]);
-	var rest_lego, tmp_str = 't_updateAllCube.php?team=' + current_team + '&c1=0';
+	var rest_lego;
+	tmp_str = 't_updateAllCube.php?team=' + current_team + '&c1=0';
 	var j;
 	for (j = 1; j < 5; j++){
 		rest_lego = current_lego[j-1] - cost_list[n-1][j];
-		alert(rest_lego);
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
-	alert(tmp_str);
 	window.location = tmp_str;
 
 	tmp_str = 't_updatePosition.php?team=' + current_team + '&position=' + end.toString();
