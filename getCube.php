@@ -6,9 +6,11 @@ echo "start!!";
 // $sql = "SELECT team, cube2, cube3, cube4, cube5, mission FROM taipeiRun";
 // $result = $conn->query($query) or die($conn->error.__LINE__);
 
-$sql = "SELECT cube1, cube2, cube3, cube4, cube5 FROM taipeiRun where team=".$team;
+    $conn = connect();
+    $sql = "SELECT team, cube1, cube2, cube3, cube4, cube5 FROM taipeiRun ORDER BY team ASC";
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
+    
 echo "success!";
 echo $items;
 
