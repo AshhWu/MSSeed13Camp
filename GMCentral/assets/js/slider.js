@@ -334,7 +334,7 @@ var x20 = [10,10,10,10];
 /* Set json in each graph */
 setNewGraph = function(obj){
 	//Debug//
-	var obj = JSON.parse("[[\"A\",\"500\"],[\"B\",\"300\"]]");
+	//var obj = JSON.parse("[[\"A\",\"500\"],[\"B\",\"300\"]]");
 	//Debug//
 	//console.log(obj[0][1]);
 	x20[0]=0;
@@ -343,8 +343,8 @@ setNewGraph = function(obj){
 	x20[3]=0;
 	for(i=1;i<=32;i++){
 		x20[1] = x20[1]+Number(obj[0][i]);
-		x20[2] = x20[1]+Number(obj[1][i]);
-		x20[3] = x20[1]+Number(obj[2][i]);
+		x20[2] = x20[2]+Number(obj[1][i]);
+		x20[3] = x20[3]+Number(obj[2][i]);
 		x20[0] = x20[0]+Number(obj[3][i]);
 	}
 	
