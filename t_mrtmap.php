@@ -17,8 +17,9 @@ session_start();
 
 <?php include "backend/navbar/nav.php"; ?>
 <?php include "t_getitems.php"; ?>
-<?php $sstation = getPosition(1); ?>
-<?php $lego = getAllCubeNum(1); ?>
+<?php $team = $_SESSION['t_team'];?>
+<?php $sstation = getPosition($team); ?>
+<?php $lego = getAllCubeNum($team); ?>
 
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-indigo w3-padding">移動</h5>

@@ -1,4 +1,11 @@
-﻿/* MRT */
+
+#team_label {
+	width: 280px;
+	margin: auto;
+	text-align: center;
+}
+
+/* MRT */
 
 .middle_part {
 	width: 320px;

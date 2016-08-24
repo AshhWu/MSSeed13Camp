@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +17,8 @@
 
 <?php include "backend/navbar/nav.php"; ?>
 <?php include "t_getitems.php"; ?>
-<?php $team=1; ?>
-<?php $team2=$_GET['teamb']; ?>
+<?php $team = $_SESSION['t_team']; ?>
+<?php $team2 = $_GET['teamb']; ?>
 <?php $lego = getAllCubeNum(1); ?>
 <?php $lego2 = getAllCubeNum($team2); ?>
 

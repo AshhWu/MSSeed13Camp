@@ -121,9 +121,9 @@ session_start();
 
         <hr/>
     
-
+<!--
 <h1>missionReports</h1>
-    <?php
+    <?php/*
         header('Cache-Control: no-cache');
         header('Pragma: no-cache');
         require_once "t_getitems.php";
@@ -161,7 +161,7 @@ session_start();
             }
 
             echo "</table>";
-        }
+        }*/
     ?>
 
         <form action="t_addMissionReport.php" method="post" enctype="multipart/form-data">
@@ -183,7 +183,7 @@ session_start();
         </form>
 
         <hr/>
-        
+-->
         
 <h1>missionInfo</h1>
     <?php
@@ -197,6 +197,7 @@ session_start();
                         <th>title</th>
                         <th>content</th>
                         <th>picture</th>
+                        <th>pic</th>
                     </tr>";
         $items = getMissionInfo();
         if(!empty($items))
@@ -208,8 +209,14 @@ session_start();
                             <td>".$item[4]."</td>
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
-                if(!empty($item[3])){
+                /*if(!empty($item[3])){
                     echo    "<td><img src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
+                }else{
+                    echo    "<td>無圖片</td>";
+                }*/
+                echo    "<td></td>";
+                if(!empty($item[5])){
+                    echo    "<td><img src='".$item[5]."') /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
                 }
