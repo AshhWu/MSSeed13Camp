@@ -3,7 +3,7 @@ include_once '../../../backend/taskmodel.php';
 
 $conn = connect();
 $sql = "SELECT team, gpsX, gpsY FROM taipeiRun";
-$result = $conn->query($query) or die($conn->error.__LINE__);
+$result = $conn->query($sql) or die($conn->error.__LINE__);
 
 $arr = array();
 if($result->num_rows > 0) {
