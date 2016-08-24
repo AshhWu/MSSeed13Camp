@@ -14,19 +14,19 @@ chartMaker = function(){
                 "startDuration": 1,
                 "dataProvider": [{
                     "country": "A",
-                    "visits": x2[0],
+                    "visits": x20[0],
                     "color": "#FF0F00"
                 }, {
                     "country": "B",
-                    "visits": x2[1],
+                    "visits": x20[1],
                     "color": "#FF6600"
                 }, {
                     "country": "C",
-                    "visits": x2[2],
+                    "visits": x20[2],
                     "color": "#FF9E01"
                 }, {
                     "country": "D",
-                    "visits": x2[3],
+                    "visits": x20[3],
                     "color": "#FCD202"
 
                 }],
@@ -330,15 +330,24 @@ function getAllResources() {
 	});
 }
 
-var x2 = [10,10,10,10];
+var x20 = [10,10,10,10];
 /* Set json in each graph */
 setNewGraph = function(obj){
 	//Debug//
 	var obj = JSON.parse("[[\"A\",\"500\"],[\"B\",\"300\"]]");
 	//Debug//
 	//console.log(obj[0][1]);
-	//x2[0] = x2[0]+100;
-	x2[0] = x2[0]+obj[0][1];
+	x20[0]=0;
+	x20[1]=0;
+	x20[2]=0;
+	x20[3]=0;
+	for(i=1;i<=32;i++){
+		x20[1] = x20[1]+Number(obj[0][i]);
+		x20[2] = x20[1]+Number(obj[1][i]);
+		x20[3] = x20[1]+Number(obj[2][i]);
+		x20[0] = x20[0]+Number(obj[3][i]);
+	}
+	
 	console.log(x2[0]);
 }
 /* Down Below is Function to Set Graph */
