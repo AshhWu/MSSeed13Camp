@@ -186,20 +186,19 @@ function send_request(){
 function trade_init(trade){
 	var i, sender;
 	var tmp_str;
-	for (i = 0; i < trade.length; i++){
-		sender = trade[i][1];
-		tmp_str = '<li class="w3-container"><a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第' + sneder.toString() + '組</a><p>向你提出交易</p></li>';
+	for (i = 1; i < trade.length; i += 14){
+		sender = trade[i];
+		tmp_str = '<li class="w3-card"><a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第' + sneder.toString() + '組</a><p>向你提出的交易</p></li>';
 		document.getElementById("trade_ul").innerHTML += tmp_str;
 	}
 }
 
 function wait_init(wait){
-	alert(wait.length);
-	var i, sender;
+	var i, receiver;
 	var tmp_str;
-	for (i = 1; i < wait.length; i+=14){
+	for (i = 2; i < wait.length; i += 14){
 		sender = wait[i];
-		tmp_str = '<li class="w3-container"><p>你向第' + sender + '組提出的交易</p></li>';
+		tmp_str = '<li class="w3-card"><p>你向第' + receiver + '組提出的交易</p></li>';
 		document.getElementById("wait_ul").innerHTML += tmp_str;
 	}
 }
