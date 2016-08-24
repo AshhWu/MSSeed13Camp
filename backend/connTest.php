@@ -29,9 +29,9 @@
     
     
 
-    $sql = "SELECT * FROM account";
-    $stmt = $conn->query($sql);
-    echo $stmt->fetchAll(PDO::FETCH_NUM);
+    // $sql = "SELECT * FROM account";
+    // $stmt = $conn->query($sql);
+    // echo $stmt->fetchAll(PDO::FETCH_NUM);
     
 
 ?>
