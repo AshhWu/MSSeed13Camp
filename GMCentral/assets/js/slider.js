@@ -1,6 +1,7 @@
 
 renew = function(){
 	var resourcesObj = getAllResources();
+	console.log('resourcesObj is ',resourcesObj[0][1]);
 	setNewGraph(resourcesObj);
 	// $("#main").load(location.href + " #main",function () {
     //      $(this).unwrap();
