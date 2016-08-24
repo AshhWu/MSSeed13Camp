@@ -1,4 +1,4 @@
-﻿// mrt picture size switch
+// mrt picture size switch
 var pic_full = 0;
 var p;
 function pic_switchsize(){
@@ -168,8 +168,8 @@ function lego_refresh(obj){
 }
 
 //lego_trade
-function send_request(){
-	var tmp_str = 't_addTradeRequest.php?sender=1&receiver=4&c1=0&fc1=0';
+function send_request(sender, receiver){
+	var tmp_str = 't_addTradeRequest.php?sender=' + sender + '&receiver=' + receiver + '&c1=0&fc1=0';
 	var i, tmp_value;
 	var inputs = document.getElementsByTagName("input");
 	for (i = 0; i < 4; i++){
