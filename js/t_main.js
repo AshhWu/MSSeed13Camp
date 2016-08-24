@@ -191,7 +191,7 @@ function trade_init(trade){
 	var tmp_str;
 	for (i = 1; i < trade.length; i += 14){
 		sender = trade[i];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand"><p>第' + sender + '組向你提出的交易  </p></div><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>第' + sender + '組向你提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
 	}
 	document.getElementById("trade_ul").innerHTML = tmp_str;
 }
@@ -204,7 +204,7 @@ function wait_init(wait){
 	var tmp_str;
 	for (i = 2; i < wait.length; i += 14){
 		receiver = wait[i];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand"><p>你向第' + receiver + '組提出的交易  </p></div><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>你向第' + receiver + '組提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
 	}
 	document.getElementById("wait_ul").innerHTML = tmp_str;
 }
