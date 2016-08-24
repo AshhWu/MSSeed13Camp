@@ -215,8 +215,8 @@ session_start();
                     echo    "<td>無圖片</td>";
                 }*/
                 echo    "<td></td>";
-                if(!empty($item[4])){
-                    echo    "<td><img src='".$item[4]."') /></td>";
+                if(!empty($item[5])){
+                    echo    "<td><img src='".$item[5]."') /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
                 }
