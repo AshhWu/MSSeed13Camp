@@ -1,6 +1,8 @@
 
 renew = function(){
 	getAllResources();
+	getAllStrong();
+	calculateTotal();
 	chartMaker();
 }
 chartMaker = function(){
@@ -159,25 +161,25 @@ chartMaker = function(){
                 "export": {
                     "enabled": false
                 }}, 0);
-		var chart = AmCharts.makeChart("chartdiv2", {
+		var chart = AmCharts.makeChart("chartdiv10", {
 			"theme": "black",
 			"type": "serial",
 			"startDuration": 0,
 			"dataProvider": [{
 				"country": "美洲",
-				"visits": 40205,
+				"visits": x10[0],
 				"color": "#FF0F00"
 			}, {
 				"country": "歐洲",
-				"visits": 1882,
+				"visits": x10[1],
 				"color": "#FF6600"
 			}, {
 				"country": "亞洲",
-				"visits": 1809,
+				"visits": x10[2],
 				"color": "#3A8FB7"
 			}, {
 				"country": "非洲",
-				"visits": 1322,
+				"visits": x10[3],
 				"color": "#86C166"
 			
 			}],
@@ -207,7 +209,7 @@ chartMaker = function(){
 
 		});
 
-        var chart = AmCharts.makeChart("chartdiv1", {
+        var chart = AmCharts.makeChart("chartdiv11", {
 			"theme": "black",
 			"type": "serial",
 			"startDuration": 0,
@@ -259,25 +261,25 @@ chartMaker = function(){
 			"export": {
 				"enabled": false
 			}}, 0);
-		var chart = AmCharts.makeChart("chartdiv01", {
+		var chart = AmCharts.makeChart("chartdiv00", {
 			"theme": "black",
 			"type": "serial",
 			"startDuration": 0,
 			"dataProvider": [{
 				"country": "美洲",
-				"visits": 40205,
+				"visits": x00[0],
 				"color": "#FF0F00"
 			}, {
 				"country": "歐洲",
-				"visits": 20182,
+				"visits": x00[1],
 				"color": "#FF6600"
 			}, {
 				"country": "亞洲",
-				"visits": 20009,
+				"visits": x00[2],
 				"color": "#3A8FB7"
 			}, {
 				"country": "非洲",
-				"visits": 18022,
+				"visits": x00[3],
 				"color": "#86C166"
 			
 			}],
@@ -378,6 +380,14 @@ function getAllResources() {
 			x20[1]=0;
 			x20[2]=0;
 			x20[3]=0;
+			x21[0]=0;
+			x21[1]=0;
+			x21[2]=0;
+			x21[3]=0;
+			x22[0]=0;
+			x22[1]=0;
+			x22[2]=0;
+			x22[3]=0;
 			for(i=1;i<=16;i++){
 				x20[1] = x20[1]+Number(obj[0][i]);
 				x20[2] = x20[2]+Number(obj[1][i]);
@@ -400,6 +410,54 @@ function getAllResources() {
 	});
 	
 }
+function getAllStrong() {
+	$.ajax({
+  		type: "GET",
+  		url: "getstrong.php",
+ 		datatype: "json",
+ 		data: {},
+  		success: function(response) {
+			console.log(response);
+			var obj = JSON.parse(response);
+			console.log(obj);
+			console.log(obj[0][1]);
+    		x10[0]=0;
+			x10[1]=0;
+			x10[2]=0;
+			x10[3]=0;
+
+			for(i=0;i<=15;i++){
+				switch (obj[i][7]) {
+					case 'A':
+						x10[0]++;
+						break;
+					case 'B':
+						x10[1]++;
+						break;
+					case 'C':
+						x10[2]++;
+						break;
+					case 'D':
+						x10[3]++;
+						break;
+					default:
+						break;
+				}
+			}
+    	}
+	});
+	
+}
+function calculateTotal(){
+	var strongHoldPara = 100;
+	var tier1Parameter = 1;
+	var tier2Parameter = 20;
+	var tier3Parameter = 200;
+	x00[0] = x10[0]*strongHoldPara + x20[0]*tier1Parameter + x21[0]*tier2Parameter + x22[0]*tier3Parameter;
+	x00[1] = x10[1]*strongHoldPara + x20[1]*tier1Parameter + x21[1]*tier2Parameter + x22[1]*tier3Parameter;
+	x00[2] = x10[2]*strongHoldPara + x20[2]*tier1Parameter + x21[2]*tier2Parameter + x22[2]*tier3Parameter;
+	x00[3] = x10[3]*strongHoldPara + x20[3]*tier1Parameter + x21[3]*tier2Parameter + x22[3]*tier3Parameter;
+}
 
 var x20 = [10,10,10,10];
 var x21 = [20,20,20,20];
@@ -407,35 +465,13 @@ var x22 = [10,10,10,10];
 var x10 = [20,20,20,20];
 var x11 = [20,20,20,20];
 var x00 = [20,20,20,20];
-
-
-
-/* Set json in each graph */
-setNewGraph = function(obj){
-	// //Debug//
-	// //var obj = JSON.parse("[[\"A\",\"500\"],[\"B\",\"300\"]]");
-	// //Debug//
-	// //console.log(obj[0][1]);
-	// x20[0]=0;
-	// x20[1]=0;
-	// x20[2]=0;
-	// x20[3]=0;
-	// for(i=1;i<=32;i++){
-	// 	x20[1] = x20[1]+Number(obj[0][i]);
-	// 	x20[2] = x20[2]+Number(obj[1][i]);
-	// 	x20[3] = x20[3]+Number(obj[2][i]);
-	// 	x20[0] = x20[0]+Number(obj[3][i]);
-	// }
-	
-	// console.log(x2[0]);
-}
 /* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {
 
         var jssor_2_options = {
             
               $AutoPlay: true,
-              $Idle: 5000,
+              $Idle: 8000,
               $ArrowNavigatorOptions: {
                 $Class: $JssorArrowNavigator$
               },
@@ -463,12 +499,9 @@ jssor_2_slider_init = function() {
                 }
             }
             ScaleSlider();
-
             $Jssor$.$AddEvent(window, "load", ScaleSlider);
             $Jssor$.$AddEvent(window, "resize", ScaleSlider);
             $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-
-            
         }
 
 
