@@ -15,7 +15,7 @@
     <?php
       include_once 'backend/taskmodel.php';
       include_once 't_getitems.php';
-      $team = 20;
+      $team = $_SESSION['t_team'];
       $mState = getMissionState($team);
       $mission = getMissionByTeam($team);
     ?>
