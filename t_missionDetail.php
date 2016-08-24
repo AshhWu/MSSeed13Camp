@@ -16,7 +16,7 @@ session_start();
     <?php
       include "backend/navbar/nav.php";
       include_once 't_getitems.php';
-      $team = 20;
+      $team = $_SESSION['t_team'];
       $mission = getMissionByTeam($team);
     ?>
     <!-- Custom styles for this template -->
