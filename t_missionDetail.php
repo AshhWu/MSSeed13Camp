@@ -31,8 +31,8 @@ session_start();
             <div class="thumbnail">
                 <img class="img-rounded" width="250px" src="data:image/jpeg;base64,<?echo base64_encode(getMissionPic($mission))?>" alt="請重新整理頁面">    <!--題目圖片-->
                 <div class="caption">
-                    <h3><?php echo getMissionTitle($mission); ?></h3>             <!--題目標題-->
-                    <p><?php echo getMissionContent($mission); ?></p>  <!--題目內容與提示-->
+                    <h3><?php echo getMissionContent($mission); ?></h3>             <!--題目標題-->
+                    <p>關卡名稱:<?php echo getMissionTitle($mission); ?></p>  <!--題目內容與提示-->
                     <p><a href="t_missionSend.php" class="btn btn-success" role="button">照片上傳</a></p>
                 </div>
             </div>
