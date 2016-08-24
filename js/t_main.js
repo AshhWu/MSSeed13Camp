@@ -194,14 +194,11 @@ function trade_init(trade){
 }
 
 function wait_init(wait){
-	alert(wait.type);
+	alert(wait.length);
 	var i, sender;
 	var tmp_str;
-	var patt = /\d+/g;
-    var result = wait.match(patt);
-    alert(result.length);
-	for (i = 1; i < result.length; i+=14){
-		sender = result[i];
+	for (i = 1; i < wait.length; i+=14){
+		sender = wait[i];
 		tmp_str = '<li class="w3-container"><p>你向第' + sender + '組提出的交易</p></li>';
 		document.getElementById("wait_ul").innerHTML += tmp_str;
 	}
