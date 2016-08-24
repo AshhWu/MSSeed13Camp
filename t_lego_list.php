@@ -34,7 +34,7 @@ session_start();
 <div class="container">
 	<ul class="nav nav-tabs">
 		<li class="active"><a data-toggle="tab" href="#lego_list">樂高列表</a></li>
-		<li><a data-toggle="tab" href="#trade_list" onclick="trade_init(<?php echo $trade;?>)">交易請求</a></li>
+		<li><a data-toggle="tab" href="#trade_list" onclick="trade_init(<?php echo '['; foreach($trade as $arr){foreach($arr as $value){echo $value . ',';}} echo '-1]';?>)">交易請求</a></li>
 		<li><a data-toggle="tab" href="#wait_list" onclick="wait_init(<?php echo '['; foreach($wait as $arr){foreach($arr as $value){echo $value . ',';}} echo '-1]';?>)">已提交易</a></li>
 	</ul>
 
