@@ -15,9 +15,9 @@
 session_start();
 include_once 'backend/taskmodel.php';
 
-$sql = $_POST['sql'];
+$id = $_GET['id'];
 
-sqlcode($sql);
+deleteGMMessage($id);
 
 header('Location: superAdmin.php');
 ?>

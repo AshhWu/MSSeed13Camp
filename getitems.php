@@ -39,6 +39,12 @@ function getMessages()
   return $items;
 }
 
+function getGMMessages()
+{
+  $items = getAllGMMessages();
+  return $items;
+}
+
 function getStrongholds()
 {
   $items = getAllStrongholds();

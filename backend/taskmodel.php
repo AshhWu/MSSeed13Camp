@@ -134,6 +134,14 @@ function getAllMessages()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getAllGMMessages()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM gmmessage";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function updateGroupResource($conn, $team, $value, $resource) // private function
 {
 	$sql = "UPDATE resource SET ".$resource."='".$value."' WHERE team='".$team."'";
@@ -761,6 +769,15 @@ function deleteMessage($item_id)
 {
 	$conn = connect();
 	$sql = "DELETE FROM message WHERE id = ?";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $item_id);
+	$stmt->execute();
+}
+
+function deleteGMMessage($item_id)
+{
+	$conn = connect();
+	$sql = "DELETE FROM gmmessage WHERE id = ?";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $item_id);
 	$stmt->execute();

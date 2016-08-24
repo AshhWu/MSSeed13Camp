@@ -420,6 +420,37 @@ if($_SESSION['authority']==3){
 		</table>
 		<input type="submit" value="Add message"/>
 	</form>
+
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getGMMessages();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>Time</th>
+					<th>Client</td>
+					<th>Color</td>
+					<th>Message</td>
+					<th>Delete?</th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1]."</td>
+						<td>".$item[2]."</td>
+						<td>".$item[4]."</td>
+						<td>".$item[3]."</td>";
+							
+			echo "<td><a href='deleteGMmessage.php?id=".$item[0]."'>Delete</a></td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
 	
           </div>
         </div>
