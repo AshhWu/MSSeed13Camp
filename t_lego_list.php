@@ -17,7 +17,7 @@ session_start();
 <?php include "backend/navbar/nav.php"; ?>
 <?php include "t_getitems.php"; ?>
 <?php $all_lego = getAllTeamCubeNum(); ?>
-<?php $team = 1; ?>
+<?php $team = $_SESSION['t_team']; ?>
 <?php $wait = getTradeRequestBySender($team); ?>
 <?php $trade = getTradeRequestByReceiver($team); ?>
 
