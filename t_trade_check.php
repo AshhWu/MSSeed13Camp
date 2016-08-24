@@ -29,10 +29,10 @@ session_start();
 
 <table id="trade_table" class="w3-table w3-sand">
 <tr>
-	<th class="w3-tag">第<?php echo $trade[1];?>組</th>
+	<th class="w3-tag"><?php echo $trade[1];?>組</th>
 	<th>給出</th>
 	<th>|</th>
-	<th class="w3-tag">第<?php echo $trade[2];?>組</th>
+	<th class="w3-tag"><?php echo $trade[2];?>組</th>
 	<th>給出</th>
 </tr>	
 <tr>
