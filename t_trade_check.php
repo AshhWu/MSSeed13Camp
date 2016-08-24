@@ -19,6 +19,7 @@ session_start();
 <?php include "t_getitems.php"; ?>
 <?php $team = $_SESSION['t_team']; ?>
 <?php $id = $_GET['id']; ?>
+<?php $team2 = $_GET['teamb']; ?>
 <?php $lego = getAllCubeNum($team); ?>
 <?php $lego2 = getAllCubeNum($team2); ?>
 <?php $trade = getTradeRequestById($id); ?>
