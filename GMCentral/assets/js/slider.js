@@ -337,7 +337,7 @@ setNewGraph = function(obj){
 	var obj = JSON.parse("[[\"A\",\"500\"],[\"B\",\"300\"]]");
 	//Debug//
 	console.log(obj[0][1]);
-	x2[0] = x2[0]+5;
+	x2[0] = Number(obj[0][1]);
 	console.log(x2[0]);
 }
 /* Down Below is Function to Set Graph */
