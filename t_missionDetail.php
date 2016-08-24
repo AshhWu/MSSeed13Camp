@@ -13,18 +13,17 @@ session_start();
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+    
+  </head>
+  <body>
     <?php
       include "backend/navbar/nav.php";
       include_once 't_getitems.php';
       $team = $_SESSION['t_team'];
       $mission = getMissionByTeam($team);
     ?>
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
-    
-  </head>
-  <body>
-
     <div class="container">
 
       <div class="starter-template">
