@@ -21,7 +21,7 @@ session_start();
 <?php $wait = getTradeRequestBySender($team); ?>
 <?php $trade = getTradeRequestByReceiver($team); ?>
 
-<h3 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h3>
+<h5 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h5>
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-brown w3-padding">樂高</h5>
 	<section class="section2 w3-container">
