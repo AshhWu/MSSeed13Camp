@@ -325,7 +325,8 @@ function getAllResources() {
   		success: function(response) {
 			console.log(response);
 			var obj = JSON.parse(response);
-			//console.log(obj[0][1]);
+			console.log(obj);
+			console.log(obj[0][1]);
     		return obj;
     	}
 	});
