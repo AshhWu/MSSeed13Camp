@@ -166,9 +166,6 @@ function lego_refresh(obj){
 	}
 	window.location = tmp_str;
 
-	tmp_str = 't_updatePosition.php?team=' + current_team + '&position=' + end.toString();
-	window.location = tmp_str;
-
 	alert("移動成功! 請向" + mrt_value[end.toString()] + "站前進~");
 }
 
