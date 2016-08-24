@@ -37,7 +37,7 @@
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
-	$items = getMessages();
+	$items = getGMMessages();
 	$team = $_SESSION['s_team'];
 	if(!empty($items))
 	{
