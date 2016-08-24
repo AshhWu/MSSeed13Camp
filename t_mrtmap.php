@@ -21,9 +21,9 @@ session_start();
 <?php $sstation = getPosition($team); ?>
 <?php $lego = getAllCubeNum($team); ?>
 
-<h3 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h3>
+<h5 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h5>
 <div class="middle_part w3-container w3-section">
-	<h5 class="w3-indigo w3-padding">移動</h5>
+	<h5 class="w3-orange w3-padding">移動</h5>
 	<section class="section1 w3-container">
 	<p id="start"><?php echo $sstation?></p>
 	<script type="text/javascript">

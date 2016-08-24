@@ -10,6 +10,7 @@
 .middle_part {
 	width: 320px;
 	margin: auto;
+	border: solid 1px;
 }
 
 .middle_part h5 {
@@ -22,7 +23,7 @@
 	display: inline-block;
 	max-width: 50%;
 	position: relative;
-	top: 10px;
+	top: 20px;
 }
 
 .middle_part form {

@@ -197,7 +197,6 @@ session_start();
                         <th>title</th>
                         <th>content</th>
                         <th>picture</th>
-                        <th>pic</th>
                     </tr>";
         $items = getMissionInfo();
         if(!empty($items))
@@ -214,9 +213,8 @@ session_start();
                 }else{
                     echo    "<td>無圖片</td>";
                 }*/
-                echo    "<td></td>";
                 if(!empty($item[5])){
-                    echo    "<td><img height='300px' src='".$item[5]."') /></td>";
+                    echo    "<td><img height='200px' src='".$item[5]."') /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
                 }
