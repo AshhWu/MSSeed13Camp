@@ -1,4 +1,4 @@
-// mrt picture size switch
+ï»¿// mrt picture size switch
 var pic_full = 0;
 var p;
 function pic_switchsize(){
@@ -117,7 +117,7 @@ function change_twice(start, line_s, line_e, end){
 }
 
 var lego_color = ["yellow", "red", "green", "yellow", "blue"];
-var mrt_value = {'100':'°Êª«¶é', '101':'¤ì¬]', '102':'¸UªÚªÀ°Ï', '103':'¸UªÚÂå°|', '104':'¨¯¥è', '105':'Åï¥ú', '106':'¤»±i²p', '107':'¬ì§Þ¤j¼Ó', '108':'¤j¦w', '109':'©¾§µ´_¿³', '110':'«n¨Ê´_¿³', '111':'¤¤¤s°ê¤¤', '112':'ªQ¤s¾÷³õ', '113':'¤jª½', '114':'¼C«n¸ô', '115':'¦è´ò', '116':'´äáY', '117':'¤å¼w', '118':'¤º´ò', '119':'¤j´ò¤½¶é', '120':'¸¬¬w', '121':'ªF´ò', '122':'«n´ä³nÅé¶é°Ï', '123':'«n´ä®iÄýÀ]', '226':'²H¤ô', '225':'¬õ¾ðªL', '224':'¦Ë³ò', '223':'Ãö´ç', '222':'©¾¸q', '221':'´_¿³±^', '220':'·s¥_§ë', '220':'¥_§ë', '219':'©_©¥', '218':'Ô§­ù©¤', '217':'¥ÛµP', '216':'©ú¼w', '215':'ªÛ¤s', '214':'¤hªL', '213':'¼C¼æ', '212':'¶ê¤s', '211':'¥ÁÅv¦è¸ô', '210':'Âù³s', '209':'¤¤¤s', '208':'¥x¥_¨®¯¸', '207':'¥x¤jÂå°|', '206':'¤¤¥¿¬ö©À°ó', '205':'ªFªù', '204':'¤j¦w´ËªL¤½¶é', '203':'¤j¦w', '202':'«H¸q¦w©M', '201':'¥x¥_101/¥@¶T', '200':'¶H¤s', '300':'ªQ¤s', '301':'«n¨Ê¤T¥Á', '302':'¥x¥_¤p¥¨³J', '303':'«n¨Ê´_¿³', '304':'ªQ¦¿«n¨Ê', '305':'¤¤¤s', '306':'¥_ªù', '307':'¦èªù', '308':'¤p«nªù', '309':'¤¤¥¿¬ö©À°ó', '310':'¥j«F', '311':'¥x¹q¤j¼Ó', '312':'¤½À]', '313':'¸U¶©', '314':'´º¬ü', '315':'¤j©WªL', '316':'¤C±i', '316':'¤pºÑ¼æ', '317':'·s©±°Ï¤½©Ò', '318':'·s©±', '400':'«n¶Õ¨¤', '401':'´º¦w', '402':'¥Ã¦w¥«³õ', '403':'³»·Ë', '404':'¥j«F', '405':'ªFªù', '406':'©¾§µ·s¥Í', '407':'ªQ¦¿«n¨Ê', '408':'¦æ¤Ñ®c', '409':'¤¤¤s°ê¤p', '410':'¥ÁÅv¦è¸ô', '411':'¤j¾ôÀY', '412':'¥x¥_¾ô', '413':'µæ¼d', '414':'¤T­«', '415':'¥ý¶Þ®c', '416':'ÀY«eÉÜ', '417':'·s²ø', '418':'»²¤j', '419':'¤¦»ñ', '420':'°jÀs', '412':'¤T­«°ê¤p', '413':'¤T©M°ê¤¤', '414':'®}¶×¤¤¾Ç', '415':'¤T¥Á°ª¤¤', '416':'Äª¬w', '523':'³»®H', '521':'¥Ã¹ç', '520':'¤g«°', '519':'®ü¤s', '518':'¨ÈªFÂå°|', '517':'©²¤¤', '516':'ªO¾ô', '515':'·s®H', '514':'¦¿¤l»A', '513':'Às¤s¦x', '512':'¦èªù', '511':'¥x¥_¨®¯¸', '510':'µ½¾É¦x', '509':'©¾§µ·s¥Í', '508':'©¾§µ´_¿³', '507':'©¾§µ´°¤Æ', '506':'°ê¤÷¬ö©ÀÀ]', '505':'¥«¬F©²', '504':'¥Ã¬K', '503':'«á¤s°ñ', '502':'©ø¶§', '501':'«n´ä', '500':'«n´ä®iÄýÀ]'};
+var mrt_value = {'100':'å‹•ç‰©åœ’', '101':'æœ¨æŸµ', '102':'è¬èŠ³ç¤¾å€', '103':'è¬èŠ³é†«é™¢', '104':'è¾›äº¥', '105':'éºŸå…‰', '106':'å…­å¼µçŠ', '107':'ç§‘æŠ€å¤§æ¨“', '108':'å¤§å®‰', '109':'å¿ å­å¾©èˆˆ', '110':'å—äº¬å¾©èˆˆ', '111':'ä¸­å±±åœ‹ä¸­', '112':'æ¾å±±æ©Ÿå ´', '113':'å¤§ç›´', '114':'åŠå—è·¯', '115':'è¥¿æ¹–', '116':'æ¸¯å¢˜', '117':'æ–‡å¾·', '118':'å…§æ¹–', '119':'å¤§æ¹–å…¬åœ’', '120':'è‘«æ´²', '121':'æ±æ¹–', '122':'å—æ¸¯è»Ÿé«”åœ’å€', '123':'å—æ¸¯å±•è¦½é¤¨', '226':'æ·¡æ°´', '225':'ç´…æ¨¹æž—', '224':'ç«¹åœ', '223':'é—œæ¸¡', '222':'å¿ ç¾©', '221':'å¾©èˆˆå´—', '220':'æ–°åŒ—æŠ•', '220':'åŒ—æŠ•', '219':'å¥‡å²©', '218':'å”­å“©å²¸', '217':'çŸ³ç‰Œ', '216':'æ˜Žå¾·', '215':'èŠå±±', '214':'å£«æž—', '213':'åŠæ½­', '212':'åœ“å±±', '211':'æ°‘æ¬Šè¥¿è·¯', '210':'é›™é€£', '209':'ä¸­å±±', '208':'å°åŒ—è»Šç«™', '207':'å°å¤§é†«é™¢', '206':'ä¸­æ­£ç´€å¿µå ‚', '205':'æ±é–€', '204':'å¤§å®‰æ£®æž—å…¬åœ’', '203':'å¤§å®‰', '202':'ä¿¡ç¾©å®‰å’Œ', '201':'å°åŒ—101/ä¸–è²¿', '200':'è±¡å±±', '300':'æ¾å±±', '301':'å—äº¬ä¸‰æ°‘', '302':'å°åŒ—å°å·¨è›‹', '303':'å—äº¬å¾©èˆˆ', '304':'æ¾æ±Ÿå—äº¬', '305':'ä¸­å±±', '306':'åŒ—é–€', '307':'è¥¿é–€', '308':'å°å—é–€', '309':'ä¸­æ­£ç´€å¿µå ‚', '310':'å¤äº­', '311':'å°é›»å¤§æ¨“', '312':'å…¬é¤¨', '313':'è¬éš†', '314':'æ™¯ç¾Ž', '315':'å¤§åªæž—', '316':'ä¸ƒå¼µ', '316':'å°ç¢§æ½­', '317':'æ–°åº—å€å…¬æ‰€', '318':'æ–°åº—', '400':'å—å‹¢è§’', '401':'æ™¯å®‰', '402':'æ°¸å®‰å¸‚å ´', '403':'é ‚æºª', '404':'å¤äº­', '405':'æ±é–€', '406':'å¿ å­æ–°ç”Ÿ', '407':'æ¾æ±Ÿå—äº¬', '408':'è¡Œå¤©å®®', '409':'ä¸­å±±åœ‹å°', '410':'æ°‘æ¬Šè¥¿è·¯', '411':'å¤§æ©‹é ­', '412':'å°åŒ—æ©‹', '413':'èœå¯®', '414':'ä¸‰é‡', '415':'å…ˆå—‡å®®', '416':'é ­å‰åº„', '417':'æ–°èŽŠ', '418':'è¼”å¤§', '419':'ä¸¹é³³', '420':'è¿´é¾', '412':'ä¸‰é‡åœ‹å°', '413':'ä¸‰å’Œåœ‹ä¸­', '414':'å¾åŒ¯ä¸­å­¸', '415':'ä¸‰æ°‘é«˜ä¸­', '416':'è˜†æ´²', '523':'é ‚åŸ”', '521':'æ°¸å¯§', '520':'åœŸåŸŽ', '519':'æµ·å±±', '518':'äºžæ±é†«é™¢', '517':'åºœä¸­', '516':'æ¿æ©‹', '515':'æ–°åŸ”', '514':'æ±Ÿå­ç¿ ', '513':'é¾å±±å¯º', '512':'è¥¿é–€', '511':'å°åŒ—è»Šç«™', '510':'å–„å°Žå¯º', '509':'å¿ å­æ–°ç”Ÿ', '508':'å¿ å­å¾©èˆˆ', '507':'å¿ å­æ•¦åŒ–', '506':'åœ‹çˆ¶ç´€å¿µé¤¨', '505':'å¸‚æ”¿åºœ', '504':'æ°¸æ˜¥', '503':'å¾Œå±±åŸ¤', '502':'æ˜†é™½', '501':'å—æ¸¯', '500':'å—æ¸¯å±•è¦½é¤¨'};
 function mrt_route(route, count){
 	var cost = [0, 0, 0, 0, 0];
 	var l, disable = 0;
@@ -140,9 +140,9 @@ function mrt_route(route, count){
 			disable = 1;
 	}
 	if (disable == 1)
-		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple w3-disabled">Lego¤£°÷</button></li>';
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple w3-disabled">Legoä¸å¤ </button></li>';
 	else
-		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(this)">«ö§ÚGo</button></li>';
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(this)">æŒ‰æˆ‘Go</button></li>';
 
 	document.getElementById("route_ul").innerHTML += result;
 
@@ -164,7 +164,7 @@ function lego_refresh(obj){
 
 	var tmp_str = 't_updatePosition.php?team=1&position=' + end.toString();
 	window.location = tmp_str;
-	alert("²¾°Ê¦¨¥\! ½Ð¦V" + mrt_value[end.toString()] + "¯¸«e¶i~");
+	alert("ç§»å‹•æˆåŠŸ! è«‹å‘" + mrt_value[end.toString()] + "ç«™å‰é€²~");
 }
 
 //lego_trade
@@ -190,7 +190,7 @@ function trade_init(trade){
 	var tmp_str;
 	for (i = 1; i < trade.length; i += 14){
 		sender = trade[i];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-orange w3-padding"><p>²Ä' + sender + '²Õ¦V§A´£¥Xªº¥æ©ö</p></div><a class="w3-btn w3-purple w3-padding w3-round">¬d¬Ý</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-orange w3-padding"><p>ç¬¬' + sender + 'çµ„å‘ä½ æå‡ºçš„äº¤æ˜“</p></div><a class="w3-btn w3-purple w3-padding w3-round">æŸ¥çœ‹</a></li>';
 	}
 	document.getElementById("trade_ul").innerHTML = tmp_str;
 }
@@ -203,7 +203,7 @@ function wait_init(wait){
 	var tmp_str;
 	for (i = 2; i < wait.length; i += 14){
 		receiver = wait[i];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-orange w3-padding"><p>§A¦V²Ä' + receiver + '²Õ´£¥Xªº¥æ©ö</p></div><a class="w3-btn w3-purple w3-padding w3-round">¬d¬Ý</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-orange w3-padding"><p>ä½ å‘ç¬¬' + receiver + 'çµ„æå‡ºçš„äº¤æ˜“</p></div><a class="w3-btn w3-purple w3-padding w3-round">æŸ¥çœ‹</a></li>';
 	}
 	document.getElementById("wait_ul").innerHTML = tmp_str;
 }
