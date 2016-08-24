@@ -28,6 +28,7 @@ body {
  */
 .plane-ticket {
 	position: relative;
+	margin-bottom: 2em;
 }
 
 /* Large Info */
@@ -77,8 +78,39 @@ body {
 	left: 78%;
 }
 
+/* Mission */
+.mission {
+	color: white;
+	font-size: 25px;
+}
+#target {
+	width: 100%;
+}
+#mission-title {
+	font-size: 27px;
+	margin-bottom: 10px;
+}
+.mission-row {
+	margin-bottom: 5px;
+}
+#mission-master {
+	color: #CDE09B;
+	display: inline;
+}
+#mission-content {
+	color: #CDE09B;
+	display: inline;
+}
 
-@media screen and (max-width: 600px){
+
+@media screen and (max-width: 599px){
+.form-group {
+	letter-spacing: 3px;
+}
+.form-control {
+	letter-spacing: 3px;
+}
+
 .large-info {
 	letter-spacing: 0.5px;
 	font-size: 10px;
@@ -87,16 +119,43 @@ body {
 	letter-spacing: 1px;
 	font-size: 8px;
 }
+
+/* Mission */
+.mission {
+	font-size: 12px;
+}
+#mission-title {
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+.mission-row {
+	margin-bottom: 2px;
+}
+.mission-margin {
+	padding-left: 0px;
+}
 }
 
 
-@media screen and (min-width: 600px) and (max-width: 800){
+@media screen and (min-width: 600px) and (max-width: 1050px){
 .large-info {
-	letter-spacing: 2px;
-	font-size: 12px;
+	letter-spacing: 1px;
+	font-size: 14px;
 }
 .small-info {
 	letter-spacing: 1px;
-	font-size: 10px;
+	font-size: 12px;
+}
+
+/* Mission */
+.mission {
+	font-size: 18px;
+}
+#mission-title {
+	font-size: 20px;
+	margin-bottom: 6px;
+}
+.mission-row {
+	margin-bottom: 4px;
 }
 }
