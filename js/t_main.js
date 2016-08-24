@@ -194,7 +194,7 @@ function trade_init(trade){
 }
 
 function wait_init(wait){
-	alert(wait.length);
+	alert(wait.type);
 	var i, sender;
 	var tmp_str;
 	var patt = /\d+/g;
