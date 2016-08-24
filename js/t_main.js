@@ -142,7 +142,7 @@ function mrt_route(route, count){
 	if (disable == 1)
 		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple w3-disabled">Lego不夠</button></li>';
 	else
-		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(<? php echo "this, " . $team; ?>)">按我Go</button></li>';
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(<? php echo "this, "; echo $team;?>)">按我Go</button></li>';
 
 	document.getElementById("route_ul").innerHTML += result;
 
