@@ -1,5 +1,4 @@
-
-/* MRT */
+﻿/* MRT */
 
 .middle_part {
 	width: 320px;
@@ -129,7 +128,12 @@
 	text-align: center;
 }
 
-/* lego_exchange */
+.tab-pane ul .w3-card p {
+	position: relative;
+	top: 8px;
+}
+
+/* lego_trade */
 
 #trade_with {
 	width: 280px;
