@@ -188,7 +188,7 @@ function trade_init(trade){
 	var tmp_str;
 	for (i = 1; i < trade.length; i += 14){
 		sender = trade[i];
-		tmp_str = '<li class="w3-card"><a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第' + sneder.toString() + '組</a><p>向你提出的交易</p></li>';
+		tmp_str = '<li class="w3-card w3-sand"><a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第' + sneder.toString() + '組</a><p>向你提出的交易</p></li>';
 		document.getElementById("trade_ul").innerHTML += tmp_str;
 	}
 }
@@ -197,8 +197,8 @@ function wait_init(wait){
 	var i, receiver;
 	var tmp_str;
 	for (i = 2; i < wait.length; i += 14){
-		sender = wait[i];
-		tmp_str = '<li class="w3-card"><p>你向第' + receiver + '組提出的交易</p></li>';
+		receiver = wait[i];
+		tmp_str = '<li class="w3-card w3-sand"><p>你向第' + receiver + '組提出的交易</p></li>';
 		document.getElementById("wait_ul").innerHTML += tmp_str;
 	}
 }
