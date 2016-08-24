@@ -38,10 +38,11 @@ session_start();
 if($_SESSION['ID'] != null){ 
   ?>
  
-    <frameset rows="150,*">
-        <frame src="messagePageGM.php">
-        <frame src="messagePageNormal.php">
-
+<frameset rows="40%,*">
+    <frame src="messagePageGM.php">
+    <frame src="messagePageNormal.php">
+</frameset>
+		
 <?php
 }
 else{
