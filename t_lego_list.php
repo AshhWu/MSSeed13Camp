@@ -34,8 +34,8 @@ session_start();
 <div class="container">
 	<ul class="nav nav-tabs">
 		<li class="active"><a data-toggle="tab" href="#lego_list">樂高列表</a></li>
-		<li><a data-toggle="tab" href="#trade_list" onclick="trade_init(<?php echo '['; foreach($trade as $arr){foreach($arr as $value){echo $value . ',';}} echo '-1]';?>)">交易請求</a></li>
-		<li><a data-toggle="tab" href="#wait_list" onclick="wait_init(<?php echo '['; foreach($wait as $arr){foreach($arr as $value){echo $value . ',';}} echo '-1]';?>)">已提交易</a></li>
+		<li><a data-toggle="tab" href="#trade_list" onclick="trade_init(<?php echo '['; foreach($trade as $arr){foreach($arr as $value){echo $value . ',';}} echo '-1]';?>)">交易請求(<?php echo count($trade);?>)</a></li>
+		<li><a data-toggle="tab" href="#wait_list" onclick="wait_init(<?php echo '['; foreach($wait as $arr){foreach($arr as $value){echo $value . ',';}} echo '-1]';?>)">已提交易(<?php echo count($wait);?>)</a></li>
 	</ul>
 
 	<div class="tab-content">
@@ -66,12 +66,12 @@ session_start();
 			</ul>
 		</div>
 		<div id="trade_list" class="tab-pane fade w3-container w3-section w3-padding">
-			<h4 class="w3-card w3-pink w3-padding">別組交易請求(<?php echo count($trade);?>)</h4>
+			<h4 class="w3-card w3-pink w3-padding">別組交易請求</h4>
 			<ul id="trade_ul" class="w3-ul">
 			</ul>
 		</div>
 		<div id="wait_list" class="tab-pane fade w3-container w3-section w3-padding">
-			<h4 class="w3-card w3-pink w3-padding">已提出的交易(<?php echo count($wait);?>)</h4>
+			<h4 class="w3-card w3-pink w3-padding">已提出的交易</h4>
 			<ul id="wait_ul" class="w3-ul">
 			</ul>
 		</div>
