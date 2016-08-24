@@ -15,18 +15,20 @@
         $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
     }
 
-    $conn = mysqli_connect($connectstr_dbhost, $connectstr_dbusername, $connectstr_dbpassword,$connectstr_dbname)   ;
-    
-    if (!$conn) {
-        echo "Error: Unable to connect to MySQL." . PHP_EOL;
-        echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-        echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-        exit;
+    try{
+        $conn = new PDO( "mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     }
-    
+    catch(Exception $e){
+        die(print_r($e));
+    }
+
     echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
     echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
     
+    $sql = "SELECT * FROM account";
+    $stmt = $conn->query($sql);
+    echo $stmt->fetchAll(PDO::FETCH_NUM);
     
 
 ?>
