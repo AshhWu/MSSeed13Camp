@@ -19,11 +19,11 @@ session_start();
 <?php include "t_getitems.php"; ?>
 <?php $team = $_SESSION['t_team']; ?>
 <?php $team2 = $_GET['teamb']; ?>
-<?php $lego = getAllCubeNum(1); ?>
+<?php $lego = getAllCubeNum($team); ?>
 <?php $lego2 = getAllCubeNum($team2); ?>
 
 <h5 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h5>
-<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">和第<?php echo $team2 ?>組交易</div>
+<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">和第<?php echo $team2;?>組交易</div>
 
 <table id="trade_table" class="w3-table w3-sand">
 <tr>
@@ -34,37 +34,37 @@ session_start();
 	<th>給我方</th>
 </tr>	
 <tr>
-	<th><div class="w3-tag w3-red"><p><?php echo $lego[1]?></p></div></th>
-	<th><input type="number" value="0" min="0" max=<?php echo $lego[1]?>></th>
+	<th><div class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div></th>
+	<th><input type="number" value="0" min="0" max=<?php echo $lego[1];?>></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-red"><p><?php echo $lego2[1]?></p></div></th>
-	<th><input type="number" value="0" min="0" max=<?php echo $lego2[1]?>></th>
+	<th><div class="w3-tag w3-red"><p><?php echo $lego2[1];?></p></div></th>
+	<th><input type="number" value="0" min="0" max=<?php echo $lego2[1];?>></th>
 </tr>
 <tr>
-	<th><div class="w3-tag w3-green"><p><?php echo $lego[2]?></p></div></th>
-	<th><input type="number" value="0" min="0" max=<?php echo $lego[2]?>></th>
+	<th><div class="w3-tag w3-green"><p><?php echo $lego[2];?></p></div></th>
+	<th><input type="number" value="0" min="0" max=<?php echo $lego[2];?>></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-green"><p><?php echo $lego2[2]?></p></div></th>
-	<th><input type="number" value="0" min="0" max=<?php echo $lego2[2]?>></th>
+	<th><div class="w3-tag w3-green"><p><?php echo $lego2[2];?></p></div></th>
+	<th><input type="number" value="0" min="0" max=<?php echo $lego2[2];?>></th>
 </tr>
 <tr>
-	<th><div class="w3-tag w3-yellow"><p><?php echo $lego[3]?></p></div></th>
-	<th><input type="number" value="0" min="0" max=<?php echo $lego[3]?>></th>
+	<th><div class="w3-tag w3-yellow"><p><?php echo $lego[3];?></p></div></th>
+	<th><input type="number" value="0" min="0" max=<?php echo $lego[3];?>></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-yellow"><p><?php echo $lego2[3]?></p></div></th>
-	<th><input type="number" value="0" min="0" max=<?php echo $lego2[3]?>></th>
+	<th><div class="w3-tag w3-yellow"><p><?php echo $lego2[3];?></p></div></th>
+	<th><input type="number" value="0" min="0" max=<?php echo $lego2[3];?>></th>
 </tr>
 <tr>
-	<th><div class="w3-tag w3-blue"><p><?php echo $lego[4]?></p></div></th>
-	<th><input type="number" value="0" min="0" max=<?php echo $lego[4]?>></th>
+	<th><div class="w3-tag w3-blue"><p><?php echo $lego[4];?></p></div></th>
+	<th><input type="number" value="0" min="0" max=<?php echo $lego[4];?>></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-blue"><p><?php echo $lego2[4]?></p></div></th>
-	<th><input type="number" value="0" min="0" max=<?php echo $lego2[4]?>></th>
+	<th><div class="w3-tag w3-blue"><p><?php echo $lego2[4];?></p></div></th>
+	<th><input type="number" value="0" min="0" max=<?php echo $lego2[4];?>></th>
 </tr>
 </table>
 
 <div id="trade_btn" class="w3-container w3-section w3-padding-large">
-<button class="w3-btn w3-padding w3-teal w3-round" onclick="send_request()">確定</button><br><br>
+<button class="w3-btn w3-padding w3-teal w3-round" onclick="send_request(<?php echo $team . ',' . $team2; ?>)">確定</button><br><br>
 <a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">取消</a>
 </div>
 

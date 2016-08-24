@@ -121,9 +121,9 @@ session_start();
 
         <hr/>
     
-<!--
+
 <h1>missionReports</h1>
-    <?php/*
+    <?php
         header('Cache-Control: no-cache');
         header('Pragma: no-cache');
         require_once "t_getitems.php";
@@ -161,7 +161,7 @@ session_start();
             }
 
             echo "</table>";
-        }*/
+        }
     ?>
 
         <form action="t_addMissionReport.php" method="post" enctype="multipart/form-data">
@@ -183,7 +183,7 @@ session_start();
         </form>
 
         <hr/>
--->
+
         
 <h1>missionInfo</h1>
     <?php
