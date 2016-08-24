@@ -12,6 +12,6 @@ $stmt->bindValue(1, $position);
 $stmt->bindValue(2, $team);
 $stmt->execute();
 
-header('Location: t_mrtmap.php');
+//header('Location: t_mrtmap.php');
 
 ?>
