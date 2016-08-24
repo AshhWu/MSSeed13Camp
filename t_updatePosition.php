@@ -1,6 +1,6 @@
 <?php
 
-include_once 'backend/staskmodel.php';
+include_once 'backend/taskmodel.php';
 
 $team = $_GET['team'];
 $position = $_GET['position'];
