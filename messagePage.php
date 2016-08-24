@@ -46,15 +46,18 @@ if($_SESSION['ID'] != null){
 	header('Pragma: no-cache');
 	require_once "getitems.php";
 	$items = getMessages();
+	$team = $_SESSION['s_team'];
 	if(!empty($items))
 	{
 		$items = array_reverse($items); // try 反向
 		foreach($items as $item)
 		{	
-			echo 	"<p>
-			<span style=\"font-size:14px;\">".$item[1]."</span></p>
-				<h3 style=\"color:".$item[4].";\">".$item[3]."</h3>
-			<hr />";
+			if($item[2]=="All" || $item[2]==$team){
+				echo 	"<p>
+				<span style=\"font-size:14px;\">".$item[1]."</span></p>
+					<h3 style=\"color:".$item[4].";\">".$item[3]."</h3>
+				<hr />";
+			}
 		}
 	}
 ?>
