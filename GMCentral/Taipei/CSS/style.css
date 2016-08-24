@@ -2,9 +2,13 @@
 
 html,
 body{
-	width: 100%;
-  	height: 100%;
-	background-color: #1b7db6 !important;
+  width: 100%;
+  height: 1080px; 
+	background: #289dd6; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #1b7db6, #2BC5F3); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #1b7db6, #2BC5F3); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #1b7db6, #2BC5F3); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #1b7db6, #2BC5F3); /* Standard syntax (must be last) */
 	font-family: 'Noto Sans Kannada', sans-serif;
 }
 
@@ -15,17 +19,18 @@ body {
 
 .init-animation {
 	z-index: 1;
-	height: 100%;	
-	background: url("../background_blur.jpg") no-repeat center center fixed !important;
+  width: 100%;
+	height: 1080px;	
+	background: url("../img/background_blur.jpg") no-repeat center center fixed !important;
 	-webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .init-animation p{
   margin: 0px auto;
-  padding-top: 300px;
+  padding-top: 315px;
   align:center;
   padding-left:25%;
   color: white; 
@@ -35,7 +40,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 30em;
-  animation: type 5s steps(60, end); 
+  animation: type 5s steps(60, end);
 }
 
 .init-animation p:nth-child(2){
@@ -46,8 +51,6 @@ body {
 	font-family: "Courier";
   	animation: type2 7s steps(60, end);
 }
-
-
 
 .init-animation span{
   animation: blink 1s infinite;
@@ -70,31 +73,79 @@ body {
  
 .title{
 	background-color: black;
-	color: #1b7db6;
+	color: #1b8dc6;
 	text-align: center;
 	align: center;
 }
 
 .title h1{
-	font-size: 30px;
-	height: 35px;
+	font-size: 29px;
+	height: 28px;
+}
+
+.title h4{
+  font-size: 20px;
+  padding-top:15px;
+}
+.title h4 a{
+  color: #2b9dD6;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.title h4 a:hover,
+.title h4 a:focus,
+.title h4 .active{
+  text-decoration: none;
+  color: #EEE;
 }
 
 .labels {
      color: white;
-     background-color: red;
-     font-family: "Lucida Grande", "Arial", sans-serif;
+     background-color: #e12a22;
      font-size: 12px;
      font-weight: bold;
      text-align: center;
      white-space: nowrap;
-     border-left: 3px solid red;
-     border-right: 3px solid red;
-     border-radius: 1px;
+     border-left: 3px solid #e12a22;
+     border-right: 3px solid #e12a22;
+     border-radius: 3px;
 }
 
 #map-canvas{
-	margin-top:65px;
-	height: 450px; 
+	margin-top:55px;
+	height: 530px; 
 	width: 100%;
+}
+
+#my-carousel{
+	padding-top:20px;
+}
+
+.item{
+  color:white;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.item img{
+  height: 165px;
+  background-color: red;
+}
+
+.item img[class] { 
+  width: 270px;
+}
+.item .pic{
+  object-fit: cover;
+  margin: 0 auto;
+  overflow: hidden;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.item h3{
+  font-size: 20px;
 }

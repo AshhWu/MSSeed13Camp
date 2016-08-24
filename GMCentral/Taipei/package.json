@@ -1,0 +1,14 @@
+{
+  "name": "taipei",
+  "version": "1.0.0",
+  "description": "Microsoft Taiwan 13th Intern Camp Website",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AshhWu",
+  "license": "ISC"
+}
