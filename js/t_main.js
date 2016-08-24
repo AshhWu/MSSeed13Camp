@@ -163,7 +163,7 @@ function lego_refresh(obj){
 		//document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
-	document.getElementById("route_list").style.display = "none";
+	//document.getElementById("route_list").style.display = "none";
 	window.location = tmp_str;
 
 	tmp_str = 't_updatePosition.php?team=' + current_team + '&position=' + end.toString();
