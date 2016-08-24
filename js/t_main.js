@@ -33,6 +33,7 @@ function check_lego(start, team, lego){
 	var line_s, line_e;
 	current_team = team;
 	current_lego = lego;
+	alert(lego);
 	//start = parseInt(document.getElementById("sstation").value);
 	end = parseInt(document.getElementById("estation").value);
 	if (!Number.isInteger(start) || !Number.isInteger(end)){
