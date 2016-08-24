@@ -123,6 +123,10 @@
 	top: 10px;
 }
 
+.tab-pane .w3-card {
+	display: inline-block;
+}
+
 /* lego_exchange */
 
 #trade_with {
