@@ -38,10 +38,8 @@ session_start();
 if($_SESSION['ID'] != null){ 
   ?>
  
-<frameset rows="40%,*">
-    <frame src="messagePageGM.php">
-    <frame src="messagePageNormal.php">
-</frameset>
+    <iframe src="messagePageGM.php" width="100%" height="100">
+    <iframe src="messagePageNormal.php" width="100%" height="200">
 		
 <?php
 }
