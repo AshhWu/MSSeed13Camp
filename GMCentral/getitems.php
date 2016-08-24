@@ -19,7 +19,6 @@ include_once 'taskmodel.php';
 include 'ChromePhp.php';
 //Debugger//
 
-
 	$aResult = array();
   $items = getAllResources();
 	$aResult['result']=$items;
@@ -29,12 +28,4 @@ include 'ChromePhp.php';
 	// Debugger //
 
   echo json_encode($items);
-
-/*
-function getGroupResources($team)
-{
-  $items = getGroupAllResources($team);
-  return $items;
-}
-*/
 ?>

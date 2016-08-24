@@ -4,26 +4,26 @@ renew = function(){
 	chartMaker();
 }
 chartMaker = function(){
-		var chart = AmCharts.makeChart("chartdiv3", {
+		var chart = AmCharts.makeChart("chartdiv20", {
                 "theme": "black",
                 "type": "serial",
                 "startDuration": 1,
                 "dataProvider": [{
-                    "country": "A",
+                    "country": "美洲",
                     "visits": x20[0],
                     "color": "#FF0F00"
                 }, {
-                    "country": "B",
+                    "country": "歐洲",
                     "visits": x20[1],
                     "color": "#FF6600"
                 }, {
-                    "country": "C",
+                    "country": "亞洲",
                     "visits": x20[2],
-                    "color": "#FF9E01"
+                    "color": "#3A8FB7"
                 }, {
-                    "country": "D",
+                    "country": "非洲",
                     "visits": x20[3],
-                    "color": "#FCD202"
+                    "color": "#86C166"
 
                 }],
                 "valueAxes": [{
@@ -55,26 +55,78 @@ chartMaker = function(){
                 }
 
 		    });
-   		var chart = AmCharts.makeChart("chartdiv4", {
+   		var chart = AmCharts.makeChart("chartdiv21", {
                 "theme": "black",
                 "type": "serial",
                 "startDuration": 0,
                 "dataProvider": [{
-                    "country": "A",
-                    "visits": 4025,
+                    "country": "美洲",
+                    "visits": x21[0],
                     "color": "#FF0F00"
                 }, {
-                    "country": "B",
-                    "visits": 1882,
+                    "country": "歐洲",
+                    "visits": x21[1],
                     "color": "#FF6600"
                 }, {
-                    "country": "C",
-                    "visits": 1809,
-                    "color": "#FF9E01"
+                    "country": "亞洲",
+                    "visits": x21[2],
+                    "color": "#3A8FB7"
                 }, {
-                    "country": "D",
-                    "visits": 1322,
-                    "color": "#FCD202"
+                    "country": "非洲",
+                    "visits": x21[3],
+                    "color": "#86C166"
+                
+                }],
+                "valueAxes": [{
+                    "position": "left",
+                    "axisAlpha":0,
+                    "gridAlpha":0
+                }],
+                "graphs": [{
+                    "balloonText": "[[category]]: <b>[[value]]</b>",
+                    "colorField": "color",
+                    "fillAlphas": 0.85,
+                    "lineAlpha": 0.1,
+                    "type": "column",
+                    "topRadius":1,
+                    "valueField": "visits"
+                }],
+                "depth3D": 40,
+                "angle": 30,
+                "chartCursor": {
+                    "categoryBalloonEnabled": false,
+                    "cursorAlpha": 0,
+                    "zoomable": false
+                },
+                "categoryField": "country",
+                "categoryAxis": {
+                    "gridPosition": "start",
+                    "axisAlpha":0,
+                    "gridAlpha":0
+                },
+                "export": {
+                    "enabled": false
+                }}, 0);
+   		var chart = AmCharts.makeChart("chartdiv22", {
+                "theme": "black",
+                "type": "serial",
+                "startDuration": 0,
+                "dataProvider": [{
+                    "country": "美洲",
+                    "visits": x22[0],
+                    "color": "#FF0F00"
+                }, {
+                    "country": "歐洲",
+                    "visits": x22[1],
+                    "color": "#FF6600"
+                }, {
+                    "country": "亞洲",
+                    "visits": x22[2],
+                    "color": "#3A8FB7"
+                }, {
+                    "country": "非洲",
+                    "visits": x22[3],
+                    "color": "#86C166"
                 
                 }],
                 "valueAxes": [{
@@ -112,21 +164,21 @@ chartMaker = function(){
 			"type": "serial",
 			"startDuration": 0,
 			"dataProvider": [{
-				"country": "A",
+				"country": "美洲",
 				"visits": 40205,
 				"color": "#FF0F00"
 			}, {
-				"country": "B",
+				"country": "歐洲",
 				"visits": 1882,
 				"color": "#FF6600"
 			}, {
-				"country": "C",
+				"country": "亞洲",
 				"visits": 1809,
-				"color": "#FF9E01"
+				"color": "#3A8FB7"
 			}, {
-				"country": "D",
+				"country": "非洲",
 				"visits": 1322,
-				"color": "#FCD202"
+				"color": "#86C166"
 			
 			}],
 			"graphs": [{
@@ -160,21 +212,21 @@ chartMaker = function(){
 			"type": "serial",
 			"startDuration": 0,
 			"dataProvider": [{
-				"country": "A",
+				"country": "美洲",
 				"visits": 4025,
 				"color": "#FF0F00"
 			}, {
-				"country": "B",
+				"country": "歐洲",
 				"visits": 1882,
 				"color": "#FF6600"
 			}, {
-				"country": "C",
+				"country": "亞洲",
 				"visits": 1809,
-				"color": "#FF9E01"
+				"color": "#3A8FB7"
 			}, {
-				"country": "D",
+				"country": "非洲",
 				"visits": 1322,
-				"color": "#FCD202"
+				"color": "#86C166"
 			
 			}],
 			"valueAxes": [{
@@ -212,21 +264,21 @@ chartMaker = function(){
 			"type": "serial",
 			"startDuration": 0,
 			"dataProvider": [{
-				"country": "A",
+				"country": "美洲",
 				"visits": 40205,
 				"color": "#FF0F00"
 			}, {
-				"country": "B",
+				"country": "歐洲",
 				"visits": 20182,
 				"color": "#FF6600"
 			}, {
-				"country": "C",
+				"country": "亞洲",
 				"visits": 20009,
-				"color": "#FF9E01"
+				"color": "#3A8FB7"
 			}, {
-				"country": "D",
+				"country": "非洲",
 				"visits": 18022,
-				"color": "#FCD202"
+				"color": "#86C166"
 			
 			}],
 			"graphs": [{
@@ -260,21 +312,21 @@ chartMaker = function(){
 			"type": "serial",
 			"startDuration": 0,
 			"dataProvider": [{
-				"country": "A",
+				"country": "美洲",
 				"visits": 4025,
 				"color": "#FF0F00"
 			}, {
-				"country": "B",
+				"country": "歐洲",
 				"visits": 1882,
 				"color": "#FF6600"
 			}, {
-				"country": "C",
+				"country": "亞洲",
 				"visits": 1809,
-				"color": "#FF9E01"
+				"color": "#3A8FB7"
 			}, {
-				"country": "D",
+				"country": "非洲",
 				"visits": 1322,
-				"color": "#FCD202"
+				"color": "#86C166"
 			
 			}],
 			"valueAxes": [{
@@ -326,17 +378,38 @@ function getAllResources() {
 			x20[1]=0;
 			x20[2]=0;
 			x20[3]=0;
-			for(i=1;i<=32;i++){
+			for(i=1;i<=16;i++){
 				x20[1] = x20[1]+Number(obj[0][i]);
 				x20[2] = x20[2]+Number(obj[1][i]);
 				x20[3] = x20[3]+Number(obj[2][i]);
 				x20[0] = x20[0]+Number(obj[3][i]);
 			}
+			for(i=17;i<=26;i++){
+				x21[1] = x21[1]+Number(obj[0][i]);
+				x21[2] = x21[2]+Number(obj[1][i]);
+				x21[3] = x21[3]+Number(obj[2][i]);
+				x21[0] = x21[0]+Number(obj[3][i]);
+			}
+			for(i=27;i<=33;i++){
+				x22[1] = x22[1]+Number(obj[0][i]);
+				x22[2] = x22[2]+Number(obj[1][i]);
+				x22[3] = x22[3]+Number(obj[2][i]);
+				x22[0] = x22[0]+Number(obj[3][i]);
+			}
     	}
 	});
+	
 }
 
 var x20 = [10,10,10,10];
+var x21 = [20,20,20,20];
+var x22 = [10,10,10,10];
+var x10 = [20,20,20,20];
+var x11 = [20,20,20,20];
+var x00 = [20,20,20,20];
+
+
+
 /* Set json in each graph */
 setNewGraph = function(obj){
 	// //Debug//
