@@ -668,6 +668,14 @@ function prepareAccounts()
 
 }
 
+function getUserInfo($id)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM users WHERE p_id='".$id."'";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function occupyStronghold($team, $code, $record)
 {
 	$conn = connect();

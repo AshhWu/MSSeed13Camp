@@ -23,6 +23,7 @@ session_start();
 <body>
 <?php
   include "backend/navbar/nav.php";
+if($_SESSION['authority']==2 || $_SESSION['authority']==3){
   ?>
   
 <div style="text-align:center">
@@ -77,6 +78,14 @@ session_start();
 			</form>
 	</p>
 </div>
+
+<?php
+}
+else{
+	echo "<script> alert('您無權觀看此頁面喔')</script>";
+	echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+}
+?>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

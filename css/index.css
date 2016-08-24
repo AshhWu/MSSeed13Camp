@@ -21,3 +21,82 @@ body {
 .banner {
 	margin-bottom: 1em;
 }
+
+
+/*
+ * Plane Ticket 
+ */
+.plane-ticket {
+	position: relative;
+}
+
+/* Large Info */
+.large-info {
+	position: absolute;
+	letter-spacing: 6px;
+	font-size: 27px;
+}
+#en-name-lg {
+	top: 75.5%;
+	left: 15.5%;
+}
+#ID-lg {
+	top: 87%;
+	left: 15.5%;
+}
+#country-lg {
+	top: 75.5%;
+	left: 53.5%;
+}
+#room-lg {
+	top: 87%;
+	left: 53.5%;
+}
+
+
+/* Small Info */
+.small-info {
+	position: absolute;
+	letter-spacing: 4px;
+	font-size: 20px;
+}
+#en-name-sm {
+	top: 64.5%;
+	left: 78%;
+}
+#country-sm {
+	top: 72.5%;
+	left: 78%;
+}
+#room-sm {
+	top: 80.5%;
+	left: 78%;
+}
+#ID-sm {
+	top: 88.5%;
+	left: 78%;
+}
+
+
+@media screen and (max-width: 600px){
+.large-info {
+	letter-spacing: 0.5px;
+	font-size: 10px;
+}
+.small-info {
+	letter-spacing: 1px;
+	font-size: 8px;
+}
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 800){
+.large-info {
+	letter-spacing: 2px;
+	font-size: 12px;
+}
+.small-info {
+	letter-spacing: 1px;
+	font-size: 10px;
+}
+}

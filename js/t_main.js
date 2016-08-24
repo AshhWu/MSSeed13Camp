@@ -189,17 +189,18 @@ function trade_init(trade){
 	for (i = 0; i < trade.length; i++){
 		sender = trade[i][1];
 		tmp_str = '<li class="w3-container"><a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第' + sneder.toString() + '組</a><p>向你提出交易</p></li>';
-		document.getElementById("trade_list").getElementsByTagName("ul")[0].innerHTML += tmp_str;
+		document.getElementById("trade_ul").innerHTML += tmp_str;
 	}
 }
 
 function wait_init(wait){
+	alert(wait.length);
 	var i, sender;
 	var tmp_str;
-	for (i = 0; i < trade.length; i++){
-		sender = trade[i][2];
-		tmp_str = '<li class="w3-container"><p>你向第' + sneder.toString() + '組提出的交易</p></li>';
-		document.getElementById("wait_list").getElementsByTagName("ul")[0].innerHTML += tmp_str;
+	for (i = 0; i < wait.length-1; i++){
+		sender = wait[i][2];
+		tmp_str = '<li class="w3-container"><p>你向第' + sender.toString() + '組提出的交易</p></li>';
+		document.getElementById("wait_ul").innerHTML += tmp_str;
 	}
 }
 

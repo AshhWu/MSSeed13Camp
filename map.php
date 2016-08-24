@@ -28,6 +28,7 @@ else { $_SESSION["day"] = 1; }
   <!-- Navigation Bar -->
   <?php
   include "backend/navbar/nav.php";
+if($_SESSION['ID'] != null){ 
   ?>
 
   <!-- Map -->
@@ -196,7 +197,14 @@ else { $_SESSION["day"] = 1; }
       <img src="png/s_map/mark/mark_brown.png" class="img-responsive map-marker-brown">
     </a>
   </div>
-
+  
+<?php
+}
+else{
+	echo "<script> alert('您無權觀看此頁面喔')</script>";
+	echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+}
+?>
 
 
 <!-- jQuery -->

@@ -2,7 +2,6 @@
 session_start();
 header('Cache-Control: no-cache');
 header('Pragma: no-cache');
-$_SESSION["s_team"] = 'B'; //testing
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +22,7 @@ $_SESSION["s_team"] = 'B'; //testing
   <!-- Navigation Bar -->
   <?php
   include "backend/navbar/nav.php";
+if($_SESSION['ID'] != null){ 
   ?>
 
 
@@ -632,7 +632,13 @@ $_SESSION["s_team"] = 'B'; //testing
     </div>
   </div>
 
-
+<?php
+}
+else{
+	echo "<script> alert('您無權觀看此頁面喔')</script>";
+	echo '<meta http-equiv=REFRESH CONTENT=2;url=index.php>';
+}
+?>
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

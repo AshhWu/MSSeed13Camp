@@ -41,7 +41,7 @@ switch($_SESSION['authority']){
 				<li <?=findActiveClass("messagePage")?>><a href="messagePage.php">消息公告</a></li>  
 			</ul>
 			</li>
-			<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+			<li><a href="/backend/login/logout.php" class="logout-btn"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
 		</ul>
 		</div>
 	</div>
@@ -88,7 +88,7 @@ switch($_SESSION['authority']){
 				<li <?=findActiveClass("reportPage")?>><a href="reportPage.php">回報成果</a></li>  
 			</ul>
 			</li>
-			<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+			<li><a href="/backend/login/logout.php" class="logout-btn"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
 		</ul>
 		</div>
 	</div>
@@ -137,7 +137,7 @@ switch($_SESSION['authority']){
 				<li <?=findActiveClass("superAdmin")?>><a href="superAdmin.php">超級管理員</a></li>  
 			</ul>
 			</li>
-			<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+			<li><a href="/backend/login/logout.php" class="logout-btn"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
 		</ul>
 		</div>
 	</div>
