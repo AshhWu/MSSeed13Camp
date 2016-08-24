@@ -184,21 +184,27 @@ function send_request(){
 }
 
 function trade_init(trade){
+	if (trade.length <= 1)
+		return;
+
 	var i, sender;
 	var tmp_str;
 	for (i = 1; i < trade.length; i += 14){
 		sender = trade[i];
-		tmp_str += '<li class="w3-container"><p class="w3-card w3-sand">第' + sender + '組向你提出的交易  </p><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand"><p>第' + sender + '組向你提出的交易  </p></div><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
 	}
 	document.getElementById("trade_ul").innerHTML = tmp_str;
 }
 
 function wait_init(wait){
+	if (wait.length <= 1)
+		return;
+
 	var i, receiver;
 	var tmp_str;
 	for (i = 2; i < wait.length; i += 14){
 		receiver = wait[i];
-		tmp_str += '<li class="w3-container"><p class="w3-card w3-sand">你向第' + receiver + '組提出的交易  </p><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand"><p>你向第' + receiver + '組提出的交易  </p></div><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
 	}
 	document.getElementById("wait_ul").innerHTML = tmp_str;
 }
