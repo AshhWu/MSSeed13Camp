@@ -23,7 +23,7 @@
 	display: inline-block;
 	max-width: 50%;
 	position: relative;
-	top: 20px;
+	top: 8px;
 }
 
 .middle_part form {
@@ -42,6 +42,8 @@
 .middle_part .section2 {
 	display: inline-block;
 	width: 80%;
+	position: relative;
+	top: 10px;
 }
 
 .middle_part .w3-tag {
