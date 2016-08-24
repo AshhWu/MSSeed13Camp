@@ -1,7 +1,5 @@
 <?php
     
-    function connect()
-    {
         $connectstr_dbhost = '';
         $connectstr_dbname = 'msseed13';
         $connectstr_dbusername = '';
@@ -30,11 +28,7 @@
         echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
     
     
-        return $conn;
-    }
 
-    
-    $conn = connect();
     $sql = "SELECT * FROM account";
     $stmt = $conn->query($sql);
     echo $stmt->fetchAll(PDO::FETCH_NUM);
