@@ -188,11 +188,12 @@ function trade_init(trade){
 	if (trade.length <= 1)
 		return;
 
-	var i, sender;
+	var i, sender, id;
 	var tmp_str = '';
 	for (i = 1; i < trade.length; i += 14){
 		sender = trade[i];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>第' + sender + '組向你提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round">回覆</a></li>';
+		id = trade[i-1];
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>第' + sender + '組向你提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '">回覆</a></li>';
 	}
 	document.getElementById("trade_ul").innerHTML = tmp_str;
 }
@@ -201,11 +202,17 @@ function wait_init(wait){
 	if (wait.length <= 1)
 		return;
 
-	var i, receiver;
+	var i, receiver, id;
 	var tmp_str = '';
 	for (i = 2; i < wait.length; i += 14){
 		receiver = wait[i];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>你向第' + receiver + '組提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round">查看</a></li>';
+		id = wait[i-2];
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>你向第' + receiver + '組提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '">查看</a></li>';
 	}
 	document.getElementById("wait_ul").innerHTML = tmp_str;
+}
+
+function trade_agree(){
+	alert("agree!");
+	window.location = 't_lego_list.php';
 }
