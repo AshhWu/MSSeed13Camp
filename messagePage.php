@@ -39,7 +39,7 @@ if($_SESSION['ID'] != null){
   ?>
  
     <iframe src="messagePageGM.php" width="100%" height="180"></iframe>
-    <iframe src="messagePageNormal.php" width="100%" height="300"></iframe>
+    <iframe src="messagePageNormal.php" width="100%" height="350"></iframe>
 		
 <?php
 }
