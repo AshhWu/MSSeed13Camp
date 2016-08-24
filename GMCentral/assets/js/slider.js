@@ -1,11 +1,6 @@
 
 renew = function(){
-	var resourcesObj = getAllResources();
-	console.log('resourcesObj is ',resourcesObj[0][1]);
-	setNewGraph(resourcesObj);
-	// $("#main").load(location.href + " #main",function () {
-    //      $(this).unwrap();
-    // });
+	getAllResources();
 	chartMaker();
 }
 chartMaker = function(){
@@ -327,7 +322,16 @@ function getAllResources() {
 			var obj = JSON.parse(response);
 			console.log(obj);
 			console.log(obj[0][1]);
-    		return obj;
+    		x20[0]=0;
+			x20[1]=0;
+			x20[2]=0;
+			x20[3]=0;
+			for(i=1;i<=32;i++){
+				x20[1] = x20[1]+Number(obj[0][i]);
+				x20[2] = x20[2]+Number(obj[1][i]);
+				x20[3] = x20[3]+Number(obj[2][i]);
+				x20[0] = x20[0]+Number(obj[3][i]);
+			}
     	}
 	});
 }
@@ -335,22 +339,22 @@ function getAllResources() {
 var x20 = [10,10,10,10];
 /* Set json in each graph */
 setNewGraph = function(obj){
-	//Debug//
-	//var obj = JSON.parse("[[\"A\",\"500\"],[\"B\",\"300\"]]");
-	//Debug//
-	//console.log(obj[0][1]);
-	x20[0]=0;
-	x20[1]=0;
-	x20[2]=0;
-	x20[3]=0;
-	for(i=1;i<=32;i++){
-		x20[1] = x20[1]+Number(obj[0][i]);
-		x20[2] = x20[2]+Number(obj[1][i]);
-		x20[3] = x20[3]+Number(obj[2][i]);
-		x20[0] = x20[0]+Number(obj[3][i]);
-	}
+	// //Debug//
+	// //var obj = JSON.parse("[[\"A\",\"500\"],[\"B\",\"300\"]]");
+	// //Debug//
+	// //console.log(obj[0][1]);
+	// x20[0]=0;
+	// x20[1]=0;
+	// x20[2]=0;
+	// x20[3]=0;
+	// for(i=1;i<=32;i++){
+	// 	x20[1] = x20[1]+Number(obj[0][i]);
+	// 	x20[2] = x20[2]+Number(obj[1][i]);
+	// 	x20[3] = x20[3]+Number(obj[2][i]);
+	// 	x20[0] = x20[0]+Number(obj[3][i]);
+	// }
 	
-	console.log(x2[0]);
+	// console.log(x2[0]);
 }
 /* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {
