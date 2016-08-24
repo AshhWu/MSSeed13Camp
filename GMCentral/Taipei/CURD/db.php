@@ -13,7 +13,7 @@ echo "start!!";
 	}
 	echo "success1!";
 $sql = "SELECT team, cube2, cube3, cube4, cube5, mission FROM taipeiRun";
-$result = $conn->query($query) or die($conn->error.__LINE__);
+$result = $conn->query($query) ;
 
 echo "success2!";
 
