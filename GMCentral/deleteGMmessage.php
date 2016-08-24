@@ -12,26 +12,12 @@
 	* See the License for the specific language governing permissions and 
 	* limitations under the License. 
 	*/
-	
+session_start();
 include_once 'taskmodel.php';
 
-//Debugger//
-include 'ChromePhp.php';
-//Debugger//
+$id = $_GET['id'];
 
-	$aResult = array();
-  $items = getAllResources();
-	$aResult['result']=$items;
+deleteGMMessage($id);
 
-	// Debugger //
-	ChromePhp::log($items);
-	// Debugger //
-
-function getGMMessages()
-{
-  $items = getAllGMMessages();
-  return $items;
-}
-	
-  echo json_encode($items);
+header('Location: resources.html');
 ?>

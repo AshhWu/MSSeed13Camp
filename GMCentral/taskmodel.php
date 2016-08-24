@@ -126,6 +126,14 @@ function getAllMessages()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getAllGMMessages()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM gmmessage";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function updateGroupResource($conn, $team, $value, $resource) // private function
 {
 	$sql = "UPDATE resource SET ".$resource."='".$value."' WHERE team='".$team."'";
@@ -732,6 +740,18 @@ function addMessage($time, $client, $content, $color)
 	$stmt->execute();
 }
 
+function addGMMessage($time, $client, $content, $color)
+{
+	$conn = connect();
+	$sql = "INSERT INTO gmmessage (time, client, content, color) VALUES (?, ?, ?, ?)";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $time);
+	$stmt->bindValue(2, $client);
+	$stmt->bindValue(3, $content);
+	$stmt->bindValue(4, $color);
+	$stmt->execute();
+}
+
 function deleteItem($item_id)
 {
 	$conn = connect();
@@ -745,6 +765,15 @@ function deleteMessage($item_id)
 {
 	$conn = connect();
 	$sql = "DELETE FROM message WHERE id = ?";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $item_id);
+	$stmt->execute();
+}
+
+function deleteGMMessage($item_id)
+{
+	$conn = connect();
+	$sql = "DELETE FROM gmmessage WHERE id = ?";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $item_id);
 	$stmt->execute();
