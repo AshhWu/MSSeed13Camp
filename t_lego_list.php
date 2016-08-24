@@ -22,6 +22,7 @@ session_start();
 <?php $trade = getTradeRequestByReceiver($team); ?>
 
 <div class="middle_part w3-container w3-section">
+	<h3 class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h3>
 	<h5 class="w3-brown w3-padding">樂高</h5>
 	<section class="section2 w3-container">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $all_lego[0][2];?></p></div>
