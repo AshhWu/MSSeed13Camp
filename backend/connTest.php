@@ -34,13 +34,11 @@
         return $conn;
     }
 
-    function getAllItems()
-    {
-        $conn = connect();
-        $sql = "SELECT * FROM account";
-        $stmt = $conn->query($sql);
-        return $stmt->fetchAll(PDO::FETCH_NUM);
-    }
+    
+    $conn = connect();
+    $sql = "SELECT * FROM account";
+    $stmt = $conn->query($sql);
+    echo $stmt->fetchAll(PDO::FETCH_NUM);
+    
 
-    echo getAllItems();
 ?>
