@@ -33,7 +33,6 @@ function check_lego(start, team, lego){
 	var line_s, line_e;
 	current_team = team;
 	current_lego = lego;
-	alert(lego);
 	//start = parseInt(document.getElementById("sstation").value);
 	end = parseInt(document.getElementById("estation").value);
 	if (!Number.isInteger(start) || !Number.isInteger(end)){
@@ -145,7 +144,7 @@ function mrt_route(route, count){
 	if (disable == 1)
 		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple w3-disabled">Lego不夠</button></li>';
 	else {
-		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(this, ' + current_team.toString() + ')">按我Go</button></li>';
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(this)">按我Go</button></li>';
 	}
 
 	document.getElementById("route_ul").innerHTML += result;
@@ -153,19 +152,21 @@ function mrt_route(route, count){
 	cost_list.push(cost);
 }
 
-function lego_refresh(obj, team){
+function lego_refresh(obj){
+	alert(current_lego);
 	var n = parseInt(obj.id[obj.id.length-1]);
-	var rest_lego, tmp_str = 't_updateAllCube.php?team=' + team + '&c1=0';
+	var rest_lego, tmp_str = 't_updateAllCube.php?team=' + current_team + '&c1=0';
 	var j;
 	for (j = 1; j < 5; j++){
 		rest_lego = current_lego[j-1] - cost_list[n-1][j];
+		alert(rest_lego);
 		//document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
 	document.getElementById("route_list").style.display = "none";
 	window.location = tmp_str;
 
-	tmp_str = 't_updatePosition.php?team=' + team + '&position=' + end.toString();
+	tmp_str = 't_updatePosition.php?team=' + current_team + '&position=' + end.toString();
 	window.location = tmp_str;
 
 	alert("移動成功! 請向" + mrt_value[end.toString()] + "站前進~");
