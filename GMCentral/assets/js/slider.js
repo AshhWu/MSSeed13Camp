@@ -380,6 +380,7 @@ function getAllStrong() {
 			x10[1]=0;
 			x10[2]=0;
 			x10[3]=0;
+			x10[4]=0;
 
 			for(i=0;i<=15;i++){
 				switch (obj[i][7]) {
@@ -396,11 +397,10 @@ function getAllStrong() {
 						x10[3]++;
 						break;
 					default:
-						x10[4]++
 						break;
 				}
 			}
-			
+			x10[4]=16-x10[0]-x10[1]-x10[2]-x10[3];
     	}
 	});
 	
