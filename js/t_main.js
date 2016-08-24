@@ -142,7 +142,7 @@ function mrt_route(route, count){
 	if (disable == 1)
 		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple w3-disabled">Lego不夠</button></li>';
 	else
-		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(this,<? php echo $team;?>)">按我Go</button></li>';
+		result += '<button id="cost' + count.toString() + '"class="w3-btn w3-round w3-purple" onclick="lego_refresh(this, <? php echo $team;?>)">按我Go</button></li>';
 
 	document.getElementById("route_ul").innerHTML += result;
 
@@ -151,16 +151,15 @@ function mrt_route(route, count){
 
 function lego_refresh(obj, team){
 	var n = parseInt(obj.id[obj.id.length-1]);
-	var rest_lego;
-	var tmp_str = 't_updateAllCube.php?team=' + team + '&c1=0';
+	var rest_lego, tmp_str = 't_updateAllCube.php?team=' + team + '&c1=0';
 	var j;
 	for (j = 1; j < 5; j++){
 		rest_lego = document.getElementById("lego" + (j+1).toString()).innerText - cost_list[n-1][j];
 		document.getElementById("lego" + (j+1).toString()).innerHTML = "<p>" + rest_lego.toString() + "</p>"
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
-	window.location = tmp_str;
 	document.getElementById("route_list").style.display = "none";
+	window.location = tmp_str;
 
 	tmp_str = 't_updatePosition.php?team=' + team + '&position=' + end.toString();
 	window.location = tmp_str;
