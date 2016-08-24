@@ -14,7 +14,7 @@
         $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
         $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
     }
-    echo $connectstr_dbusername.",".$connectstr_dbpassword;
+    
     try{
         $conn = new PDO( "mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
