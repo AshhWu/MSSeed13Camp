@@ -155,7 +155,6 @@ function mrt_route(route, count){
 function lego_refresh(obj){
 	var tmp_str = 't_updatePosition.php?team=' + current_team + '&position=' + end.toString();
 	window.location = tmp_str;
-	sleep(3000);
 
 	var n = parseInt(obj.id[obj.id.length-1]);
 	var rest_lego;
@@ -168,14 +167,6 @@ function lego_refresh(obj){
 	window.location = tmp_str;
 
 	alert("移動成功! 請向" + mrt_value[end.toString()] + "站前進~");
-}
-
-//sleep
-function sleep(milliseconds) {
-	var start = new Date().getTime();
-	for (var i = 0; i < 1e7; i++)
-		if ((new Date().getTime() - start) > milliseconds)
-			break;
 }
 
 //lego_trade
