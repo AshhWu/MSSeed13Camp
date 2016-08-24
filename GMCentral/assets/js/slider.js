@@ -332,7 +332,7 @@ function getAllResources() {
 var x2 = [10,10,10,10];
 /* Set json in each graph */
 setNewGraph = function(obj){
-	x2[0] = obj[0][0];
+	x2[0] = obj[0][1];
 	console.log(x2[0]);
 }
 /* Down Below is Function to Set Graph */
