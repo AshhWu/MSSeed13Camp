@@ -440,7 +440,7 @@ if($_SESSION['authority']==3){
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	require_once "getitems.php";
-	#prepareStronghold();
+	prepareStronghold();
 	$items = getStrongholds();
 	if(!empty($items))
 	{
