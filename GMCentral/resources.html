@@ -163,11 +163,48 @@
                                     <span data-u="arrowleft" class="jssora02l" style="top:0px;left:8px;width:55px;height:55px;" data-autocenter="2"></span>
                                     <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
                                 </div>
-                                <div class="inner"">
+                                <div class="inner">
 									<h3>第二級材料</h3>
 									<p>經過一次合成的結果總和</p>
                                 </div>
 
+								<!-- GM Message BOX -->
+								<form method="post">
+									<table border="1">
+										<tr>
+											<td>現在時間: </td>
+											<td><input name="time" type="text"/></td>
+										</tr>
+										<tr>
+											<td>要傳給的隊伍: </td>
+											<td>
+												<select name="client"/>
+													<option value="A">美洲</option>
+													<option value="B">歐洲</option>
+													<option value="C">亞洲</option>
+													<option value="D">非洲</option>
+													<option value="All">All</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>訊息內容: </td>
+											<td><textarea name="content" rows="4" cols="40"></textarea></td>
+										</tr>
+										<tr>
+											<td>訊息顏色: </td>
+											<td>
+												<select name="color"/>
+													<option value="black">黑色</option>
+													<option value="blue">藍色</option>
+													<option value="red">紅色</option>
+												</select>
+											</td>
+										</tr>
+									</table>
+									<input type="submit" value="Add message"/>
+								</form>
+								
 							</div>
 						</div>
 
