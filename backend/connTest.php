@@ -23,12 +23,6 @@
         die(print_r($e));
     }
 
-    echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-    echo "Host information: " . mysqli_get_host_info($conn) . PHP_EOL;
-    
-    $sql = "SELECT * FROM account";
-    $stmt = $conn->query($sql);
-    echo $stmt->fetchAll(PDO::FETCH_NUM);
-    
+    echo "Success: A proper connection to MySQL was made!" ;
 
 ?>
