@@ -356,6 +356,7 @@
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
+		text-align:center;
 	}
 
 		.thumbnails .mediumbox {
@@ -515,7 +516,7 @@
 	input[type="email"],
 	select {
 		height: 2.75em;
-		background-color: rgba(50, 50, 50, 0.25);
+		background-color: #555555
 	}
 
 	textarea {
