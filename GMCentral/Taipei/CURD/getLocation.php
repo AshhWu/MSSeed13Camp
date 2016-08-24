@@ -1,7 +1,6 @@
 <?php
-include_once '../../../backend/taskmodel.php';
+include_once 'db.php';
 
-$conn = connect();
 $sql = "SELECT team, gpsX, gpsY FROM taipeiRun";
 $result = $conn->query($sql) or die($conn->error.__LINE__);
 
