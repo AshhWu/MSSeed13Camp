@@ -5,7 +5,6 @@ session_start();
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>任務資訊</title>
@@ -20,7 +19,7 @@ session_start();
   <body>
     <?php
       include "backend/navbar/nav.php";
-      include_once 't_getitems.php';
+      include 't_getitems.php';
       $team = $_SESSION['t_team'];
       $mission = getMissionByTeam($team);
     ?>
