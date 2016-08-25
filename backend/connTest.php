@@ -18,7 +18,7 @@
     try{
         $conn = new PDO( "mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-
+        $conn->exec("set names utf8");
         /* testing */
         /*$sql = "";
         $stmt = $conn->prepare($sql);
