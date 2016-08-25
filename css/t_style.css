@@ -110,12 +110,19 @@
 	text-align: center;
 }
 
-.tab-pane a {
+#lego_list a {
 	display: inline-block;
 	margin-right: 5px;
 	position: relative;
 	top: 8px;
 	width: 100px;
+}
+
+.tab-pane a {
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+	top: 8px;
 }
 
 .tab-pane .w3-tag {
