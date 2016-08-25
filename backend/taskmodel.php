@@ -16,7 +16,7 @@
 function connect()
 {
 	// DB connection info
-	$host = "ap-cdbr-azure-east-c.cloudapp.net";
+	/*$host = "ap-cdbr-azure-east-c.cloudapp.net";
 	$user = "b37f8ddf38d21d";
 	$pwd = "1e72c81e";
 	$db = "stronghold";
@@ -28,7 +28,32 @@ function connect()
 	catch(Exception $e){
 		die(print_r($e));
 	}
-	return $conn;
+	return $conn;*/
+	$connectstr_dbhost = '';
+    $connectstr_dbname = 'msseed13';
+    $connectstr_dbusername = '';
+    $connectstr_dbpassword = '';
+    
+    foreach ($_SERVER as $key => $value) {
+        if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
+            continue;
+        }
+        
+        $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+        $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+        $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
+    }
+    
+    try{
+        $conn = new PDO( "mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
+        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+
+    }
+    catch(Exception $e){
+        die(print_r($e));
+    }
+
+    return $conn;
 }
 
 function getAllItems()
