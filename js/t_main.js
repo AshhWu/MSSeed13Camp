@@ -33,7 +33,6 @@ function check_lego(start, team, lego){
 	var line_s, line_e;
 	current_team = team;
 	current_lego = lego;
-	//start = parseInt(document.getElementById("sstation").value);
 	end = parseInt(document.getElementById("estation").value);
 	if (!Number.isInteger(start) || !Number.isInteger(end)){
 		alert("Error!");
@@ -153,12 +152,9 @@ function mrt_route(route, count){
 }
 
 function lego_refresh(obj){
-	var tmp_str = 't_updatePosition.php?team=' + current_team + '&position=' + end.toString();
-	window.location = tmp_str;
-
+	var tmp_str = '/TaipeiRun/t_teamMove.php?team=' + current_team + '&position=' + end.toString();
 	var n = parseInt(obj.id[obj.id.length-1]);
 	var rest_lego;
-	tmp_str = 't_updateAllCube.php?team=' + current_team + '&c1=0';
 	var j;
 	for (j = 1; j < 5; j++){
 		rest_lego = current_lego[j-1] - cost_list[n-1][j];
@@ -184,6 +180,7 @@ function send_request(sender, receiver){
 	window.location = tmp_str;
 }
 
+var country_str = ['', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
 function trade_init(trade){
 	if (trade.length <= 1)
 		return;
@@ -193,7 +190,7 @@ function trade_init(trade){
 	for (i = 1; i < trade.length; i += 14){
 		sender = trade[i];
 		id = trade[i-1];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>第' + sender + '組向你提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + sender + '">回覆</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>' + country_str[sender] + ' 向你提的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + sender + '">回覆</a></li>';
 	}
 	document.getElementById("trade_ul").innerHTML = tmp_str;
 }
@@ -207,28 +204,30 @@ function wait_init(wait){
 	for (i = 2; i < wait.length; i += 14){
 		receiver = wait[i];
 		id = wait[i-2];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>你向第' + receiver + '組提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + receiver + '">查看</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>我向 ' + country_str[receiver] + ' 提的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + receiver + '">查看</a></li>';
 	}
 	document.getElementById("wait_ul").innerHTML = tmp_str;
 }
 
-function trade_agree(trade){
+function trade_agree(lego, trade){
 	alert("agree!");
 	var i, tmp_str;
 	var team_s = trade[1];
 	var team_r = trade[2];
 
-	tmp_str = "t_updateAllCube.php?team=" + team_r + "&c1=0";
+	tmp_str = 'TaipeiRun/t_tradeComplete.php?id=' + trade[0] + '&teama=' + team_s;
 	for (i = 4; i <= 7; i++){
-		tmp_str += "&c" + (i-2).toString() + "=" + trade[i].toString();
+		tmp_str += '&c' + (i-2).toString() + '=' + (lego[i-4] - trade[i] + trade[i+5]).toString();
 	}
-	window.location =  tmp_str;
-
-	tmp_str = "t_updateAllCube.php?team=" + team_s + "&c1=0";
+	tmp_str += '&teamb=' + team_r;
 	for (i = 9; i <= 12; i++){
-		tmp_str += "&c" + (i-7).toString() + "=" + trade[i].toString();
+		tmp_str += '&fc' + (i-7).toString() + '=' + (lego[i-5] - trade[i] + trade[i-5]).toString();
 	}
 	window.location =  tmp_str;
+}
 
-	//window.location = 't_lego_list.php';
+function trade_reject(id){
+	alert('reject!');
+	var tmp_str = 'TaipeiRun/t_tradeFail.php?id=' + id;
+	window.location = tmp_str;
 }

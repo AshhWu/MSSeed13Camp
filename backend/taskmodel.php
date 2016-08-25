@@ -788,7 +788,17 @@ function addMessage($time, $client, $content, $color)
 	$stmt->bindValue(4, $color);
 	$stmt->execute();
 }
-
+function addGMMessage($time, $client, $content, $color)
+{
+	$conn = connect();
+	$sql = "INSERT INTO gmmessage (time, client, content, color) VALUES (?, ?, ?, ?)";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $time);
+	$stmt->bindValue(2, $client);
+	$stmt->bindValue(3, $content);
+	$stmt->bindValue(4, $color);
+	$stmt->execute();
+}
 function deleteItem($item_id)
 {
 	$conn = connect();
@@ -810,9 +820,9 @@ function deleteMessage($item_id)
 function deleteGMMessage($item_id)
 {
 	$conn = connect();
-	$sql = "DELETE FROM gmmessage WHERE id = ?";
+	$sql = "DELETE FROM gmmessage WHERE id='".$item_id."'";
 	$stmt = $conn->prepare($sql);
-	$stmt->bindValue(1, $item_id);
+	//$stmt->bindValue(1, $item_id);
 	$stmt->execute();
 }
 

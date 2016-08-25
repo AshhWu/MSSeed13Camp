@@ -408,8 +408,8 @@ function getAllStrong() {
 function calculateTotal(){
 	var strongHoldPara = 100;
 	var tier1Parameter = 1;
-	var tier2Parameter = 20;
-	var tier3Parameter = 200;
+	var tier2Parameter = 150;
+	var tier3Parameter = 500;
 	x00[0] = x10[0]*strongHoldPara + x20[0]*tier1Parameter + x21[0]*tier2Parameter + x22[0]*tier3Parameter;
 	x00[1] = x10[1]*strongHoldPara + x20[1]*tier1Parameter + x21[1]*tier2Parameter + x22[1]*tier3Parameter;
 	x00[2] = x10[2]*strongHoldPara + x20[2]*tier1Parameter + x21[2]*tier2Parameter + x22[2]*tier3Parameter;

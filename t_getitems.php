@@ -90,7 +90,15 @@ function getMissionPic($id){
     $sql = "SELECT * FROM t_missionInfo where id=".$id;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
-    return $items[0][3];
+    return $items[0][4];
+}
+
+function getMissionHint($id){
+    $conn = connect();
+    $sql = "SELECT * FROM t_missionInfo where id=".$id;
+	$stmt = $conn->query($sql);
+    $items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $items[0][5];
 }
 
 function getMissionState($team){
@@ -149,14 +157,14 @@ function getAllTradeRequest(){
 
 function getTradeRequestBySender($sender){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest where sender=".$sender;
+	$sql = "SELECT * FROM t_tradeRequest where sender=".$sender." AND state<2";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
 function getTradeRequestByReceiver($receiver){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest where receiver=".$receiver;
+	$sql = "SELECT * FROM t_tradeRequest where receiver=".$receiver." AND state<2";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }

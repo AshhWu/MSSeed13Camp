@@ -3,13 +3,8 @@
 include_once 'backend/taskmodel.php';
 include_once 't_getitems.php';
 
-if(isset($_GET['sender'])){
-    $sender = $_GET['sender'];
-    $receiver = $_GET['receiver'];
-}else{
-    $sender = 20;
-    $receiver = 21;
-}
+$sender = $_GET['sender'];
+$receiver = $_GET['receiver'];
 
 $c1 = $_GET['c1'];
 $c2 = $_GET['c2'];
@@ -39,10 +34,5 @@ $stmt->bindValue(11, $fc4);
 $stmt->bindValue(12, $fc5);
 $stmt->execute();
 
-if(isset($_GET['sender'])){
-    header('Location: t_taipeiAdmin.php');
-}else{
-    header('Location: index.php');
-}
-
+header('Location: t_lego_list.php');
 ?>
