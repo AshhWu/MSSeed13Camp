@@ -1,4 +1,4 @@
-angular.module('app', ["chart.js"])
+angular.module('app')
 .directive("owlCarousel", function() {
     return {
         restrict: 'E',
