@@ -311,7 +311,6 @@ var app = angular.module('app', []);
               var team = data[index];
               console.log(team);
               console.log($scope.markers[team['team']]);
-              console.log($scope.teamInfo[team['team']].picture);
               if(team.location != 'null')
               {
                 if($scope.markers[team['team']] == undefined)
