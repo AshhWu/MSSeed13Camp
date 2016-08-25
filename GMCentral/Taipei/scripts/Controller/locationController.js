@@ -1,4 +1,4 @@
-angular.module('app', ["chart.js"])
+angular.module('app')
 	.controller('locationController', ['$scope', '$interval', 'flagService', function($scope, $interval, flagService){
       $scope.markers = [];
       

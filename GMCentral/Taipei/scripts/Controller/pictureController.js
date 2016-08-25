@@ -1,4 +1,4 @@
- angular.module('app', ["chart.js"])
+ angular.module('app')
 	.controller('picController', ['$scope', 'picService', '$interval', function($scope, picService, $interval){
      	$scope.pics = picService.getPics();
 

@@ -1,4 +1,4 @@
-angular.module('app', ["chart.js"])
+angular.module('app')
 	.controller('cubeController', ['$scope', 'cubeService', '$interval', function($scope, cubeService, $interval){
 
 		function getCube() {
