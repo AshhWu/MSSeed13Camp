@@ -14,18 +14,9 @@
 	*/
 	
 include_once 'taskmodel.php';
-
-//Debugger//
-include 'ChromePhp.php';
-//Debugger//
-
-	$aResult = array();
-  $items = getAllResources();
-	$aResult['result']=$items;
-
-	// Debugger //
-	ChromePhp::log($items);
-	// Debugger //
-	
-  echo json_encode($items);
+function getGMMessages()
+{
+  $items = getAllGMMessages();
+  return $items;
+}
 ?>
