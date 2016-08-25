@@ -161,9 +161,15 @@
 	margin-top: 2px;
 }
 
-#trade_table p {
+#trade_table .w3-tag p {
 	position: relative;
 	top: 10px;
+}
+
+#trade_table th > p {
+	position: relative;
+	top: 10px;
+	left: 15px;
 }
 
 #trade_table input {
