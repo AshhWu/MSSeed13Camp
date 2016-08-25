@@ -190,7 +190,7 @@ function trade_init(trade){
 	for (i = 1; i < trade.length; i += 14){
 		sender = trade[i];
 		id = trade[i-1];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>' + country_str[sender] + ' 向你提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + sender + '">回覆</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>' + country_str[sender] + ' 向你提的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + sender + '">回覆</a></li>';
 	}
 	document.getElementById("trade_ul").innerHTML = tmp_str;
 }
@@ -204,7 +204,7 @@ function wait_init(wait){
 	for (i = 2; i < wait.length; i += 14){
 		receiver = wait[i];
 		id = wait[i-2];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>你向 ' + country_str[receiver] + ' 提出的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + receiver + '">查看</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>我向 ' + country_str[receiver] + ' 提的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + receiver + '">查看</a></li>';
 	}
 	document.getElementById("wait_ul").innerHTML = tmp_str;
 }
