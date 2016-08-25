@@ -29,7 +29,7 @@ function connect()
 		die(print_r($e));
 	}
 	return $conn;*/
-	$connectstr_dbhost = '';
+	/*$connectstr_dbhost = '';
     $connectstr_dbname = 'msseed13';
     $connectstr_dbusername = '';
     $connectstr_dbpassword = '';
@@ -53,7 +53,7 @@ function connect()
         die(print_r($e));
     }
 
-    return $conn;
+    return $conn;*/
 }
 
 function getAllItems()
