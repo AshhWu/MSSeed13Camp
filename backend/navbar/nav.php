@@ -21,7 +21,7 @@ switch($_SESSION['authority']){
 		<div class="collapse navbar-collapse" id="myNavbar">
 		<ul class="nav navbar-nav navbar-right">
 			<!-- Message alert -->
-			<li <?=findActiveClass("messagePage")?>><a href="messagePage.php"><div style="color:red;">新訊息!!</div></a></li> <!-- use findActiveClass to toggle current page-->
+			<li <?=findActiveClass("messagePage")?>><a href="messagePage.php">新訊息!!</a></li> <!-- use findActiveClass to toggle current page-->
 			<li <?=findActiveClass("index")?>><a href="index.php">首頁</a></li> <!-- use findActiveClass to toggle current page-->
 			<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown">台北行 <span class="caret"></span></a>
