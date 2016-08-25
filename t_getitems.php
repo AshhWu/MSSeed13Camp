@@ -149,14 +149,14 @@ function getAllTradeRequest(){
 
 function getTradeRequestBySender($sender){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest where sender=".$sender;
+	$sql = "SELECT * FROM t_tradeRequest where sender=".$sender." & state<2";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
 function getTradeRequestByReceiver($receiver){
     $conn = connect();
-	$sql = "SELECT * FROM t_tradeRequest where receiver=".$receiver;
+	$sql = "SELECT * FROM t_tradeRequest where receiver=".$receiver." & state<2";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
