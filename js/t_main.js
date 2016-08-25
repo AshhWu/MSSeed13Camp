@@ -216,7 +216,7 @@ function trade_agree(trade){
 	alert("agree!");
 	var i, tmp_str;
 	var team_s = trade[1];
-	var tema_r = trade[2];
+	var team_r = trade[2];
 
 	tmp_str = "t_updateAllCube.php?team=" + team_r + "&c1=0";
 	for (i = 4; i <= 7; i++){
