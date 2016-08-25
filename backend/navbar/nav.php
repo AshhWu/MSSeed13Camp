@@ -17,7 +17,7 @@ switch($_SESSION['authority']){
 		</button>
 		
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營 新訊息!!</a>
+		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -56,7 +56,7 @@ switch($_SESSION['authority']){
 			<span class="icon-bar"></span>
 		</button>
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營 新訊息!!</a>
+		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
