@@ -40,13 +40,13 @@ angular.module('myApp', ["chart.js"])
                     	{
                     	  team: "埃及"
                     	}
-		];
+		              ];
 
-			this.getTeamInfo = function(){
-				return teamInfo;
-			}
+		this.getTeamInfo = function(){
+			return teamInfo;
+		};
 
-            this.getCube = function(){
-            	return $http.get("../CURD/getCube.php");
-        }
+        this.getCube = function(){
+        	return $http.get("scripts/CURD/getCube.php");
+        };
     }]);

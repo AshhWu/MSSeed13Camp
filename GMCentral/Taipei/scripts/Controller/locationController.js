@@ -1,7 +1,6 @@
 angular.module('myApp', ["chart.js"])
 	.controller('locationController', ['$scope', '$interval', 'flagService', function($scope, $interval, flagService){
       $scope.markers = [];
-      $scope.teamInfo;
       
       var latLng = new google.maps.LatLng(25.054056, 121.539021);
       var mapCanvas = document.getElementById('map-canvas');
@@ -21,20 +20,20 @@ angular.module('myApp', ["chart.js"])
             {
               var team = data[index];
               console.log(team);
-              console.log($scope.markers[team['Team']]);
+              console.log($scope.markers[team.Team]);
   
-              if(team['location'] != 'null')
+              if(team.location != 'null')
               {
-                if($scope.markers[team['Team']] == undefined)
+                if($scope.markers[team.Team] === undefined)
                 {
                     console.log('Create new marker');
-                    $scope.markers[team['Team']] = new MarkerWithLabel({
-                        position: new google.maps.LatLng(team['gpsX'], team['gpsY']),
+                    $scope.markers[team.Team] = new MarkerWithLabel({
+                        position: new google.maps.LatLng(team.gpsX, team.gpsY),
                         draggable: true,
                         raiseOnDrag: true,
                         map: map,
-                        icon: $scope.teamInfo[team['Team']]['picture'],
-                        labelContent: $scope.teamInfo[team['Team']]['team'],
+                        icon: $scope.teamInfo[team.Team].picture,
+                        labelContent: $scope.teamInfo[team.Team].team,
                         labelAnchor: new google.maps.Point(22, 0),
                         labelClass: "labels", // the CSS class for the label
                         labelStyle: {opacity: 0.8}
@@ -43,12 +42,11 @@ angular.module('myApp', ["chart.js"])
                 else
                 {
                     console.log('Move');
-                    $scope.markers[team['Team']].setPosition(new google.maps.LatLng(team['gpsX'], team['gpsY']));
+                    $scope.markers[team.Team].setPosition(new google.maps.LatLng(team.gpsX, team.gpsY));
                 }
               }
             }
-          }
-          ,function(error)
+          } ,function(error)
           { 
               console.log("error: " + error.message);
           });

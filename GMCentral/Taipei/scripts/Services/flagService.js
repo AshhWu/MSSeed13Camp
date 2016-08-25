@@ -55,12 +55,12 @@ angular.module('myApp')
                     }
 		];
 
-        this.getTeamInfo = function(){
-            return teamInfo;
-        }
+    this.getTeamInfo = function(){
+        return teamInfo;
+    };
 
 		this.getLocation = function(){
-			return $http.get("../CURD/getLocation.php");
+			return $http.get("scripts/CURD/getLocation.php");
 			     
 		};
 
@@ -86,6 +86,4 @@ angular.module('myApp')
   //               labelStyle: {opacity: 0.8}
   //           });
   //       };
-	}
-
 	}]);
