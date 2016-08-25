@@ -154,7 +154,7 @@
 							<?php
 								header('Cache-Control: no-cache');
 								header('Pragma: no-cache');
-								require_once "getGMmessages.php";
+								require_once "getGMMessages.php";
 								$items = getGMMessages();
 								if(!empty($items))
 								{
