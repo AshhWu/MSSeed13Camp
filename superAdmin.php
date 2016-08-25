@@ -634,18 +634,28 @@ window.onload=function(){
 		
 		echo "</table>";
 	}
-	echo "New message<br>";
-	
-	$items2 = getRead();
-	if(!empty($items2))
+?>
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getRead();
+	if(!empty($items))
 	{
 		echo "<table border='1'>
-				<tr><th>Unread:</th></tr>
-				<tr><td>".$items2[0][0]."</td></tr>
-			  </table>";
+				<tr>
+					<th>Unread:</th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo "<tr>
+						<td>".$item[0 ]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
 	}
 ?>
-
           </div>
         </div>
       </div>
