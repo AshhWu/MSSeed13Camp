@@ -197,6 +197,7 @@ session_start();
                         <th>title</th>
                         <th>content</th>
                         <th>picture</th>
+                        <th>hint</th>
                     </tr>";
         $items = getMissionInfo();
         if(!empty($items))
@@ -205,14 +206,14 @@ session_start();
             {
                 echo 	"<tr>
                             <td>".$item[0]."</td>
-                            <td>".$item[4]."</td>
+                            <td>".$item[3]."</td>
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
-                /*if(!empty($item[3])){
-                    echo    "<td><img src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
+                if(!empty($item[4])){
+                    echo    "<td><img height='200px' src='".$item[4]."') /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
-                }*/
+                }
                 if(!empty($item[5])){
                     echo    "<td><img height='200px' src='".$item[5]."') /></td>";
                 }else{
