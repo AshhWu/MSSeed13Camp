@@ -20,5 +20,5 @@ include_once '../backend/taskmodel.php';
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 
-    header('Location: t_mrtmap.php');
+    header('Location: ../t_mrtmap.php');
 ?>
