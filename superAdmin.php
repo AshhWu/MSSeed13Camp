@@ -635,6 +635,7 @@ window.onload=function(){
 		echo "</table>";
 	}
 	echo "New message";
+	/*
 	$items = getRead();
 	if(!empty($items))
 	{
@@ -642,7 +643,7 @@ window.onload=function(){
 				<tr><th>Unread:</th></tr>
 				<tr><td>".$items[0][0]."</td></tr>
 			  </table>";
-	}
+	}*/
 ?>
 
           </div>
