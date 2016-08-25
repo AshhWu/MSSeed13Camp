@@ -24,7 +24,12 @@ session_start();
 <?php $lego2 = getAllCubeNum($team2); ?>
 
 <h5 id="team_label" class="w3-indigo w3-padding"><?php echo $country;?></h5>
-<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">和第<?php echo $team2;?>組交易</div>
+<div id="team2" style="display:none"><?php echo $team2;?></div>
+<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown"></div>
+<script type="text/javascript">
+	var country_str = ['', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
+	document.getElementById("trade_with").innerHTML = '和' + country_str[document.getElementById("team2").innerText] + '交易';
+</script>
 
 <table id="trade_table" class="w3-table w3-sand">
 <tr>
