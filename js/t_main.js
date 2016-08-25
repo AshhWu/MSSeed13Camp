@@ -154,8 +154,6 @@ function mrt_route(route, count){
 
 function lego_refresh(obj){
 	var tmp_str = '/TaipeiRun/t_teamMove.php?team=' + current_team + '&position=' + end.toString();
-	window.location = tmp_str;
-
 	var n = parseInt(obj.id[obj.id.length-1]);
 	var rest_lego;
 	var j;
