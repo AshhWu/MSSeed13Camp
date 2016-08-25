@@ -70,7 +70,7 @@ session_start();
 
 <div id="trade_btn" class="w3-container w3-section w3-padding-large">
 <button class="w3-btn w3-padding w3-teal w3-round" onclick="trade_agree(<?php echo '['.$lego[1].','.$lego[2].','.$lego[3].','.$lego[4].','.$lego2[1].','.$lego2[2].','.$lego2[3].','.$lego2[4].'],['; foreach($trade as $value){echo $value . ',';} echo '-1]';?>)">同意</button><br><br>
-<a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">拒絕</a>
+<a class="w3-btn w3-padding w3-teal w3-round" onclick="trade_reject(<?php echo $id;?>)">拒絕</a>
 </div>
 
 <div id="team" style="display:none"><?php echo $team;?></div>
