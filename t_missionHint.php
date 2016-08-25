@@ -31,22 +31,22 @@ session_start();
     ?>
     <?php
       if($mission==1 && $position!=513){
-          alert("請到正確地點在開啟提示!");
+          echo '<script>alert("請到正確地點在開啟提示!")</script>';
           header('Location: t_mrtmap.php');
       }else if($mission==2 && $position!=300){
-          alert("請到正確地點在開啟提示!");
+          echo '<script>alert("請到正確地點在開啟提示!")</script>';
           header('Location: t_mrtmap.php');
       }else if($mission==3 && $position!=406 && $position!=509){
-          alert("請到正確地點在開啟提示!");
+          echo '<script>alert("請到正確地點在開啟提示!")</script>';
           header('Location: t_mrtmap.php');
       }else if($mission==4 && $position!=506){
-          alert("請到正確地點在開啟提示!");
+          echo '<script>alert("請到正確地點在開啟提示!")</script>';
           header('Location: t_mrtmap.php');
       }else if($mission==5 && $position!=212){
-          alert("請到正確地點在開啟提示!");
+          echo '<script>alert("請到正確地點在開啟提示!")</script>';
           header('Location: t_mrtmap.php');
       }else if($mission==6 && $position!=505){
-          alert("請到正確地點在開啟提示!");
+          echo '<script>alert("請到正確地點在開啟提示!")</script>';
           header('Location: t_mrtmap.php');
       }else;
     ?>
