@@ -90,7 +90,7 @@ function getMissionPic($id){
     $sql = "SELECT * FROM t_missionInfo where id=".$id;
 	$stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
-    return $items[0][3];
+    return $items[0][5];
 }
 
 function getMissionState($team){
