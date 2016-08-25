@@ -1,27 +1,24 @@
 <?php
+include_once '../backend/taskmodel.php';
 
-include_once 'backend/taskmodel.php';
-include_once 't_getitems.php';
+    $teama = $_GET['teama'];
+    $cube2 = $_GET['c2'];
+    $cube3 = $_GET['c3'];
+    $cube4 = $_GET['c4'];
+    $cube5 = $_GET['c5'];
+    $teamb = $_GET['teamb'];
+    $fcube2 = $_GET['fc2'];
+    $fcube3 = $_GET['fc3'];
+    $fcube4 = $_GET['fc4'];
+    $fcube5 = $_GET['fc5'];
+    $conn = connect();
+    $sql = "UPDATE taipeiRun SET cube2=".$cube2.", cube3=".$cube3.", cube4=".$cube4.", cube5=".$cube5." where team=".$teama;
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
 
-$id = $_POST['id'];
+    $sql = "UPDATE taipeiRun SET cube2=".$fcube2.", cube3=".$fcube3.", cube4=".$fcube4.", cube5=".$fcube5." where team=".$teamb;
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
 
-$item = getTradeRequestById($id);
-
-$conn = connect();
-$sql = "UPDATE taipeiRun SET cube1=?, cube2=?, cube3=?, cube4=?, cube5=? WHERE team=".$item['sender'].
-       "UPDATE taipeiRun SET cube1=?, cube2=?, cube3=?, cube4=?, cube5=? WHERE team=".$item['receiver'].
-       "UPDATE t_tradeRequest SET state=2 WHERE id=".$id;
-$stmt = $conn->prepare($sql);
-$stmt->bindValue(1, $c1);
-$stmt->bindValue(2, $c2);
-$stmt->bindValue(3, $c3);
-$stmt->bindValue(4, $c4);
-$stmt->bindValue(5, $c5);
-$stmt->bindValue(6, $fc1);
-$stmt->bindValue(7, $fc2);
-$stmt->bindValue(8, $fc3);
-$stmt->bindValue(9, $fc4);
-$stmt->bindValue(10, $fc5);
-$stmt->execute();
-
+    header('Location: t_mrtmap.php');
 ?>
