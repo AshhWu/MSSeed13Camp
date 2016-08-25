@@ -273,7 +273,7 @@ if($_SESSION['authority']==3){
 			<tr>
 				<td>Group: </td>
 				<td>
-					<select name="team"/>
+					<select name="name"/>
 						<option value="A">A</option>
 						<option value="B">B</option>
 						<option value="C">C</option>
@@ -284,7 +284,7 @@ if($_SESSION['authority']==3){
 			<tr>
 				<td>Resource: </td>
 				<td>
-					<select name="resource"/>
+					<select name="source"/>
 								<option value="wood">Wood</option>
 								<option value="gold">Gold</option>
 								<option value="water">Water</option>
