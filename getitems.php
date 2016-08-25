@@ -88,6 +88,12 @@ function getDay()
   return $items;
 }
 
+function getRead()
+{
+  $items = getAllRead();
+  return $items;
+}
+
 function prepareResource()
 {
   prepareResources();

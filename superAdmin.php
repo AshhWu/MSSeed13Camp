@@ -634,6 +634,14 @@ window.onload=function(){
 		
 		echo "</table>";
 	}
+	$items = getRead();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr><th>Unread:</th></tr>
+				<tr><td>".$items[0][0]."</td></tr>
+			  </table>";
+	}
 ?>
 
           </div>

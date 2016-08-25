@@ -110,6 +110,14 @@ function getAllDay()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getAllRead()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM newmessage";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function searchMission($code)
 {
 	$conn = connect();
