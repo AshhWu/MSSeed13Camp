@@ -21,8 +21,8 @@ session_start();
 <?php $id = $_GET['id']; ?>
 <?php $team2 = $_GET['teamb']; ?>
 <?php $trade = getTradeRequestById($id); ?>
-<?php $sender = $id[1]; ?>
-<?php $receiver = $id[2]; ?>
+<?php $sender = $trade[1]; ?>
+<?php $receiver = $trade[2]; ?>
 <?php $lego = getAllCubeNum($sender); ?>
 <?php $lego2 = getAllCubeNum($receiver); ?>
 
