@@ -72,6 +72,9 @@ session_start();
 <a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">拒絕</a>
 </div>
 
+<div id="team" style="display:none"><?php echo $team;?></div>
+<div id="sender" style="display:none"><?php echo $sender;?></div>
+
 <script type="text/javascript">
 	if (document.getElementById("team").innerText == document.getElementById("sender").innerText)
 		document.getElementById("trade_btn").innerHTML = '<a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">退出</a>';
