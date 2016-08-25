@@ -23,9 +23,9 @@ $id = $_GET['id'];
 ChromePhp::log('get id');
 ChromePhp::log($id);
 
-//deleteGMMessage($id);
+deleteGMMessage($id);
 
 ChromePhp::log('Finish Delete!');
 
-header('Location: resources.php');
+//header('Location: resources.php');
 ?>
