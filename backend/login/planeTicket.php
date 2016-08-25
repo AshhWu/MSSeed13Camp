@@ -92,7 +92,12 @@
 		<div class="large-info" id="room-lg"><?php echo $_SESSION['room'] ?></div>
 		<!-- Smaller Information -->
 		<div class="small-info" id="ID-sm"><?php echo $_SESSION['ID'] ?></div>
-		<div class="small-info" id="en-name-sm"><?php echo $_SESSION['en_name'] ?></div>
+		<div class="small-info" id="en-name-sm">
+			<?php 
+			$name = explode(" ", $_SESSION['en_name']);
+			echo $name[0];  // remove last name
+			?>	
+		</div>
 		<div class="small-info" id="country-sm"><?php echo $_SESSION['country'] ?></div>
 		<div class="small-info" id="room-sm"><?php echo $_SESSION['room'] ?></div>
 	</div>
