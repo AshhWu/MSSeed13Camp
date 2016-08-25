@@ -14,10 +14,18 @@
 	*/
 session_start();
 include_once '../backend/taskmodel.php';
+include 'ChromePhp.php';
+
+ChromePhp::log('In delete GM php');
 
 $id = $_GET['id'];
 
+ChromePhp::log('get id');
+ChromePhp::log($id);
+
 deleteGMMessage($id);
+
+ChromePhp::log('Finish Delete!');
 
 header('Location: resources.php');
 ?>
