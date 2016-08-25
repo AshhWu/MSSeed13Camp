@@ -22,5 +22,5 @@ $color = $_POST['color'];
 
 addGMMessage($time, $client, $content, $color);
 
-header('Location: resources.html');
+header('Location: resources.php');
 ?>
