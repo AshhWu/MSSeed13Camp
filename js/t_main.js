@@ -215,7 +215,7 @@ function trade_agree(lego, trade){
 	var team_s = trade[1];
 	var team_r = trade[2];
 
-	tmp_str = "TaipeiRun/t_tradeComplete.php?teama=" + team_r;
+	tmp_str = "TaipeiRun/t_tradeComplete.php?id=" + trade[0] + "&teama=" + team_r;
 	for (i = 4; i <= 7; i++){
 		tmp_str += "&c" + (i-2).toString() + "=" + (lego[i-4] - trade[i]).toString();
 	}
