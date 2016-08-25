@@ -19,5 +19,5 @@ $id = $_GET['id'];
 
 deleteGMMessage($id);
 
-header('Location: resources.html');
+header('Location: resources.php');
 ?>

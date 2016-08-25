@@ -21,7 +21,7 @@
 
 .middle_part .section1 {
 	display: inline-block;
-	max-width: 50%;
+	max-width: 55%;
 	position: relative;
 	top: 8px;
 }
@@ -164,6 +164,12 @@
 #trade_table .w3-tag p {
 	position: relative;
 	top: 10px;
+}
+
+#trade_table th > p {
+	position: relative;
+	top: 10px;
+	left: 15px;
 }
 
 #trade_table input {

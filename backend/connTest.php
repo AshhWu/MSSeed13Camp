@@ -18,11 +18,18 @@
     try{
         $conn = new PDO( "mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+
+        /* testing */
+        /*$sql = "";
+        $stmt = $conn->prepare($sql);
+        echo ($stmt->execute());*/
+
     }
     catch(Exception $e){
         die(print_r($e));
     }
 
     echo "Success: A proper connection to MySQL was made!" ;
+
 
 ?>
