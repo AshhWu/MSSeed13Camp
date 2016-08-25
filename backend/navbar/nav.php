@@ -17,6 +17,8 @@ switch($_SESSION['authority']){
 		</button>
 		<a class="navbar-brand" href="#">微軟13屆領袖營</a>
 		</div>
+		<!-- Message alert -->
+		<div style="text-align:center; color:red;"><h3>您有新訊息</h3></div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
 		<ul class="nav navbar-nav navbar-right">
