@@ -1,5 +1,5 @@
 <?php
-include_once 'db.php';
+include_once 'DBConnect.php';
 
 $sql = "SELECT team, cube2, cube3, cube4, cube5, mission FROM taipeiRun";
 $result = $conn->query($sql) or die($conn->error.__LINE__);

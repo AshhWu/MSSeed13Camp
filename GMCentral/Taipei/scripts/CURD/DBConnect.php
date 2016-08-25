@@ -22,6 +22,4 @@
         die(print_r($e));
     }
 
-    echo "Success: A proper connection to MySQL was made!" ;
-
 ?>
