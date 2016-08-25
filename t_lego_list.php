@@ -18,10 +18,11 @@ session_start();
 <?php include "t_getitems.php"; ?>
 <?php $all_lego = getAllTeamCubeNum(); ?>
 <?php $team = $_SESSION['t_team']; ?>
+<?php $country = $_SESSION['country']; ?>
 <?php $wait = getTradeRequestBySender($team); ?>
 <?php $trade = getTradeRequestByReceiver($team); ?>
 
-<h5 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h5>
+<h5 id="team_label" class="w3-indigo w3-padding"><?php echo $country;?></h5>
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-brown w3-padding">樂高</h5>
 	<section class="section2 w3-container">
@@ -44,84 +45,84 @@ session_start();
 			<h4 class="w3-card w3-pink w3-padding">點組別按鈕請求交易</h4>
 			<ul id="lego_list" class="w3-ul">
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=1">第1組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=1">America</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[0][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[0][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[0][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[0][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第2組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">Canada</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[1][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[1][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[1][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[1][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=3">第3組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=3">Brazil</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[2][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[2][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[2][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[2][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=4">第4組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=4">Italy</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[3][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[3][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[3][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[3][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=5">第5組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=5">Germany</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[4][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[4][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[4][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[4][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=6">第6組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=6">England</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[5][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[5][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[5][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[5][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=7">第7組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=7">Taiwan</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[6][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[6][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[6][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[6][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=8">第8組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=8">Japan</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[7][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[7][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[7][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[7][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=9">第9組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=9">Thailand</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[8][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[8][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[8][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[8][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=10">第10組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=10">SouthAfrica</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[9][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[9][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[9][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[9][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=11">第11組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=11">Madagascar</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[10][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[10][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[10][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[10][5];?></p></div>
 				</li>
 				<li class="team_li w3-container">
-					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=12">第12組</a>
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=12">Egypt</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[11][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[11][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[11][4];?></p></div>
