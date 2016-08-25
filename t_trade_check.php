@@ -26,12 +26,12 @@ session_start();
 <?php $lego = getAllCubeNum($sender); ?>
 <?php $lego2 = getAllCubeNum($receiver); ?>
 
-<h5 id="team_label" class="w3-indigo w3-padding">我是第<p id="team"><?php echo $team;?></p>組</h5>
-<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">和<?php echo $team2;?>組的交易細節</div>
+<h5 id="team_label" class="w3-indigo w3-padding">我是第<h4 id="team"><?php echo $team;?></h4>組</h5>
+<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">和第<?php echo $team2;?>組的交易細節</div>
 
 <table id="trade_table" class="w3-table w3-sand">
 <tr>
-	<th class="w3-tag"><p id="sender"><?php echo $sender;?></p>組</th>
+	<th class="w3-tag"><h4 id="sender"><?php echo $sender;?></h4>組</th>
 	<th>給出</th>
 	<th>|</th>
 	<th>給出</th>
