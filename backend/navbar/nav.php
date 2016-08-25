@@ -17,11 +17,11 @@ switch($_SESSION['authority']){
 		</button>
 		<a class="navbar-brand" href="#">微軟13屆領袖營</a>
 		</div>
-		<!-- Message alert -->
-		<div style="text-align:center; color:red;"><h3>您有新訊息</h3></div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
 		<ul class="nav navbar-nav navbar-right">
+			<!-- Message alert -->
+			<li <?=findActiveClass("messagePage")?>><a href="messagePage.php"><div style="color:red;">新訊息!!</div></a></li> <!-- use findActiveClass to toggle current page-->
 			<li <?=findActiveClass("index")?>><a href="index.php">首頁</a></li> <!-- use findActiveClass to toggle current page-->
 			<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown">台北行 <span class="caret"></span></a>
