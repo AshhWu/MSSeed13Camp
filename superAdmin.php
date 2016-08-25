@@ -247,7 +247,8 @@ if($_SESSION['authority']==3){
 					<th>SD卡:   </th>
 					<th>飛彈:    </th>
 					<th>空姐:    </th>
-					<th>LED燈:  </th>				
+					<th>LED燈:  </th>
+					<th>交通工具:  </th>				
 				</tr>";
 		foreach($items as $item)
 		{
@@ -260,7 +261,7 @@ if($_SESSION['authority']==3){
 						<td>".$item[31]."</td>
 						<td>".$item[32]."</td>
 						<td>".$item[33]."</td>
-						<td></td>";
+						<td>".$item[34]."</td>";
 			echo "</tr>";
 		}
 		
@@ -268,12 +269,12 @@ if($_SESSION['authority']==3){
 	}
 ?>
 
-	<form action="updateresource.php" method="post">
+	<form action="backend/stronghold/updateResource.php" method="post">
 		<table border="1">
 			<tr>
 				<td>Group: </td>
 				<td>
-					<select name="name"/>
+					<select name="team"/>
 						<option value="A">A</option>
 						<option value="B">B</option>
 						<option value="C">C</option>
@@ -284,10 +285,49 @@ if($_SESSION['authority']==3){
 			<tr>
 				<td>Resource: </td>
 				<td>
-					<select name="source"/>
-								<option value="wood">Wood</option>
-								<option value="gold">Gold</option>
-								<option value="water">Water</option>
+					<select name="resource"/>
+								<optgroup label="原料">
+									<option value="magic_powder">魔法粉末</option>
+									<option value="cloth">布</option>
+									<option value="ruby">紅寶石</option>
+									<option value="shaft">轉軸</option>
+									<option value="fire">熊熊烈火</option>
+									<option value="seed">種子</option>
+									<option value="water">生命之水</option>
+									<option value="light">神聖光芒</option>
+									<option value="flax">麻</option>
+									<option value="screw">螺絲</option>
+									<option value="plastic">塑料</option>
+									<option value="electron">十萬伏特</option>
+									<option value="ergonomic">人體工學</option>
+									<option value="imagine">想像力</option>
+									<option value="metal">金屬</option>
+									<option value="air">大地氧氣</option>
+								</optgroup>
+								<optgroup label="零件">
+									<option value="magic_stone">魔法石</option>
+									<option value="control_panel">控制面板</option>
+									<option value="seat">座位</option>
+									<option value="wheel">方向盤</option>
+									<option value="rope">繩子</option>
+									<option value="cypress">檜木</option>
+									<option value="propeller">螺旋槳</option>
+									<option value="door">門</option>
+									<option value="jet">噴射器</option>
+									<option value="gun">機艙</option>
+								</optgroup>
+								<optgroup label="特殊材料">
+									<option value="elk">麋鹿</option>
+									<option value="s_logo">S Logo</option>
+									<option value="sound">叫聲</option>
+									<option value="sd_card">SD卡</option>
+									<option value="missile">飛彈</option>
+									<option value="miss_air">飛彈</option>
+									<option value="led_light">LED燈</option>
+								</optgroup>
+								<optgroup label="交通工具">
+									<option value="transportation">交通工具</option>
+								</optgroup>
 							</select>
 				</td>
 			</tr>
