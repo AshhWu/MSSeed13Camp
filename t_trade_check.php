@@ -20,20 +20,22 @@ session_start();
 <?php $team = $_SESSION['t_team']; ?>
 <?php $id = $_GET['id']; ?>
 <?php $team2 = $_GET['teamb']; ?>
-<?php $lego = getAllCubeNum($team); ?>
-<?php $lego2 = getAllCubeNum($team2); ?>
 <?php $trade = getTradeRequestById($id); ?>
+<?php $sender = $id[1]; ?>
+<?php $receiver = $id[2]; ?>
+<?php $lego = getAllCubeNum($sender); ?>
+<?php $lego2 = getAllCubeNum($receiver); ?>
 
 <h5 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h5>
-<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">交易細節</div>
+<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">和<?php echo $team2;?>組的交易細節</div>
 
 <table id="trade_table" class="w3-table w3-sand">
 <tr>
-	<th class="w3-tag"><?php echo $trade[1];?>組</th>
+	<th class="w3-tag"><?php echo $sender;?>組</th>
 	<th>給出</th>
 	<th>|</th>
 	<th>給出</th>
-	<th class="w3-tag"><?php echo $trade[2];?>組</th>
+	<th class="w3-tag"><?php echo $receiver;?>組</th>
 </tr>	
 <tr>
 	<th><div class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div></th>
