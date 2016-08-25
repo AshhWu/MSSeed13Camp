@@ -308,22 +308,22 @@ var app = angular.module('app', []);
          .then(function(data){
             for(var index in data)
             {
-              var team = data[index];
-              console.log(team);
-              console.log(team['team']);
-              console.log($scope.teamInfo[team['team']].picture);
-              if(team.location != 'null')
+              var perTeam = data[index];
+              console.log(perTeam);
+              console.log(perTeam['team']);
+              console.log($scope.teamInfo[perTeam['team']]);
+              if(perTeam['location'] != 'null')
               {
-                if($scope.markers[team['team']] == undefined)
+                if($scope.markers[perTeam['team']] == undefined)
                 {
                     console.log('Create new marker');
-                    $scope.markers[team['team']] = new MarkerWithLabel({
-                        position: new google.maps.LatLng(team.gpsX, team.gpsY),
+                    $scope.markers[perTeam['team']] = new MarkerWithLabel({
+                        position: new google.maps.LatLng(perTeam.gpsX, perTeam.gpsY),
                         draggable: true,
                         raiseOnDrag: true,
                         map: map,
-                        icon: $scope.teamInfo[team['team']].picture,
-                        labelContent: $scope.teamInfo[team['team']].team,
+                        icon: $scope.teamInfo[perTeam['team']].picture,
+                        labelContent: $scope.teamInfo[perTeam['team']].team,
                         labelAnchor: new google.maps.Point(22, 0),
                         labelClass: "labels", // the CSS class for the label
                         labelStyle: {opacity: 0.8}

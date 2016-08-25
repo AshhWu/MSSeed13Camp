@@ -1,7 +1,7 @@
 <?php
 include_once 'DBConnect.php';
 
-$sql = "SELECT team, gpsX, gpsY FROM taipeiRun";
+$sql = "SELECT team, location, gpsX, gpsY FROM taipeiRun";
 $result = $conn->query($sql) or die($conn->error.__LINE__);
 
 $arr = array();
