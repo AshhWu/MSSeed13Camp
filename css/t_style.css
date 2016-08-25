@@ -115,6 +115,7 @@
 	margin-right: 5px;
 	position: relative;
 	top: 8px;
+	width: 100px;
 }
 
 .tab-pane .w3-tag {
@@ -122,7 +123,7 @@
 	height: 35px;
 	width: 35px;
 	text-align: center;
-	margin-right: 3px;
+	margin-right: 2px;
 }
 
 .tab-pane .w3-tag p {
