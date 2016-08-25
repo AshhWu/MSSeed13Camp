@@ -395,7 +395,7 @@ session_start();
     <hr/>
         
 <h1>SQL</h1>
-    <form action="usesqlcode.php" method="post">
+    <form action="TaipeiRun/t_usesqlcode.php" method="post">
 		<table border="1">
 			<tr>
 				<td>SQL: </td>
