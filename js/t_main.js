@@ -209,23 +209,19 @@ function wait_init(wait){
 	document.getElementById("wait_ul").innerHTML = tmp_str;
 }
 
-function trade_agree(trade){
+function trade_agree(lego, trade){
 	alert("agree!");
 	var i, tmp_str;
 	var team_s = trade[1];
 	var team_r = trade[2];
 
-	tmp_str = "t_updateAllCube.php?team=" + team_r + "&c1=0";
+	tmp_str = "TaipeiRun/t_tradeComplete.php?teama=" + team_r;
 	for (i = 4; i <= 7; i++){
-		tmp_str += "&c" + (i-2).toString() + "=" + trade[i].toString();
+		tmp_str += "&c" + (i-2).toString() + "=" + (lego[i-4] - trade[i]).toString();
 	}
-	window.location =  tmp_str;
-
-	tmp_str = "t_updateAllCube.php?team=" + team_s + "&c1=0";
+	tmp_str += "&teamb=" + team_s;
 	for (i = 9; i <= 12; i++){
-		tmp_str += "&c" + (i-7).toString() + "=" + trade[i].toString();
+		tmp_str += "&fc" + (i-7).toString() + "=" + (lego[i-5] - trade[i]).toString();
 	}
 	window.location =  tmp_str;
-
-	//window.location = 't_lego_list.php';
 }
