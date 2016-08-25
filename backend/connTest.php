@@ -24,5 +24,8 @@
     }
 
     echo "Success: A proper connection to MySQL was made!" ;
+    echo "<p>".$connectstr_dbhost."<\p>";
+    echo "<p>".$connectstr_dbusername."<\p>";
+    echo "<p>".$connectstr_dbpassword."<\p>";
 
 ?>
