@@ -26,10 +26,10 @@ session_start();
 <div class="middle_part w3-container w3-section">
 	<h5 class="w3-brown w3-padding">樂高</h5>
 	<section class="section2 w3-container">
-		<div id="lego2" class="w3-tag w3-red"><p><?php echo $all_lego[0][2];?></p></div>
-		<div id="lego3" class="w3-tag w3-green"><p><?php echo $all_lego[0][3];?></p></div>
-		<div id="lego4" class="w3-tag w3-yellow"><p><?php echo $all_lego[0][4];?></p></div>
-		<div id="lego5" class="w3-tag w3-blue"><p><?php echo $all_lego[0][5];?></p></div>
+		<div id="lego2" class="w3-tag w3-red"><p><?php echo $all_lego[$team-1][2];?></p></div>
+		<div id="lego3" class="w3-tag w3-green"><p><?php echo $all_lego[$team-1][3];?></p></div>
+		<div id="lego4" class="w3-tag w3-yellow"><p><?php echo $all_lego[$team-1][4];?></p></div>
+		<div id="lego5" class="w3-tag w3-blue"><p><?php echo $all_lego[$team-1][5];?></p></div>
 	</section>
 </div>
 
