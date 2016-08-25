@@ -16,7 +16,7 @@
 function connect()
 {
 	// DB connection info
-	/*$host = "ap-cdbr-azure-east-c.cloudapp.net";
+	$host = "ap-cdbr-azure-east-c.cloudapp.net";
 	$user = "b37f8ddf38d21d";
 	$pwd = "1e72c81e";
 	$db = "stronghold";
@@ -28,32 +28,7 @@ function connect()
 	catch(Exception $e){
 		die(print_r($e));
 	}
-	return $conn;*/
-	$connectstr_dbhost = '';
-    $connectstr_dbname = 'msseed13';
-    $connectstr_dbusername = '';
-    $connectstr_dbpassword = '';
-    
-    foreach ($_SERVER as $key => $value) {
-        if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
-            continue;
-        }
-        
-        $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
-        $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
-        $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
-    }
-    
-    try{
-        $conn = new PDO( "mysql:host=$connectstr_dbhost;dbname=$connectstr_dbname", $connectstr_dbusername, $connectstr_dbpassword);
-        $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-
-    }
-    catch(Exception $e){
-        die(print_r($e));
-    }
-
-    return $conn;
+	return $conn;
 }
 
 function getAllItems()
@@ -135,26 +110,10 @@ function getAllDay()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
-function getAllRead()
-{
-	$conn = connect();
-	$sql = "SELECT * FROM newmessage";
-	$stmt = $conn->query($sql);
-	return $stmt->fetchAll(PDO::FETCH_NUM);
-}
-
 function searchMission($code)
 {
 	$conn = connect();
 	$sql = "SELECT * FROM mission WHERE code='".$code."'";
-	$stmt = $conn->query($sql);
-	return $stmt->fetchAll(PDO::FETCH_NUM);
-}
-
-function searchStronghold($code)
-{
-	$conn = connect();
-	$sql = "SELECT * FROM stronghold WHERE mission='".$code."'";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
@@ -709,14 +668,6 @@ function prepareAccounts()
 
 }
 
-function getUserInfo($id)
-{
-	$conn = connect();
-	$sql = "SELECT * FROM users WHERE p_id='".$id."'";
-	$stmt = $conn->query($sql);
-	return $stmt->fetchAll(PDO::FETCH_NUM);
-}
-
 function occupyStronghold($team, $code, $record)
 {
 	$conn = connect();
@@ -781,6 +732,18 @@ function addMessage($time, $client, $content, $color)
 {
 	$conn = connect();
 	$sql = "INSERT INTO message (time, client, content, color) VALUES (?, ?, ?, ?)";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $time);
+	$stmt->bindValue(2, $client);
+	$stmt->bindValue(3, $content);
+	$stmt->bindValue(4, $color);
+	$stmt->execute();
+}
+
+function addGMMessage($time, $client, $content, $color)
+{
+	$conn = connect();
+	$sql = "INSERT INTO gmmessage (time, client, content, color) VALUES (?, ?, ?, ?)";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $time);
 	$stmt->bindValue(2, $client);
