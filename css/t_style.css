@@ -119,15 +119,15 @@
 
 .tab-pane .w3-tag {
 	display: inline-block;
-	height: 40px;
-	width: 40px;
+	height: 35px;
+	width: 35px;
 	text-align: center;
 	margin-right: 3px;
 }
 
 .tab-pane .w3-tag p {
 	position: relative;
-	top: 10px;
+	top: 8px;
 }
 
 .tab-pane ul .w3-card {
