@@ -147,6 +147,7 @@
 .tab-pane ul .w3-card p {
 	position: relative;
 	top: 5px;
+	width: 150px;
 }
 
 /* lego_trade */
