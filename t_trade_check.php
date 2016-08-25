@@ -18,6 +18,7 @@ session_start();
 <?php include "backend/navbar/nav.php"; ?>
 <?php include "t_getitems.php"; ?>
 <?php $team = $_SESSION['t_team']; ?>
+<?php $country = $_SESSION['country'] ;?>
 <?php $id = $_GET['id']; ?>
 <?php $team2 = $_GET['teamb']; ?>
 <?php $trade = getTradeRequestById($id); ?>
@@ -26,7 +27,7 @@ session_start();
 <?php $lego = getAllCubeNum($sender); ?>
 <?php $lego2 = getAllCubeNum($receiver); ?>
 
-<h5 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h5>
+<h5 id="team_label" class="w3-indigo w3-padding"><?php echo $country;?></h5>
 <div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">和第<?php echo $team2;?>組的交易細節</div>
 
 <table id="trade_table" class="w3-table w3-sand">
