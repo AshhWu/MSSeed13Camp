@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  
+  <title>Center</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Important Owl stylesheet -->
+  <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
+ 
+  <!-- Default Theme -->
+  <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
+
+  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHZc-_tEA40YGT3q4f9vkB-IM0khoyyBk"
+  type="text/javascript"></script>-->
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
+
+  <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+  <body >
+
+  <div class="init-animation">
+    <p>Microsoft Seed 13th Camp</p>
+    <p>台北行<span>_</span></p> 
+  </div>
+
+  <nav class="navbar title navbar-fixed-top">
+    <div class="container">
+      <h1 class="col-xs-8 col-xs-offset-2">Microsoft Seed 13th Camp</h1>
+      <h4 class="col-xs-1"><a href="map.html">Map</a></h4>
+      <h4 class="col-xs-1"><a href="#" class="active">Tables</a></h4>
+    </div>
+  </nav>
+
+  <div class="row">
+    <table class="col-xs-4 col-xs-offset-1 table table-inverse" ng-controller="cubeController">
+        <thead>
+            <tr>
+                <th scope="row">Team</th>
+                <tr>Red Cube</tr>
+                <tr>Green Cube</tr>
+                <tr>Yellow Cube</tr>
+                <tr>Blue Cube</tr>
+                <tr>Mission</tr>
+            </tr>
+        </thead>
+        <tbody>          
+            <tr ng-repeat = "cube in cubes">
+                <th scope="row">{{ cube.Team }}</th>
+                <td>{{ cube.cube1 }}</td>
+                <td>{{ cube.cube2 }}</td>
+                <td>{{ cube.cube3 }}</td>
+                <td>{{ cube.cube4 }}</td>
+                <td>{{ cube.mission }}</td>
+            </tr>
+        </tbody>            
+    </table>
+
+    <div class="col-xs-5">
+        <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+        </canvas>
+    </div>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Include js plugin -->
+  <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.js"></script>
+  <script type="text/javascript" src="vendor/angular.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
+
+  
+  <script type="text/javascript" src="scripts/app.js"></script>
+  <script type="text/javascript" src="scripts/Controller/barController.js"></script>
+  <script type="text/javascript" src="scripts/Controller/cubeController.js"></script>
+  <script type="text/javascript" src="scripts/Controller/locationController.js"></script>
+  <script type="text/javascript" src="scripts/Controller/pictureController.js"></script>
+
+  <script type="text/javascript" src="scripts/Service/cubeService.js"></script>
+  <script type="text/javascript" src="scripts/Service/flagService.js"></script>
+  <script type="text/javascript" src="scripts/Service/picService.js"></script>
+  <script type="text/javascript" src="scripts/markerwithlabel.js"></script>
+
+  <script type="text/javascript" src="scripts/carouselFix.js"></script>
+  <script>
+  //$("#owl-example").owlCarousel({autoPlay : 5000});
+
+  setTimeout(
+  function() 
+  {
+    $(".init-animation").fadeOut(5000);
+  }, 6000);
+</script>
+
+</script>
+</body>
+</html>

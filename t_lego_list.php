@@ -43,26 +43,89 @@ session_start();
 		<div id="lego_list" class="tab-pane fade in active w3-container w3-section w3-padding">
 			<h4 class="w3-card w3-pink w3-padding">點組別按鈕請求交易</h4>
 			<ul id="lego_list" class="w3-ul">
-				<li class="w3-container">
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=1">第1組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[0][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[0][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[0][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[0][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
 					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=2">第2組</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[1][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[1][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[1][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[1][5];?></p></div>
 				</li>
-				<li class="w3-container">
+				<li class="team_li w3-container">
 					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=3">第3組</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[2][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[2][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[2][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[2][5];?></p></div>
 				</li>
-				<li class="w3-container">
+				<li class="team_li w3-container">
 					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=4">第4組</a>
 					<div class="w3-tag w3-red"><p><?php echo $all_lego[3][2];?></p></div>
 					<div class="w3-tag w3-green"><p><?php echo $all_lego[3][3];?></p></div>
 					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[3][4];?></p></div>
 					<div class="w3-tag w3-blue"><p><?php echo $all_lego[3][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=5">第5組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[4][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[4][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[4][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[4][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=6">第6組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[5][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[5][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[5][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[5][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=7">第7組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[6][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[6][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[6][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[6][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=8">第8組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[7][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[7][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[7][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[7][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=9">第9組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[8][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[8][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[8][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[8][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=10">第10組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[9][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[9][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[9][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[9][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=11">第11組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[10][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[10][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[10][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[10][5];?></p></div>
+				</li>
+				<li class="team_li w3-container">
+					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=12">第12組</a>
+					<div class="w3-tag w3-red"><p><?php echo $all_lego[11][2];?></p></div>
+					<div class="w3-tag w3-green"><p><?php echo $all_lego[11][3];?></p></div>
+					<div class="w3-tag w3-yellow"><p><?php echo $all_lego[11][4];?></p></div>
+					<div class="w3-tag w3-blue"><p><?php echo $all_lego[11][5];?></p></div>
 				</li>
 			</ul>
 		</div>
@@ -79,6 +142,10 @@ session_start();
 	</div>
 </div>
 
+<div id="team" style="display:none"><?php echo $team;?></div>
+<script type="text/javascript">
+	document.getElementsByClassName("team_li")[parseInt(document.getElementById("team").innerText) - 1].style.display = "none";
+</script>
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
