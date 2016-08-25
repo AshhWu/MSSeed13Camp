@@ -2,7 +2,6 @@ var main = function(){
 	// Compose Transportation
 	$.post("backend/stronghold/getTime.php")
 	.done(function( result ) {
-		alert(result);
 		var buttons = document.getElementsByClassName("btn-transport");
 		if (result == "true") { 
 			for (var i = 0; i < buttons.length; ++i) {
