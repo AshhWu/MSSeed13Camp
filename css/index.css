@@ -62,15 +62,15 @@ body {
 	font-size: 20px;
 }
 #en-name-sm {
-	top: 64.5%;
+	top: 64.3%;
 	left: 78%;
 }
 #country-sm {
-	top: 72.5%;
+	top: 72.3%;
 	left: 78%;
 }
 #room-sm {
-	top: 80.5%;
+	top: 80.3%;
 	left: 78%;
 }
 #ID-sm {
@@ -112,12 +112,15 @@ body {
 }
 
 .large-info {
-	letter-spacing: 0.5px;
+	letter-spacing: 0px;
 	font-size: 10px;
 }
 .small-info {
-	letter-spacing: 1px;
+	letter-spacing: 0px;
 	font-size: 8px;
+}
+#country-lg {
+	font-size: 9px;
 }
 
 /* Mission */
