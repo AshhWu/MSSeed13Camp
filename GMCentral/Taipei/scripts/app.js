@@ -1,3 +1,1 @@
-'use strict';
-
-angular.module('myApp', ["chart.js"]);
+angular.module('app', ["chart.js"]);

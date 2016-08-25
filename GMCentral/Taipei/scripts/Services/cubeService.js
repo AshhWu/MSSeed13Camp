@@ -1,4 +1,4 @@
-angular.module('myApp', ["chart.js"])
+angular.module('app', ["chart.js"])
 	.service('cubeService', ["$http", function($http){
 		var teamInfo = [
 						{

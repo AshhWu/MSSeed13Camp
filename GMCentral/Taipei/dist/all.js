@@ -1,6 +1,4 @@
-'use strict';
-
-angular.module('myApp', ["chart.js"]);
+angular.module('app', ["chart.js"]);
 angular.module('myApp')
 .directive("owlCarousel", function() {
     return {
@@ -581,7 +579,7 @@ MarkerWithLabel.prototype.setMap = function (theMap) {
   this.label.setMap(theMap);
 };
 
-angular.module("myApp", ["chart.js"]).
+angular.module("app", ["chart.js"]).
 	controller("BarCtrl", function ($scope) {
   		$scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
   		$scope.series = ['Series A', 'Series B'];
@@ -591,7 +589,7 @@ angular.module("myApp", ["chart.js"]).
   		  [28, 48, 40, 19, 86, 27, 90]
   		];
 });
-angular.module('myApp', ["chart.js"])
+angular.module('app', ["chart.js"])
 	.controller('cubeController', ['$scope', 'cubeService', '$interval', function($scope, cubeService, $interval){
 
 		function getCube() {
@@ -606,7 +604,7 @@ angular.module('myApp', ["chart.js"])
 
         $interval(getCube, 2000);
 }]);
-angular.module('myApp', ["chart.js"])
+angular.module('app', ["chart.js"])
 	.controller('locationController', ['$scope', '$interval', 'flagService', function($scope, $interval, flagService){
       $scope.markers = [];
       
@@ -661,7 +659,7 @@ angular.module('myApp', ["chart.js"])
       }
 
 	}]);
- angular.module('myApp', ["chart.js"])
+ angular.module('app', ["chart.js"])
 	.controller('picController', ['$scope', 'picService', '$interval', function($scope, picService, $interval){
      	$scope.pics = picService.getPics();
 
@@ -675,7 +673,7 @@ angular.module('myApp', ["chart.js"])
      	$interval(updatePics, 2000);
 
 	}]);
-angular.module('myApp', ["chart.js"])
+angular.module('app', ["chart.js"])
 	.service('cubeService', ["$http", function($http){
 		var teamInfo = [
 						{
@@ -727,7 +725,7 @@ angular.module('myApp', ["chart.js"])
         	return $http.get("scripts/CURD/getCube.php");
         };
     }]);
-angular.module('myApp')
+angular.module('app')
   .service('flagService', ["$http", function($http){
 		var teamInfo = [
 						        {
@@ -816,7 +814,7 @@ angular.module('myApp')
   //           });
   //       };
 	}]);
-angular.module('myApp')
+angular.module('app')
 	.service('picService',function(){
 		var Pics = [
 					{

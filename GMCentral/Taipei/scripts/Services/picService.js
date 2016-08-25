@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('app')
 	.service('picService',function(){
 		var Pics = [
 					{

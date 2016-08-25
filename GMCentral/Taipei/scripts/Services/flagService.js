@@ -1,4 +1,4 @@
-angular.module('myApp')
+angular.module('app')
   .service('flagService', ["$http", function($http){
 		var teamInfo = [
 						        {
