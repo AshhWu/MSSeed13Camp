@@ -39,29 +39,29 @@ session_start();
 	<th><div class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div></th>
 	<th><p><?php echo $trade[4];?></p></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-red"><p><?php echo $lego2[1];?></p></div></th>
 	<th><p><?php echo $trade[9];?></p></th>
+	<th><div class="w3-tag w3-red"><p><?php echo $lego2[1];?></p></div></th>
 </tr>
 <tr>
 	<th><div class="w3-tag w3-green"><p><?php echo $lego[2];?></p></div></th>
 	<th><p><?php echo $trade[5];?></p></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-green"><p><?php echo $lego2[2];?></p></div></th>
 	<th><p><?php echo $trade[10];?></p></th>
+	<th><div class="w3-tag w3-green"><p><?php echo $lego2[2];?></p></div></th>
 </tr>
 <tr>
 	<th><div class="w3-tag w3-yellow"><p><?php echo $lego[3];?></p></div></th>
 	<th><p><?php echo $trade[6];?></p></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-yellow"><p><?php echo $lego2[3];?></p></div></th>
 	<th><p><?php echo $trade[11];?></p></th>
+	<th><div class="w3-tag w3-yellow"><p><?php echo $lego2[3];?></p></div></th>
 </tr>
 <tr>
 	<th><div class="w3-tag w3-blue"><p><?php echo $lego[4];?></p></div></th>
 	<th><p><?php echo $trade[7];?></p></th>
 	<th>|</th>
-	<th><div class="w3-tag w3-blue"><p><?php echo $lego2[4];?></p></div></th>
 	<th><p><?php echo $trade[12];?></p></th>
+	<th><div class="w3-tag w3-blue"><p><?php echo $lego2[4];?></p></div></th>
 </tr>
 </table>
 
