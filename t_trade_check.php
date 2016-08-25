@@ -66,7 +66,7 @@ session_start();
 </table>
 
 <div id="trade_btn" class="w3-container w3-section w3-padding-large">
-<button class="w3-btn w3-padding w3-teal w3-round" onclick="trade_agree(<?php echo $id;?>)">同意</button><br><br>
+<button class="w3-btn w3-padding w3-teal w3-round" onclick="trade_agree(<?php echo '['; foreach($trade as $value){echo $value . ',';} echo '-1]';?>)">同意</button><br><br>
 <a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">拒絕</a>
 </div>
 
