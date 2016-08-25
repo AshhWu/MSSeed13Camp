@@ -634,6 +634,7 @@ window.onload=function(){
 		
 		echo "</table>";
 	}
+	echo "New message";
 	$items = getRead();
 	if(!empty($items))
 	{
