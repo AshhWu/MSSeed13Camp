@@ -1,4 +1,4 @@
-angular.module('app', ["chart.js"]);
+var app = angular.module('app', ["chart.js"]);
 angular.module('app', ["chart.js"])
 .directive("owlCarousel", function() {
     return {
