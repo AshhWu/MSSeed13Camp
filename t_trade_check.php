@@ -26,12 +26,12 @@ session_start();
 <?php $lego = getAllCubeNum($sender); ?>
 <?php $lego2 = getAllCubeNum($receiver); ?>
 
-<h5 id="team_label" class="w3-indigo w3-padding">我是第<h4 id="team"><?php echo $team;?></h4>組</h5>
+<h5 id="team_label" class="w3-indigo w3-padding">我是第<?php echo $team;?>組</h5>
 <div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown">和第<?php echo $team2;?>組的交易細節</div>
 
 <table id="trade_table" class="w3-table w3-sand">
 <tr>
-	<th class="w3-tag"><h4 id="sender"><?php echo $sender;?></h4>組</th>
+	<th class="w3-tag"><?php echo $sender;?>組</th>
 	<th>給出</th>
 	<th>|</th>
 	<th>給出</th>
@@ -72,10 +72,13 @@ session_start();
 <a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">拒絕</a>
 </div>
 
-<!-- <script type="text/javascript">
+<div id="team" style="display:none"><?php echo $team;?></div>
+<div id="sender" style="display:none"><?php echo $sender;?></div>
+
+<script type="text/javascript">
 	if (document.getElementById("team").innerText == document.getElementById("sender").innerText)
 		document.getElementById("trade_btn").innerHTML = '<a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">退出</a>';
-</script> -->
+</script>
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
