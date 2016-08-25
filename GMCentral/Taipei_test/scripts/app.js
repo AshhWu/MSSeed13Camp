@@ -10,7 +10,7 @@ app.controller('BarCtrl', ['$scope', function ($scope) {
   		];
 	}])
 
-	.controller('cubeController', ['$scope', '$interval', function($scope, $interval){
+	.controller('cubeController', ['$scope','$http', '$interval', function($scope, $http, $interval){
       $scope.teamInfo = [
             {
                           team: "NULL"
@@ -64,7 +64,7 @@ app.controller('BarCtrl', ['$scope', function ($scope) {
 
         $interval(getCube, 2000);
 }])
-	.controller('locationController', ['$scope', '$interval', function($scope, $interval){
+	.controller('locationController', ['$scope','$http', '$interval', function($scope, $http, $interval){
       $scope.markers = [];
       
       var latLng = new google.maps.LatLng(25.054056, 121.539021);
@@ -171,7 +171,7 @@ app.controller('BarCtrl', ['$scope', function ($scope) {
       }
 
 	}])
-	.controller('picController', ['$scope', 'picService', '$interval', function($scope, picService, $interval){
+	.controller('picController', ['$scope', '$interval', function($scope, $interval){
      	$scope.pics = Pics = [
           {
                       team: "NULL",
