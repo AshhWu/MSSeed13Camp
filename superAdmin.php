@@ -635,27 +635,6 @@ window.onload=function(){
 		echo "</table>";
 	}
 ?>
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
-	$items = getRead();
-	if(!empty($items))
-	{
-		echo "<table border='1'>
-				<tr>
-					<th>Unread:</th>
-				</tr>";
-		foreach($items as $item)
-		{
-			echo "<tr>
-						<td>".$item[0 ]."</td>";
-			echo "</tr>";
-		}
-		
-		echo "</table>";
-	}
-?>
           </div>
         </div>
       </div>
