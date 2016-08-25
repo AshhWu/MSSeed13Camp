@@ -634,16 +634,14 @@ window.onload=function(){
 		
 		echo "</table>";
 	}
-	echo "New message";
-	/*
-	$items = getRead();
-	if(!empty($items))
+	echo "New message<br>";
+	$items2 = getRead();
+	if(!empty($items2))
 	{
 		echo "<table border='1'>
 				<tr><th>Unread:</th></tr>
-				<tr><td>".$items[0][0]."</td></tr>
+				<tr><td>".$items2[0][0]."</td></tr>
 			  </table>";
-	}*/
 ?>
 
           </div>
