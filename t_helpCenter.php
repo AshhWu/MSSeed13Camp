@@ -29,7 +29,7 @@ session_start();
 	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_message(<?php echo $team;?>)">送出</button>
 </div>
 
-<h5 class="w3-orange w3-padding" style="width:320px;margin:auto;">小提醒:越靠上方的訊息越新,想看新回覆請手動刷新頁面.</h5>
+<h5 class="w3-card-2 w3-orange w3-padding" style="width:320px;margin:auto;">小提醒: 越靠頁面上方的訊息越新, 如想看新回覆請手動刷新頁面.</h5>
 
 <div id="chat_board" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; margin:auto;"></div>
 
