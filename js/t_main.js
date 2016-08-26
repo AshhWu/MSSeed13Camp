@@ -265,3 +265,7 @@ function send_message(team){
 	window.location = 'TaipeiRun/t_addHelpMsg.php?team=' + team + '&content=' + message;
 }
 
+function send_messageGM(team){
+	var message = document.getElementsByTagName("input")[team-1].value;
+	window.location = 'TaipeiRun/t_addHelpMsgGM.php?team=' + team + '&content=' + message;
+}
