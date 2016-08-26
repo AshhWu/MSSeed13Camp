@@ -65,12 +65,10 @@
 
         <div id="my-carousel">
           <data-owl-carousel class="owl-carousel">
-            <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
-            </canvas>
-          </data-owl-carousel>
-          <data-owl-carousel class="owl-carousel">
-            <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
-            </canvas>
+            <div owl-carousel-item="" ng-repeat="Data in allData" class="item">
+              <canvas id="bar" class="chart chart-bar" chart-data="{{Data.data}}" chart-labels="labels" chart-series="series">
+              </canvas>
+            </div>
           </data-owl-carousel>
         </div>
     </div>
