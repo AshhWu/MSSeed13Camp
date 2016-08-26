@@ -23,8 +23,8 @@
 				<section id="banner">
 					<div class="inner">
 						<header>
-							<h1>MS 13</h1>
-							<p>各組材料表<br /></p>
+							<h1>Microsoft Seed 13th Camp</h1>
+							<p>據點戰戰況<br /></p>
 						</header>
 					</div>
                     <div id="Response"/>
@@ -71,8 +71,8 @@
                                     <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
                                 </div>
 	                            <div class="inner">
-									<h3>團隊加權總分</h3>
-									<p>以獲取資源作為加權所得的所有分數</p>
+									<h3>團隊資源豐富程度</h3>
+									<p>以獲取資源作為加權所得的分數</p>
                                 </div>
 							</div>                            
 							<div class="mediumbox">
@@ -100,7 +100,7 @@
                                 </div>
 	                            <div class="inner">
 									<h3>佔有要塞數量</h3>
-									<p>該隊在地圖上佔據了幾個點</p>
+									<p>該隊在地圖上佔據了幾個據點</p>
                                 </div>
 							</div>
 
@@ -258,13 +258,14 @@
             <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
             <script src="https://www.amcharts.com/lib/3/themes/black.js"></script>
             
-            <script>jssor_0_slider_init();</script>
-            <script>jssor_1_slider_init();</script>
-            <script>jssor_2_slider_init();</script>
+
             <script>
                 renew();
                 var myVar = setInterval(renew, 8000);
             </script>
+            <script>jssor_0_slider_init();</script>
+            <script>jssor_1_slider_init();</script>
+            <script>jssor_2_slider_init();</script>
             <!--Time Default Input By this-->
             <script>
                 function updateClock() {
