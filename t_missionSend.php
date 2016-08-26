@@ -68,8 +68,8 @@ session_start();
                                     <img src="data:image/jpeg;base64,'.base64_encode(getMissionReportPic($team)).'" width="250px"/>
                                     <script language="javascript">setTimeout("self.location.reload();",10000);</script>';
                         }else if($mState==2){
-                            echo    '<p><h1><span class="label label-primary" style="color:#53FF53;background-color:white">任務完成</span></h1></p><br>
-                                    <p><a href="t_newMission.php?team='.$team.'" class="btn btn-danger" role="button">獲得新任務</a></p>';
+                            echo    '<p><h1><span class="label label-primary" style="color:#007500;background-color:white">任務完成</span></h1></p><br>
+                                    <p><a href="t_newMission.php?team='.$team.'" class="btn btn-danger" role="button" style="color:#007500">獲得新任務</a></p>';
                         }else if($mState==3){
                             echo    '<p><h1><span class="label label-primary" style="color:#CE0000;background-color:white">任務失敗</span></h1></p><br>
                                     <p><a href="TaipeiRun/t_oldMission.php?team='.$team.'" class="btn btn-danger" role="button">返回任務資訊</a></p>';
