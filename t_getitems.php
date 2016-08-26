@@ -234,11 +234,10 @@ function getReportCount(){
 
 function getTeamMissionState(){
     $conn = connect();
-    $sql = "SELECT state FROM taipeiRun where team<13";
+    $sql = "SELECT mState FROM taipeiRun where team<13";
     $stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items;
-}
 }
 
 ?>
