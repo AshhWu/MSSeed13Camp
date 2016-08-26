@@ -150,9 +150,109 @@ body {
   font-size: 20px;
 }
 
+.table-inverse{
+  background-color: #333;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+
 #bar{
-  margin:15px;
-  margin-top:75px;
-  padding:15px;
+  margin-top:0px;
+  padding-top:15px;
+  padding-right:10px;
   background-color: #FFF;
+}
+
+.chart-style{
+  padding-top:5px;
+  background-color: white;
+  color: #1b7db6;
+  text-align: center;
+}
+
+.upper-chart{
+  margin-top: 35px;
+}
+
+#chart-carousel{
+  margin-top: 50px;
+}
+
+#mission-carousel{
+  margin-top: 5px;
+}
+
+.owl-theme .owl-controls .owl-page.active span {
+    background-color: white;
+    border: 2px solid white;
+}
+
+.owl-theme .owl-controls .owl-page span {
+    background-color: #113;
+    border: 2px solid #113;
+}
+
+.table-background{
+  padding:15px;
+  padding-bottom:0.05px;
+  background-color: white;
+}
+
+.table td,
+.table th{
+  text-align: center;
+  font-size: 14px;
+}
+
+.team-col{
+  background-color:#5bc0de;
+  color:white;
+}
+.red-cube{
+  background-color:#d9534f; 
+  color:white;
+}
+.green-cube{
+  background-color:#5cb85c; 
+  color:white;
+}
+.yellow-cube{
+  background-color:#f0ad4e; 
+  color:white;
+}
+.blue-cube{
+  background-color:#337ab7; 
+  color:white;
+}
+.mission{
+  background-color:#5bc0de; 
+  color:white;
+}
+
+.mission-table{
+  font-size: 16px;
+  color: black;
+  background-color: white;
+}
+
+.mission-table th{
+  font-size: 16px;
+  color: black;
+  vertical-align: middle;
+}
+.table > tbody > tr > th,
+.table > tbody > tr > td{
+    vertical-align: middle;
+}
+
+.mission-table img{
+  max-height: 138px;
+  max-width: 150px;
+  vertical-align: middle;
+}
+
+.mission-table .mission-height{
+  height: 156px;
 }
