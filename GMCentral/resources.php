@@ -193,10 +193,10 @@
                                             <td>
                                                 <select name="client"/>
                                                     <option value="All">All</option>
-                                                    <option value="A">美洲</option>
-                                                    <option value="B">歐洲</option>
-                                                    <option value="C">亞洲</option>
-                                                    <option value="D">非洲</option>                                                    
+                                                    <option value="A">美洲(紅隊)</option>
+                                                    <option value="B">歐洲(黃隊)</option>
+                                                    <option value="C">亞洲(藍隊)</option>
+                                                    <option value="D">非洲(綠隊)</option>                                                    
                                                 </select>
                                             </td>
                                         </tr>

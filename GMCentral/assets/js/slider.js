@@ -17,7 +17,7 @@ chartMaker = function(){
 			}, {
 				"country": "歐洲",
 				"visits": x20[1],
-				"color": "#FF6600"
+				"color": "#FFB11B"
 			}, {
 				"country": "亞洲",
 				"visits": x20[2],
@@ -70,7 +70,7 @@ chartMaker = function(){
 			}, {
 				"country": "歐洲",
 				"visits": x21[1],
-				"color": "#FF6600"
+				"color": "#FFB11B"
 			}, {
 				"country": "亞洲",
 				"visits": x21[2],
@@ -124,7 +124,7 @@ chartMaker = function(){
 			}, {
 				"country": "歐洲",
 				"visits": x22[1],
-				"color": "#FF6600"
+				"color": "#FFB11B"
 			}, {
 				"country": "亞洲",
 				"visits": x22[2],
@@ -182,7 +182,7 @@ chartMaker = function(){
 		}, {
 			"country": "歐洲",
 			"visits": x10[1],
-			"color": "#FF6600"
+			"color": "#FFB11B"
 		}, {
 			"country": "亞洲",
 			"visits": x10[2],
@@ -235,7 +235,7 @@ chartMaker = function(){
 		}, {
 			"country": "歐洲",
 			"value": x10[1],
-			"color": "#FF6600"	
+			"color": "#FFB11B"	
 		}, {
 			"country": "亞洲",
 			"value": x10[2],
@@ -277,7 +277,7 @@ chartMaker = function(){
 		}, {
 			"country": "歐洲",
 			"visits": x00[1],
-			"color": "#FF6600"
+			"color": "#FFB11B"
 		}, {
 			"country": "亞洲",
 			"visits": x00[2],
