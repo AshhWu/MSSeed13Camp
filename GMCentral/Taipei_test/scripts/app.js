@@ -1,6 +1,6 @@
 var app = angular.module('app', ["chart.js"]);
 
-app.controller('barCtrl', ['$scope', function ($scope) {
+app.controller('barController', ['$scope', function ($scope) {
   		$scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
   		$scope.series = ['Series A', 'Series B'];
 
@@ -171,7 +171,7 @@ app.controller('barCtrl', ['$scope', function ($scope) {
 //       }
 
 // 	}])
-	app.controller('picController', ['$scope', '$interval', '$http', function($scope, $interval, $http){
+	.controller('picController', ['$scope', '$interval', '$http', function($scope, $interval, $http){
      	$scope.pics =  [
                     {
                       team: "美國",
