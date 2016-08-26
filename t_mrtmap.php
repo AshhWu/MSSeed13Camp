@@ -22,9 +22,9 @@ session_start();
 <?php $sstation = getPosition($team); ?>
 <?php $lego = getAllCubeNum($team); ?>
 
-<h5 id="team_label" class="w3-padding" style="color:#337ab7"><?php echo $country;?></h5>
+<h3 id="team_label" class="w3-padding" style="color:#337ab7"><?php echo $country;?></h3>
 <div class="middle_part w3-container w3-section w3-card-4">
-	<h5 class="w3-padding" style="color:#337ab7">移動</h5>
+	<h5 style="color:#337ab7">移動</h5>
 	<section class="section1 w3-container">
 	<p id="start"><?php echo $sstation;?></p>
 	<script type="text/javascript">
@@ -43,7 +43,7 @@ session_start();
 </div>
 
 <div class="middle_part w3-container w3-section w3-card-4">
-	<h5 class="w3-padding" style="color:#337ab7">樂高</h5>
+	<h5 style="color:#337ab7">樂高</h5>
 	<section class="section2 w3-container">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo $lego[2];?></p></div>
