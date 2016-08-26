@@ -41,6 +41,8 @@
 .middle_part .section2 {
 	display: inline-block;
 	width: 80%;
+	position: relative;
+	top: 10px;
 }
 
 .middle_part .w3-tag {
@@ -50,6 +52,7 @@
 	text-align: center;
 	position: relative;
 	bottom: 15px;
+	margin-right: 5px;
 }
 
 .middle_part .w3-tag p {
