@@ -23,10 +23,10 @@ session_start();
 
 <div class="container">
     <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#chat1">| America / Canada / Brazil |</a></li>
-        <li><a data-toggle="tab" href="#chat2">| Italy / Germany / England |</a></li>
-        <li><a data-toggle="tab" href="#chat3">| Taiwan / Japan / Thailand |</a></li>
-        <li><a data-toggle="tab" href="#chat4">| SouthAfrica / Madagascar / Egypt |</a></li>
+        <li class="active"><a data-toggle="tab" href="#chat1" style="color:red">America / Canada / Brazil</a></li>
+        <li><a data-toggle="tab" href="#chat2" style="color:orange">Italy / Germany / England</a></li>
+        <li><a data-toggle="tab" href="#chat3" style="color:green">Taiwan / Japan / Thailand</a></li>
+        <li><a data-toggle="tab" href="#chat4" style="color:blue">SouthAfrica / Madagascar / Egypt</a></li>
     </ul>
 
     <div class="tab-content">
@@ -48,15 +48,15 @@ session_start();
                 <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
 
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
             	給America的訊息:<br> <input type="text" name="message">
             	<button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Canada的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Brazil的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
@@ -79,15 +79,15 @@ session_start();
                 <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
 
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Italy的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Germany的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給England的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
@@ -110,15 +110,15 @@ session_start();
                 <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
 
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Taiwan的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Japan的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Thailand的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
@@ -141,15 +141,15 @@ session_start();
                 <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
 
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給SouthAfrica的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Madagascar的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
-            <div class="w3-container w3-section w3-card-2" style="width: 320px; display:inline-block; margin-left:30px;">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Egypt的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
