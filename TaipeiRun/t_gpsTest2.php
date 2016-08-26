@@ -1,3 +1,19 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @mnbvy
+ Watch 5
+  Star 0
+  Fork 1 AshhWu/MSSeed13Camp
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathMSSeed13Camp/TaipeiRun/t_gpsTest2.php
+c403b9a  just now
+@mnbvy mnbvy Update t_gpsTest2.php
+1 contributor
+RawBlameHistory     55 lines (54 sloc)  1.63 KB
 <!DOCTYPE html>
 <meta charset=utf-8>
 <head>
@@ -19,10 +35,11 @@
         }
     else {alert("此瀏覽器不支援地理定位功能!");}
     function successCallback(position) {
-      $lat=parseFloat(position.coords.latitude).toString();
-      $lon=parseFloat(position.coords.longitude).toString();
-      alert($lat);
-      //document.location.href="t_updateGPS.php?lat=".$lat."&lon=".$lon;
+      $lat1=parseFloat(position.coords.latitude).toString();
+      $lon1=parseFloat(position.coords.longitude).toString();
+      $lat = $lat1.replace(/[.]/, "_");
+      $lon = $lon1.replace(/[.]/, "_");
+      document.location.href="t_updateGPS.php?lat="+$lat+"&lon="+$lon;
     }
     function errorCallback(error) {
       var errorTypes={
@@ -52,3 +69,5 @@
     </tbody>
   </table>
 </body>
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
