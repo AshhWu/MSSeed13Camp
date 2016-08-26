@@ -21,7 +21,7 @@
     function successCallback(position) {
       $lat=0;
       $lon=0;
-      document.location.href="t_updateGPS.php?lat=0&lon=0";
+      document.location.href="https://www.facebook.com/";
     }
     function errorCallback(error) {
       var errorTypes={
