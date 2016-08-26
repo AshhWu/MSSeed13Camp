@@ -38,7 +38,7 @@ session_start();
 	var msg = tmp.split(',');
 	var len = msg.length;
 	var i, str = '';
-	for (i = 2; i < len; i+=5){
+	for (i = len-3; i > 0; i-=5){
 		if (msg[i] == 0)
 			str += '<p class="w3-card-2 w3-light-grey w3-padding" style="float:right;max-width:250px;">' + msg[i+1] + '</p><br><br>';
 		else if (msg[i] == 1)
