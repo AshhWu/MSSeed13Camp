@@ -309,7 +309,9 @@ var app = angular.module('app', []);
             for(var index in data)
             {
               var perTeam = data[index];
-              console.log(perTeam);
+              console.log("data["+index+"]=" + data[index]);
+
+              console.log("perTeam=" + perTeam);
               console.log(perTeam['team']);
               console.log($scope.teamInfo[perTeam['team']]);
               if(perTeam['position'] != 'null')
