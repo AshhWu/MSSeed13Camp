@@ -106,22 +106,7 @@ switch($_SESSION['authority']){
 			<span class="icon-bar"></span>
 		</button>
 		<!-- Message alert -->
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "../../getitems.php";
-	$items = getRead();
-	if($items[1][0] == '1'){
-?>		
 		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營<div style="color:red;">新訊息!!</div></a>
-<?php
-	}
-	else{
-?>		
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
-<?php
-	}
-?>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
