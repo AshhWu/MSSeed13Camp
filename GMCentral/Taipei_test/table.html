@@ -34,7 +34,7 @@
       <h4 class="col-xs-1"><a href="#" class="active">Tables</a></h4>
     </div>
   </nav>
-  <div class="container">
+  <div class="container-fuild">
   <div class="row">
     <!-- <table class="col-xs-4 col-xs-offset-1 table table-inverse" >
         <thead>
@@ -59,14 +59,13 @@
         </tbody>            
     </table> -->
 
-    <div class="col-xs-5" ng-controller="barController">
+    <div class="col-xs-8" ng-controller="barController">
         <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
         </canvas>
-
         <div id="my-carousel">
           <data-owl-carousel class="owl-carousel">
             <div owl-carousel-item="" ng-repeat="Data in allData" class="item">
-              <canvas id="bar" class="chart chart-bar" chart-data="{{Data.data}}" chart-labels="labels" chart-series="series">
+              <canvas id="bar" class="chart chart-bar" chart-data={{Data.data}} chart-labels="labels" chart-series="series">
               </canvas>
             </div>
           </data-owl-carousel>
