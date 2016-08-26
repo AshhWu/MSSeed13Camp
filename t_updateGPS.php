@@ -1,4 +1,6 @@
 <?php
+    include_once '../backend/taskmodel.php';
+
     $conn = connect();
     $sql = "UPDATE taipeiRun SET gpsX=".$lat.", gpsY=".$lon." where team=2";
     $stmt = $conn->prepare($sql);
