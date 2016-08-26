@@ -186,7 +186,7 @@ if($_SESSION['ID'] != null){
     <!-- 千年神木/甩便利貼-->
     <a class="stronghold" id="icon16" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="千年神木" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[15][0]; } ?><br />
       生產材料：大地氧氣（9個／2mins）<br />
-      佔領條件：6人，需包含：<br />
+      佔領條件：4人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[15][0]; } ?><br />
       <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
       <?php getStrongholdColor($team[15][0]); ?>

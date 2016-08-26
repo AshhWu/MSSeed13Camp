@@ -1,9 +1,16 @@
 
+#team_label {
+	width: 180px;
+	margin: auto;
+	text-align: center;
+}
+
 /* MRT */
 
 .middle_part {
 	width: 320px;
 	margin: auto;
+	border: solid 1px;
 }
 
 .middle_part h5 {
@@ -14,9 +21,9 @@
 
 .middle_part .section1 {
 	display: inline-block;
-	max-width: 50%;
+	max-width: 55%;
 	position: relative;
-	top: 10px;
+	top: 8px;
 }
 
 .middle_part form {
@@ -103,6 +110,14 @@
 	text-align: center;
 }
 
+#lego_list a {
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+	top: 8px;
+	width: 100px;
+}
+
 .tab-pane a {
 	display: inline-block;
 	margin-right: 5px;
@@ -112,18 +127,30 @@
 
 .tab-pane .w3-tag {
 	display: inline-block;
-	height: 40px;
-	width: 40px;
+	height: 35px;
+	width: 35px;
 	text-align: center;
-	margin-right: 3px;
+	margin-right: 2px;
 }
 
 .tab-pane .w3-tag p {
 	position: relative;
-	top: 10px;
+	top: 8px;
 }
 
-/* lego_exchange */
+.tab-pane ul .w3-card {
+	display: inline-block;
+	margin-right: 8px;
+	text-align: center;
+}
+
+.tab-pane ul .w3-card p {
+	position: relative;
+	top: 5px;
+	width: 150px;
+}
+
+/* lego_trade */
 
 #trade_with {
 	width: 280px;
@@ -146,6 +173,12 @@
 #trade_table .w3-tag p {
 	position: relative;
 	top: 10px;
+}
+
+#trade_table th > p {
+	position: relative;
+	top: 10px;
+	left: 15px;
 }
 
 #trade_table input {

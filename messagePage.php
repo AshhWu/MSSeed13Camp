@@ -37,30 +37,10 @@ session_start();
   include "backend/navbar/nav.php";
 if($_SESSION['ID'] != null){ 
   ?>
-  
-<div style="text-align:center" align="center">
-	<h1>Messages</h1>
-
-<?php
-	header('Cache-Control: no-cache');
-	header('Pragma: no-cache');
-	require_once "getitems.php";
-	$items = getMessages();
-	if(!empty($items))
-	{
-		$items = array_reverse($items); // try 反向
-		foreach($items as $item)
-		{	
-			echo 	"<p>
-			<span style=\"font-size:14px;\">".$item[1]."</span></p>
-				<h3 style=\"color:".$item[4].";\">".$item[3]."</h3>
-			<hr />";
-		}
-	}
-?>
-
-</div>
-
+ 
+    <iframe src="messagePageGM.php" width="100%" height="180"></iframe>
+    <iframe src="messagePageNormal.php" width="100%" height="350"></iframe>
+		
 <?php
 }
 else{

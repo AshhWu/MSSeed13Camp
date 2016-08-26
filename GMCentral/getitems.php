@@ -13,12 +13,11 @@
 	* limitations under the License. 
 	*/
 	
-include_once 'taskmodel.php';
+include_once '../backend/taskmodel.php';
 
 //Debugger//
 include 'ChromePhp.php';
 //Debugger//
-
 
 	$aResult = array();
   $items = getAllResources();
@@ -27,14 +26,6 @@ include 'ChromePhp.php';
 	// Debugger //
 	ChromePhp::log($items);
 	// Debugger //
-
+	
   echo json_encode($items);
-
-/*
-function getGroupResources($team)
-{
-  $items = getGroupAllResources($team);
-  return $items;
-}
-*/
 ?>

@@ -144,11 +144,11 @@ session_start();
                             <td>".$item[0]."</td>
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
-                if(!empty($item[3])){
+               /* if(!empty($item[3])){
                     echo    "<td><img height='200px' src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
-                }else{
+                }else{*/
                     echo    "<td>無圖片</td>";
-                }
+                //}
                 if($item[4]==0){
                     echo    "<td><a href='t_missionComplete.php?id=".$item[0]."&team=".$item[1]."'>OK</a> or 
                                  <a href='t_missionFail.php?id=".$item[0]."&team=".$item[1]."'>NOT</a></td>";
@@ -183,7 +183,7 @@ session_start();
         </form>
 
         <hr/>
-        
+
         
 <h1>missionInfo</h1>
     <?php
@@ -197,6 +197,7 @@ session_start();
                         <th>title</th>
                         <th>content</th>
                         <th>picture</th>
+                        <th>hint</th>
                     </tr>";
         $items = getMissionInfo();
         if(!empty($items))
@@ -205,11 +206,16 @@ session_start();
             {
                 echo 	"<tr>
                             <td>".$item[0]."</td>
-                            <td>".$item[4]."</td>
+                            <td>".$item[3]."</td>
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
-                if(!empty($item[3])){
-                    echo    "<td><img src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
+                if(!empty($item[4])){
+                    echo    "<td><img height='200px' src='".$item[4]."') /></td>";
+                }else{
+                    echo    "<td>無圖片</td>";
+                }
+                if(!empty($item[5])){
+                    echo    "<td><img height='200px' src='".$item[5]."') /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
                 }
@@ -390,7 +396,7 @@ session_start();
     <hr/>
         
 <h1>SQL</h1>
-    <form action="usesqlcode.php" method="post">
+    <form action="TaipeiRun/t_usesqlcode.php" method="post">
 		<table border="1">
 			<tr>
 				<td>SQL: </td>

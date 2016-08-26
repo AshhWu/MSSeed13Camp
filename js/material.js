@@ -1,4 +1,21 @@
 var main = function(){
+	// Compose Transportation
+	$.post("backend/stronghold/getTime.php")
+	.done(function( result ) {
+		var buttons = document.getElementsByClassName("btn-transport");
+		if (result == "true") { 
+			for (var i = 0; i < buttons.length; ++i) {
+				buttons[i].disabled = false;
+			}
+		}
+		else {
+			for (var i = 0; i < buttons.length; ++i) {
+				buttons[i].disabled = true;
+			}
+		}
+	});
+
+
 	// Reload Current Tab
 	$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
         localStorage.setItem('activeTab', $(this).attr('href'));

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <html>
     <head>
         <title>圖片上傳中</title>
@@ -14,7 +17,7 @@ if(isset($_POST['team'])){
     $team = $_POST['team'];
     $mission = $_POST['mission'];
 }else{
-    $team = 20;
+    $team = $_SESSION['t_team'];
     $mission = getMissionByTeam($team);
 }
 

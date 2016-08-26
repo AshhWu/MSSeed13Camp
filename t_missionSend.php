@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,13 +15,6 @@
     <script src="jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     
-    <?php
-      include_once 'backend/taskmodel.php';
-      include_once 't_getitems.php';
-      $team = 20;
-      $mState = getMissionState($team);
-      $mission = getMissionByTeam($team);
-    ?>
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
     
@@ -37,6 +33,13 @@
     </script>
   </head>
   <body>
+    <?php
+      include_once 'backend/taskmodel.php';
+      include_once 't_getitems.php';
+      $team = $_SESSION['t_team'];
+      $mState = getMissionState($team);
+      $mission = getMissionByTeam($team);
+    ?>
     <?php
       include "backend/navbar/nav.php";
     ?>

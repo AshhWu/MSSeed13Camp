@@ -21,3 +21,145 @@ body {
 .banner {
 	margin-bottom: 1em;
 }
+
+
+/*
+ * Plane Ticket 
+ */
+.plane-ticket {
+	position: relative;
+	margin-bottom: 2em;
+}
+
+/* Large Info */
+.large-info {
+	position: absolute;
+	letter-spacing: 6px;
+	font-size: 27px;
+}
+#en-name-lg {
+	top: 75.5%;
+	left: 15.5%;
+}
+#ID-lg {
+	top: 87%;
+	left: 15.5%;
+}
+#country-lg {
+	top: 75.5%;
+	left: 53.5%;
+}
+#room-lg {
+	top: 87%;
+	left: 53.5%;
+}
+
+
+/* Small Info */
+.small-info {
+	position: absolute;
+	letter-spacing: 4px;
+	font-size: 20px;
+}
+#en-name-sm {
+	top: 64.3%;
+	left: 78%;
+}
+#country-sm {
+	top: 72.3%;
+	left: 78%;
+}
+#room-sm {
+	top: 80.3%;
+	left: 78%;
+}
+#ID-sm {
+	top: 88.5%;
+	left: 78%;
+}
+
+/* Mission */
+.mission {
+	color: white;
+	font-size: 25px;
+	margin-bottom: 4em;
+}
+#target {
+	width: 100%;
+}
+#mission-title {
+	font-size: 27px;
+	margin-bottom: 10px;
+}
+.mission-row {
+	margin-bottom: 5px;
+}
+#mission-master {
+	color: #CDE09B;
+	display: inline;
+}
+#mission-content {
+	color: #CDE09B;
+	display: inline;
+}
+
+
+@media screen and (max-width: 599px){
+.form-group {
+	letter-spacing: 3px;
+}
+.form-control {
+	letter-spacing: 3px;
+}
+
+.large-info {
+	letter-spacing: 0px;
+	font-size: 10px;
+}
+.small-info {
+	letter-spacing: 0px;
+	font-size: 8px;
+}
+#country-lg {
+	font-size: 9px;
+}
+
+/* Mission */
+.mission {
+	font-size: 12px;
+}
+#mission-title {
+	font-size: 14px;
+	margin-bottom: 4px;
+}
+.mission-row {
+	margin-bottom: 2px;
+}
+.mission-margin {
+	padding-left: 0px;
+}
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1050px){
+.large-info {
+	letter-spacing: 1px;
+	font-size: 14px;
+}
+.small-info {
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+
+/* Mission */
+.mission {
+	font-size: 18px;
+}
+#mission-title {
+	font-size: 20px;
+	margin-bottom: 6px;
+}
+.mission-row {
+	margin-bottom: 4px;
+}
+}

@@ -39,6 +39,12 @@ function getMessages()
   return $items;
 }
 
+function getGMMessages()
+{
+  $items = getAllGMMessages();
+  return $items;
+}
+
 function getStrongholds()
 {
   $items = getAllStrongholds();
@@ -79,6 +85,12 @@ function getTimes()
 function getDay()
 {
   $items = getAllDay();
+  return $items;
+}
+
+function getRead()
+{
+  $items = getAllRead();
   return $items;
 }
 
