@@ -24,7 +24,7 @@ session_start();
 
 <h3 id="team_label" style="color:#337ab7"><?php echo $country;?></h3>
 <div class="middle_part w3-container w3-section w3-card-4 w3-padding">
-	<h5 style="color:#337ab7">移動</h5>
+	<h5 style="color:#337ab7; position: relative; bottom: 20px;">移動</h5>
 	<section class="section1 w3-container">
 	<p id="start"><?php echo $sstation;?></p>
 	<script type="text/javascript">
@@ -44,7 +44,7 @@ session_start();
 
 <div class="middle_part w3-container w3-section w3-card-4 w3-padding">
 	<h5 style="color:#337ab7">樂高</h5>
-	<section class="section2 w3-container">
+	<section class="section2 w3-container" style="position: relative; top:10px;">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo $lego[2];?></p></div>
 		<div id="lego4" class="w3-tag w3-yellow"><p><?php echo $lego[3];?></p></div>
