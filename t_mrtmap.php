@@ -23,7 +23,7 @@ session_start();
 <?php $lego = getAllCubeNum($team); ?>
 
 <h3 id="team_label" style="color:#337ab7"><?php echo $country;?></h3>
-<div class="middle_part w3-container w3-section w3-card-4 w3-padding">
+<div class="middle_part w3-container w3-section w3-card-2 w3-padding">
 	<h5 style="color:#337ab7; position: relative; bottom: 20px;">移動</h5>
 	<section class="section1 w3-container">
 	<p id="start"><?php echo $sstation;?></p>
@@ -42,7 +42,7 @@ session_start();
 	<button class="w3-btn w3-khaki w3-round" onclick="check_lego(<?php echo $sstation . ', ' . $team . ', [' . $lego[1] . ',' . $lego[2] . ',' . $lego[3] . ',' . $lego[4] . ']';?>)">確定</button>
 </div>
 
-<div class="middle_part w3-container w3-section w3-card-4 w3-padding">
+<div class="middle_part w3-container w3-section w3-card-2 w3-padding">
 	<h5 style="color:#337ab7">樂高</h5>
 	<section class="section2 w3-container" style="position: relative; top:10px;">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div>
@@ -52,8 +52,8 @@ session_start();
 	</section>
 </div>
 
-<div id="route_list" class="w3-container w3-section w3-padding">
-	<h4 class="w3-card-4 w3-pink w3-padding">路線選擇</h4>
+<div id="route_list" class="w3-container w3-section w3-padding w3-card-2">
+	<h4 class="w3-card w3-padding" style="color:#337ab7">路線選擇</h4>
 	<ul id="route_ul" class="w3-ul">
 	</ul>
 </div>
