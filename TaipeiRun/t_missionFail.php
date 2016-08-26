@@ -1,14 +1,11 @@
 <?php
 include_once '../backend/taskmodel.php';
-$id = $_GET['id'];
 $team = $_GET['team'];
+$mission = $_GET['mission'];
 $conn = connect();
-$sql = "UPDATE t_missionReport SET state=2 where id=".$id;
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-$sql = "UPDATE taipeiRun SET mState=0 where team=?";
+$sql = "UPDATE taipeiRun SET mState=3 where team=?";
 $stmt = $conn->prepare($sql);
 $stmt->bindValue(1, $team);
 $stmt->execute();
-header('Location: ../t_taipeiAdmin.php');
+header('Location: ../t_mission'.$mission.'.php');
 ?>
