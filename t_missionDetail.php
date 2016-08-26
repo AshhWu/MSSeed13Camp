@@ -30,7 +30,7 @@ session_start();
         <div class=".col-md-10 .col-md-offset-1" style="margin-top: 20px;" >
             <div class="thumbnail" style="box-shadow: 1px 1px 4px rgba(0,0,0,.3)">
               <?php
-              if($mission==7){
+              if($mission<7){
                 echo '<img class="img-rounded" width="250px" src="'.getMissionPic($mission).'" alt="請重新整理頁面">    <!--題目圖片-->
                 <div class="caption">
                     <p style="font-weight:700;color:rgba(0,0,0,.7)">'.getMissionContent($mission).'</p>  <!--題目標題-->
