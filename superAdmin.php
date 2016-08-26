@@ -632,6 +632,28 @@ if($_SESSION['authority']==3){
 	}
 ?>
 
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getRead.php";
+	$items = getTimes();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>新訊息:  </th>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[0]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
+
 <script type="text/javascript">
 function GetTime(){
 	var d=new Date();
