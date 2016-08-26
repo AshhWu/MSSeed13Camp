@@ -21,13 +21,13 @@ session_start();
 <?php $team = $_SESSION['t_team']; ?>
 <?php $country = $_SESSION['country'] ;?>
 
-<h3 style="color:#337ab7">求助中心</h3>
+<h3 style="color:#337ab7; width:180px; margin:auto;">求助中心</h3>
 
-<div id="chat_board" class="w3-container w3-section w3-card-2" style="height:300px"></div>
+<div id="chat_board" class="w3-container w3-section w3-card-2" style="height:500px"></div>
 
-<div class="w3-container w3-section w3-card-2">
-	請輸入要傳給後台的訊息: <input type="text" name="message"><br>
-	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round">送出</button>
+<div class="w3-container w3-section w3-card-2" style="width: 300px; margin: auto;">
+	請輸入要傳給後台(Grace ma)的訊息: <input type="text" name="message"><br>
+	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block" onclick="">送出</button>
 </div>
 
 
