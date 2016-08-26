@@ -26,7 +26,7 @@ session_start();
 <h5 id="team_label" class="w3-indigo w3-padding"><?php echo $country;?></h5>
 <div id="team2" style="display:none"><?php echo $team2;?></div>
 <div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown"></div>
-<div class="w3-container w3-section w3-red w3-card">
+<div id="warning" class="w3-container w3-section w3-red">
 	<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span>
   	<h3>注意!</h3>
   	<p>1.雙方交易用的樂高數量請不要超出合理範圍(ex. 我有10個紅色樂高,輸入框請填0~10範圍內的數字)</p><br>
@@ -38,7 +38,7 @@ session_start();
 	var country_str = ['XX', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
 	document.getElementById("trade_with").innerHTML = '和' + country_str[document.getElementById("team2").innerText] + '交易';
 	var phone = ['XX', '0923880223', '0912345678', '09', '09', '09', '09', '09', '09', '09', '09', '09', '09'];
-	document.getElementById("trade_with").innerHTML += '<br>連絡電話: ' + phone[document.getElementById("team2").innerText];
+	document.getElementById("trade_with").innerHTML += '<br>聯絡電話: ' + phone[document.getElementById("team2").innerText];
 </script>
 
 <table id="trade_table" class="w3-table w3-sand">

@@ -45,7 +45,7 @@ session_start();
 	document.getElementById("sender_country").innerHTML = country_str[document.getElementById("sender_country").innerText];
 	document.getElementById("receiver_country").innerHTML = country_str[document.getElementById("receiver_country").innerText];
 	var phone = ['XX', '0923880223', '0912345678', '09', '09', '09', '09', '09', '09', '09', '09', '09', '09'];
-	document.getElementById("trade_with").innerHTML += '<br>連絡電話: ' + phone[document.getElementById("team2").innerText];
+	document.getElementById("trade_with").innerHTML += '<br>聯絡電話: ' + phone[document.getElementById("team2").innerText];
 </script>
 <tr>
 	<th><div class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div></th>
