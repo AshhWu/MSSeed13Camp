@@ -109,8 +109,8 @@ switch($_SESSION['authority']){
 <?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
-	require_once "../../getRead.php";
-	$items = getTimes();
+	require_once "../../getitems.php";
+	$items = getRead();
 	if($items[1][0] == '1'){
 ?>		
 		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營<div style="color:red;">新訊息!!</div></a>
