@@ -306,10 +306,11 @@ var app = angular.module('app', []);
       function getLoc(){
         $http.get("scripts/CURD/getLocation.php")
          .then(function(data){
-            for(var index in data)
+          $scope.teams = data;
+            for(var index in teams)
             {
-              var perTeam = data[index];
-              console.log("data["+index+"]=" + data[index]);
+              var perTeam = teams[index];
+              console.log("data["+index+"]=" + teams[index]);
 
               console.log("perTeam=" + perTeam);
               console.log(perTeam['team']);
