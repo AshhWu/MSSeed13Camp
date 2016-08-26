@@ -60,12 +60,12 @@
     </table> -->
 
     <div class="col-xs-8" ng-controller="barController">
-        <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
+        <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" >
         </canvas>
         <div id="my-carousel">
           <data-owl-carousel class="owl-carousel">
             <div owl-carousel-item="" ng-repeat="Data in allData" class="item">
-              <canvas id="bar" class="chart chart-bar" chart-data={{Data.data}} chart-labels="labels" chart-series="series">
+              <canvas id="bar" class="chart chart-bar" chart-data={{Data.data}} chart-labels="labels">
               </canvas>
             </div>
           </data-owl-carousel>

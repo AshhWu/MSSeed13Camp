@@ -1,7 +1,7 @@
 var app = angular.module('app', ["chart.js"]);
 
 app.controller('barController', ['$scope', function ($scope) {
-  		$scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  		$scope.labels = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
   		$scope.series = ['Series A', 'Series B'];
 
   		$scope.data = [65, 59, 80, 81, 56, 55, 42, 45, 69, 83, 88, 75];
