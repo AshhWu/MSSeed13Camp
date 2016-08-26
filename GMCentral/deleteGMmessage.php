@@ -27,5 +27,5 @@ deleteGMMessage($id);
 
 ChromePhp::log('Finish Delete!');
 
-//header('Location: resources.php');
+header('Location: resources.php');
 ?>
