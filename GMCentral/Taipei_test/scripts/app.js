@@ -4,20 +4,14 @@ app.controller('barController', ['$scope', function ($scope) {
   		$scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
   		$scope.series = ['Series A', 'Series B'];
 
-  		$scope.data = [65, 59, 80, 81, 56, 55, 40];
+  		$scope.data = [65, 59, 80, 81, 56, 55, 42, 45, 69, 83, 88, 75];
 
       $scope.allData = [
         { 
-          data :[
-            [65, 59, 80, 81, 56, 55, 40],
-            [28, 48, 40, 19, 86, 27, 90]
-          ]
+          data :[65, 59, 80, 81, 56, 55, 40]
         },
         { 
-          data :[
-            [68, 59, 50, 81, 56, 55, 40],
-            [20, 48, 80, 19, 86, 27, 90]
-          ]
+          data :[68, 59, 50, 81, 56, 55, 40]
         }
       ];
       console.log($scope.allData[0].data);
