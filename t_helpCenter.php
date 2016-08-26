@@ -39,9 +39,9 @@ session_start();
 	var i, str = '';
 	for (i = 2; i < len; i+=5){
 		if (msg[i] == 0)
-			str += '<div class="w3-card-2 w3-light-grey w3-padding" style="float:right;max-width:250px;"><p>' + msg[i+1] + '</p></div><br><br>';
+			str += '<p class="w3-card-2 w3-light-grey w3-padding" style="float:right;max-width:250px;">' + msg[i+1] + '</p><br><br>';
 		else if (msg[i] == 1)
-			str += '<div class="w3-card-2 w3-light-grey w3-padding" style="float:left;max-width:250px;"><p>' + msg[i+1] + '</p></div><br><br>';
+			str += '<p class="w3-card-2 w3-light-grey w3-padding" style="float:left;max-width:250px;">' + msg[i+1] + '</p><br><br>';
 	}
 	document.getElementById("chat_board").innerHTML = str;
 </script>
