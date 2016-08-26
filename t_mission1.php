@@ -41,7 +41,7 @@ session_start();
                     foreach($items as $item)
                     {
                       echo "<tr><td>".$item[11]."</td><td>";
-                            if($item[9]!=$mission){
+                            if(getMissionByTeam($item[0])!=$mission){
                               echo "無申請";
                             }else{
                               if($item[10]!=1){
