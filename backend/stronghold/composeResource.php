@@ -5,10 +5,10 @@ include_once ($_SERVER['DOCUMENT_ROOT'].'/backend/taskmodel.php');
 
 // Get component name
 $component = $_POST['component'];
-$team = $_SESSION['s_team'];
+$team = $_SESSION['t_team'];
 $isTrans = $_POST['isTrans'];
 /*$isTrans = false;
-$team = 'A';
+$team = '1';
 $component = "magic_stone";*/
 
 
