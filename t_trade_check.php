@@ -27,11 +27,11 @@ session_start();
 <?php $lego = getAllCubeNum($sender); ?>
 <?php $lego2 = getAllCubeNum($receiver); ?>
 
-<h5 id="team_label" class="w3-indigo w3-padding"><?php echo $country;?></h5>
+<h3 id="team_label" style="color:#337ab7"><?php echo $country;?></h3>
 <div id="team2" style="display:none"><?php echo $team2;?></div>
-<div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown"></div>
+<div id="trade_with" class="w3-container w3-section w3-card-2 w3-padding" style="color:brown"></div>
 
-<table id="trade_table" class="w3-table w3-sand">
+<table id="trade_table" class="w3-table w3-container w3-card-2">
 <tr>
 	<th id="sender_country" class="w3-tag"><?php echo $sender;?></th>
 	<th>給出</th>
