@@ -42,7 +42,7 @@ session_start();
 
 	<div class="tab-content">
 		<div id="lego_list" class="tab-pane fade in active w3-container w3-section w3-padding w3-card-2">
-			<h4 class="w3-card w3-pink w3-padding">點組別按鈕請求交易</h4>
+			<h4 class="w3-card w3-brown w3-padding">點國家按鈕請求交易</h4>
 			<ul id="lego_list" class="w3-ul">
 				<li class="team_li w3-container">
 					<a class="w3-btn w3-purple w3-padding w3-round" href="t_lego_trade.php?teamb=1">America</a>
