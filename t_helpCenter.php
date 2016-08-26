@@ -29,6 +29,8 @@ session_start();
 	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_message(<?php echo $team;?>)">送出</button>
 </div>
 
+<h5 class="w3-orange w3-padding">小提醒: 越靠頁面上方的訊息越新,如想看最新回覆請手動刷新頁面.
+
 <div id="chat_board" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; margin:auto;"></div>
 
 
@@ -40,9 +42,9 @@ session_start();
 	var i, str = '';
 	for (i = len-4; i > 0; i-=5){
 		if (msg[i] == 0)
-			str += '<p class="w3-card-2 w3-blue w3-padding" style="float:right;max-width:250px;">' + msg[i+1] + '</p><br><br>';
+			str += '<p class="w3-card-2 w3-blue w3-padding w3-round" style="float:right;max-width:250px;">' + msg[i+1] + '</p><br><br>';
 		else if (msg[i] == 1)
-			str += '<p class="w3-card-2 w3-light-grey w3-padding" style="float:left;max-width:250px;">' + msg[i+1] + '</p><br><br>';
+			str += '<p class="w3-card-2 w3-light-grey w3-padding w3-round" style="float:left;max-width:250px;">' + msg[i+1] + '</p><br><br>';
 	}
 	document.getElementById("chat_board").innerHTML = str;
 </script>
@@ -54,6 +56,7 @@ session_start();
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- My Scripts -->
 <script src="js/nav.js"></script>
+
 
 </body>
 </html>
