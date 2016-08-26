@@ -19,11 +19,10 @@
         }
     else {alert("此瀏覽器不支援地理定位功能!");}
     function successCallback(position) {
-      $lat=0;
-      $lon=0;
-      $lat=parseFloat(position.coords.latitude);
-      $lon=parseFloat(position.coords.longitude);
-      document.location.href="t_updateGPS.php?lat=".$lat."&lon=".$lon;
+      $lat=parseFloat(position.coords.latitude).toString();
+      $lon=parseFloat(position.coords.longitude).toString();
+      alert($lat);
+      //document.location.href="t_updateGPS.php?lat=".$lat."&lon=".$lon;
     }
     function errorCallback(error) {
       var errorTypes={
