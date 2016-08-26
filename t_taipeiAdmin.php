@@ -56,6 +56,7 @@ session_start();
                         <th>cube5</th>
                         <th>mission</th>
                         <th>mState</th>
+                        <th>Country</th>
                     </tr>";
         $items = getTaipeiRun();
         if(!empty($items))
@@ -74,6 +75,7 @@ session_start();
                             <td>".$item[8]."</td>
                             <td>".$item[9]."</td>
                             <td>".$item[10]."</td>
+                            <td>".$item[11]."</td>
                             </tr>";
             }
 
