@@ -88,6 +88,7 @@ session_start();
 <script type="text/javascript">
 	if (document.getElementById("team").innerText == document.getElementById("sender").innerText)
 		document.getElementById("trade_btn").innerHTML = '<a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">退出</a>';
+	alert("還在等待對方回覆,如需向對方施壓請撥聯絡電話~");
 </script>
 
 <!-- jQuery -->
