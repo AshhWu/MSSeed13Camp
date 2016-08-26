@@ -2,6 +2,10 @@
     font-size: 1.25em;
 }
 
+.panel-heading {
+    cursor: pointer;
+}
+
 .container {
   margin-top: 3em;
 }

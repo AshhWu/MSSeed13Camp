@@ -7,7 +7,7 @@ session_start();
   <!-- Title -->
   <title>微軟13屆領袖營 - 首頁</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=2.0" />
   <!-- My Scripts 
   <script src="#"></script> -->
   <!-- CSS Style -->
