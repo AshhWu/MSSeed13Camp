@@ -22,9 +22,9 @@ session_start();
 <?php $sstation = getPosition($team); ?>
 <?php $lego = getAllCubeNum($team); ?>
 
-<h5 id="team_label" class="w3-indigo w3-padding"><?php echo $country;?></h5>
-<div class="middle_part w3-container w3-section">
-	<h5 class="w3-brown w3-padding">移動</h5>
+<h5 id="team_label" class="w3-padding" style="color:#337ab7"><?php echo $country;?></h5>
+<div class="middle_part w3-container w3-section w3-card-4">
+	<h5 class="w3-padding" style="color:#337ab7">移動</h5>
 	<section class="section1 w3-container">
 	<p id="start"><?php echo $sstation;?></p>
 	<script type="text/javascript">
@@ -42,8 +42,8 @@ session_start();
 	<button class="w3-btn w3-khaki w3-round" onclick="check_lego(<?php echo $sstation . ', ' . $team . ', [' . $lego[1] . ',' . $lego[2] . ',' . $lego[3] . ',' . $lego[4] . ']';?>)">確定</button>
 </div>
 
-<div class="middle_part w3-container w3-section">
-	<h5 class="w3-brown w3-padding">樂高</h5>
+<div class="middle_part w3-container w3-section w3-card-4">
+	<h5 class="w3-padding" style="color:#337ab7">樂高</h5>
 	<section class="section2 w3-container">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo $lego[2];?></p></div>
