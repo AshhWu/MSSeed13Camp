@@ -120,6 +120,42 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Change Password -->
+	<div class="text-center">
+		<button type="button" class="btn btn-md btn-warning" id="btn-modal" data-toggle="modal" data-target="#change-pwd">更改登入密碼</button>
+	</div>
+	<!-- Modal -->
+	<div id="change-pwd" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">更改登入密碼</h4>
+				</div>
+				<div class="modal-body container-fluid">
+					<form>
+						<div class="form-group">
+							<label for="pwd1">新密碼：</label>
+							<input type="password" class="form-control" 
+							id="pwd1" placeholder="Enter New Password"/>
+						</div>
+						<div class="form-group">
+							<label for="pwd2" >請再輸入一次：</label>
+							<input type="password" class="form-control"
+							id="pwd2" placeholder="Enter Again"/>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-danger" id="btn-change-pwd" data-dismiss="modal">確定更改？</button>
+						</div>
+					</form>
+				</div>
+				<!--<div class="modal-footer">
+					<button type="button" class="btn btn-default" id="btn-change-pwd" data-dismiss="modal">Close</button>
+				</div>-->
+			</div>
+		</div>
+	</div>
 </div>
 
 	
