@@ -34,10 +34,8 @@ session_start();
 <div id="msg" style="display:none"><?php foreach($msg as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 <script type="text/javascript">
 	var tmp = document.getElementById("msg").innerText;
-	alert(tmp);
 	var msg = tmp.split(',');
 	var len = msg.length;
-	alert(len);
 	var i, j, str = '';
 	for (i = 2; i < len; i+=5){
 		if (msg[i] == 0)
