@@ -312,7 +312,7 @@ var app = angular.module('app', []);
               console.log(perTeam);
               console.log(perTeam['team']);
               console.log($scope.teamInfo[perTeam['team']]);
-              if(perTeam['location'] != 'null')
+              if(perTeam['position'] != 'null')
               {
                 if($scope.markers[perTeam['team']] == undefined)
                 {
