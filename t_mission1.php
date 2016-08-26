@@ -35,67 +35,26 @@ session_start();
                     <td>國家</td>
                     <td>審核</td>
                 </tr>
-                <tr>
-                    <td>America</td>
-                    <td>
-                      <?php
-                      if($items[0][9]!=$mission){
-                        echo "無申請";
-                      }else{
-                        if($items[0][10]!=1){
-                          echo "無申請";
-                        }else{
-                          echo "<a href='TaipeiRun/t_missionComplete.php?team=1&mission=".$mission."'>OK</a> or 
-                                 <a href='TaipeiRun/t_missionFail.php?team=1&mission=".$mission."'>NOT</a>";
-                        }
-                      }
-                      ?>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Canada</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>Brazil</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>Italy</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>Germany</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>England</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>Taiwan</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>Japan</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>Thailand</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>SouthAfrica</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>Madagascar</td>
-                    <td>審核</td>
-                </tr>
-                <tr>
-                    <td>Egypt</td>
-                    <td>審核</td>
-                </tr>
+                <?php
+                if(!empty($items))
+                {
+                    foreach($items as $item)
+                    {
+                      echo "<tr><td>".$item[11]."</td><td>";
+                            if($item[9]!=$mission){
+                              echo "無申請";
+                            }else{
+                              if($item[10]!=1){
+                                echo "無申請";
+                              }else{
+                                echo "<a href='TaipeiRun/t_missionComplete.php?team=".$item[0]."&mission=".$mission."'>OK</a> or 
+                                       <a href='TaipeiRun/t_missionFail.php?team=".$item[0]."&mission=".$mission."'>NOT</a>";
+                              }
+                            }
+                      echo "</td></tr>";
+                    }
+                }
+                ?>
             </table>
         </div>
       </div>
