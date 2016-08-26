@@ -30,7 +30,7 @@ session_start();
 
 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; margin: auto;">
 	給後台(Grace ma)的訊息: <input type="text" name="message">
-	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
+	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_message(<?php echo $team;?>)">送出</button>
 </div>
 
 
