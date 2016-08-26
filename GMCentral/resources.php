@@ -192,11 +192,11 @@
                                             <td>要傳給的隊伍: </td>
                                             <td>
                                                 <select name="client"/>
+                                                    <option value="All">All</option>
                                                     <option value="A">美洲</option>
                                                     <option value="B">歐洲</option>
                                                     <option value="C">亞洲</option>
-                                                    <option value="D">非洲</option>
-                                                    <option value="All">All</option>
+                                                    <option value="D">非洲</option>                                                    
                                                 </select>
                                             </td>
                                         </tr>
@@ -268,7 +268,7 @@
             <script>
                 function updateClock() {
                     var now = new Date(), // current date
-                        time = now.getHours() + ':' + now.getMinutes()+ ':' + now.getSeconds();
+                        time = now.getHours() + ':' + ("0" + now.getMinutes()).slice(-2)+ ':' + ("0" + now.getSeconds()).slice(-2);
 
                     // set the content of the element with the ID time to the formatted string
                     document.getElementById('time').value = [time].join(' / ');
