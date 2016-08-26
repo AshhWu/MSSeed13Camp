@@ -10,21 +10,16 @@
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
   <!-- Important Owl stylesheet -->
   <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css">
  
   <!-- Default Theme -->
   <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css">
 
-  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHZc-_tEA40YGT3q4f9vkB-IM0khoyyBk"
-  type="text/javascript"></script>-->
-  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
-
   <link rel="stylesheet" href="CSS/style.css">
 
 </head>
-  <body >
+  <body>
 
   <div class="init-animation">
     <p>Microsoft Seed 13th Camp</p>
@@ -39,60 +34,98 @@
     </div>
   </nav>
 
-  <div class="row">
-    <table class="col-xs-4 col-xs-offset-1 table table-inverse" ng-controller="cubeController">
+  <div class="container-fuild" style="padding:20px; margin-top:50px" ng-controller="cubeController">
+  <div class="col-xs-7">
+    <div class="table-background">
+    <table class="table">
         <thead>
             <tr>
-                <th scope="row">Team</th>
-                <tr>Red Cube</tr>
-                <tr>Green Cube</tr>
-                <tr>Yellow Cube</tr>
-                <tr>Blue Cube</tr>
-                <tr>Mission</tr>
+                <th scope="row" class="team-col">Team</th>
+                <th class="red-cube">Red</th>
+                <th class="green-cube">Green</th>
+                <th class="yellow-cube">Yellow</th>
+                <th class="blue-cube">Blue</th>
+                <th class="mission">Mission</th>
             </tr>
         </thead>
         <tbody>          
             <tr ng-repeat = "cube in cubes">
-                <th scope="row">{{ cube.Team }}</th>
-                <td>{{ cube.cube1 }}</td>
-                <td>{{ cube.cube2 }}</td>
-                <td>{{ cube.cube3 }}</td>
-                <td>{{ cube.cube4 }}</td>
-                <td>{{ cube.mission }}</td>
+                <th scope="row" class="team-col">{{ cube.team }} - {{ cube.teamName }}</th>
+                <td class="red-cube">{{ cube.cube2 }}</td>
+                <td class="green-cube">{{ cube.cube3 }}</td>
+                <td class="yellow-cube">{{ cube.cube4 }}</td>
+                <td class="blue-cube">{{ cube.cube5 }}</td>
+                <td class="mission">{{ cube.mission }}</td>
             </tr>
         </tbody>            
     </table>
+    </div>
+    <div class="">
+        <div id="mission-carousel">
+          <data-owl-carousel class="owl-carousel">
+            <div owl-carousel-item="" ng-repeat="mission in missions" class="chart-style">
+              <table class="table mission-table" >
+                  <thead>
+                      <tr>
+                          <th scope="row">Mission</th>
+                          <th>Position</th>
+                          <th>Title</th>
+                          <th>Content</th>
+                          <th>Picture</th>
+                          <th>Hint</th>
+                      </tr>
+                  </thead>
+                  <tbody>          
+                      <tr class="mission-height">
+                          <th scope="row">{{ mission.id }}</th>
+                          <td>{{ mission.position }}</td>
+                          <td>{{ mission.title }}</td>
+                          <td>{{ mission.content }}</td>
+                          <td><img ng-src="{{ mission.picture }}"></td>
+                          <td><img ng-src="{{ mission.hint }}"></td>
+                      </tr>
+                  </tbody>            
+              </table>
+            </div>
+          </data-owl-carousel>
+        </div>
+    </div>
+    </div>
 
     <div class="col-xs-5">
-        <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
-        </canvas>
+        <div class="chart-style upper-chart">
+          <h4>Total Cube</h4>
+          <canvas id="bar" class="chart chart-bar" chart-data="totalCube" chart-labels="labels" >
+          </canvas>
+        </div>
+        <div id="chart-carousel">
+          <data-owl-carousel class="owl-carousel">
+            <div owl-carousel-item="" ng-repeat="Data in colorCube" class="chart-style">
+              <h4>{{Data.title}}</h4>
+              <canvas id="bar" class="chart chart-bar" chart-data="Data.data" chart-labels="labels" chart-series="series">
+              </canvas>
+            </div>
+          </data-owl-carousel>
+        </div>
     </div>
+  </div>
 
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Bootstrap Core JavaScript -->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
   <!-- Include js plugin -->
   <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.js"></script>
-  <script type="text/javascript" src="vendor/angular.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
-
   
+  <script type="text/javascript" src="vendor/angular.min.js"></script>
+  <script type="text/javascript" src="vendor/Chart.min.js"></script>
+  <script type="text/javascript" src="vendor/angular-chart.min.js"></script>
+
   <script type="text/javascript" src="scripts/app.js"></script>
-  <script type="text/javascript" src="scripts/Controller/barController.js"></script>
-  <script type="text/javascript" src="scripts/Controller/cubeController.js"></script>
-  <script type="text/javascript" src="scripts/Controller/locationController.js"></script>
-  <script type="text/javascript" src="scripts/Controller/pictureController.js"></script>
-
-  <script type="text/javascript" src="scripts/Service/cubeService.js"></script>
-  <script type="text/javascript" src="scripts/Service/flagService.js"></script>
-  <script type="text/javascript" src="scripts/Service/picService.js"></script>
-  <script type="text/javascript" src="scripts/markerwithlabel.js"></script>
-
-  <script type="text/javascript" src="scripts/carouselFix.js"></script>
+  <script type="text/javascript" src="scripts/carouselFix_table.js"></script>
   <script>
-  //$("#owl-example").owlCarousel({autoPlay : 5000});
 
   setTimeout(
   function() 

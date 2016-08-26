@@ -6,11 +6,10 @@ angular.module('app')
         link: function (scope) {
             scope.initCarousel = function(element) {
                 $(element).owlCarousel({
-                    items : 4,
+                    items : 1,
                     lazyLoad : true,
-                    autoPlay : 5000,
-                    rewindNav : true,
-                    navigation:true
+                    autoPlay : 6000,
+                    rewindNav : true
                 });
             };
         }
