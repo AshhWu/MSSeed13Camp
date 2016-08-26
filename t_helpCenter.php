@@ -23,11 +23,14 @@ session_start();
 
 <h3 style="color:#337ab7; width:180px; margin:auto; text-align: center">求助中心</h3>
 
-<div id="chat_board" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:350px; margin:auto;"></div>
+<div id="chat_board" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:350px; margin:auto;">
+	<p class="w3-card-4 w3-padding" style="float:left">hi!</p>
+	<p class="w3-card-4 w3-padding w3-grey" style="float:right">hello~</p>
+</div>
 
 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; margin: auto;">
 	給後台(Grace ma)的訊息: <input type="text" name="message">
-	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 10px;" onclick="">送出</button>
+	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
 </div>
 
 
