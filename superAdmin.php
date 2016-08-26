@@ -643,12 +643,9 @@ if($_SESSION['authority']==3){
 				<tr>
 					<th>新訊息:  </th>
 				</tr>";
-		foreach($items as $item)
-		{
 			echo 	"<tr>
-						<td>".$item[0]."</td>";
+						<td>".$items[1][0]."</td>";
 			echo "</tr>";
-		}
 		
 		echo "</table>";
 	}
