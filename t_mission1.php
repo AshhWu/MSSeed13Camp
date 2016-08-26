@@ -20,8 +20,12 @@ session_start();
     <?php
       include "backend/navbar/nav.php";
       include 't_getitems.php';
+      $items = getTaipeiRun();
       $mission = 1;
     ?>
+    <script>
+      setTimeout("self.location.reload();",5000);
+    </script>
     <div class="container">
 
       <div class="starter-template">
@@ -33,7 +37,20 @@ session_start();
                 </tr>
                 <tr>
                     <td>America</td>
-                    <td></td>
+                    <td>
+                      <?php
+                      if($items[0][9]!=$mission){
+                        echo "無申請";
+                      }else{
+                        if($items[0][10]!=1){
+                          echo "無申請";
+                        }else{
+                          echo "<a href='TaipeiRun/t_missionComplete.php?team=1&mission=".$mission."'>OK</a> or 
+                                 <a href='TaipeiRun/t_missionFail.php?team=1&mission=".$mission."'>NOT</a>"
+                        }
+                      }
+                      ?>
+                    </td>
                 </tr>
                 <tr>
                     <td>Canada</td>
