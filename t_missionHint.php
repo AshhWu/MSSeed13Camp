@@ -50,8 +50,9 @@ session_start();
 
     <div class="container">
       <div class="starter-template">
-        <h1><span class="label label-primary">任務提示</span></h1>
-            <div class="thumbnail">
+        <h1><span class="label label-primary" style="color:#337ab7;background-color:white">任務提示</span></h1>
+        <div class=".col-md-10 .col-md-offset-1" style="margin-top: 20px;" >
+            <div class="thumbnail" style="box-shadow: 1px 1px 4px rgba(0,0,0,.3)">
                 <div class=".col-md-10 .col-md-offset-1">
                     <?php
                         if($isOK==1){
@@ -62,6 +63,7 @@ session_start();
                     ?>
                 </div>
             </div>
+        </div>
       </div>
     </div><!-- /.container -->
 
