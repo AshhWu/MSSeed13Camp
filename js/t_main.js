@@ -264,3 +264,9 @@ function send_message(team){
 	var message = document.getElementsByTagName("input")[0].value;
 	window.location = 'TaipeiRun/t_addHelpMsg.php?team=' + team + '&content=' + message;
 }
+
+function refresh_message(){
+	var i, j;
+	var msg = <? echo '[ '; foreach($msg as $arr){ echo '['; foreach($arr as $value){echo $value . ',';} echo '-1], ';} echo '[] ]'; ?>
+	alert(msg);
+}
