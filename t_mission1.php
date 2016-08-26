@@ -46,7 +46,7 @@ session_start();
                           echo "無申請";
                         }else{
                           echo "<a href='TaipeiRun/t_missionComplete.php?team=1&mission=".$mission."'>OK</a> or 
-                                 <a href='TaipeiRun/t_missionFail.php?team=1&mission=".$mission."'>NOT</a>"
+                                 <a href='TaipeiRun/t_missionFail.php?team=1&mission=".$mission."'>NOT</a>";
                         }
                       }
                       ?>
