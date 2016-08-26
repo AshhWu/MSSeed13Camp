@@ -55,7 +55,7 @@ session_start();
 <!-- Navbar Dropdown -->
 <script src="js/nav.js"></script>
 <!-- My Scripts -->
-<script src="js/nav.js"></script>
+<script src="js/index.js"></script>
 
 
 </body>
