@@ -154,7 +154,7 @@ session_start();
 
         <div id="chat4" class="tab-pane fade w3-container w3-section w3-padding">
 
-            <div class="w3-container" style="display:inline-block;margin-left:10px;margin-top:10px;">
+            <div class="w3-container" style="display:inline-block;margin-left:10px;top:10px;">
                 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
                     給SouthAfrica的訊息:<br> <input type="text" name="message">
                     <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(10)">送出</button>
@@ -165,7 +165,7 @@ session_start();
                 <div id="msg10" style="display:none"><?php foreach($msg10 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
 
-            <div class="w3-container" style="display:inline-block;margin-left:10px;margin-top:10px;">
+            <div class="w3-container" style="display:inline-block;margin-left:10px;top:10px;">
                 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
                     給Madagascar的訊息:<br> <input type="text" name="message">
                     <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(11)">送出</button>
@@ -176,7 +176,7 @@ session_start();
                 <div id="msg11" style="display:none"><?php foreach($msg11 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
 
-            <div class="w3-container" style="display:inline-block;margin-left:10px;margin-top:10px;">
+            <div class="w3-container" style="display:inline-block;margin-left:10px;top:10px;">
                 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
                     給Egypt的訊息:<br> <input type="text" name="message">
                     <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(12)">送出</button>
