@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
-<body onload="refresh_message(<?php echo '[ '; foreach($msg as $arr){ echo '['; foreach($arr as $value){echo $value . ',';} echo '-1], ';} echo '[] ]'; ?>)">
+<body>
 
 <?php include "backend/navbar/nav.php"; ?>
 <?php include "t_getitems.php"; ?>
@@ -33,6 +33,12 @@ session_start();
 	給後台(Grace ma)的訊息: <input type="text" name="message">
 	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_message(<?php echo $team;?>)">送出</button>
 </div>
+
+<div id="msg" style="display:none"><?php echo '[ '; foreach($msg as $arr){ echo '['; foreach($arr as $value){echo $value . ',';} echo '-1], ';} echo '[] ]'; ?></div>
+<script type="text/javascript">
+	var msg = document.getElementById("msg").innerText;
+	alert(msg);
+</script>
 
 
 <!-- jQuery -->
