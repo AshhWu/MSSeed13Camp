@@ -33,7 +33,11 @@ session_start();
     </script>
     <script>
       function sendReport(){
-        alert("YOYOYO");
+        if(MPForm.picture.value==""){
+          alert("請上傳圖片!");
+        }else{
+          alert("fdsf");
+        }
       }
     </script>
   </head>
@@ -54,7 +58,7 @@ session_start();
       <div class="starter-template">
         <div class=".col-md-10 .col-md-offset-1">
             <div class="thumbnail">
-                <form action="t_addMissionReport.php" method="post" runat="server" enctype="multipart/form-data">
+                <form action="t_addMissionReport.php" name="MPForm" method="post" runat="server" enctype="multipart/form-data">
                     <div class="caption">
                     <?php 
                         if($mState==0){
@@ -62,7 +66,8 @@ session_start();
                                     <img id="blah" src="" height="260px" width="260px" alt="預覽區" />
                                     <br>
                                     <p><input class="btn btn-success" type="submit" value="完成任務" onclick="sendReport()">
-                                    <a href="t_missionDetail.php" class="btn btn-danger" role="button">取消</a></p>';
+                                    <a href="t_missionDetail.php" class="btn btn-danger" role="button">取消</a></p>
+                                    <p>請勿上傳與任務無關的檔案</p>';
                         }else if($mState==1){
                             echo    '<h1><span class="label label-primary" style="color:#337ab7;background-color:white">審查中...</span></h1>
                                     <img src="data:image/jpeg;base64,'.base64_encode(getMissionReportPic($team)).'" width="250px"/>
