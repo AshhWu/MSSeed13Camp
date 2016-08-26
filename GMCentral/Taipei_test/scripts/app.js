@@ -316,7 +316,7 @@ var app = angular.module('app', []);
               {
                 if($scope.markers[perTeam['team']] == undefined)
                 {
-                    console.log('Create new marker');
+                    console.log('Create new marker ');
                     $scope.markers[perTeam['team']] = new MarkerWithLabel({
                         position: new google.maps.LatLng(perTeam.gpsX, perTeam.gpsY),
                         draggable: true,
