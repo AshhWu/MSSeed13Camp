@@ -80,7 +80,7 @@ session_start();
 </table>
 
 <div id="trade_btn" class="w3-container w3-section w3-padding-large">
-<button class="w3-btn w3-padding w3-teal w3-round" onclick="send_request(<?php echo $team . ',' . $team2; ?>)">確定</button><br><br>
+<button class="w3-btn w3-padding w3-teal w3-round" onclick="send_request(<?php echo $team . ',' . $team2 . ', ['; foreach($lego as $value){echo $value . ',';} foreach($lego2 as $value){echo $value . ',';} echo '-1]';?>)">確定</button><br><br>
 <a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">取消</a>
 </div>
 
