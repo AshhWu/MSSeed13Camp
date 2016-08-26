@@ -185,14 +185,22 @@ function lego_refresh(obj){
 }
 
 //lego_trade
-function send_request(sender, receiver){
+function send_request(sender, receiver, lego){
 	var tmp_str = 't_addTradeRequest.php?sender=' + sender + '&receiver=' + receiver + '&c1=0&fc1=0';
 	var i, tmp_value;
 	var inputs = document.getElementsByTagName("input");
 	for (i = 0; i < 4; i++){
 		tmp_value = inputs[2*i].value;
+		if (tmp_value > lego[1+i] || tmp_value < 0){
+			alert("亂填數字! 三寶是你?");
+			return;
+		}
 		tmp_str += '&c' + (i+2).toString() + '=' + tmp_value;
 		tmp_value = inputs[2*i+1].value;
+		if (tmp_value > lego[6+i] || tmp_value < 0){
+			alert("亂填數字! 三寶是你?");
+			return;
+		}
 		tmp_str += '&fc' + (i+2).toString() + '=' + tmp_value;
 	}
 
