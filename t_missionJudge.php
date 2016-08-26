@@ -21,7 +21,7 @@ session_start();
       include "backend/navbar/nav.php";
       include 't_getitems.php';
       $items = getTaipeiRun();
-      $mission = 1;
+      $mission = $_GET['mission'];
     ?>
     <script>
       setTimeout("self.location.reload();",5000);
