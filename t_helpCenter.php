@@ -14,12 +14,13 @@ session_start();
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
-<body>
+<body onload="refresh_message()">
 
 <?php include "backend/navbar/nav.php"; ?>
 <?php include "t_getitems.php"; ?>
 <?php $team = $_SESSION['t_team']; ?>
 <?php $country = $_SESSION['country'] ;?>
+<?php $msg = getHelpFromGM($team);?>
 
 <h3 style="color:#337ab7; width:180px; margin:auto; text-align: center">求助中心</h3>
 
