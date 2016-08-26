@@ -30,7 +30,6 @@ session_start();
 <h5 id="team_label" class="w3-indigo w3-padding"><?php echo $country;?></h5>
 <div id="team2" style="display:none"><?php echo $team2;?></div>
 <div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown"></div>
-<div id="phone_num" class="w3-grey w3-padding">連絡電話: </div>
 
 <table id="trade_table" class="w3-table w3-sand">
 <tr>
@@ -41,12 +40,12 @@ session_start();
 	<th id="receiver_country" class="w3-tag"><?php echo $receiver;?></th>
 </tr>
 <script type="text/javascript">
-	var country_str = ['', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
+	var country_str = ['XX', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
 	document.getElementById("trade_with").innerHTML = '和' + country_str[document.getElementById("team2").innerText] + '的交易細節';
 	document.getElementById("sender_country").innerHTML = country_str[document.getElementById("sender_country").innerText];
 	document.getElementById("receiver_country").innerHTML = country_str[document.getElementById("receiver_country").innerText];
-	var phone = ['', 0923880223, 0912345678, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-	document.getElementById("phone_num").innerHTML += phone[document.getElementById("team2").innerText];
+	var phone = ['XX', '0923880223', '0912345678', '09', '09', '09', '09', '09', '09', '09', '09', '09', '09'];
+	document.getElementById("trade_with").innerHTML += '<br>連絡電話: ' + phone[document.getElementById("team2").innerText];
 </script>
 <tr>
 	<th><div class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div></th>

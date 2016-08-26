@@ -28,9 +28,9 @@ session_start();
 <div id="trade_with" class="w3-container w3-section w3-card w3-padding w3-brown"></div>
 
 <script type="text/javascript">
-	var country_str = ['', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
+	var country_str = ['XX', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
 	document.getElementById("trade_with").innerHTML = '和' + country_str[document.getElementById("team2").innerText] + '交易';
-	var phone = ['', 0923880223, 0912345678, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	var phone = ['XX', '0923880223', '0912345678', '09', '09', '09', '09', '09', '09', '09', '09', '09', '09'];
 	document.getElementById("trade_with").innerHTML += '<br>連絡電話: ' + phone[document.getElementById("team2").innerText];
 </script>
 
