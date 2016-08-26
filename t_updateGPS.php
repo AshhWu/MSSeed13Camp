@@ -1,6 +1,8 @@
 <?php
 include_once 'backend/taskmodel.php';
 ?>
+<html>
+    <head>
 <script>
     if (navigator.geolocation) {
         var geo=navigator.geolocation;
@@ -21,11 +23,11 @@ include_once 'backend/taskmodel.php';
         $lat = parseFloat(position.coords.latitude);
         $lon = parseFloat(position.coords.longitude);
 
-        $team = $_SESSION['t_team'];
+        /*$team = $_SESSION['t_team'];
         $conn = connect();
         $sql = "UPDATE taipeiRun SET gpsX=".$lat." where team=".$team;
         $stmt = $conn->prepare($sql);
-        $stmt->execute();
+        $stmt->execute();*/
         ?>
     }
     function errorCallback(error) {
@@ -39,3 +41,9 @@ include_once 'backend/taskmodel.php';
       alert("code=" + error.code + " " + error.message); //開發測試時用
       }
 </script>
+    </head>
+    <body>
+        <?echo $lat;?>
+        <?echo $lon;?>
+    </body>
+</html>
