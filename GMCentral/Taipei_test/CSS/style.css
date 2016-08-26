@@ -40,7 +40,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 30em;
-  animation: type 5s steps(60, end);
+  animation: type 9s steps(60, end);
 }
 
 .init-animation p:nth-child(2){
@@ -49,7 +49,7 @@ body {
 	padding-left:42%;
 	color:white;
 	font-family: "Courier";
-  	animation: type2 7s steps(60, end);
+  	animation: type2 11s steps(60, end);
 }
 
 .init-animation span{
@@ -57,7 +57,9 @@ body {
 }
 
 @keyframes type{ 
-  from { width: 0; } 
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; } 
 } 
 
 @keyframes type2{
