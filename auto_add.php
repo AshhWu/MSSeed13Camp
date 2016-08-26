@@ -90,11 +90,54 @@ while($x <= 1)
 			{
 				$sql = "UPDATE auto_time SET time_now='0' WHERE point='".$i."'";
 				sqlcode($sql);
-				$resourceValue = $Strongholds[$i - 1][4];
+				$resourceValue = $Strongholds[$i - 1][4] / 3;
 				$resourceItem = $Strongholds[$i - 1][5];
-				$preResource = getGroupAllResources($resourceItem, $team);
-				$resourceValue += $preResource[0][0];
-				updateGroupResource($team, $resourceValue, $resourceItem);
+				switch($team){
+					case 'A':
+						$preResource = getGroupAllResources($resourceItem, '1');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+						$preResource = getGroupAllResources($resourceItem, '2');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+						$preResource = getGroupAllResources($resourceItem, '3');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+					break;
+					case 'B':
+						$preResource = getGroupAllResources($resourceItem, '4');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+						$preResource = getGroupAllResources($resourceItem, '5');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+						$preResource = getGroupAllResources($resourceItem, '6');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+					break;
+					case 'C':
+						$preResource = getGroupAllResources($resourceItem, '7');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+						$preResource = getGroupAllResources($resourceItem, '8');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+						$preResource = getGroupAllResources($resourceItem, '9');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+					break;
+					case 'D':
+						$preResource = getGroupAllResources($resourceItem, '10');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+						$preResource = getGroupAllResources($resourceItem, '11');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+						$preResource = getGroupAllResources($resourceItem, '12');
+						$preResource[0][0] += $resourceValue;
+						updateGroupResource($team, $preResource[0][0], $resourceItem);
+					break;
+					default:
 			}
 			else
 			{
