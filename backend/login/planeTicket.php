@@ -102,8 +102,24 @@
 		<div class="small-info" id="room-sm"><?php echo $_SESSION['room'] ?></div>
 	</div>
 
-
 	
+	<!-- Mission -->
+	<div class="mission">
+		<div class="row col-lg-offset-1 col-xs-offset-0">
+			<div class="col-lg-1 col-xs-2">
+				<img src="/png/target.svg" class="img-responsive" id="target">
+			</div>
+			<div class="col-lg-9 col-xs-8 mission-margin">
+				<div id="mission-title">機密任務</div>	
+				<div class="mission-row">
+					小主人：<div id="mission-master"><?php echo $_SESSION['master'] ?></div>
+				</div>
+				<div class="mission-row">
+					任務內容：<div id="mission-content"><?php echo $_SESSION['mission'] ?></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<!-- Change Password -->
 	<div class="text-center">
