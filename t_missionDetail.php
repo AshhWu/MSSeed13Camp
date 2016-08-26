@@ -42,6 +42,7 @@ session_start();
                 echo '<p>大家辛苦囉~<br>
                       請回來微軟陪GM吹冷氣XD</p>';
               }
+              ?>
             </div>
         </div>
       </div>
