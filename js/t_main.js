@@ -68,9 +68,16 @@ function check_lego(start, team, lego){
 		change_once(start, line_s, parseInt(b/100), b);
 		change_twice(start, line_s, parseInt(b/100), b);
 	}
-	
+
+	check_route();	
 
 	document.getElementById("route_list").style.display = "block";
+}
+
+function check_route(){
+	var i;
+	for (i = 0; i < cost_list.length - 1; i++)
+		alert(cost_list[i] - cost_list[i+1])
 }
 
 function change_once(start, line_s, line_e, end){
