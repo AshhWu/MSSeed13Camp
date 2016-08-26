@@ -10,7 +10,7 @@
         var option={
               enableAcuracy:false,
               maximumAge:0,
-              timeout:600000
+              timeout:60000
               };
         geo.getCurrentPosition(successCallback,
                                errorCallback,
@@ -21,8 +21,12 @@
     function successCallback(position) {
       $lat=parseFloat(position.coords.latitude);
       $lon=parseFloat(position.coords.longitude);
-        alert($lon);
-      }
+        <?php
+        if(!$_GET['gps']){
+            header("Location: t_updateGPS.php");
+        }
+        ?>
+    }
     function errorCallback(error) {
       var errorTypes={
             0:"不明原因錯誤",
@@ -30,8 +34,9 @@
             2:"無法取得位置資訊",
             3:"位置查詢逾時"
             };
-      alert(errorTypes[error.code]);
-      alert("code=" + error.code + " " + error.message); //開發測試時用
+        alert("無法使用定位功能,請開啟其他隊員手機以便定位小組位置");
+      //alert(errorTypes[error.code]);
+      //alert("code=" + error.code + " " + error.message); //開發測試時用
       }
 </script>
   <table style='border:solid 1px blue;'>
