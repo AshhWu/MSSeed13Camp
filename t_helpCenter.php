@@ -37,7 +37,17 @@ session_start();
 <div id="msg" style="display:none"><?php echo '[ '; foreach($msg as $arr){ echo '['; foreach($arr as $value){echo $value . ',';} echo '-1], ';} echo '[] ]'; ?></div>
 <script type="text/javascript">
 	var msg = document.getElementById("msg").innerText;
-	alert(msg);
+	var len = msg.length-1;
+	var i, j, str = '';
+	for (i = 0; i < len; i++){
+		if (msg[i][2] == 0)
+			str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:right">' + msg[i][3] + '</p><br><br>';
+		else if (msg[i][2] == 1)
+			str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:left">' + msg[i][3] + '</p><br><br>';
+		else
+			alert("error!");
+	}
+	document.getElementById("chat_board").innerHTML = str;
 </script>
 
 
