@@ -23,7 +23,7 @@ session_start();
 
 <h3 style="color:#337ab7; width:180px; margin:auto; text-align: center">求助中心</h3>
 
-<div id="chat_board" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:500px; margin:auto;"></div>
+<div id="chat_board" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:350px; margin:auto;"></div>
 
 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; margin: auto;">
 	給後台(Grace ma)的訊息: <input type="text" name="message">
