@@ -40,7 +40,7 @@
   </nav>
 
   <div class="row">
-    <table class="col-xs-4 col-xs-offset-1 table table-inverse" >
+    <!-- <table class="col-xs-4 col-xs-offset-1 table table-inverse" >
         <thead>
             <tr>
                 <th scope="row">Team</th>
@@ -61,7 +61,7 @@
                 <td>{{ cube.mission }}</td>
             </tr>
         </tbody>            
-    </table>
+    </table> -->
 
     <div class="col-xs-5">
         <canvas id="bar" class="chart chart-bar" chart-data="data" chart-labels="labels" chart-series="series">
@@ -75,24 +75,18 @@
 
   <!-- Include js plugin -->
   <script type="text/javascript" src="vendor/owl-carousel/owl.carousel.js"></script>
-  <script type="text/javascript" src="vendor/angular.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.min.js"></script>
-
   
-  <script type="text/javascript" src="scripts/app.js"></script>
-  <script type="text/javascript" src="scripts/Controller/barController.js"></script>
-  <script type="text/javascript" src="scripts/Controller/cubeController.js"></script>
-  <script type="text/javascript" src="scripts/Controller/locationController.js"></script>
-  <script type="text/javascript" src="scripts/Controller/pictureController.js"></script>
+  <script type="text/javascript" src="vendor/angular.min.js"></script>
+  <script type="text/javascript" src="vendor/Chart.min.js"></script>
+  <script type="text/javascript" src="vendor/angular-chart.min.js"></script>
 
-  <script type="text/javascript" src="scripts/Service/cubeService.js"></script>
-  <script type="text/javascript" src="scripts/Service/flagService.js"></script>
-  <script type="text/javascript" src="scripts/Service/picService.js"></script>
   <script type="text/javascript" src="scripts/markerwithlabel.js"></script>
 
+
+  <script type="text/javascript" src="scripts/app.js"></script>
   <script type="text/javascript" src="scripts/carouselFix.js"></script>
+
   <script>
-  //$("#owl-example").owlCarousel({autoPlay : 5000});
 
   setTimeout(
   function() 
