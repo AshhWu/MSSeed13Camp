@@ -7,5 +7,5 @@ $sql = "UPDATE taipeiRun SET mState=2 where team=?";
 $stmt = $conn->prepare($sql);
 $stmt->bindValue(1, $team);
 $stmt->execute();
-header('Location: ../t_mission'.$mission.'.php');
+header('Location: ../t_mission.php?mission='.$mission);
 ?>
