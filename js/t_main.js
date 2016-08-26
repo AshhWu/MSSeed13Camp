@@ -265,8 +265,7 @@ function send_message(team){
 	window.location = 'TaipeiRun/t_addHelpMsg.php?team=' + team + '&content=' + message;
 }
 
-function refresh_message(){
+function refresh_message(msg){
 	var i, j;
-	var msg = <? echo '[ '; foreach($msg as $arr){ echo '['; foreach($arr as $value){echo $value . ',';} echo '-1], ';} echo '[] ]'; ?>
 	alert(msg);
 }
