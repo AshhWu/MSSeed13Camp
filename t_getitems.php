@@ -20,6 +20,12 @@ function getMissionInfo()
   return $items;
 }
 
+function getHelpCenter()
+{
+  $items = getAllHelpCenter();
+  return $items;
+}
+
 function getMissionOrder(){
   $items = getAllMissionOrder();
   return $items;
@@ -122,6 +128,13 @@ function getAllMissionOrder(){
 	$sql = "SELECT * FROM t_missionOrder";
 	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
+function getAllHelpCenter(){
+	$conn = connect();
+	$sql = "SELECT * FROM t_helpCenter";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);	
 }
 
 function getAllTaipei()
