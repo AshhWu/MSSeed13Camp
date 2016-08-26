@@ -1,25 +1,12 @@
 <?php 
 session_start();
 ?>
-<html>
-    <head>
-        <title>圖片上傳中</title>
-    </head>
-    <body>
-        圖片上傳中
-    </body>
-</html>
 <?php
 include_once 'backend/taskmodel.php';
 include_once 't_getitems.php';
 
-if(isset($_POST['team'])){
-    $team = $_POST['team'];
-    $mission = $_POST['mission'];
-}else{
-    $team = $_SESSION['t_team'];
-    $mission = getMissionByTeam($team);
-}
+$team = $_SESSION['t_team'];
+$mission = getMissionByTeam($team);
 
 if(getMissionState($team)!=0){
     header('Location: t_missionSend.php');
@@ -27,6 +14,8 @@ if(getMissionState($team)!=0){
 
 if(isset($_FILES['picture']['tmp_name'])){
     $picture = file_get_contents($_FILES['picture']['tmp_name']);
+}else{
+    header('Location: t_missionSend.php');
 }
 
 $conn = connect();
