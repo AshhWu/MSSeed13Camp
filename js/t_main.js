@@ -165,16 +165,23 @@ function mrt_route(route, count){
 
 function lego_refresh(obj){
 	var tmp_str = '/TaipeiRun/t_teamMove.php?team=' + current_team + '&position=' + end.toString();
-	var n = parseInt(obj.id[obj.id.length-1]);
-	var rest_lego;
-	var j;
+	var rest_lego, j, n;
+	if (obj.id.length == 5)
+		n = parseInt(obj.id[4]);
+	else if (obj.id.lego == 6)
+		n = parseInt(obj.id[4]*10 + obj.id[5]);
+	else {
+		alert("error");
+		return;
+	}
+
 	for (j = 1; j < 5; j++){
 		rest_lego = current_lego[j-1] - cost_list[n-1][j];
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
 	window.location = tmp_str;
 
-	alert("移動成功! 請向" + mrt_value[end.toString()] + "站前進~");
+	alert("移動成功! 請向 " + mrt_value[end.toString()] + " 站前進~");
 }
 
 //lego_trade
