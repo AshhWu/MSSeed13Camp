@@ -131,12 +131,12 @@ session_start();
 			</ul>
 		</div>
 		<div id="trade_list" class="tab-pane fade w3-container w3-section w3-padding w3-card-2">
-			<h4 class="w3-card w3-pink w3-padding">別組交易請求</h4>
+			<h4 class="w3-card w3-brown w3-padding">別組交易請求</h4>
 			<ul id="trade_ul" class="w3-ul">
 			</ul>
 		</div>
 		<div id="wait_list" class="tab-pane fade w3-container w3-section w3-padding w3-card-2">
-			<h4 class="w3-card w3-pink w3-padding">已提出的交易</h4>
+			<h4 class="w3-card w3-brown w3-padding">已提出的交易</h4>
 			<ul id="wait_ul" class="w3-ul">
 			</ul>
 		</div>
