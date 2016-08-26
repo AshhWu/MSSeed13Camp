@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
-<body>
+<body onload="refresh_message(<?php echo '[ '; foreach($msg as $arr){ echo '['; foreach($arr as $value){echo $value . ',';} echo '-1], ';} echo '[] ]'; ?>)">
 
 <?php include "backend/navbar/nav.php"; ?>
 <?php include "t_getitems.php"; ?>
