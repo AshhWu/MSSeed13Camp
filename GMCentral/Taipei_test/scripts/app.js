@@ -305,9 +305,8 @@ var app = angular.module('app', []);
       // var data = [{"team":"1","gpsX":"0","gpsY":"0"},{"team":"2","gpsX":"0","gpsY":"0"},{"team":"3","gpsX":"0","gpsY":"0"},{"team":"4","gpsX":"0","gpsY":"0"},{"team":"5","gpsX":"0","gpsY":"0"},{"team":"6","gpsX":"0","gpsY":"0"},{"team":"7","gpsX":"0","gpsY":"0"},{"team":"8","gpsX":"0","gpsY":"0"},{"team":"9","gpsX":"0","gpsY":"0"},{"team":"10","gpsX":"0","gpsY":"0"},{"team":"11","gpsX":"0","gpsY":"0"},{"team":"12","gpsX":"0","gpsY":"0"}];
       function getLoc(){
         $http.get("scripts/CURD/getLocation.php")
-         .then(function(data){
-          console.log(data);
-          $scope.teams = data;
+         .then(function(response){
+          $scope.teams = response.data;
             for(var index in $scope.teams)
             {
               var perTeam = $scope.teams[index];
