@@ -44,7 +44,7 @@ if($_SESSION['ID'] != null){
               <?php  
               require_once "getitems.php";
             #prepareResource();
-              $items = getGroupResources($_SESSION["s_team"]);
+              $items = getGroupResources($_SESSION["t_team"]);
               if(!empty($items)) { echo $items[0][1]; }
               ?>
             </div>
