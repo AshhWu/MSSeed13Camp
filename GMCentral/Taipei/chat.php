@@ -42,8 +42,8 @@ session_start();
     <div class="tab-content">
 
         <div id="chat1" class="tab-pane fade in active w3-container w3-section w3-padding">
-        
-            <div class="w3-container" style="display:inline-block;margin-left:30px;">
+
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
                 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
                     給America的訊息:<br> <input type="text" name="message">
                     <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(1)">送出</button>
@@ -54,7 +54,7 @@ session_start();
                 <div id="msg1" style="display:none"><?php foreach($msg1 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
 
-            <div class="w3-container" style="display:inline-block;margin-left:30px;">
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
                 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
                     給Canada的訊息:<br> <input type="text" name="message">
                     <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(2)">送出</button>
@@ -65,107 +65,128 @@ session_start();
                 <div id="msg2" style="display:none"><?php foreach($msg2 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
 
-            <div class="w3-container" style="display:inline-block;margin-left:30px;">
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
                 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
                     給Brazil的訊息:<br> <input type="text" name="message">
                     <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(3)">送出</button>
                 </div>
                 <div id="board3" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
-                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Canada</h3><br>
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Brazil</h3><br>
                 </div>
                 <div id="msg3" style="display:none"><?php foreach($msg3 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
 
         </div>
 
-        <div id="chat2" class="tab-pane fade w3-container w3-section w3-padding">
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給Italy的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(4)">送出</button>
-            </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給Germany的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(5)">送出</button>
-            </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給England的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(6)">送出</button>
+        <div id="chat2" class="tab-pane fade in active w3-container w3-section w3-padding">
+
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給Italy的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(4)">送出</button>
+                </div>
+                <div id="board4" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Italy</h3><br>
+                </div>
+                <div id="msg4" style="display:none"><?php foreach($msg4 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
 
-            <div id="board4" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Italy</h3><br>
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給Germany的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(5)">送出</button>
+                </div>
+                <div id="board5" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Germany</h3><br>
+                </div>
+                <div id="msg5" style="display:none"><?php foreach($msg5 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
-            <div id="msg4" style="display:none"><?php foreach($msg4 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
-            <div id="board5" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Germany</h3><br>
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給England的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(6)">送出</button>
+                </div>
+                <div id="board6" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">England</h3><br>
+                </div>
+                <div id="msg6" style="display:none"><?php foreach($msg6 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
-            <div id="msg5" style="display:none"><?php foreach($msg5 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
-            <div id="board6" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">England</h3><br>
-            </div>
-            <div id="msg6" style="display:none"><?php foreach($msg6 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
         </div>
 
-        <div id="chat3" class="tab-pane fade w3-container w3-section w3-padding">
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給Taiwan的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(7)">送出</button>
-            </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給Japan的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(8)">送出</button>
-            </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給Thailand的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(9)">送出</button>
+        <div id="chat3" class="tab-pane fade in active w3-container w3-section w3-padding">
+
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給Taiwan的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(7)">送出</button>
+                </div>
+                <div id="board7" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Taiwan</h3><br>
+                </div>
+                <div id="msg7" style="display:none"><?php foreach($msg7 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
 
-            <div id="board7" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Taiwan</h3><br>
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給Japan的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(8)">送出</button>
+                </div>
+                <div id="board8" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Japan</h3><br>
+                </div>
+                <div id="msg8" style="display:none"><?php foreach($msg8 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
-            <div id="msg7" style="display:none"><?php foreach($msg7 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
-            <div id="board8" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Japan</h3><br>
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給Thailand的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(9)">送出</button>
+                </div>
+                <div id="board9" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Thailand</h3><br>
+                </div>
+                <div id="msg9" style="display:none"><?php foreach($msg9 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
-            <div id="msg8" style="display:none"><?php foreach($msg8 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
-            <div id="board9" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Thailand</h3><br>
-            </div>
-            <div id="msg9" style="display:none"><?php foreach($msg9 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
         </div>
 
-        <div id="chat4" class="tab-pane fade w3-container w3-section w3-padding">
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給SouthAfrica的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(10)">送出</button>
-            </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給Madagascar的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(11)">送出</button>
-            </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
-                給Egypt的訊息:<br> <input type="text" name="message">
-                <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(12)">送出</button>
+        <div id="chat4" class="tab-pane fade in active w3-container w3-section w3-padding">
+
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給SouthAfrica的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(10)">送出</button>
+                </div>
+                <div id="board10" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">ASouthAfrica</h3><br>
+                </div>
+                <div id="msg10" style="display:none"><?php foreach($msg10 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
 
-            <div id="board10" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">SouthAfrica</h3><br>
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給Madagascar的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(11)">送出</button>
+                </div>
+                <div id="board11" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Madagascar</h3><br>
+                </div>
+                <div id="msg11" style="display:none"><?php foreach($msg11 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
-            <div id="msg10" style="display:none"><?php foreach($msg10 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
-            <div id="board11" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Madagascar</h3><br>
+            <div class="w3-container" style="display:inline-block;margin-left:10px;">
+                <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px;">
+                    給Egypt的訊息:<br> <input type="text" name="message">
+                    <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_messageGM(12)">送出</button>
+                </div>
+                <div id="board12" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;">
+                    <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Egypt</h3><br>
+                </div>
+                <div id="msg12" style="display:none"><?php foreach($msg12 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
             </div>
-            <div id="msg11" style="display:none"><?php foreach($msg11 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
-            <div id="board12" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Egypt</h3><br>
-            </div>
-            <div id="msg12" style="display:none"><?php foreach($msg12 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
         </div>
 
     </div>
