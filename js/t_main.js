@@ -75,13 +75,14 @@ function check_lego(start, team, lego){
 }
 
 function check_route(){
-	var i;
-	for (i = 0; i < cost_list.length - 1; i++){
-		if (cost_list[i][1] >= cost_list[i+1][1] && cost_list[i][2] >= cost_list[i+1][2] && cost_list[i][3] >= cost_list[i+1][3] && cost_list[i][4] >= cost_list[i+1][4])
-			document.getElementById("route" + (i+1).toString()).style.display = "none";
-		else if (cost_list[i][1] <= cost_list[i+1][1] && cost_list[i][2] <= cost_list[i+1][2] && cost_list[i][3] <= cost_list[i+1][3] && cost_list[i][4] <= cost_list[i+1][4])
-			document.getElementById("route" + (i+2).toString()).style.display = "none";
-	}
+	var i, j;
+	for (i = 0; i < cost_list.length; i++)
+		for (j = i+1; j < cost_list.length; j++){
+			if (cost_list[i][1] >= cost_list[j][1] && cost_list[i][2] >= cost_list[j][2] && cost_list[i][3] >= cost_list[j][3] && cost_list[i][4] >= cost_list[j][4])
+				document.getElementById("route" + (i+1).toString()).style.display = "none";
+			else if (cost_list[i][1] <= cost_list[j][1] && cost_list[i][2] <= cost_list[j][2] && cost_list[i][3] <= cost_list[j][3] && cost_list[i][4] <= cost_list[j][4])
+				document.getElementById("route" + (j+1).toString()).style.display = "none";
+		}
 }
 
 function change_once(start, line_s, line_e, end){
