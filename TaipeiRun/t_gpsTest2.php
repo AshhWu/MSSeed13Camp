@@ -19,6 +19,8 @@
         }
     else {alert("此瀏覽器不支援地理定位功能!");}
     function successCallback(position) {
+      $lat=0;
+      $lon=0;
       $lat=parseFloat(position.coords.latitude);
       $lon=parseFloat(position.coords.longitude);
         <?php
