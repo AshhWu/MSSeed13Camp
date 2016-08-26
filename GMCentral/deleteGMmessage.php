@@ -23,7 +23,7 @@ $id = $_GET['id'];
 ChromePhp::log('get id');
 ChromePhp::log($id);
 
-deleteGMMessage($id);
+deleteGMMessage0000($id);
 
 ChromePhp::log('Finish Delete!');
 
