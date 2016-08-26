@@ -89,7 +89,7 @@ app.controller('cubeController', ['$scope','$http', '$interval', function($scope
                   $scope.colorCube[2].data[index] = $scope.cubes[index].cube4;
                   $scope.colorCube[3].data[index] = $scope.cubes[index].cube5;
 
-                  $scope.totalCube[index] = ($scope.cubes[index].cube2 + $scope.cubes[index].cube3 + $scope.cubes[index].cube4 + $scope.cubes[index].cube5);
+                  $scope.totalCube[index] = (parseInt($scope.cubes[index].cube2) + parseInt($scope.cubes[index].cube3) + parseInt($scope.cubes[index].cube4) + parseInt($scope.cubes[index].cube5));
                   console.log($scope.totalCube[index]);
                   $scope.cubes[index].teamName = $scope.labels[index];
                   console.log($scope.cubes[index].teamName);
