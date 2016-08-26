@@ -31,6 +31,11 @@ session_start();
             }
         }
     </script>
+    <script>
+      function sendReport(){
+        alert("YOYOYO");
+      }
+    </script>
   </head>
   <body>
     <?php
@@ -55,17 +60,18 @@ session_start();
                         if($mState==0){
                             echo    '<input type="file" name="picture" onchange="readURL(this);" />
                                     <img id="blah" src="" height="260px" width="260px" alt="預覽區" />
-                                    <p><input class="btn btn-success" type="submit" value="完成任務">
+                                    <br>
+                                    <p><input class="btn btn-success" type="submit" value="完成任務" onclick="sendReport()">
                                     <a href="t_missionDetail.php" class="btn btn-danger" role="button">取消</a></p>';
                         }else if($mState==1){
-                            echo    '<p><h1><span class="label label-success">Judging</span></h1></p>
+                            echo    '<h1><span class="label label-primary" style="color:#337ab7;background-color:white">審查中...</span></h1>
                                     <img src="data:image/jpeg;base64,'.base64_encode(getMissionReportPic($team)).'" width="250px"/>
-                                    <script language="javascript">setTimeout("self.location.reload();",5000);</script>';
+                                    <script language="javascript">setTimeout("self.location.reload();",10000);</script>';
                         }else if($mState==2){
-                            echo    '<p><h1><span class="label label-success">任務完成</span></h1></p><br>
+                            echo    '<p><h1><span class="label label-primary" style="color:#53FF53;background-color:white">任務完成</span></h1></p><br>
                                     <p><a href="t_newMission.php?team='.$team.'" class="btn btn-danger" role="button">獲得新任務</a></p>';
                         }else if($mState==3){
-                            echo    '<p><h1><span class="label label-success">任務失敗</span></h1></p><br>
+                            echo    '<p><h1><span class="label label-primary" style="color:#CE0000;background-color:white">任務失敗</span></h1></p><br>
                                     <p><a href="TaipeiRun/t_oldMission.php?team='.$team.'" class="btn btn-danger" role="button">返回任務資訊</a></p>';
                         }else{
                             echo    '<p><h1><span class="label label-success">任務已全部完成</span></h1></p>';
