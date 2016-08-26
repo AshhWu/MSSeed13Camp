@@ -133,12 +133,12 @@ session_start();
 
         <div id="chat4" class="tab-pane fade w3-container w3-section w3-padding">
             <div id="board10" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">SouthAfrica</h3><br>
+                <h3 class="w3-card w3-padding w3-brown" style="width:200px;margin:auto;text-align:center;">SouthAfrica</h3><br>
             </div>
             <div id="msg10" style="display:none"><?php foreach($msg10 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
             <div id="board11" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Madagascar</h3><br>
+                <h3 class="w3-card w3-padding w3-brown" style="width:200px;margin:auto;text-align:center;">Madagascar</h3><br>
             </div>
             <div id="msg11" style="display:none"><?php foreach($msg11 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
