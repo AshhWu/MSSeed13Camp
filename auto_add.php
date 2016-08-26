@@ -73,9 +73,6 @@ function updateGroupResource($team, $value, $resource)
 
 #sqlcode("UPDATE auto_time SET time_now='1' WHERE point='1'");
 echo "Start time" . date('h:i:s') . "<br>";
-$x = 1;
-while($x <= 1)
-{
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
 	$i = 0;
@@ -146,9 +143,6 @@ while($x <= 1)
 			}
 		}
 	}
-	//sleep(1);
-	$x += 1;
-}
 echo "End time" . date('h:i:s') . "<br>";
 echo "<script>window.close();</script>";
 
