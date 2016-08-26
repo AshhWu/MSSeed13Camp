@@ -1,4 +1,4 @@
-var app = angular.module('app', []);
+var app = angular.module('app', ["chart.js"]);
 
 // app.controller('BarCtrl', ['$scope', function ($scope) {
 //   		$scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
