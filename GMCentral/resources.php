@@ -174,7 +174,7 @@
 													<td>".$item[4]."</td>
 													<td>".$item[3]."</td>";
 														
-										echo "<td><a href='deleteGMmessage.php?content=".$item[3]."'>Delete</a></td>";
+										echo "<td><a href='deleteGMmessage.php?content=".$item[1]."'>Delete</a></td>";
 										echo "</tr>";
 									}
 									
@@ -186,7 +186,7 @@
                                     <table border="1">
                                         <tr>
                                             <td>現在時間: </td>
-                                            <td><input name="time" type="text"/></td>
+                                            <td><input id="time" name="time" type="text" value="" /></td>
                                         </tr>
                                         <tr>
                                             <td>要傳給的隊伍: </td>
@@ -263,6 +263,20 @@
             <script>
                 renew();
                 var myVar = setInterval(renew, 8000);
+            </script>
+            <!--Time Default Input By this-->
+            <script>
+                function updateClock() {
+                    var now = new Date(), // current date
+                        time = now.getHours() + ':' + now.getMinutes()+ ':' + now.getSeconds();
+
+                    // set the content of the element with the ID time to the formatted string
+                    document.getElementById('time').value = [time].join(' / ');
+
+                    // call this function again in 1000ms
+                    setTimeout(updateClock, 1000);
+                }
+                updateClock();
             </script>
 	</body>
 </html>

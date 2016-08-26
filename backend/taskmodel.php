@@ -826,12 +826,12 @@ function deleteGMMessage($item_id)
 	$stmt->bindValue(1, $item_id);
 	$stmt->execute();
 }
-function deleteGMMessageContent($content)
+function deleteGMMessageTime($time)
 {
 	$conn = connect();
-	$sql = "DELETE FROM gmmessage WHERE content=?";
+	$sql = "DELETE FROM gmmessage WHERE time=?";
 	$stmt = $conn->prepare($sql);
-	$stmt->bindValue(1, $content);
+	$stmt->bindValue(1, $time);
 	$stmt->execute();
 }
 
