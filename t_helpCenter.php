@@ -42,9 +42,9 @@ session_start();
 	var i, str = '';
 	for (i = len-4; i > 0; i-=5){
 		if (msg[i] == 0)
-			str += '<p class="w3-card w3-blue w3-padding w3-round" style="float:right;max-width:250px;">' + msg[i+1] + '</p><br><br>';
+			str += '<p class="w3-card-2 w3-blue w3-padding w3-round" style="float:right;max-width:250px;margin-top:3px;">' + msg[i+1] + '</p><br><br>';
 		else if (msg[i] == 1)
-			str += '<p class="w3-card w3-light-grey w3-padding w3-round" style="float:left;max-width:250px;">' + msg[i+1] + '</p><br><br>';
+			str += '<p class="w3-card-2 w3-light-grey w3-padding w3-round" style="float:left;max-width:250px;margin-top:3px;">' + msg[i+1] + '</p><br><br>';
 	}
 	document.getElementById("chat_board").innerHTML = str;
 </script>
