@@ -31,7 +31,7 @@ session_start();
       <div class="starter-template">
         <div class=".col-md-10 .col-md-offset-1">
           <?echo getMissionName($mission);?>
-            <h4><table border='1'>
+            <h4><table border="1" align="center" cellspacing="20" cellpadding="50">
                 <tr>
                     <td>國家</td>
                     <td>審核</td>
