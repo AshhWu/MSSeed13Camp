@@ -35,8 +35,7 @@ session_start();
       function sendReport(){
         if(MPForm.picture.value==""){
           alert("請上傳圖片!");
-        }else{
-          alert("fdsf");
+          window.location.reload();
         }
       }
     </script>
