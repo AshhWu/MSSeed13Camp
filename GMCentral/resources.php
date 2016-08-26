@@ -24,7 +24,8 @@
 					<div class="inner">
 						<header>
 							<h1>Microsoft Seed 13th Camp</h1>
-							<p>據點戰戰況<br /></p>
+							<h2>據點戰戰況<br /></h2>
+
 						</header>
 					</div>
                     <div id="Response"/>
@@ -36,6 +37,8 @@
 
 					<!-- Boxes -->
 						<div class="thumbnails">
+                            <p>每四個小隊會合成一個陣營，共同合作去獲取物資。</p>
+                            <p>但同時，各小隊也會根據自身的小隊情況，去思考該合成甚麼樣的元件，才對自己有利..</p>
                             <div class="bigbox">
                                 <div id="jssor_0" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden; background-color: #003C9D ;">
                                     <!-- Loading Screen -->
@@ -71,8 +74,7 @@
                                     <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
                                 </div>
 	                            <div class="inner">
-									<h3>團隊資源豐富程度</h3>
-									<p>以獲取資源作為加權所得的分數</p>
+									<h3>陣營資源豐富程度</h3>
                                 </div>
 							</div>                            
 							<div class="mediumbox">
@@ -146,8 +148,8 @@
                                     <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
                                 </div>
                                 <div class="inner">
-									<h3>各組材料數量</h3>
-									<p>各組的初級材料/合成元件/特殊材料</p>
+									<h3>各小組材料數量</h3>
+									<p>各小組的「原料」、「零件」、「特殊材料」</p>
                                 </div>
 
 							</div>
