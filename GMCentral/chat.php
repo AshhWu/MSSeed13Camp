@@ -18,8 +18,6 @@ session_start();
 
 <?php include "../backend/navbar/nav.php"; ?>
 <?php include "../t_getitems.php"; ?>
-<?php $team = $_SESSION['t_team']; ?>
-<?php $country = $_SESSION['country'] ;?>
 
 <h3 style="color:#337ab7; width:180px; margin:auto; text-align: center">聊天中心</h3>
 
@@ -156,7 +154,7 @@ session_start();
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
         </div>
-    
+
     </div>
 </div>
 
