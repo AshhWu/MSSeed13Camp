@@ -7,17 +7,17 @@ session_start();
     <title>台北行</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="../js/t_main.js"></script>
-    <link rel="stylesheet" href="../css/w3.css">
+    <script src="../../js/t_main.js"></script>
+    <link rel="stylesheet" href="../../css/w3.css">
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
 
-<?php include "../t_getitems.php"; ?>
+<?php include "../../t_getitems.php"; ?>
 
-<h3 class="w3-container w3-padding" style="color:#337ab7; width:180px; margin:auto; text-align: center">聊天中心</h3>
+<h3 class="w3-container w3-section w3-padding" style="color:#337ab7; width:180px; margin:auto; text-align: center">聊天中心</h3>
 
 <div class="container">
     <ul class="nav nav-tabs">
