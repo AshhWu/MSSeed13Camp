@@ -261,4 +261,12 @@ function getMissionName($id){
     return $items[0][0];
 }
 
+function getHelpFromGM($team){
+    $conn = connect();
+    $sql = "SELECT * FROM  where sender=".$team." ORDER BY id ASC";
+    $stmt = $conn->query($sql);
+    $items = $stmt->fetchAll(PDO::FETCH_NUM);
+    return $items;
+}
+
 ?>
