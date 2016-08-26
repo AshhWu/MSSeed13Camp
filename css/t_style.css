@@ -73,7 +73,6 @@
 	width: 320px;
 	margin: auto;
 	display: none;
-	border: solid black;
 	text-align: center;
 }
 
@@ -139,13 +138,13 @@
 	top: 8px;
 }
 
-.tab-pane ul .w3-card {
+.tab-pane ul .w3-card-2 {
 	display: inline-block;
 	margin-right: 8px;
 	text-align: center;
 }
 
-.tab-pane ul .w3-card p {
+.tab-pane ul .w3-card-2 p {
 	position: relative;
 	top: 5px;
 	width: 150px;

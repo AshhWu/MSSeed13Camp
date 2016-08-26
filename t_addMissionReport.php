@@ -1,33 +1,20 @@
 <?php 
 session_start();
 ?>
-<html>
-    <head>
-        <title>圖片上傳中</title>
-    </head>
-    <body>
-        圖片上傳中
-    </body>
-</html>
 <?php
 include_once 'backend/taskmodel.php';
 include_once 't_getitems.php';
 
-if(isset($_POST['team'])){
-    $team = $_POST['team'];
-    $mission = $_POST['mission'];
-}else{
-    $team = $_SESSION['t_team'];
-    $mission = getMissionByTeam($team);
-}
+$team = $_SESSION['t_team'];
+$mission = getMissionByTeam($team);
 
 if(getMissionState($team)!=0){
     header('Location: t_missionSend.php');
 }
 
 if(isset($_FILES['picture']['tmp_name'])){
-    $picture = file_get_contents($_FILES['picture']['tmp_name']);
-}
+   
+$picture = file_get_contents($_FILES['picture']['tmp_name']);
 
 $conn = connect();
 $sql = "INSERT INTO t_missionReport (team, mission, picture, state) VALUES (?, ?, ?, 0)";
@@ -42,10 +29,8 @@ $stmt = $conn->prepare($sql);
 $stmt->bindValue(1, $team);
 $stmt->execute();
 
-if(isset($_POST['team'])){
-    header('Location: t_taipeiAdmin.php');
-}else{
-    header('Location: t_missionSend.php');
 }
+
+header('Location: t_missionSend.php');
 
 ?>

@@ -53,7 +53,7 @@ session_start();
 </div>
 
 <div id="route_list" class="w3-container w3-section w3-padding w3-card-2">
-	<h4 class="w3-card w3-padding" style="color:#337ab7">路線選擇</h4>
+	<h4 class="w3-card w3-padding w3-brown">路線選擇</h4>
 	<ul id="route_ul" class="w3-ul">
 	</ul>
 </div>

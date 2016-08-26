@@ -134,7 +134,7 @@ var mrt_value = {'100':'動物園', '101':'木柵', '102':'萬芳社區', '103':
 function mrt_route(route, count){
 	var cost = [0, 0, 0, 0, 0];
 	var l, disable = 0;
-	result ='<li id="route' + count.toString() + '"><div class="w3-grey">';
+	result ='<li id="route' + count.toString() + '"><div class="w3-card-2 w3-grey">';
 
 	for (l = 0; l < route.length-1; l++){
 		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
@@ -185,14 +185,22 @@ function lego_refresh(obj){
 }
 
 //lego_trade
-function send_request(sender, receiver){
+function send_request(sender, receiver, lego){
 	var tmp_str = 't_addTradeRequest.php?sender=' + sender + '&receiver=' + receiver + '&c1=0&fc1=0';
 	var i, tmp_value;
 	var inputs = document.getElementsByTagName("input");
 	for (i = 0; i < 4; i++){
 		tmp_value = inputs[2*i].value;
+		if (tmp_value > lego[1+i] || tmp_value < 0){
+			alert("亂填數字! 三寶是你?");
+			return;
+		}
 		tmp_str += '&c' + (i+2).toString() + '=' + tmp_value;
 		tmp_value = inputs[2*i+1].value;
+		if (tmp_value > lego[6+i] || tmp_value < 0){
+			alert("亂填數字! 三寶是你?");
+			return;
+		}
 		tmp_str += '&fc' + (i+2).toString() + '=' + tmp_value;
 	}
 
@@ -209,7 +217,7 @@ function trade_init(trade){
 	for (i = 1; i < trade.length; i += 14){
 		sender = trade[i];
 		id = trade[i-1];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>' + country_str[sender] + ' 向你提的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + sender + '">回覆</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card-2 w3-padding"><p>' + country_str[sender] + ' 向你提的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + sender + '">回覆</a></li>';
 	}
 	document.getElementById("trade_ul").innerHTML = tmp_str;
 }
@@ -223,7 +231,7 @@ function wait_init(wait){
 	for (i = 2; i < wait.length; i += 14){
 		receiver = wait[i];
 		id = wait[i-2];
-		tmp_str += '<li class="w3-container"><div class="w3-card w3-sand w3-padding"><p>我向 ' + country_str[receiver] + ' 提的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + receiver + '">查看</a></li>';
+		tmp_str += '<li class="w3-container"><div class="w3-card-2 w3-padding"><p>我向 ' + country_str[receiver] + ' 提的交易</p></div><a class="w3-btn w3-purple w3-padding w3-round" href="t_trade_check.php?id=' + id + '&teamb=' + receiver + '">查看</a></li>';
 	}
 	document.getElementById("wait_ul").innerHTML = tmp_str;
 }
