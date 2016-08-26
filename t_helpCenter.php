@@ -24,12 +24,13 @@ session_start();
 
 <h3 style="color:#337ab7; width:180px; margin:auto; text-align: center">求助中心</h3>
 
-<div id="chat_board" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:350px; margin:auto;"></div>
-
 <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; margin: auto;">
 	給後台(Grace ma)的訊息: <input type="text" name="message">
 	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_message(<?php echo $team;?>)">送出</button>
 </div>
+
+<div id="chat_board" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; margin:auto;"></div>
+
 
 <div id="msg" style="display:none"><?php foreach($msg as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 <script type="text/javascript">
