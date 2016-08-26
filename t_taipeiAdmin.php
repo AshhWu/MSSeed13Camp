@@ -83,19 +83,15 @@ session_start();
         }
     ?>
 
-        <form action="t_addTaipei.php" method="post">
+        <form action="TaipeiRun/t_addTaipei.php" method="post">
             <table border="1">
                 <tr>
                     <td>Team: </td>
                     <td><input name="team" type="number"/></td>
                 </tr>
                 <tr>
-                    <td>Position: </td>
-                    <td><input name="position" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>Cube1: </td>
-                    <td><input name="cube1" type="number"/></td>
+                    <td>Country: </td>
+                    <td><input name="country" type="text"/></td>
                 </tr>
                 <tr>
                     <td>Cube2: </td>
@@ -112,10 +108,6 @@ session_start();
                 <tr>
                     <td>Cube5: </td>
                     <td><input name="cube5" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>Mission: </td>
-                    <td><input name="mission" type="number"/></td>
                 </tr>
             </table>
             <input type="submit" value="Add taipei"/>
