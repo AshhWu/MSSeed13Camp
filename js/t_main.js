@@ -68,9 +68,21 @@ function check_lego(start, team, lego){
 		change_once(start, line_s, parseInt(b/100), b);
 		change_twice(start, line_s, parseInt(b/100), b);
 	}
-	
+
+	check_route();	
 
 	document.getElementById("route_list").style.display = "block";
+}
+
+function check_route(){
+	var i, j;
+	for (i = 0; i < cost_list.length; i++)
+		for (j = i+1; j < cost_list.length; j++){
+			if (cost_list[i][1] >= cost_list[j][1] && cost_list[i][2] >= cost_list[j][2] && cost_list[i][3] >= cost_list[j][3] && cost_list[i][4] >= cost_list[j][4])
+				document.getElementById("route" + (i+1).toString()).style.display = "none";
+			else if (cost_list[i][1] <= cost_list[j][1] && cost_list[i][2] <= cost_list[j][2] && cost_list[i][3] <= cost_list[j][3] && cost_list[i][4] <= cost_list[j][4])
+				document.getElementById("route" + (j+1).toString()).style.display = "none";
+		}
 }
 
 function change_once(start, line_s, line_e, end){
@@ -122,7 +134,7 @@ var mrt_value = {'100':'動物園', '101':'木柵', '102':'萬芳社區', '103':
 function mrt_route(route, count){
 	var cost = [0, 0, 0, 0, 0];
 	var l, disable = 0;
-	result ='<li><div class="w3-grey">'
+	result ='<li id="route' + count.toString() + '"><div class="w3-grey">';
 
 	for (l = 0; l < route.length-1; l++){
 		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
@@ -153,16 +165,23 @@ function mrt_route(route, count){
 
 function lego_refresh(obj){
 	var tmp_str = '/TaipeiRun/t_teamMove.php?team=' + current_team + '&position=' + end.toString();
-	var n = parseInt(obj.id[obj.id.length-1]);
-	var rest_lego;
-	var j;
+	var rest_lego, j, n;
+	if (obj.id.length == 5)
+		n = parseInt(obj.id[4]);
+	else if (obj.id.lego == 6)
+		n = parseInt(obj.id[4]*10 + obj.id[5]);
+	else {
+		alert("error");
+		return;
+	}
+
 	for (j = 1; j < 5; j++){
 		rest_lego = current_lego[j-1] - cost_list[n-1][j];
 		tmp_str += '&c' + (j+1).toString() + '=' + rest_lego.toString();
 	}
 	window.location = tmp_str;
 
-	alert("移動成功! 請向" + mrt_value[end.toString()] + "站前進~");
+	alert("移動成功! 請向 " + mrt_value[end.toString()] + " 站前進~");
 }
 
 //lego_trade

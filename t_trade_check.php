@@ -40,10 +40,12 @@ session_start();
 	<th id="receiver_country" class="w3-tag"><?php echo $receiver;?></th>
 </tr>
 <script type="text/javascript">
-	var country_str = ['', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
+	var country_str = ['XX', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
 	document.getElementById("trade_with").innerHTML = '和' + country_str[document.getElementById("team2").innerText] + '的交易細節';
 	document.getElementById("sender_country").innerHTML = country_str[document.getElementById("sender_country").innerText];
 	document.getElementById("receiver_country").innerHTML = country_str[document.getElementById("receiver_country").innerText];
+	var phone = ['XX', '0923880223', '0912345678', '09', '09', '09', '09', '09', '09', '09', '09', '09', '09'];
+	document.getElementById("trade_with").innerHTML += '<br>聯絡電話: ' + phone[document.getElementById("team2").innerText];
 </script>
 <tr>
 	<th><div class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div></th>
@@ -86,6 +88,7 @@ session_start();
 <script type="text/javascript">
 	if (document.getElementById("team").innerText == document.getElementById("sender").innerText)
 		document.getElementById("trade_btn").innerHTML = '<a class="w3-btn w3-padding w3-teal w3-round" href="t_lego_list.php">退出</a>';
+	alert("還在等待對方回覆,如需向對方施壓請撥聯絡電話~");
 </script>
 
 <!-- jQuery -->

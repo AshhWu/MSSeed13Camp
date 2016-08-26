@@ -56,6 +56,7 @@ session_start();
                         <th>cube5</th>
                         <th>mission</th>
                         <th>mState</th>
+                        <th>Country</th>
                     </tr>";
         $items = getTaipeiRun();
         if(!empty($items))
@@ -74,6 +75,7 @@ session_start();
                             <td>".$item[8]."</td>
                             <td>".$item[9]."</td>
                             <td>".$item[10]."</td>
+                            <td>".$item[11]."</td>
                             </tr>";
             }
 
@@ -81,19 +83,15 @@ session_start();
         }
     ?>
 
-        <form action="t_addTaipei.php" method="post">
+        <form action="TaipeiRun/t_addTaipei.php" method="post">
             <table border="1">
                 <tr>
                     <td>Team: </td>
                     <td><input name="team" type="number"/></td>
                 </tr>
                 <tr>
-                    <td>Position: </td>
-                    <td><input name="position" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>Cube1: </td>
-                    <td><input name="cube1" type="number"/></td>
+                    <td>Country: </td>
+                    <td><input name="country" type="text"/></td>
                 </tr>
                 <tr>
                     <td>Cube2: </td>
@@ -110,10 +108,6 @@ session_start();
                 <tr>
                     <td>Cube5: </td>
                     <td><input name="cube5" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>Mission: </td>
-                    <td><input name="mission" type="number"/></td>
                 </tr>
             </table>
             <input type="submit" value="Add taipei"/>
@@ -133,7 +127,6 @@ session_start();
                         <th>team</th>
                         <th>mission</th>
                         <th>picture</th>
-                        <th>state</th>
                     </tr>";
         $items = getMissionReport();
         if(!empty($items))
@@ -149,14 +142,14 @@ session_start();
                 }else{*/
                     echo    "<td>無圖片</td>";
                 //}
-                if($item[4]==0){
+                /*if($item[4]==0){
                     echo    "<td><a href='t_missionComplete.php?id=".$item[0]."&team=".$item[1]."'>OK</a> or 
                                  <a href='t_missionFail.php?id=".$item[0]."&team=".$item[1]."'>NOT</a></td>";
                 }else if($item[4]==1){
                     echo    "<td>Complete</td>";
                 }else{
                     echo    "<td>Fail</td>";
-                }
+                }*/
                 echo    "</tr>";
             }
 

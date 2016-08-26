@@ -18,12 +18,12 @@ include 'ChromePhp.php';
 
 ChromePhp::log('In delete GM php');
 
-$id = $_GET['id'];
+$time = $_GET['time'];
 
-ChromePhp::log('get id');
-ChromePhp::log($id);
+ChromePhp::log('get time');
+ChromePhp::log($time);
 
-deleteGMMessage($id);
+deleteGMMessageTime($time);
 
 ChromePhp::log('Finish Delete!');
 

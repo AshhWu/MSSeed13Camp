@@ -11,26 +11,57 @@ chartMaker = function(){
 			"type": "serial",
 			"startDuration": 1,
 			"dataProvider": [{
-				"country": "美洲",
+				"country": "1",
 				"visits": x20[0],
 				"color": "#FF0F00"
-			}, {
-				"country": "歐洲",
+			},{
+				"country": "2",
 				"visits": x20[1],
-				"color": "#FF6600"
-			}, {
-				"country": "亞洲",
+				"color": "#FF0F00"
+			},{
+				"country": "5",
 				"visits": x20[2],
+				"color": "#FF0F00"
+			},{
+				"country": "4",
+				"visits": x20[3],
+				"color": "#FFB11B"
+			}, {
+				"country": "5",
+				"visits": x20[4],
+				"color": "#FFB11B"
+			},{
+				"country": "6",
+				"visits": x20[5],
+				"color": "#FFB11B"
+			},{
+				"country": "7",
+				"visits": x20[6],
+				"color": "#3A8FB7"
+			},{
+				"country": "8",
+				"visits": x20[7],
 				"color": "#3A8FB7"
 			}, {
-				"country": "非洲",
-				"visits": x20[3],
+				"country": "9",
+				"visits": x20[8],
+				"color": "#3A8FB7"
+			}, {
+				"country": "10",
+				"visits": x20[9],
 				"color": "#86C166"
-
+			}, {
+				"country": "11",
+				"visits": x20[10],
+				"color": "#86C166"
+			}, {
+				"country": "12",
+				"visits": x20[11],
+				"color": "#86C166"
 			}],
 			"valueAxes": [{
 				"position": "left",
-				"title": "數量",
+				"title": "原料",
 				"minimum": 0,
 				"integersOnly":true
 			}],
@@ -64,27 +95,60 @@ chartMaker = function(){
 			"type": "serial",
 			"startDuration": 0,
 			"dataProvider": [{
-				"country": "美洲",
+				"country": "1",
 				"visits": x21[0],
 				"color": "#FF0F00"
-			}, {
-				"country": "歐洲",
+			},{
+				"country": "2",
 				"visits": x21[1],
-				"color": "#FF6600"
-			}, {
-				"country": "亞洲",
+				"color": "#FF0F00"
+			},{
+				"country": "5",
 				"visits": x21[2],
+				"color": "#FF0F00"
+			},{
+				"country": "4",
+				"visits": x21[3],
+				"color": "#FFB11B"
+			}, {
+				"country": "5",
+				"visits": x21[4],
+				"color": "#FFB11B"
+			},{
+				"country": "6",
+				"visits": x21[5],
+				"color": "#FFB11B"
+			},{
+				"country": "7",
+				"visits": x21[6],
+				"color": "#3A8FB7"
+			},{
+				"country": "8",
+				"visits": x21[7],
 				"color": "#3A8FB7"
 			}, {
-				"country": "非洲",
-				"visits": x21[3],
+				"country": "9",
+				"visits": x21[8],
+				"color": "#3A8FB7"
+			}, {
+				"country": "10",
+				"visits": x21[9],
 				"color": "#86C166"
-			
+			}, {
+				"country": "11",
+				"visits": x21[10],
+				"color": "#86C166"
+			}, {
+				"country": "12",
+				"visits": x21[11],
+				"color": "#86C166"
 			}],
 			"valueAxes": [{
 				"position": "left",
+				"title": "零件",
 				"axisAlpha":0.8,
 				"gridAlpha":0.5,
+				"minimum": 0,
 				"integersOnly":true
 			}],
 			"graphs": [{
@@ -96,7 +160,7 @@ chartMaker = function(){
 				"topRadius":1,
 				"valueField": "visits"
 			}],
-			"depth3D": 40,
+			"depth3D": 15,
 			"angle": 30,
 			"chartCursor": {
 				"categoryBalloonEnabled": false,
@@ -118,25 +182,57 @@ chartMaker = function(){
 			"type": "serial",
 			"startDuration": 0,
 			"dataProvider": [{
-				"country": "美洲",
+				"country": "1",
 				"visits": x22[0],
 				"color": "#FF0F00"
-			}, {
-				"country": "歐洲",
+			},{
+				"country": "2",
 				"visits": x22[1],
-				"color": "#FF6600"
-			}, {
-				"country": "亞洲",
+				"color": "#FF0F00"
+			},{
+				"country": "5",
 				"visits": x22[2],
+				"color": "#FF0F00"
+			},{
+				"country": "4",
+				"visits": x22[3],
+				"color": "#FFB11B"
+			}, {
+				"country": "5",
+				"visits": x22[4],
+				"color": "#FFB11B"
+			},{
+				"country": "6",
+				"visits": x22[5],
+				"color": "#FFB11B"
+			},{
+				"country": "7",
+				"visits": x22[6],
+				"color": "#3A8FB7"
+			},{
+				"country": "8",
+				"visits": x22[7],
 				"color": "#3A8FB7"
 			}, {
-				"country": "非洲",
-				"visits": x22[3],
+				"country": "9",
+				"visits": x22[8],
+				"color": "#3A8FB7"
+			}, {
+				"country": "10",
+				"visits": x22[9],
 				"color": "#86C166"
-			
+			}, {
+				"country": "11",
+				"visits": x22[10],
+				"color": "#86C166"
+			}, {
+				"country": "12",
+				"visits": x22[11],
+				"color": "#86C166"
 			}],
 			"valueAxes": [{
 				"position": "left",
+				"title": "特殊材料",
 				"axisAlpha":0.8,
 				"gridAlpha":0.5,
 				"minimum": 0,
@@ -153,7 +249,7 @@ chartMaker = function(){
 				
 			}],
 			
-			"depth3D": 40,
+			"depth3D": 15,
 			"angle": 30,
 			"chartCursor": {
 				"categoryBalloonEnabled": false,
@@ -182,7 +278,7 @@ chartMaker = function(){
 		}, {
 			"country": "歐洲",
 			"visits": x10[1],
-			"color": "#FF6600"
+			"color": "#FFB11B"
 		}, {
 			"country": "亞洲",
 			"visits": x10[2],
@@ -221,9 +317,7 @@ chartMaker = function(){
 		"export": {
 			"enabled": false
 			}
-
 	});
-
 	var chart = AmCharts.makeChart( "chartdiv11", {
 		"type": "pie",
 		"theme": "black",
@@ -235,7 +329,7 @@ chartMaker = function(){
 		}, {
 			"country": "歐洲",
 			"value": x10[1],
-			"color": "#FF6600"	
+			"color": "#FFB11B"	
 		}, {
 			"country": "亞洲",
 			"value": x10[2],
@@ -265,7 +359,7 @@ chartMaker = function(){
 		"export": {
 			"enabled": false
 		}
-		} );
+	});
 	var chart = AmCharts.makeChart("chartdiv00", {
 		"theme": "black",
 		"type": "serial",
@@ -277,7 +371,7 @@ chartMaker = function(){
 		}, {
 			"country": "歐洲",
 			"visits": x00[1],
-			"color": "#FF6600"
+			"color": "#FFB11B"
 		}, {
 			"country": "亞洲",
 			"visits": x00[2],
@@ -331,35 +425,25 @@ function getAllResources() {
 			var obj = JSON.parse(response);
 			console.log(obj);
 			console.log(obj[0][1]);
-    		x20[0]=0;
-			x20[1]=0;
-			x20[2]=0;
-			x20[3]=0;
-			x21[0]=0;
-			x21[1]=0;
-			x21[2]=0;
-			x21[3]=0;
-			x22[0]=0;
-			x22[1]=0;
-			x22[2]=0;
-			x22[3]=0;
+    		for(i=0;i<12;i++){
+				x20[i]=0;
+				x21[i]=0;
+				x22[i]=0;
+			}
 			for(i=1;i<=16;i++){
-				x20[1] = x20[1]+Number(obj[0][i]);
-				x20[2] = x20[2]+Number(obj[1][i]);
-				x20[3] = x20[3]+Number(obj[2][i]);
-				x20[0] = x20[0]+Number(obj[3][i]);
+				for(j=0;j<12;j++){
+					x20[j] = x20[j]+Number(obj[j+4][i]);
+				}
 			}
 			for(i=17;i<=26;i++){
-				x21[1] = x21[1]+Number(obj[0][i]);
-				x21[2] = x21[2]+Number(obj[1][i]);
-				x21[3] = x21[3]+Number(obj[2][i]);
-				x21[0] = x21[0]+Number(obj[3][i]);
+				for(j=0;j<12;j++){
+					x21[j] = x21[j]+Number(obj[j+4][i]);
+				}
 			}
 			for(i=27;i<=33;i++){
-				x22[1] = x22[1]+Number(obj[0][i]);
-				x22[2] = x22[2]+Number(obj[1][i]);
-				x22[3] = x22[3]+Number(obj[2][i]);
-				x22[0] = x22[0]+Number(obj[3][i]);
+				for(j=0;j<12;j++){
+					x22[j] = x22[j]+Number(obj[j+4][i]);
+				}
 			}
     	}
 	});
@@ -408,18 +492,21 @@ function getAllStrong() {
 function calculateTotal(){
 	var strongHoldPara = 100;
 	var tier1Parameter = 1;
-	var tier2Parameter = 150;
-	var tier3Parameter = 500;
-	x00[0] = x10[0]*strongHoldPara + x20[0]*tier1Parameter + x21[0]*tier2Parameter + x22[0]*tier3Parameter;
-	x00[1] = x10[1]*strongHoldPara + x20[1]*tier1Parameter + x21[1]*tier2Parameter + x22[1]*tier3Parameter;
-	x00[2] = x10[2]*strongHoldPara + x20[2]*tier1Parameter + x21[2]*tier2Parameter + x22[2]*tier3Parameter;
-	x00[3] = x10[3]*strongHoldPara + x20[3]*tier1Parameter + x21[3]*tier2Parameter + x22[3]*tier3Parameter;
+	var tier2Parameter = 100;
+	var tier3Parameter = 400;
+	x00 = [0,0,0,0];
+	for(i=0;i<3;i++){
+		x00[0]=x00[0]+ x20[i]*tier1Parameter + x21[i]*tier2Parameter + x22[i]*tier3Parameter;
+		x00[1]=x00[1]+ x20[i+3]*tier1Parameter + x21[i+3]*tier2Parameter + x22[i+3]*tier3Parameter;
+		x00[2]=x00[2]+ x20[i+6]*tier1Parameter + x21[i+6]*tier2Parameter + x22[i+6]*tier3Parameter;
+		x00[3]=x00[3]+ x20[i+9]*tier1Parameter + x21[i+9]*tier2Parameter + x22[i+9]*tier3Parameter;
+	}
 }
 
-var x20 = [40,32,19,60];
-var x21 = [19,20,21,18];
-var x22 = [2,1,3,3];
-var x10 = [1,1,2,3,9];
+var x20 = [40,40,40,40,40,40,40,40,40,40,40,40];
+var x21 = [5,5,5,5,5,5,5,5,5,5,5,5];
+var x22 = [0,0,0,0,0,0,0,0,0,0,0,0];
+var x10 = [1,1,1,1,12];
 var x00 = [20,20,20,20];
 /* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {

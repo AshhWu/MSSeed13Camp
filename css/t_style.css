@@ -158,6 +158,11 @@
 	text-align: center;
 }
 
+#warning {
+	width: 280px;
+	margin: auto;
+}
+
 #trade_table {
 	width: 280px;
 	margin: auto;

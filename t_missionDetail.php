@@ -26,13 +26,14 @@ session_start();
     <div class="container">
 
       <div class="starter-template">
-        <h1><span class="label label-primary">任務資訊</span></h1>
-        <div class=".col-md-10 .col-md-offset-1">
-            <div class="thumbnail">
+        <h1><span class="label label-primary" style="color:#337ab7;background-color:white">任務資訊</span></h1>
+        <div class=".col-md-10 .col-md-offset-1" style="margin-top: 20px;" >
+            <div class="thumbnail" style="box-shadow: 1px 1px 4px rgba(0,0,0,.3)">
                 <img class="img-rounded" width="250px" src="<?echo getMissionPic($mission)?>" alt="請重新整理頁面">    <!--題目圖片-->
                 <div class="caption">
-                    <h3><?php echo getMissionContent($mission); ?></h3>             <!--題目標題-->
-                    <p>關卡名稱:<?php echo getMissionTitle($mission); ?></p>  <!--題目內容與提示-->
+                    <p style="font-weight:700;color:rgba(0,0,0,.7)"><?echo getMissionContent($mission)?></p>  <!--題目標題-->
+                    <hr>
+                    <p style="font-weight:700">關卡名稱: <?echo getMissionTitle($mission)?></p>  <!--題目內容與提示-->
                     <p><a href="t_missionSend.php" class="btn btn-success" role="button">照片上傳</a></p>
                 </div>
             </div>

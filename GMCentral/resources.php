@@ -4,6 +4,7 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
+
 <html>
 	<head>
 		<title>微軟領袖營 據點戰戰況</title>
@@ -22,8 +23,9 @@
 				<section id="banner">
 					<div class="inner">
 						<header>
-							<h1>MS 13</h1>
-							<p>各組材料表<br /></p>
+							<h1>Microsoft Seed 13th Camp</h1>
+							<h2>據點戰戰況<br /></h2>
+
 						</header>
 					</div>
                     <div id="Response"/>
@@ -35,6 +37,8 @@
 
 					<!-- Boxes -->
 						<div class="thumbnails">
+                            <p>每四個小隊會合成一個陣營，共同合作去獲取物資。</p>
+                            <p>但同時，各小隊也會根據自身的小隊情況，去思考該合成甚麼樣的元件，才對自己有利..</p>
                             <div class="bigbox">
                                 <div id="jssor_0" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 600px; height: 400px; overflow: hidden; visibility: hidden; background-color: #003C9D ;">
                                     <!-- Loading Screen -->
@@ -70,8 +74,7 @@
                                     <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
                                 </div>
 	                            <div class="inner">
-									<h3>團隊加權總分</h3>
-									<p>以獲取資源作為加權所得的所有分數</p>
+									<h3>陣營資源豐富程度</h3>
                                 </div>
 							</div>                            
 							<div class="mediumbox">
@@ -99,7 +102,7 @@
                                 </div>
 	                            <div class="inner">
 									<h3>佔有要塞數量</h3>
-									<p>該隊在地圖上佔據了幾個點</p>
+									<p>該隊在地圖上佔據了幾個據點</p>
                                 </div>
 							</div>
 
@@ -145,8 +148,8 @@
                                     <span data-u="arrowright" class="jssora02r" style="top:0px;right:8px;width:55px;height:55px;" data-autocenter="2"></span>
                                 </div>
                                 <div class="inner">
-									<h3>各組材料數量</h3>
-									<p>各組的初級材料/合成元件/特殊材料</p>
+									<h3>各小組材料數量</h3>
+									<p>各小組的「原料」、「零件」、「特殊材料」</p>
                                 </div>
 
 							</div>
@@ -174,7 +177,7 @@
 													<td>".$item[4]."</td>
 													<td>".$item[3]."</td>";
 														
-										echo "<td><a href='deleteGMmessage.php?id=".$item[0]."'>Delete</a></td>";
+										echo "<td><a href='deleteGMmessage.php?time=".$item[1]."'>Delete</a></td>";
 										echo "</tr>";
 									}
 									
@@ -186,17 +189,17 @@
                                     <table border="1">
                                         <tr>
                                             <td>現在時間: </td>
-                                            <td><input name="time" type="text"/></td>
+                                            <td><input id="time" name="time" type="text" value="" /></td>
                                         </tr>
                                         <tr>
                                             <td>要傳給的隊伍: </td>
                                             <td>
                                                 <select name="client"/>
-                                                    <option value="A">美洲</option>
-                                                    <option value="B">歐洲</option>
-                                                    <option value="C">亞洲</option>
-                                                    <option value="D">非洲</option>
                                                     <option value="All">All</option>
+                                                    <option value="A">美洲(紅隊)</option>
+                                                    <option value="B">歐洲(黃隊)</option>
+                                                    <option value="C">亞洲(藍隊)</option>
+                                                    <option value="D">非洲(綠隊)</option>                                                    
                                                 </select>
                                             </td>
                                         </tr>
@@ -257,12 +260,27 @@
             <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
             <script src="https://www.amcharts.com/lib/3/themes/black.js"></script>
             
-            <script>jssor_0_slider_init();</script>
-            <script>jssor_1_slider_init();</script>
-            <script>jssor_2_slider_init();</script>
+
             <script>
                 renew();
                 var myVar = setInterval(renew, 8000);
+            </script>
+            <script>jssor_0_slider_init();</script>
+            <script>jssor_1_slider_init();</script>
+            <script>jssor_2_slider_init();</script>
+            <!--Time Default Input By this-->
+            <script>
+                function updateClock() {
+                    var now = new Date(), // current date
+                        time = now.getHours() + ':' + ("0" + now.getMinutes()).slice(-2)+ ':' + ("0" + now.getSeconds()).slice(-2);
+
+                    // set the content of the element with the ID time to the formatted string
+                    document.getElementById('time').value = [time].join(' / ');
+
+                    // call this function again in 1000ms
+                    setTimeout(updateClock, 1000);
+                }
+                updateClock();
             </script>
 	</body>
 </html>
