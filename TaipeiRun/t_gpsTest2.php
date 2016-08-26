@@ -21,7 +21,7 @@
     function successCallback(position) {
       $lat=0;
       $lon=0;
-      document.location.href="t_updateGPS.php?lat=".$lat."&lon=".$lon;
+      document.location.href="t_updateGPS.php?lat=0&lon=0;
     }
     function errorCallback(error) {
       var errorTypes={
