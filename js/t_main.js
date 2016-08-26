@@ -76,8 +76,12 @@ function check_lego(start, team, lego){
 
 function check_route(){
 	var i;
-	for (i = 0; i < cost_list.length - 1; i++)
-		alert(cost_list[i] - cost_list[i+1])
+	for (i = 0; i < cost_list.length - 1; i++){
+		if (cost_list[i][1] >= cost_list[i+1][1] && cost_list[i][2] >= cost_list[i+1][2] && cost_list[i][3] >= cost_list[i+1][3] && cost_list[i][4] >= cost_list[i+1][4])
+			document.getElementById("route" + (i+1).toString()).style.display = "none";
+		else if (cost_list[i][1] <= cost_list[i+1][1] && cost_list[i][2] <= cost_list[i+1][2] && cost_list[i][3] <= cost_list[i+1][3] && cost_list[i][4] <= cost_list[i+1][4])
+			document.getElementById("route" + (i+2).toString()).style.display = "none";
+	}
 }
 
 function change_once(start, line_s, line_e, end){
@@ -129,7 +133,7 @@ var mrt_value = {'100':'動物園', '101':'木柵', '102':'萬芳社區', '103':
 function mrt_route(route, count){
 	var cost = [0, 0, 0, 0, 0];
 	var l, disable = 0;
-	result ='<li><div class="w3-grey">'
+	result ='<li><div id="route' + count.toString() + '"class="w3-grey">';
 
 	for (l = 0; l < route.length-1; l++){
 		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
