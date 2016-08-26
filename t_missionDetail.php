@@ -31,9 +31,9 @@ session_start();
             <div class="thumbnail" style="box-shadow: 1px 1px 4px rgba(0,0,0,.3)">
                 <img class="img-rounded" width="250px" src="<?echo getMissionPic($mission)?>" alt="請重新整理頁面">    <!--題目圖片-->
                 <div class="caption">
-                    <h4 style="font-weight:700;color:rgba(0,0,0,.7)"><?echo getMissionContent($mission)?></h4>  <!--題目標題-->
+                    <p style="font-weight:700;color:rgba(0,0,0,.7)"><?echo getMissionContent($mission)?></p>  <!--題目標題-->
                     <hr>
-                    <h3><p style="font-weight:700"><?echo getMissionTitle($mission)?></p></h3>  <!--題目內容與提示-->
+                    <p style="font-weight:700">關卡名稱: <?echo getMissionTitle($mission)?></p>  <!--題目內容與提示-->
                     <p><a href="t_missionSend.php" class="btn btn-success" role="button">照片上傳</a></p>
                 </div>
             </div>
