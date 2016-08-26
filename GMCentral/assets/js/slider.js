@@ -408,18 +408,18 @@ function getAllStrong() {
 function calculateTotal(){
 	var strongHoldPara = 100;
 	var tier1Parameter = 1;
-	var tier2Parameter = 150;
-	var tier3Parameter = 500;
+	var tier2Parameter = 100;
+	var tier3Parameter = 400;
 	x00[0] = x10[0]*strongHoldPara + x20[0]*tier1Parameter + x21[0]*tier2Parameter + x22[0]*tier3Parameter;
 	x00[1] = x10[1]*strongHoldPara + x20[1]*tier1Parameter + x21[1]*tier2Parameter + x22[1]*tier3Parameter;
 	x00[2] = x10[2]*strongHoldPara + x20[2]*tier1Parameter + x21[2]*tier2Parameter + x22[2]*tier3Parameter;
 	x00[3] = x10[3]*strongHoldPara + x20[3]*tier1Parameter + x21[3]*tier2Parameter + x22[3]*tier3Parameter;
 }
 
-var x20 = [40,32,19,60];
-var x21 = [19,20,21,18];
-var x22 = [2,1,3,3];
-var x10 = [1,1,2,3,9];
+var x20 = [40,40,40,40];
+var x21 = [5,5,5,5];
+var x22 = [0,0,0,0];
+var x10 = [1,1,1,1,12];
 var x00 = [20,20,20,20];
 /* Down Below is Function to Set Graph */
 jssor_2_slider_init = function() {
