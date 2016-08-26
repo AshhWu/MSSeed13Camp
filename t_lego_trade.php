@@ -25,7 +25,7 @@ session_start();
 
 <h3 id="team_label" style="color:#337ab7"><?php echo $country;?></h3>
 <div id="team2" style="display:none"><?php echo $team2;?></div>
-<div id="trade_with" class="w3-container w3-section w3-card-2 w3-padding"></div>
+<div id="trade_with" class="w3-container w3-section w3-card-2 w3-padding" style="color:brown"></div>
 <div id="warning" class="w3-container w3-section w3-red w3-card-4">
 	<span onclick="this.parentElement.style.display='none'" class="w3-closebtn">&times;</span>
   	<h3>注意!</h3><br>
@@ -41,7 +41,7 @@ session_start();
 	document.getElementById("trade_with").innerHTML += '<br>聯絡電話: ' + phone[document.getElementById("team2").innerText];
 </script>
 
-<table id="trade_table" class="w3-table w3-card-2">
+<table id="trade_table" class="w3-table w3-container w3-card-2">
 <tr>
 	<th class="w3-tag">我方</th>
 	<th>給對方</th>
