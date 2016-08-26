@@ -24,7 +24,7 @@ session_start();
 
 <h3 id="team_label" style="color:#337ab7"><?php echo $country;?></h3>
 <div class="middle_part w3-container w3-section w3-card-2 w3-padding">
-	<h5 style="color:#337ab7">樂高</h5>
+	<h5 style="color:#337ab7; position:relative; top:5px;">樂高</h5>
 	<section class="section2 w3-container">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $all_lego[$team-1][2];?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo $all_lego[$team-1][3];?></p></div>
