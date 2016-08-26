@@ -38,14 +38,14 @@ session_start();
 <script type="text/javascript">
 	var msg = document.getElementById("msg").innerText;
 	var len = msg.length-1;
+	alert(msg);
+	alert(len);
 	var i, j, str = '';
 	for (i = 0; i < len; i++){
 		if (msg[i][2] == 0)
 			str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:right">' + msg[i][3] + '</p><br><br>';
 		else if (msg[i][2] == 1)
 			str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:left">' + msg[i][3] + '</p><br><br>';
-		else
-			alert("error!");
 	}
 	document.getElementById("chat_board").innerHTML = str;
 </script>
