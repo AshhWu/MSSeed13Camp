@@ -23,7 +23,7 @@ $content = $_GET['content'];
 ChromePhp::log('get content');
 ChromePhp::log($content);
 
-deleteGMMessage($content);
+deleteGMMessageContent($content);
 
 ChromePhp::log('Finish Delete!');
 

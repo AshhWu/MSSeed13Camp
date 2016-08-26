@@ -818,7 +818,15 @@ function deleteMessage($item_id)
 	$stmt->execute();
 }
 
-function deleteGMMessage($content)
+function deleteGMMessage($item_id)
+{
+	$conn = connect();
+	$sql = "DELETE FROM gmmessage WHERE id=?";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $item_id);
+	$stmt->execute();
+}
+function deleteGMMessageContent($content)
 {
 	$conn = connect();
 	$sql = "DELETE FROM gmmessage WHERE content=?";
