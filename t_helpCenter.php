@@ -36,12 +36,12 @@ session_start();
 	var tmp = document.getElementById("msg").innerText;
 	var msg = tmp.split(',');
 	var len = msg.length;
-	var i, j, str = '';
+	var i, str = '';
 	for (i = 2; i < len; i+=5){
 		if (msg[i] == 0)
-			str += '<div class="w3-card-4 w3-padding w3-light-grey" style="float:right; height:30px; max-width:250px;"><p>' + msg[i+1] + '</p></div><br><br>';
+			str += '<div class="w3-card-4 w3-padding w3-light-grey" style="float:right;min-height:30px;max-width:300px;"><p>' + msg[i+1] + '</p></div><br><br>';
 		else if (msg[i] == 1)
-			str += '<div class="w3-card-4 w3-padding w3-light-grey" style="float:left; height:30px; max-width:250px;"><p>' + msg[i+1] + '</p</div><br><br>';
+			str += '<div class="w3-card-4 w3-padding w3-light-grey" style="float:left;min-height:30px;max-width:300px;"><p>' + msg[i+1] + '</p></div><br><br>';
 	}
 	document.getElementById("chat_board").innerHTML = str;
 </script>
