@@ -22,9 +22,9 @@ session_start();
 <?php $wait = getTradeRequestBySender($team); ?>
 <?php $trade = getTradeRequestByReceiver($team); ?>
 
-<h5 id="team_label" class="w3-indigo w3-padding"><?php echo $country;?></h5>
-<div class="middle_part w3-container w3-section">
-	<h5 class="w3-brown w3-padding">樂高</h5>
+<h3 id="team_label" style="color:#337ab7"><?php echo $country;?></h3>
+<div class="middle_part w3-container w3-section w3-card-2">
+	<h5 style="color:#337ab7">樂高</h5>
 	<section class="section2 w3-container">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $all_lego[$team-1][2];?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo $all_lego[$team-1][3];?></p></div>
@@ -41,7 +41,7 @@ session_start();
 	</ul>
 
 	<div class="tab-content">
-		<div id="lego_list" class="tab-pane fade in active w3-container w3-section w3-padding">
+		<div id="lego_list" class="tab-pane fade in active w3-container w3-section w3-padding w3-card-2">
 			<h4 class="w3-card w3-pink w3-padding">點組別按鈕請求交易</h4>
 			<ul id="lego_list" class="w3-ul">
 				<li class="team_li w3-container">
@@ -130,12 +130,12 @@ session_start();
 				</li>
 			</ul>
 		</div>
-		<div id="trade_list" class="tab-pane fade w3-container w3-section w3-padding">
+		<div id="trade_list" class="tab-pane fade w3-container w3-section w3-padding w3-card-2">
 			<h4 class="w3-card w3-pink w3-padding">別組交易請求</h4>
 			<ul id="trade_ul" class="w3-ul">
 			</ul>
 		</div>
-		<div id="wait_list" class="tab-pane fade w3-container w3-section w3-padding">
+		<div id="wait_list" class="tab-pane fade w3-container w3-section w3-padding w3-card-2">
 			<h4 class="w3-card w3-pink w3-padding">已提出的交易</h4>
 			<ul id="wait_ul" class="w3-ul">
 			</ul>
