@@ -65,10 +65,12 @@ switch($_SESSION['authority']){
 			<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown">台北行 <span class="caret"></span></a>
 			<ul class="dropdown-menu">
-				<li <?=findActiveClass("t_mrtmap")?>><a href="t_mrtmap.php">移動迷宮</a></li>
-				<li <?=findActiveClass("t_missionDetail")?>><a href="t_missionDetail.php">任務資訊</a></li>
-				<li <?=findActiveClass("t_missionHint")?>><a href="t_missionHint.php">圖片提示</a></li>
-				<li <?=findActiveClass("t_lego_list")?>><a href="t_lego_list.php">樂高交易</a></li>
+				<li <?=findActiveClass("t_mission1")?>><a href="t_mission1.php">龍山寺</a></li>
+				<li <?=findActiveClass("t_mission2")?>><a href="t_mission2.php">松山</a></li>
+				<li <?=findActiveClass("t_mission3")?>><a href="t_mission3.php">忠孝新生</a></li>
+				<li <?=findActiveClass("t_mission4")?>><a href="t_mission4.php">國父紀念館</a></li>
+				<li <?=findActiveClass("t_mission5")?>><a href="t_mission5.php">圓山</a></li>
+				<li <?=findActiveClass("t_mission6")?>><a href="t_mission6.php">市政府</a></li>
 				<li><a href="#">求助中心</a></li> 
 			</ul>
 			</li>
