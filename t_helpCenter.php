@@ -34,18 +34,19 @@ session_start();
 	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_message(<?php echo $team;?>)">送出</button>
 </div>
 
-<div id="msg" style="display:none"><?php echo '[ '; foreach($msg as $arr){ echo '["'; foreach($arr as $value){echo $value . '","';} echo '""], ';} echo '[""]]'; ?></div>
+<div id="msg" style="display:none"><?php foreach($msg as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 <script type="text/javascript">
-	var msg = document.getElementById("msg").innerText;
-	var len = msg.length-1;
-	alert(msg);
+	var tmp = document.getElementById("msg").innerText;
+	alert(tmp);
+	var msg = tmp.split(',');
+	var len = msg.length;
 	alert(len);
 	var i, j, str = '';
-	for (i = 0; i < len; i++){
-		if (msg[i][2] == 0)
-			str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:right">' + msg[i][3] + '</p><br><br>';
-		else if (msg[i][2] == 1)
-			str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:left">' + msg[i][3] + '</p><br><br>';
+	for (i = 0; i < len; i+=5){
+		if (msg[i+2] == 0)
+			str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:right">' + msg[i+3] + '</p><br><br>';
+		else if (msg[i+2] == 1)
+			str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:left">' + msg[i+3] + '</p><br><br>';
 	}
 	document.getElementById("chat_board").innerHTML = str;
 </script>
