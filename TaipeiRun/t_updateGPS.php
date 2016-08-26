@@ -5,5 +5,5 @@
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     
-    header("Location: t_mrtmap.php?gps=1");
+    header("Location: ../t_mrtmap.php?gps=1");
 ?>
