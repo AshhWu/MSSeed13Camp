@@ -174,7 +174,7 @@
 													<td>".$item[4]."</td>
 													<td>".$item[3]."</td>";
 														
-										echo "<td><a href='deleteGMmessage.php?content=".$item[1]."'>Delete</a></td>";
+										echo "<td><a href='deleteGMmessage.php?time=".$item[1]."'>Delete</a></td>";
 										echo "</tr>";
 									}
 									
