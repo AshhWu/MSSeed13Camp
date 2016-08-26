@@ -23,11 +23,8 @@
       $lon=0;
       $lat=parseFloat(position.coords.latitude);
       $lon=parseFloat(position.coords.longitude);
-        <?php
-        if(!$_GET['gps']){
-          echo 'document.location.href="t_updateGPS.php?lat='.$lat.'&lon='.$lon";';
-        }
-        ?>
+      document.location.href="t_updateGPS.php?lat=".$lat."&lon=".$lon;
+        
     }
     function errorCallback(error) {
       var errorTypes={
