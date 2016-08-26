@@ -230,7 +230,9 @@ body {
   background-color:#5bc0de; 
   color:white;
 }
-
+#mission-carousel{
+  margin-top: 8px;
+}
 .mission-table{
   font-size: 16px;
   color: black;
