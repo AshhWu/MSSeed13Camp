@@ -635,8 +635,8 @@ if($_SESSION['authority']==3){
 <?php
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
-	require_once "getRead.php";
-	$items = getTimes();
+	require_once "getitems.php";
+	$items = getRead();
 	if(!empty($items))
 	{
 		echo "<table border='1'>
