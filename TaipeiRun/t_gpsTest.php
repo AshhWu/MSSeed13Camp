@@ -3,12 +3,6 @@
 <meta charset=utf-8>
 <head>
   <title>HTML5 Test</title>
-  <script>
-    function $i(id) {return document.getElementById(id);}
-    function $n(id) {return document.getElementsByName(name);}
-    function $c(id) {return document.getElementsByClass(className);}
-    function $t(id) {return document.getElementsByClass(tagName);}
-  </script>
 </head>
 <body>
   <table style='border:solid 1px blue;'>
@@ -18,35 +12,11 @@
     <tbody>
       <tr>
         <td>position.coords.latitude (經度 degree)</td>
-        <td id="latitude"></td>
+        <td><script>$lat</script></td>
       </tr>
       <tr>
         <td>position.coords.longitude (緯度 degree)</td>
-        <td id="longitude"></td>
-      </tr>
-      <tr>
-        <td>position.coords.altitude (高度 m)</td>
-        <td id="altitude"></td>
-      </tr>
-      <tr>
-        <td>position.coords.accuracy (精確度 m)</td>
-        <td id="accuracy"></td>
-      </tr>
-      <tr>
-        <td>position.coords.altitudeAccuracy (高度精確度 m)</td>
-        <td id="altitudeAccuracy"></td>
-      </tr>
-      <tr>
-        <td>position.coords.heading (移動方向 degree/s)</td>
-        <td id="heading"></td>
-      </tr>
-      <tr>
-        <td>position.coords.speed (移動速度 m/s)</td>
-        <td id="speed"></td>
-      </tr>
-      <tr>
-        <td>position.timestamp (時間戳記 ms)</td>
-        <td id="timestamp"></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -56,7 +26,7 @@
         var option={
               enableAcuracy:false,
               maximumAge:0,
-              timeout:600000
+              timeout:10000
               };
         geo.getCurrentPosition(successCallback,
                                errorCallback,
@@ -65,15 +35,9 @@
         }
     else {alert("此瀏覽器不支援地理定位功能!");}
     function successCallback(position) {
-      $i("latitude").innerHTML=position.coords.latitude;
-      $i("longitude").innerHTML=position.coords.longitude;
-      $i("altitude").innerHTML=position.coords.altitude;
-      $i("accuracy").innerHTML=position.coords.accuracy;
-      $i("altitudeAccuracy").innerHTML=position.coords.altitudeAccuracy;
-      $i("heading").innerHTML=position.coords.heading;
-      $i("speed").innerHTML=position.coords.speed;
-      $i("timestamp").innerHTML=position.timestamp;
-      }
+      $lat=parseFloat(position.coords.latitude);
+      $lon=parseFloat(position.coords.longitude);
+    }
     function errorCallback(error) {
       var errorTypes={
             0:"不明原因錯誤",
@@ -82,7 +46,6 @@
             3:"位置查詢逾時"
             };
       alert(errorTypes[error.code]);
-      alert("code=" + error.code + " " + error.message); //開發測試時用
-      }
+    }
   </script>
 </body>
