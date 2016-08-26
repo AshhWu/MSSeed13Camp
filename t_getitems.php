@@ -263,7 +263,7 @@ function getMissionName($id){
 
 function getHelpFromGM($team){
     $conn = connect();
-    $sql = "SELECT * FROM  where sender=".$team." ORDER BY id ASC";
+    $sql = "SELECT * FROM t_helpCenter where sender=".$team." ORDER BY id ASC";
     $stmt = $conn->query($sql);
     $items = $stmt->fetchAll(PDO::FETCH_NUM);
     return $items;
