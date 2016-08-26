@@ -173,7 +173,7 @@ session_start();
         str = '';
         for (i = len-4; i > 0; i-=5){
             if (msg[i] == 1)
-                str += '<p class="w3-card-2 w3-padding w3-light-grey" style="float:right;max-width:250px;">' + msg[i+1] + '</p><br><br>';
+                str += '<p class="w3-card-2 w3-padding w3-blue" style="float:right;max-width:250px;">' + msg[i+1] + '</p><br><br>';
             else if (msg[i] == 0)
                 str += '<p class="w3-card-2 w3-padding w3-light-grey" style="float:left;max-width:250px;">' + msg[i+1] + '</p><br><br>';
         }
