@@ -335,7 +335,7 @@ var app = angular.module('app', []);
                 else
                 {
                     console.log('Move');
-                    $scope.markers[team['team']].setPosition(new google.maps.LatLng(team.gpsX, team.gpsY));
+                    $scope.markers[perTeam['team']].setPosition(new google.maps.LatLng(perTeam.gpsX, perTeam.gpsY));
                 }
               }
             }
