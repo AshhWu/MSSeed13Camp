@@ -32,33 +32,33 @@ session_start();
     </ul>
 
     <div class="tab-content">
-        <div id="chat1" class="tab-pane fade in active w3-container w3-section w3-padding w3-card-2">
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:500px; display:inline-block;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">America</h3>
+        <div id="chat1" class="tab-pane fade in active w3-container w3-section w3-padding">
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:50px;">
+                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">America</h3><br><br>
             	<p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
             	<p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:500px; display:inline-block;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Canada</h3>
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block;">
+                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Canada</h3><br><br>
                 <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
                 <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:500px; display:inline-block;">
-                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Brazil</h3>
+            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block;">
+                <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Brazil</h3><br><br>
                 <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
                 <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
 
             <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block;">
-            	給America的訊息: <input type="text" name="message">
+            	給America的訊息:<br> <input type="text" name="message">
             	<button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
             <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block;">
-                給Canada的訊息: <input type="text" name="message">
+                給Canada的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
             <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block;">
-                給Brazil的訊息: <input type="text" name="message">
+                給Brazil的訊息:<br> <input type="text" name="message">
                 <button class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="">送出</button>
             </div>
         </div>
