@@ -71,7 +71,6 @@ switch($_SESSION['authority']){
 				<li <?=findActiveClass("t_mission4")?>><a href="t_missionJudge.php?mission=4">國父紀念館</a></li>
 				<li <?=findActiveClass("t_mission5")?>><a href="t_missionJudge.php?mission=5">圓山</a></li>
 				<li <?=findActiveClass("t_mission6")?>><a href="t_missionJudge.php?mission=6">市政府</a></li>
-				<li><a href="#">求助中心</a></li> 
 			</ul>
 			</li>
 			<li class="dropdown">
@@ -119,7 +118,7 @@ switch($_SESSION['authority']){
 				<li <?=findActiveClass("t_missionDetail")?>><a href="t_missionDetail.php">任務資訊</a></li>
 				<li <?=findActiveClass("t_missionHint")?>><a href="t_missionHint.php">圖片提示</a></li>
 				<li <?=findActiveClass("t_lego_list")?>><a href="t_lego_list.php">樂高交易</a></li>
-				<li><a href="#">求助中心</a></li> 
+				<li <?=findActiveClass("t_helpCenter")?>><a href="t_helpCenter.php">求助中心</a></li>
 				<li <?=findActiveClass("t_taipeiAdmin")?>><a href="t_taipeiAdmin.php">台北行管理員</a></li>
 			</ul>
 			</li>
