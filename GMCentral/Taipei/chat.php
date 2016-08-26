@@ -16,6 +16,18 @@ session_start();
 <body>
 
 <?php include "../../t_getitems.php"; ?>
+<?php $msg1 = getHelpFromGM(1);?>
+<?php $msg2 = getHelpFromGM(2);?>
+<?php $msg3 = getHelpFromGM(3);?>
+<?php $msg4 = getHelpFromGM(4);?>
+<?php $msg5 = getHelpFromGM(5);?>
+<?php $msg6 = getHelpFromGM(6);?>
+<?php $msg7 = getHelpFromGM(7);?>
+<?php $msg8 = getHelpFromGM(8);?>
+<?php $msg9 = getHelpFromGM(9);?>
+<?php $msg10 = getHelpFromGM(10);?>
+<?php $msg11 = getHelpFromGM(11);?>
+<?php $msg12 = getHelpFromGM(12);?>
 
 <h3 class="w3-container w3-section w3-padding" style="color:#337ab7; width:180px; margin:auto; text-align: center">聊天中心</h3>
 
@@ -30,21 +42,20 @@ session_start();
     <div class="tab-content">
 
         <div id="chat1" class="tab-pane fade in active w3-container w3-section w3-padding">
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="board1" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">America</h3><br>
-            	<p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-            	<p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="msg1" style="display:none"><?php foreach($msg1 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
+
+            <div id="board2" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Canada</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="msg2" style="display:none"><?php foreach($msg2 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
+
+            <div id="board3" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Brazil</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
+            <div id="msg3" style="display:none"><?php foreach($msg3 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
             <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
             	給America的訊息:<br> <input type="text" name="message">
@@ -61,21 +72,20 @@ session_start();
         </div>
 
         <div id="chat2" class="tab-pane fade w3-container w3-section w3-padding">
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="board4" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Italy</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="msg4" style="display:none"><?php foreach($msg4 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
+
+            <div id="board5" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Germany</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="msg5" style="display:none"><?php foreach($msg5 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
+
+            <div id="board6" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">England</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
+            <div id="msg6" style="display:none"><?php foreach($msg6 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
             <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Italy的訊息:<br> <input type="text" name="message">
@@ -92,21 +102,20 @@ session_start();
         </div>
 
         <div id="chat3" class="tab-pane fade w3-container w3-section w3-padding">
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="board7" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Taiwan</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="msg7" style="display:none"><?php foreach($msg7 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
+
+            <div id="board8" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Japan</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="msg8" style="display:none"><?php foreach($msg8 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
+
+            <div id="board9" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Thailand</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
+            <div id="msg9" style="display:none"><?php foreach($msg9 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
             <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給Taiwan的訊息:<br> <input type="text" name="message">
@@ -123,21 +132,20 @@ session_start();
         </div>
 
         <div id="chat4" class="tab-pane fade w3-container w3-section w3-padding">
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="board10" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">SouthAfrica</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="msg10" style="display:none"><?php foreach($msg10 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
+
+            <div id="board11" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Madagascar</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
-            <div class="w3-container w3-section w3-card-2 w3-padding" style="width:320px; height:450px; display:inline-block; margin-left:30px;">
+            <div id="msg11" style="display:none"><?php foreach($msg11 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
+
+            <div id="board12" class="w3-container w3-section w3-card-2 w3-padding" style="width:320px;height:450px;display:inline-block;margin-left:30px;">
                 <h3 class="w3-card w3-padding w3-brown" style="width:180px;margin:auto;text-align:center;">Egypt</h3><br>
-                <p class="w3-card-4 w3-padding" style="float:left">hi!</p><br><br>
-                <p class="w3-card-4 w3-padding w3-light-grey" style="float:right">hello~</p><br><br>
             </div>
+            <div id="msg12" style="display:none"><?php foreach($msg12 as $arr){ foreach($arr as $value){echo $value . ',';}} ?></div>
 
             <div class="w3-container w3-section w3-card-2 w3-padding" style="width: 320px; display:inline-block; margin-left:30px;">
                 給SouthAfrica的訊息:<br> <input type="text" name="message">
@@ -155,6 +163,23 @@ session_start();
 
     </div>
 </div>
+
+<script type="text/javascript">
+    var i, j, str, msg, len, tmp;
+    for (j = 1; j <= 12; j++){
+        tmp = document.getElementById("msg" + j.toString()).innerText;
+        msg = tmp.split(',');
+        len = msg.length;
+        str = '';
+        for (i = 2; i < len; i+=5){
+            if (msg[i] == 1)
+                str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:right; height:30px;">' + msg[i+1] + '</p><br><br>';
+            else if (msg[i] == 0)
+                str += '<p class="w3-card-4 w3-padding w3-light-grey" style="float:left; height:30px;">' + msg[i+1] + '</p><br><br>';
+        }
+        document.getElementById("board" + j.toString()).innerHTML += str;
+    }
+</script>
 
 
 <!-- jQuery -->
