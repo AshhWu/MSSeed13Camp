@@ -34,7 +34,7 @@ session_start();
 	<button id="submit_btn" class="w3-btn w3-padding w3-teal w3-round" style="display: inline-block; margin-left: 30px;" onclick="send_message(<?php echo $team;?>)">送出</button>
 </div>
 
-<div id="msg" style="display:none"><?php echo '[ '; foreach($msg as $arr){ echo '['; foreach($arr as $value){echo $value . ',';} echo '-1], ';} echo '0]'; ?></div>
+<div id="msg" style="display:none"><?php echo '[ '; foreach($msg as $arr){ echo '["'; foreach($arr as $value){echo $value . '",';} echo '""], ';} echo '[""]]'; ?></div>
 <script type="text/javascript">
 	var msg = document.getElementById("msg").innerText;
 	var len = msg.length-1;
