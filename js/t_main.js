@@ -134,7 +134,7 @@ var mrt_value = {'100':'動物園', '101':'木柵', '102':'萬芳社區', '103':
 function mrt_route(route, count){
 	var cost = [0, 0, 0, 0, 0];
 	var l, disable = 0;
-	result ='<li id="route' + count.toString() + '"><div class="w3-card-2 w3-padding">';
+	result ='<li id="route' + count.toString() + '"><div class="w3-card-2 w3-light-grey">';
 
 	for (l = 0; l < route.length-1; l++){
 		if (parseInt(route[l]/100) == parseInt(route[l+1]/100)){
