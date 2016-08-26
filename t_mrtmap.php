@@ -43,7 +43,7 @@ session_start();
 </div>
 
 <div class="middle_part w3-container w3-section w3-card-2 w3-padding">
-	<h5 style="color:#337ab7">樂高</h5>
+	<h5 style="color:#337ab7; position:relative; top:5px;">樂高</h5>
 	<section class="section2 w3-container">
 		<div id="lego2" class="w3-tag w3-red"><p><?php echo $lego[1];?></p></div>
 		<div id="lego3" class="w3-tag w3-green"><p><?php echo $lego[2];?></p></div>
