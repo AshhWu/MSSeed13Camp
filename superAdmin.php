@@ -275,10 +275,18 @@ if($_SESSION['authority']==3){
 				<td>Group: </td>
 				<td>
 					<select name="team"/>
-						<option value="A">A</option>
-						<option value="B">B</option>
-						<option value="C">C</option>
-						<option value="D">D</option>
+						<option value="1">美國</option>
+						<option value="2">加拿大</option>
+						<option value="3">巴西</option>
+						<option value="4">義大利</option>
+						<option value="5">德國</option>
+						<option value="6">英國</option>
+						<option value="7">台灣</option>
+						<option value="8">日本</option>
+						<option value="9">泰國</option>
+						<option value="10">南非</option>
+						<option value="11">馬達加斯加</option>
+						<option value="12">埃及</option>
 					</select>
 				</td>
 			</tr>
