@@ -1,5 +1,9 @@
 firstrenew = function(){
-	sleep(1000);
+	getAllResources();
+	getAllStrong();
+	calculateTotal();
+	chartMaker();
+	sleep(2000);
 	getAllResources();
 	getAllStrong();
 	calculateTotal();

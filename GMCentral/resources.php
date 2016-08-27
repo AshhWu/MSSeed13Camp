@@ -264,7 +264,7 @@
             <script>
 				renew();
                 firstrenew();
-                var myVar = setInterval(renew, 15000);
+                var myVar = setInterval(renew, 20000);
             </script>
             <script>jssor_0_slider_init();</script>
             <script>jssor_1_slider_init();</script>
