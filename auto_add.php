@@ -90,7 +90,7 @@ function updateGroupResource($team, $value, $resource)
 echo "Start time" . date('h:i:s') . "<br>";
 $x = 1;
 connect();
-while($x <= 1)
+while($x <= 10)
 {
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
@@ -167,7 +167,7 @@ while($x <= 1)
 	$x += 1;
 }
 echo "End time" . date('h:i:s') . "<br>";
-echo "<script>window.close();</script>";
+//echo "<script>window.close();</script>";
 /*
 	*/
 ?>
