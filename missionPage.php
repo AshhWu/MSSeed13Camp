@@ -31,6 +31,8 @@ session_start();
   include "backend/navbar/nav.php";
 if($_SESSION['ID'] != null){ 
   ?>
+<div class="main">
+<div class="inner">
 <div class="thumbnails">
 <div class="bigbox" style="text-align:center" align="middle">
 	<h1>Mission</h1><br>
@@ -38,6 +40,8 @@ if($_SESSION['ID'] != null){
 		Code: <input type="text" name="code">
 		<input type="submit" value="Submit">
 	</form>
+</div>
+</div>
 </div>
 </div>
 <?php
