@@ -4,7 +4,7 @@ session_start();
 <html>
     <head>
     <!-- Title -->
-    <title>台北行-超級管理員</title>
+    <title>台北行-圖片管理員</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
