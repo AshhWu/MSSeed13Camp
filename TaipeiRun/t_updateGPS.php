@@ -7,8 +7,7 @@
     str_replace ("_",".",$lat);
     str_replace ("_",".",$lon);
     
-    echo $lat."<br>".$lon;
-    sleep(10000);
+    //echo $lat."<br>".$lon;
     
     $lat=1.1;
     $lon=3.1;
