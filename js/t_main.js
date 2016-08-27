@@ -168,7 +168,7 @@ function lego_refresh(obj){
 	var rest_lego, j, n;
 	if (obj.id.length == 5)
 		n = parseInt(obj.id[4]);
-	else if (obj.id.lego == 6)
+	else if (obj.id.length == 6)
 		n = parseInt(obj.id[4]*10 + obj.id[5]);
 	else {
 		alert("error");
