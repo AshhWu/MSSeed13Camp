@@ -15,19 +15,19 @@
 
 function connect()
 {
-	$connectstr_dbhost = '';
+	$connectstr_dbhost = '127.0.0.1:50919';
     $connectstr_dbname = 'msseed13';
-    $connectstr_dbusername = '';
-    $connectstr_dbpassword = '';
+    $connectstr_dbusername = 'azure';
+    $connectstr_dbpassword = 'password';
     
     foreach ($_SERVER as $key => $value) {
         if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
             continue;
         }
         
-        $connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
-        $connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
-        $connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
+        //$connectstr_dbhost = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+        //$connectstr_dbusername = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+        //$connectstr_dbpassword = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
     }
     
     try{
