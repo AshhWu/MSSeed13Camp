@@ -81,7 +81,7 @@ function getGroupAllResources($resource, $team)
 function updateGroupResource($team, $value, $resource)
 {
 	$conn = connect();
-	echo "team:".$team."	value:".$value."	resource:".$resource."<br>";
+	//echo "team:".$team."	value:".$value."	resource:".$resource."<br>";
 	$sql = "UPDATE resource SET ".$resource."='".$value."' WHERE team='".$team."'";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
@@ -90,7 +90,7 @@ function updateGroupResource($team, $value, $resource)
 echo "Start time" . date('h:i:s') . "<br>";
 $x = 1;
 connect();
-while($x <= 10)
+while($x <= 1)
 {
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
@@ -167,7 +167,6 @@ while($x <= 10)
 	$x += 1;
 }
 echo "End time" . date('h:i:s') . "<br>";
-//echo "<script>window.close();</script>";
-/*
-	*/
+echo "<script>window.close();</script>";
+
 ?>
