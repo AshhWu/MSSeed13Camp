@@ -22,6 +22,45 @@ session_start();
 <?php $sstation = getPosition($team); ?>
 <?php $lego = getAllCubeNum($team); ?>
 
+<!--JS GPS-->
+<script>
+    if (navigator.geolocation) {
+        var geo=navigator.geolocation;
+        var option={
+              enableAcuracy:false,
+              maximumAge:0,
+              timeout:60000
+              };
+        geo.getCurrentPosition(successCallback,
+                               errorCallback,
+                               option
+                               );
+        }
+    else {alert("此瀏覽器不支援地理定位功能!");}
+    function successCallback(position) {
+      $lat1=parseFloat(position.coords.latitude).toString();
+      $lon1=parseFloat(position.coords.longitude).toString();
+      $lat = $lat1.replace(/[.]/, "_");
+      $lon = $lon1.replace(/[.]/, "_");
+      <?php
+      if(!($_GET['gps'])){
+       echo 'document.location.href="TaipeiRun/t_updateGPS.php?lat="+$lat+"&lon="+$lon';
+      }
+      ?>
+    }
+    function errorCallback(error) {
+      var errorTypes={
+            0:"不明原因錯誤",
+            1:"使用者拒絕提供位置資訊",
+            2:"無法取得位置資訊",
+            3:"位置查詢逾時"
+            };
+        alert("無法使用定位功能,請開啟其他隊員手機以便定位小組位置");
+      //alert(errorTypes[error.code]);
+      //alert("code=" + error.code + " " + error.message); //開發測試時用
+      }
+</script>
+
 <h3 id="team_label" style="color:#337ab7"><?php echo $country;?></h3>
 <div class="middle_part w3-container w3-section w3-card-2 w3-padding">
 	<h5 style="color:#337ab7; position: relative; bottom: 23px;">移動</h5>
