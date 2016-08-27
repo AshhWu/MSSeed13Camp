@@ -39,9 +39,11 @@ RawBlameHistory     55 lines (54 sloc)  1.63 KB
       $lon1=parseFloat(position.coords.longitude).toString();
       $lat = $lat1.replace(/[.]/, "_");
       $lon = $lon1.replace(/[.]/, "_");
+      <?php
       if(!($_GET['gps'])){
-       document.location.href="t_updateGPS.php?lat="+$lat+"&lon="+$lon;
+       echo 'document.location.href="t_updateGPS.php?lat="+$lat+"&lon="+$lon';
       }
+      ?>
     }
     function errorCallback(error) {
       var errorTypes={
