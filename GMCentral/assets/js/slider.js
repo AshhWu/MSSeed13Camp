@@ -1,4 +1,3 @@
-
 renew = function(){
 	getAllResources();
 	getAllStrong();
@@ -9,7 +8,7 @@ chartMaker = function(){
 	var chart = AmCharts.makeChart("chartdiv20", {
 			"theme": "black",
 			"type": "serial",
-			"startDuration": 1,
+			"startDuration": 0,
 			"dataProvider": [{
 				"country": "1",
 				"visits": x20[0],
@@ -432,17 +431,17 @@ function getAllResources() {
 			}
 			for(i=1;i<=16;i++){
 				for(j=0;j<12;j++){
-					x20[j] = x20[j]+Number(obj[j+4][i]);
+					x20[j] = x20[j]+Number(obj[j][i]);
 				}
 			}
 			for(i=17;i<=26;i++){
 				for(j=0;j<12;j++){
-					x21[j] = x21[j]+Number(obj[j+4][i]);
+					x21[j] = x21[j]+Number(obj[j][i]);
 				}
 			}
 			for(i=27;i<=33;i++){
 				for(j=0;j<12;j++){
-					x22[j] = x22[j]+Number(obj[j+4][i]);
+					x22[j] = x22[j]+Number(obj[j][i]);
 				}
 			}
     	}
