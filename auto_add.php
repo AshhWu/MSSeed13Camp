@@ -15,6 +15,7 @@
 	
 echo "Hello world<br>";
 echo "connect OK<br>";
+echo "sql OK<br>";
 function connect()
 {
 	$connectstr_dbhost = '127.0.0.1:50919';
@@ -45,7 +46,6 @@ function connect()
     return $conn;
 }
 
-/*
 
 function sqlcode($sql)
 {
@@ -53,6 +53,8 @@ function sqlcode($sql)
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
+/*
+
 function getAllTimes()
 {
 	$conn = connect();
