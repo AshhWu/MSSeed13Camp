@@ -17,7 +17,7 @@ session_start();
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- CSS Style -->
-<link rel="stylesheet" type="text/css" href="#">
+<link rel="stylesheet" type="GMCentral/assets/css/main.css" href="#">
 
 </head>
 
