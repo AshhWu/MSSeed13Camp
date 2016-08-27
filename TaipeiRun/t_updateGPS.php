@@ -7,6 +7,9 @@
     str_replace ("_",".",$lat);
     str_replace ("_",".",$lon);
     
+    $lat=1.1;
+    $lon=3.1;
+    
     $conn = connect();
     $sql = "UPDATE taipeiRun SET gpsX=".$lat.", gpsY=".$lon." where team=2";
     $stmt = $conn->prepare($sql);
