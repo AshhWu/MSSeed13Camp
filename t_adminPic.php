@@ -58,7 +58,7 @@ session_start();
                             <td>".$item[0]."</td>
                             <td>".$item[1]."</td>
                             <td>".$item[2]."</td>";
-                if(!empty($item[3])&&$item[0]>281){
+                if(!empty($item[3])&&$item[0]>288){
                     echo    "<td><img height='200px' src='data:image/jpeg;base64,".base64_encode($item[3])."' /></td>";
                 }else{
                     echo    "<td>無圖片</td>";
