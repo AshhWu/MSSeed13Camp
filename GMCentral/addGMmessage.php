@@ -20,6 +20,15 @@ $client = $_POST['client'];
 $content = $_POST['content'];
 $color = $_POST['color'];
 
+if($client == 'All'){
+	$sql = "UPDATE newmessage SET unreadmsg='1'";
+	sqlcode($sql);
+}
+else{
+	$sql = "UPDATE newmessage SET unreadmsg='1' WHERE team='".$client."'";
+	sqlcode($sql);
+}
+
 addGMMessage($time, $client, $content, $color);
 
 header('Location: resources.php');

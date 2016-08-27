@@ -1,5 +1,9 @@
 firstrenew = function(){
-	sleep(1000);
+	getAllResources();
+	getAllStrong();
+	calculateTotal();
+	chartMaker();
+	sleep(5000);
 	getAllResources();
 	getAllStrong();
 	calculateTotal();
@@ -33,47 +37,47 @@ chartMaker = function(){
 				"color": "#FF0F00"
 			},{
 				"country": "2",
-				"visits": x20[1],
+				"visits": x20[9],
 				"color": "#FF0F00"
 			},{
-				"country": "5",
-				"visits": x20[2],
+				"country": "3",
+				"visits": x20[10],
 				"color": "#FF0F00"
 			},{
 				"country": "4",
-				"visits": x20[3],
+				"visits": x20[11],
 				"color": "#FFB11B"
 			}, {
 				"country": "5",
-				"visits": x20[4],
+				"visits": x20[1],
 				"color": "#FFB11B"
 			},{
 				"country": "6",
-				"visits": x20[5],
+				"visits": x20[2],
 				"color": "#FFB11B"
 			},{
 				"country": "7",
-				"visits": x20[6],
+				"visits": x20[3],
 				"color": "#3A8FB7"
 			},{
 				"country": "8",
-				"visits": x20[7],
+				"visits": x20[4],
 				"color": "#3A8FB7"
 			}, {
 				"country": "9",
-				"visits": x20[8],
+				"visits": x20[5],
 				"color": "#3A8FB7"
 			}, {
 				"country": "10",
-				"visits": x20[9],
+				"visits": x20[6],
 				"color": "#86C166"
 			}, {
 				"country": "11",
-				"visits": x20[10],
+				"visits": x20[7],
 				"color": "#86C166"
 			}, {
 				"country": "12",
-				"visits": x20[11],
+				"visits": x20[8],
 				"color": "#86C166"
 			}],
 			"valueAxes": [{
@@ -117,47 +121,47 @@ chartMaker = function(){
 				"color": "#FF0F00"
 			},{
 				"country": "2",
-				"visits": x21[1],
+				"visits": x21[9],
 				"color": "#FF0F00"
 			},{
-				"country": "5",
-				"visits": x21[2],
+				"country": "3",
+				"visits": x21[10],
 				"color": "#FF0F00"
 			},{
 				"country": "4",
-				"visits": x21[3],
+				"visits": x21[11],
 				"color": "#FFB11B"
 			}, {
 				"country": "5",
-				"visits": x21[4],
+				"visits": x21[1],
 				"color": "#FFB11B"
 			},{
 				"country": "6",
-				"visits": x21[5],
+				"visits": x21[2],
 				"color": "#FFB11B"
 			},{
 				"country": "7",
-				"visits": x21[6],
+				"visits": x21[3],
 				"color": "#3A8FB7"
 			},{
 				"country": "8",
-				"visits": x21[7],
+				"visits": x21[4],
 				"color": "#3A8FB7"
 			}, {
 				"country": "9",
-				"visits": x21[8],
+				"visits": x21[5],
 				"color": "#3A8FB7"
 			}, {
 				"country": "10",
-				"visits": x21[9],
+				"visits": x21[6],
 				"color": "#86C166"
 			}, {
 				"country": "11",
-				"visits": x21[10],
+				"visits": x21[7],
 				"color": "#86C166"
 			}, {
 				"country": "12",
-				"visits": x21[11],
+				"visits": x21[8],
 				"color": "#86C166"
 			}],
 			"valueAxes": [{
@@ -204,47 +208,47 @@ chartMaker = function(){
 				"color": "#FF0F00"
 			},{
 				"country": "2",
-				"visits": x22[1],
+				"visits": x22[9],
 				"color": "#FF0F00"
 			},{
-				"country": "5",
-				"visits": x22[2],
+				"country": "3",
+				"visits": x22[10],
 				"color": "#FF0F00"
 			},{
 				"country": "4",
-				"visits": x22[3],
+				"visits": x22[11],
 				"color": "#FFB11B"
 			}, {
 				"country": "5",
-				"visits": x22[4],
+				"visits": x22[1],
 				"color": "#FFB11B"
 			},{
 				"country": "6",
-				"visits": x22[5],
+				"visits": x22[2],
 				"color": "#FFB11B"
 			},{
 				"country": "7",
-				"visits": x22[6],
+				"visits": x22[3],
 				"color": "#3A8FB7"
 			},{
 				"country": "8",
-				"visits": x22[7],
+				"visits": x22[4],
 				"color": "#3A8FB7"
 			}, {
 				"country": "9",
-				"visits": x22[8],
+				"visits": x22[5],
 				"color": "#3A8FB7"
 			}, {
 				"country": "10",
-				"visits": x22[9],
+				"visits": x22[6],
 				"color": "#86C166"
 			}, {
 				"country": "11",
-				"visits": x22[10],
+				"visits": x22[7],
 				"color": "#86C166"
 			}, {
 				"country": "12",
-				"visits": x22[11],
+				"visits": x22[8],
 				"color": "#86C166"
 			}],
 			"valueAxes": [{
