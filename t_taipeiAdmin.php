@@ -157,25 +157,7 @@ session_start();
         }
     ?>
 
-        <form action="t_addMissionReport.php" method="post" enctype="multipart/form-data">
-            <table border="1">
-                <tr>
-                    <td>Team: </td>
-                    <td><input name="team" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>Mission: </td>
-                    <td><input name="mission" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>Picture: </td>
-                    <td><input name="picture" type="file"/></td>
-                </tr>
-            </table>
-            <input type="submit" value="Add Mission Report"/>
-        </form>
-
-        <hr/>
+<hr/>
 
         
 <h1>missionInfo</h1>
@@ -295,61 +277,7 @@ session_start();
             echo "</table>";
         }
     ?>
-
-        <form action="t_addTradeRequest.php" method="post" enctype="multipart/form-data">
-            <table border="1">
-                <tr>
-                    <td>Sender: </td>
-                    <td><input name="sender" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>Receiver: </td>
-                    <td><input name="receiver" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>c1: </td>
-                    <td><input name="c1" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>c2: </td>
-                    <td><input name="c2" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>c3: </td>
-                    <td><input name="c3" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>c4: </td>
-                    <td><input name="c4" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>c5: </td>
-                    <td><input name="c5" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>fc1: </td>
-                    <td><input name="fc1" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>fc2: </td>
-                    <td><input name="fc2" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>fc3: </td>
-                    <td><input name="fc3" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>fc4: </td>
-                    <td><input name="fc4" type="number"/></td>
-                </tr>
-                <tr>
-                    <td>fc5: </td>
-                    <td><input name="fc5" type="number"/></td>
-                </tr>
-            </table>
-            <input type="submit" value="Add Trade Request"/>
-        </form>
-        <hr/>
+<hr/>
         
 <h1>missionOrder</h1>
     <?php
@@ -381,6 +309,37 @@ session_start();
                             <td>".$item[5]."</td>
                             <td>".$item[6]."</td>
                             <td>".$item[7]."</td></tr>";
+            }
+                
+            echo "</table>";
+        }
+    ?>
+    <hr/>
+    
+<h1>HelpCenter</h1>
+    <?php
+        header('Cache-Control: no-cache');
+        header('Pragma: no-cache');
+        require_once "t_getitems.php";
+        echo "<table border='1'>
+                    <tr>
+                        <th>id</th>
+                        <th>sender</th>
+                        <th>isGM</th>
+                        <th>content</th>
+                        <th>state</th>
+                    </tr>";
+        $items = getHelpCenter();
+        if(!empty($items))
+        {
+            foreach($items as $item)
+            {
+                echo 	"<tr>
+                            <td>".$item[0]."</td>
+                            <td>".$item[1]."</td>
+                            <td>".$item[2]."</td>
+                            <td>".$item[3]."</td>
+                            <td>".$item[4]."</td></tr>";
             }
                 
             echo "</table>";

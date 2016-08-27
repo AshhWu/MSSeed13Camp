@@ -258,3 +258,14 @@ function trade_reject(id){
 	var tmp_str = 'TaipeiRun/t_tradeFail.php?id=' + id;
 	window.location = tmp_str;
 }
+
+//helpCenter
+function send_message(team){
+	var message = document.getElementsByTagName("input")[0].value;
+	window.location = 'TaipeiRun/t_addHelpMsg.php?team=' + team + '&content=' + message;
+}
+
+function send_messageGM(team){
+	var message = document.getElementsByTagName("input")[team-1].value;
+	window.location = '../../TaipeiRun/t_addHelpMsgGM.php?team=' + team + '&content=' + message;
+}
