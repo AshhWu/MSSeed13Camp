@@ -261,7 +261,7 @@
             <script src="https://www.amcharts.com/lib/3/themes/black.js"></script>
             
             <script>
-				firstrenew();
+				renew();
                 var myVar = setInterval(renew, 15000);
             </script>
             <script>jssor_0_slider_init();</script>

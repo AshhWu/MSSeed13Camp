@@ -3,7 +3,7 @@ firstrenew = function(){
 	getAllStrong();
 	calculateTotal();
 	chartMaker();
-	sleep(5000);
+	sleep(8000);
 	getAllResources();
 	getAllStrong();
 	calculateTotal();
