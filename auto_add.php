@@ -12,7 +12,9 @@
 	* See the License for the specific language governing permissions and 
 	* limitations under the License. 
 	*/
-
+	
+echo "Hello world";
+/*
 function connect()
 {
 	$connectstr_dbhost = '127.0.0.1:50919';
@@ -43,7 +45,7 @@ function connect()
     return $conn;
 }
 
-/*
+
 function sqlcode($sql)
 {
 	$conn = connect();
@@ -159,7 +161,8 @@ while($x <= 1)
 	//sleep(1);
 	$x += 1;
 }
-	*/
 echo "End time" . date('h:i:s') . "<br>";
 echo "<script>window.close();</script>";
+
+	*/
 ?>
