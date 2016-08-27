@@ -4,7 +4,7 @@
     $lat = $_GET['lat'];
     $lon = $_GET['lon'];
     
-    str_replace ("_",".",$lat);
+    str_replace ("_",".",(string)$lat);
     str_replace ("_",".",$lon);
     
     //echo $lat."<br>".$lon;
