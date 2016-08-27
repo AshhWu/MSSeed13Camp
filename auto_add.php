@@ -14,7 +14,6 @@
 	*/
 	
 echo "Hello world";
-/*
 function connect()
 {
 	$connectstr_dbhost = '127.0.0.1:50919';
@@ -45,6 +44,7 @@ function connect()
     return $conn;
 }
 
+/*
 
 function sqlcode($sql)
 {
