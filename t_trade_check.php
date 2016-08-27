@@ -44,7 +44,7 @@ session_start();
 	document.getElementById("trade_with").innerHTML = '和' + country_str[document.getElementById("team2").innerText] + '的交易細節';
 	document.getElementById("sender_country").innerHTML = country_str[document.getElementById("sender_country").innerText];
 	document.getElementById("receiver_country").innerHTML = country_str[document.getElementById("receiver_country").innerText];
-	var phone = ['XX', '0923880223', '0912345678', '09', '09', '09', '09', '09', '09', '09', '09', '09', '09'];
+	var phone = ['XX', '0922328956', '0960196018', '0979316860', '0920050658', '0988239671', '0988833344', '0976616521', '0938623485', '0932241031', '0920627069', '0986760065', '0932973500'];
 	document.getElementById("trade_with").innerHTML += '<br>聯絡電話: ' + phone[document.getElementById("team2").innerText];
 </script>
 <tr>
