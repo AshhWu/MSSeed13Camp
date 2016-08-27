@@ -31,14 +31,15 @@ session_start();
   include "backend/navbar/nav.php";
 if($_SESSION['ID'] != null){ 
   ?>
-<div style="text-align:center" align="middle">
+<div class="thumbnails">
+<div class="bigbox" style="text-align:center" align="middle">
 	<h1>Mission</h1><br>
 	<form action="getMission.php" method="post">
 		Code: <input type="text" name="code">
 		<input type="submit" value="Submit">
 	</form>
 </div>
-
+</div>
 <?php
 }
 else{
