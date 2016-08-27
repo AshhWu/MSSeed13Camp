@@ -97,7 +97,7 @@ while($x <= 1)
 			{
 				$sql = "UPDATE auto_time SET time_now='0' WHERE point='".$i."'";
 				sqlcode($sql);
-				$resourceValue = $Strongholds[$i - 1][4] / 3;
+				$resourceValue = (int)$Strongholds[$i - 1][4] / 3;
 				$resourceItem = $Strongholds[$i - 1][5];
 				switch($team){
 					case 'A':
