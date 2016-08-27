@@ -9,6 +9,7 @@ switch($_SESSION['authority']){
 	<nav class="navbar navbar-default navbar-static-top">
 	<div class="container-fluid">
 		<!-- Website Name -->
+		
 		<div class="navbar-header">
 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 			<span class="icon-bar"></span>
@@ -17,7 +18,7 @@ switch($_SESSION['authority']){
 		</button>
 		
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
+		<a class="navbar-brand" href="#">微軟13屆領袖營</a>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -56,8 +57,42 @@ switch($_SESSION['authority']){
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
-		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
+		<!-- Message alert -->		
+		<div class="navbar-brand">微軟13屆領袖營
+<?php
+	header('Cache-Control: no-store, must-revalidate, no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getRead();
+	$team = $_SESSION['s_team'];
+	switch($team){
+		case 'A':
+			if($items[0][1] == '1')
+			{
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
+			}
+			break;
+		case 'B':
+			if($items[1][1] == '1')
+			{
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
+			}
+			break;
+		case 'C':
+			if($items[2][1] == '1')
+			{
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
+			}
+			break;
+		case 'D':
+			if($items[3][1] == '1')
+			{
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
+			}
+			break;
+	}
+?>
+		</div>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -106,7 +141,41 @@ switch($_SESSION['authority']){
 			<span class="icon-bar"></span>
 		</button>
 		<!-- Message alert -->
-		<a class="navbar-brand" href="messagePage.php">微軟13屆領袖營</a>
+		<div class="navbar-brand">微軟13屆領袖營
+<?php
+	header('Cache-Control: no-store, must-revalidate, no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getRead();
+	$team = $_SESSION['s_team'];
+	switch($team){
+		case 'A':
+			if($items[0][1] == '1')
+			{
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
+			}
+			break;
+		case 'B':
+			if($items[1][1] == '1')
+			{
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
+			}
+			break;
+		case 'C':
+			if($items[2][1] == '1')
+			{
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
+			}
+			break;
+		case 'D':
+			if($items[3][1] == '1')
+			{
+				echo '<a href="messagePage.php"><span class="glyphicon glyphicon-warning-sign" style="color:red"></span></a>';
+			}
+			break;
+	}
+?>
+		</div>
 		</div>
 		<!-- Navigation Bar Items -->
 		<div class="collapse navbar-collapse" id="myNavbar">

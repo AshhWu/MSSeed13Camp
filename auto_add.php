@@ -113,7 +113,6 @@ while($x <= 1)
 						$preResource = getGroupAllResources($resourceItem, '1');
 						$preResource[0][0] += $resourceValue;
 						updateGroupResource('1', $preResource[0][0], $resourceItem);
-
 						$preResource = getGroupAllResources($resourceItem, '2');
 						$preResource[0][0] += $resourceValue;
 						updateGroupResource('2', $preResource[0][0], $resourceItem);

@@ -34,8 +34,12 @@ session_start();
 
 <body>
 <?php
-  include "backend/navbar/nav.php";
 if($_SESSION['ID'] != null){ 
+	include_once "backend/taskmodel.php";
+	$team = $_SESSION['s_team'];
+	$sql = "UPDATE newmessage SET unreadmsg='0' WHERE team='".$team."'";
+	sqlcode($sql);
+	include "backend/navbar/nav.php";
   ?>
  
     <iframe src="messagePageGM.php" width="100%" height="180"></iframe>
