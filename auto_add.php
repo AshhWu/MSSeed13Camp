@@ -59,11 +59,11 @@ function getAllTimes()
 {
 	$conn = connect();
 	$sql = "SELECT * FROM auto_time";
-	$stmt = $conn->quer y($sql);
+	$stmt = $conn->query($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
-/*
+
 function getAllStrongholds()
 {
 	$conn = connect();
@@ -168,6 +168,6 @@ while($x <= 1)
 }
 echo "End time" . date('h:i:s') . "<br>";
 echo "<script>window.close();</script>";
-
+/*
 	*/
 ?>
