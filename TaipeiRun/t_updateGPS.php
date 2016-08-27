@@ -4,11 +4,11 @@
     $lat = $_GET['lat'];
     $lon = $_GET['lon'];
     
-    str_replace ("[_]",".",(string)$lat);
-    str_replace ("[_]",".",$lon);
+    //str_replace ("[_]",".",(string)$lat);
+    //str_replace ("[_]",".",$lon);
 
-    
-    //echo $lat."<br>".$lon;
+    $lat_sec = explode("_",$lat);
+    $lat = $lat_sec[0] + "." + $lat_sec[1];
     
     //$lat=1.1;
     $lon=3.1;
