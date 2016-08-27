@@ -260,10 +260,9 @@
             <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
             <script src="https://www.amcharts.com/lib/3/themes/black.js"></script>
             
-
             <script>
 				renew();
-                var myVar = setInterval(renew, 20000);
+                var myVar = setInterval(renew, 2000);
             </script>
             <script>jssor_0_slider_init();</script>
             <script>jssor_1_slider_init();</script>
