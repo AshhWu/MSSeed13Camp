@@ -16,6 +16,7 @@
 echo "Hello world<br>";
 echo "connect OK<br>";
 echo "sql OK<br>";
+echo "getAllTimes OK<br>";
 function connect()
 {
 	$connectstr_dbhost = '127.0.0.1:50919';
@@ -53,7 +54,6 @@ function sqlcode($sql)
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
-/*
 
 function getAllTimes()
 {
@@ -62,6 +62,8 @@ function getAllTimes()
 	$stmt = $conn->quer y($sql);
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
+
+/*
 function getAllStrongholds()
 {
 	$conn = connect();
