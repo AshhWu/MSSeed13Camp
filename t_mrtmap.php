@@ -55,7 +55,7 @@ session_start();
             2:"無法取得位置資訊",
             3:"位置查詢逾時"
             };
-        alert("無法使用定位功能,請開啟其他隊員手機以便定位小組位置");
+      //alert("無法使用定位功能,請開啟其他隊員手機以便定位小組位置");
       //alert(errorTypes[error.code]);
       //alert("code=" + error.code + " " + error.message); //開發測試時用
       }
