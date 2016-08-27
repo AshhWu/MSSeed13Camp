@@ -37,7 +37,7 @@ session_start();
 <script type="text/javascript">
 	var country_str = ['XX', 'America', 'Canada', 'Brazil', 'Italy', 'Germany', 'England', 'Taiwan', 'Japan', 'Thailand', 'SouthAfrica', 'Madagascar', 'Egypt'];
 	document.getElementById("trade_with").innerHTML = '和' + country_str[document.getElementById("team2").innerText] + '交易';
-	var phone = ['XX', '0923880223', '0912345678', '09', '09', '09', '09', '09', '09', '09', '09', '09', '09'];
+	var phone = ['XX', '0922328956', '0960196018', '0979316860', '0920050658', '0988239671', '0988833344', '0976616521', '0938623485', '0932241031', '0920627069', '0986760065', '0932973500'];
 	document.getElementById("trade_with").innerHTML += '<br>聯絡電話: ' + phone[document.getElementById("team2").innerText];
 </script>
 
