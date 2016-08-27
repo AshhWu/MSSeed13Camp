@@ -1,9 +1,27 @@
+firstrenew = function(){
+	sleep(1000);
+	getAllResources();
+	getAllStrong();
+	calculateTotal();
+	chartMaker();
+}
 renew = function(){
 	getAllResources();
 	getAllStrong();
 	calculateTotal();
 	chartMaker();
 }
+
+
+function sleep(milliseconds) {
+	var start = new Date().getTime();
+		for (var i = 0; i < 1e7; i++) {
+			if ((new Date().getTime() - start) > milliseconds){
+			break;
+		}
+	}
+}
+
 chartMaker = function(){
 	var chart = AmCharts.makeChart("chartdiv20", {
 			"theme": "black",
