@@ -86,6 +86,7 @@ while($x <= 1)
 	$times = getAllTimes();
 	$Strongholds = getAllStrongholds();
 	$i = 0;
+/*
 	foreach($times as $time)
 	{
 		$i += 1;
@@ -154,6 +155,7 @@ while($x <= 1)
 			}
 		}
 	}
+	*/
 	//sleep(1);
 	$x += 1;
 }
