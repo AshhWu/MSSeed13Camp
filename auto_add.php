@@ -13,7 +13,8 @@
 	* limitations under the License. 
 	*/
 	
-echo "Hello world";
+echo "Hello world<br>";
+echo "connect OK<br>";
 function connect()
 {
 	$connectstr_dbhost = '127.0.0.1:50919';
