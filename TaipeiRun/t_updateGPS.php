@@ -9,7 +9,7 @@
     
     //echo $lat."<br>".$lon;
     
-    $lat=1.1;
+    //$lat=1.1;
     $lon=3.1;
     
     $conn = connect();
@@ -17,5 +17,5 @@
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     
-    header("Location: ../t_mrtmap.php?gps=1");
+    header("Location: ../t_mrtmap.php?gps=1&lat=".$lat);
 ?>
