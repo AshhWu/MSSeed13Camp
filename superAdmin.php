@@ -459,6 +459,7 @@ if($_SESSION['authority']==3){
 						<option value="black">黑色</option>
 						<option value="blue">藍色</option>
 						<option value="red">紅色</option>
+						<option value="forestgreen">綠色</option>
 					</select>
 				</td>
 			</tr>
