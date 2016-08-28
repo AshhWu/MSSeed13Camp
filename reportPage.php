@@ -84,8 +84,8 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 							<option value="Ao2pa">Ao2pa 一路橡吸</option>
 							<option value="uIBpt">uIBpt 金雞獨立</option>
 							<option value="Ow3vC">Ow3vC 甩便利貼</option>
-					<!--	<option value="iVw1L">iVw1L 喝水唱歌</option>
-							<option value="ol7wr">ol7wr 天旋地轉</option>		-->
+					<!--	<option value="SZ1yG">iVw1L 喝水唱歌</option>
+							<option value="YEyKd">ol7wr 天旋地轉</option>		-->
 						</select>
 					</td>
 				</tr>
