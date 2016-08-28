@@ -115,7 +115,7 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 				</tr>
 				<tr>
 					<td>Message: </td>
-					<td><textarea name="content" rows="4" cols="40">魔法粉末 + 100</textarea></td>
+					<td><textarea name="content" rows="4" cols="40">ex. 魔法粉末 + 100</textarea></td>
 				</tr>
 			</table>
 			</center>
