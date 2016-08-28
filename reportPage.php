@@ -36,11 +36,31 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 				<tr>
 					<td>Team: </td>
 					<td>
-						<select name="team" selected="selected" value="C"/>
-							<option value="A">美洲</option>
-							<option value="B">歐洲</option>
-							<option value="C">亞洲</option>
-							<option value="D">非洲</option>
+						<select name="team">
+<?php
+	switch($team){
+		case 'A':
+				echo '<option selected value="A">美洲</option>';
+				echo '<option value="B">歐洲</option>';
+				echo '<option value="C">亞洲</option>';
+				echo '<option value="D">非洲</option>';
+		case 'B':
+				echo '<option value="A">美洲</option>';
+				echo '<option selected value="B">歐洲</option>';
+				echo '<option value="C">亞洲</option>';
+				echo '<option value="D">非洲</option>';
+		case 'C':
+				echo '<option value="A">美洲</option>';
+				echo '<option value="B">歐洲</option>';
+				echo '<option selected value="C">亞洲</option>';
+				echo '<option value="D">非洲</option>';
+		case 'D':
+				echo '<option value="A">美洲</option>';
+				echo '<option value="B">歐洲</option>';
+				echo '<option value="C">亞洲</option>';
+				echo '<option selected value="D">非洲</option>';
+	}
+?>
 						</select>
 					</td>
 				</tr>
@@ -53,7 +73,7 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 							<option value="soDJ3">soDJ3 Flip-Flop</option>
 							<option value="GJPzb">GJPzb 呼啦抓小雞</option>
 							<option value="lJAfD">lJAfD 頭好撞撞</option>
-							<option value="SZ1yG">SZ1yG 打水瓢</option>
+					<!--	<option value="SZ1yG">SZ1yG 打水瓢</option>	-->
 							<option value="y997V">y997V 巧拼渡河</option>
 							<option value="X02aw">X02aw 撲克牌好手</option>
 							<option value="Glsx3">Glsx3 斷開魂結</option>
@@ -64,8 +84,8 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 							<option value="Ao2pa">Ao2pa 一路橡吸</option>
 							<option value="uIBpt">uIBpt 金雞獨立</option>
 							<option value="Ow3vC">Ow3vC 甩便利貼</option>
-					<!--	<option value="iVw1L">iVw1L 喝水唱歌</option>
-							<option value="ol7wr">ol7wr 天旋地轉</option>		-->
+							<option value="SZ1yG">iVw1L 喝水唱歌</option>
+					<!--	<option value="YEyKd">ol7wr 天旋地轉</option>		-->
 						</select>
 					</td>
 				</tr>
@@ -78,7 +98,6 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 					<input type="submit" value="佔領據點"/>
 			</form>
 	</p>
-<!--
 	<p style="text-align: center;">
 		<form action="addTempmessage.php" method="post">
 		<center>
@@ -96,14 +115,13 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 				</tr>
 				<tr>
 					<td>Message: </td>
-					<td><textarea name="content" rows="4" cols="40"></textarea></td>
+					<td><textarea name="content" rows="4" cols="40">ex. 魔法粉末 + 100</textarea></td>
 				</tr>
 			</table>
 			</center>
 					<input type="submit" value="臨時任務回報"/>
 			</form>
 	</p>
--->
 </div>
 
 <?php

@@ -168,6 +168,14 @@ function getAllMessages()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getAllTempMessages()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM tempmessage";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllGMMessages()
 {
 	$conn = connect();
@@ -792,7 +800,7 @@ function addMessage($time, $client, $content, $color)
 function addTempMessage($team, $content)
 {
 	$conn = connect();
-	$sql = "INSERT INTO message (team, content) VALUES (?, ?)";
+	$sql = "INSERT INTO tempmessage (team, content) VALUES (?, ?)";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $team);
 	$stmt->bindValue(2, $content);

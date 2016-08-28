@@ -434,7 +434,7 @@ if($_SESSION['authority']==3){
 		<table border="1">
 			<tr>
 				<td>Time: </td>
-				<td><input name="time" type="text"/></td>
+				<td><input id="time" name="time" type="text"/></td>
 			</tr>
 			<tr>
 				<td>client: </td>
@@ -490,6 +490,30 @@ if($_SESSION['authority']==3){
 						<td>".$item[3]."</td>";
 							
 			echo "<td><a href='deleteGMmessage.php?id=".$item[0]."'>Delete</a></td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
+
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getTempMessages();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>Client</td>
+					<th>Message</td>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1]."</td>
+						<td>".$item[2]."</td>";
 			echo "</tr>";
 		}
 		
@@ -745,5 +769,19 @@ else{
 
 	<!-- Navbar Dropdown -->
 	<script src="js/nav.js"></script>
+	
+    <script>
+        function updateClock() {
+            var now = new Date(), // current date
+                time = now.getHours() + ':' + ("0" + now.getMinutes()).slice(-2)+ ':' + ("0" + now.getSeconds()).slice(-2);
+
+            // set the content of the element with the ID time to the formatted string
+            document.getElementById('time').value = [time].join(' / ');
+
+            // call this function again in 1000ms
+            setTimeout(updateClock, 1000);
+        }
+        updateClock();
+    </script>
 </body>
 </html>
