@@ -258,17 +258,17 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][1]; } ?>/30</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][1]; } ?>/15</div>
                   <img src="png/s_raw/magic_powder.png" class="img-responsive icon-components" alt="魔法粉末">
                   <p class="name raw-name text-center">魔法粉末</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/18</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/9</div>
                   <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
                   <p class="name raw-name text-center">神聖光芒</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][14]; } ?>/36</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][14]; } ?>/18</div>
                   <img src="png/s_raw/imagine.png" class="img-responsive icon-components" alt="想像力">
                   <p class="name raw-name text-center">想像力</p>
                 </div>
@@ -291,17 +291,17 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/24</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/12</div>
                   <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
                   <p class="name raw-name text-center">金屬</p>
                 </div> 
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/21</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/10</div>
                   <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
                   <p class="name raw-name text-center">神聖光芒</p>
                 </div>        
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/18</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/9</div>
                   <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
                   <p class="name raw-name text-center">十萬伏特</p>
                 </div>
@@ -324,17 +324,17 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][2]; } ?>/12</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][2]; } ?>/6</div>
                   <img src="png/s_raw/cloth.png" class="img-responsive icon-components" alt="布">
                   <p class="name raw-name text-center">布</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/30</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/15</div>
                   <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
                   <p class="name raw-name text-center">塑料</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?>/24</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?>/12</div>
                   <img src="png/s_raw/ergonomic.png" class="img-responsive icon-components" alt="人體工學">
                   <p class="name raw-name text-center">人體工學</p>
                 </div>
@@ -357,17 +357,17 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/15</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/7</div>
                   <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
                   <p class="name raw-name text-center">塑料</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/24</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/12</div>
                   <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
                   <p class="name raw-name text-center">螺絲</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][4]; } ?>/30</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][4]; } ?>/15</div>
                   <img src="png/s_raw/shaft.png" class="img-responsive icon-components" alt="轉軸">
                   <p class="name raw-name text-center">轉軸</p>
                 </div>
@@ -390,17 +390,17 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][9]; } ?>/30</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][9]; } ?>/15</div>
                   <img src="png/s_raw/flax.png" class="img-responsive icon-components" alt="麻">
                   <p class="name raw-name text-center">麻</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/21</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/10</div>
                   <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
                   <p class="name raw-name text-center">神聖光芒</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][7]; } ?>/24</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][7]; } ?>/12</div>
                   <img src="png/s_raw/water.png" class="img-responsive icon-components" alt="生命之水">
                   <p class="name raw-name text-center">生命之水</p>
                 </div>
@@ -423,22 +423,22 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][7]; } ?>/30</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][7]; } ?>/15</div>
                   <img src="png/s_raw/water.png" class="img-responsive icon-components" alt="生命之水">
                   <p class="name raw-name text-center">生命之水</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/18</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][8]; } ?>/9</div>
                   <img src="png/s_raw/light.png" class="img-responsive icon-components" alt="神聖光芒">
                   <p class="name raw-name text-center">神聖光芒</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][6]; } ?>/10</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][6]; } ?>/5</div>
                   <img src="png/s_raw/seed.png" class="img-responsive icon-components" alt="種子">
                   <p class="name raw-name text-center">種子</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/12</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/6</div>
                   <img src="png/s_raw/air.png" class="img-responsive icon-components" alt="大地氧氣">
                   <p class="name raw-name text-center">大地氧氣</p>
                 </div>
@@ -461,22 +461,22 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/21</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][11]; } ?>/10</div>
                   <img src="png/s_raw/plastic.png" class="img-responsive icon-components" alt="塑料">
                   <p class="name raw-name text-center">塑料</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][4]; } ?>/21</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][4]; } ?>/10</div>
                   <img src="png/s_raw/shaft.png" class="img-responsive icon-components" alt="轉軸">
                   <p class="name raw-name text-center">轉軸</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/12</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/6</div>
                   <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
                   <p class="name raw-name text-center">金屬</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/18</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/9</div>
                   <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
                   <p class="name raw-name text-center">螺絲</p>
                 </div>
@@ -499,22 +499,22 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/15</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/7</div>
                   <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
                   <p class="name raw-name text-center">金屬</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/15</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/7</div>
                   <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
                   <p class="name raw-name text-center">螺絲</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/12</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/6</div>
                   <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
                   <p class="name raw-name text-center">熊熊烈火</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?>/21</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][13]; } ?>/10</div>
                   <img src="png/s_raw/ergonomic.png" class="img-responsive icon-components" alt="人體工學">
                   <p class="name raw-name text-center">人體工學</p>
                 </div>
@@ -537,22 +537,22 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/9</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/4</div>
                   <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
                   <p class="name raw-name text-center">金屬</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/21</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/10</div>
                   <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
                   <p class="name raw-name text-center">螺絲</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/15</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/7</div>
                   <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
                   <p class="name raw-name text-center">熊熊烈火</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/24</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/12</div>
                   <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
                   <p class="name raw-name text-center">十萬伏特</p>
                 </div>
@@ -575,29 +575,29 @@ if($_SESSION['ID'] != null){
             <div class="modal-body container-fluid">
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/12</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][15]; } ?>/6</div>
                   <img src="png/s_raw/metal.png" class="img-responsive icon-components" alt="金屬">
                   <p class="name raw-name text-center">金屬</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/15</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][16]; } ?>/7</div>
                   <img src="png/s_raw/air.png" class="img-responsive icon-components" alt="大地氧氣">
                   <p class="name raw-name text-center">大地氧氣</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/9</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][5]; } ?>/4</div>
                   <img src="png/s_raw/fire.png" class="img-responsive icon-components" alt="熊熊烈火">
                   <p class="name raw-name text-center">熊熊烈火</p>
                 </div>
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/9</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][10]; } ?>/4</div>
                   <img src="png/s_raw/screw.png" class="img-responsive icon-components" alt="螺絲">
                   <p class="name raw-name text-center">螺絲</p>
                 </div>
               </div>
               <div class="row-fluid">
                 <div class="col-xs-3 wrapper raw-wrapper">
-                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/18</div>
+                  <div class="count raw-count"><?php if(!empty($items)) { echo $items[0][12]; } ?>/9</div>
                   <img src="png/s_raw/electron.png" class="img-responsive icon-components" alt="十萬伏特">
                   <p class="name raw-name text-center">十萬伏特</p>
                 </div>
