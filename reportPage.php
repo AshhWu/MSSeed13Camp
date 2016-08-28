@@ -98,7 +98,6 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 					<input type="submit" value="佔領據點"/>
 			</form>
 	</p>
-<!--
 	<p style="text-align: center;">
 		<form action="addTempmessage.php" method="post">
 		<center>
@@ -123,7 +122,6 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 					<input type="submit" value="臨時任務回報"/>
 			</form>
 	</p>
--->
 </div>
 
 <?php

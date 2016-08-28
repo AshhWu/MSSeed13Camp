@@ -792,7 +792,7 @@ function addMessage($time, $client, $content, $color)
 function addTempMessage($team, $content)
 {
 	$conn = connect();
-	$sql = "INSERT INTO message (team, content) VALUES (?, ?)";
+	$sql = "INSERT INTO tempmessage (team, content) VALUES (?, ?)";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $team);
 	$stmt->bindValue(2, $content);
