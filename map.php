@@ -111,11 +111,19 @@ if($_SESSION['ID'] != null){
       <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
       <?php getStrongholdColor($team[4][0]); ?>
     </a>
-    <!-- 迷幻森林/打水漂 -->
+    <!-- 迷幻森林/打水漂
     <a class="stronghold" id="icon8" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="迷幻森林" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[5][0]; } ?><br />
       生產材料：種子（3個／2mins）<br />
       佔領條件：4人，需包含：<br />
       <?php if (!empty($condition)) { echo $condition[5][0]; } ?><br />
+      <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
+      <?php getStrongholdColor($team[5][0]); ?>
+    </a>-->
+    <!-- 迷幻森林/喝水唱歌 -->
+    <a class="stronghold" id="icon8" href="#" data-toggle="popover" data-trigger="hover focus" data-placement="auto" title="迷幻森林" data-content="佔領陣營：<?php if(!empty($team)) { echo $team[5][0]; } ?><br />
+      生產材料：魔法粉末（9個／1min）<br />
+      佔領條件：8人，需包含：<br />
+      <?php if (!empty($condition)) { echo $condition[16][0]; } ?><br />
       <div class='text-right'><a href='missionPage.php' class='btn btn-warning btn-xs' role='button'>我要佔領</a><div>">
       <?php getStrongholdColor($team[5][0]); ?>
     </a>
