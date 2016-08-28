@@ -43,7 +43,7 @@ if($_SESSION['ID'] != null){
   <div class="container map">
     <!-- Map picture (According to Day) -->
     <?php  
-    if ($_SESSION["day"] == 1 || $_SESSION["day"] == 3) { echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>'; }
+    if ($_SESSION["night"] == 1) { echo '<img src="png/s_map/map_day.gif" class="img-responsive" id="map-picture"/>'; }
     else { echo '<img src="png/s_map/map_night.gif" class="img-responsive" id="map-picture"/>'; }
     ?>
 
