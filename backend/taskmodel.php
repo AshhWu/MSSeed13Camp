@@ -168,6 +168,14 @@ function getAllMessages()
 	return $stmt->fetchAll(PDO::FETCH_NUM);
 }
 
+function getAllTempMessages()
+{
+	$conn = connect();
+	$sql = "SELECT * FROM tempmessage";
+	$stmt = $conn->query($sql);
+	return $stmt->fetchAll(PDO::FETCH_NUM);
+}
+
 function getAllGMMessages()
 {
 	$conn = connect();

@@ -39,6 +39,12 @@ function getMessages()
   return $items;
 }
 
+function getTempMessages()
+{
+  $items = getAllTempMessages();
+  return $items;
+}
+
 function getGMMessages()
 {
   $items = getAllGMMessages();

@@ -496,6 +496,30 @@ if($_SESSION['authority']==3){
 		echo "</table>";
 	}
 ?>
+
+<?php
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
+	require_once "getitems.php";
+	$items = getTempMessages();
+	if(!empty($items))
+	{
+		echo "<table border='1'>
+				<tr>
+					<th>Client</td>
+					<th>Message</td>
+				</tr>";
+		foreach($items as $item)
+		{
+			echo 	"<tr>
+						<td>".$item[1]."</td>
+						<td>".$item[2]."</td>";
+			echo "</tr>";
+		}
+		
+		echo "</table>";
+	}
+?>
 	
           </div>
         </div>
