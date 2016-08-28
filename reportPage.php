@@ -36,11 +36,31 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 				<tr>
 					<td>Team: </td>
 					<td>
-						<select name="team" selected="selected" value="C"/>
-							<option value="A">美洲</option>
-							<option value="B">歐洲</option>
-							<option value="C">亞洲</option>
-							<option value="D">非洲</option>
+						<select name="team">
+<?php
+	switch($team){
+		case 'A':
+				echo '<option selected value="A">美洲</option>';
+				echo '<option value="B">歐洲</option>';
+				echo '<option value="C">亞洲</option>';
+				echo '<option value="D">非洲</option>';
+		case 'B':
+				echo '<option value="A">美洲</option>';
+				echo '<option selected value="B">歐洲</option>';
+				echo '<option value="C">亞洲</option>';
+				echo '<option value="D">非洲</option>';
+		case 'C':
+				echo '<option value="A">美洲</option>';
+				echo '<option value="B">歐洲</option>';
+				echo '<option selected value="C">亞洲</option>';
+				echo '<option value="D">非洲</option>';
+		case 'D':
+				echo '<option value="A">美洲</option>';
+				echo '<option value="B">歐洲</option>';
+				echo '<option value="C">亞洲</option>';
+				echo '<option selected value="D">非洲</option>';
+	}
+?>
 						</select>
 					</td>
 				</tr>
