@@ -73,7 +73,7 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 							<option value="soDJ3">soDJ3 Flip-Flop</option>
 							<option value="GJPzb">GJPzb 呼啦抓小雞</option>
 							<option value="lJAfD">lJAfD 頭好撞撞</option>
-							<option value="SZ1yG">SZ1yG 打水瓢</option>
+					<!--	<option value="SZ1yG">SZ1yG 打水瓢</option>	-->
 							<option value="y997V">y997V 巧拼渡河</option>
 							<option value="X02aw">X02aw 撲克牌好手</option>
 							<option value="Glsx3">Glsx3 斷開魂結</option>
@@ -84,8 +84,8 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 							<option value="Ao2pa">Ao2pa 一路橡吸</option>
 							<option value="uIBpt">uIBpt 金雞獨立</option>
 							<option value="Ow3vC">Ow3vC 甩便利貼</option>
-					<!--	<option value="SZ1yG">iVw1L 喝水唱歌</option>
-							<option value="YEyKd">ol7wr 天旋地轉</option>		-->
+							<option value="SZ1yG">iVw1L 喝水唱歌</option>
+					<!--	<option value="YEyKd">ol7wr 天旋地轉</option>		-->
 						</select>
 					</td>
 				</tr>
