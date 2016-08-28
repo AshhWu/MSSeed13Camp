@@ -33,7 +33,11 @@ switch($_SESSION['authority']){
 			<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown">據點戰 <span class="caret"></span></a>
 			<ul class="dropdown-menu">
-				<li><a href="#">尚未開放</a></li> 
+				<li <?=findActiveClass("map")?>><a href="map.php">據點地圖</a></li>
+				<li <?=findActiveClass("rules")?>><a href="rules.php">遊戲規則</a></li>
+				<li <?=findActiveClass("missionPage.php")?>><a href="missionPage.php">據點關卡</a></li>
+				<li <?=findActiveClass("material")?>><a href="material.php">材料表</a></li>
+				<li <?=findActiveClass("messagePage")?>><a href="messagePage.php">消息公告</a></li>  
 			</ul>
 			</li>
 			<li><a href="/backend/login/logout.php" class="logout-btn"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
