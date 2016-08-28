@@ -2,8 +2,16 @@
 session_start();
 require_once "backend/taskmodel.php";
 $day = getAllDay();
-if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
-else { $_SESSION["day"] = 1; }
+if (!empty($day)) 
+{ 
+  $_SESSION["day"] = $day[0][0];
+  $_SESSION['night'] = $day[0][2];
+}
+else 
+{ 
+  $_SESSION["day"] = 1;
+  $_SESSION['night'] = 1;
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +26,7 @@ else { $_SESSION["day"] = 1; }
   <link rel="stylesheet" type="text/css" href="css/map.css">
   <!--<link rel="stylesheet" type="text/css" href="css/rain_map.css">-->
   <?php 
-  if ($_SESSION["day"] == 1 || $_SESSION["day"] == 3) { echo '<style>body {background-color: #e3b029;}</style>'; }
+  if ($_SESSION["night"] == 1) { echo '<style>body {background-color: #e3b029;}</style>'; }
   else { echo '<style>body {background-color: #572105;}</style>'; }
   ?>
 </head>
