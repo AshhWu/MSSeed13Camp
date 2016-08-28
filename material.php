@@ -625,7 +625,7 @@ if($_SESSION['ID'] != null){
       if (!empty($day)) { $_SESSION["day"] = $day[0][0]; }
       else { $_SESSION["day"] = 1; }
 
-      if ($_SESSION["day"] == 4) { require_once "backend/stronghold/transportation_modal.php"; }
+      if ($_SESSION["day"] == 3 || $_SESSION["day"] == 4) { require_once "backend/stronghold/transportation_modal.php"; }
       ?>
       
 
