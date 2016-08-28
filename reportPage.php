@@ -24,6 +24,7 @@ session_start();
 <?php
   include "backend/navbar/nav.php";
 if($_SESSION['authority']==2 || $_SESSION['authority']==3){
+	$team = $_SESSION['s_team'];
   ?>
   
 <div style="text-align:center">
@@ -35,7 +36,7 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 				<tr>
 					<td>Team: </td>
 					<td>
-						<select name="team"/>
+						<select name="team" selected="selected" value="C"/>
 							<option value="A">美洲</option>
 							<option value="B">歐洲</option>
 							<option value="C">亞洲</option>
@@ -63,8 +64,8 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 							<option value="Ao2pa">Ao2pa 一路橡吸</option>
 							<option value="uIBpt">uIBpt 金雞獨立</option>
 							<option value="Ow3vC">Ow3vC 甩便利貼</option>
-							<option value="iVw1L">iVw1L 喝水唱歌</option>
-							<option value="ol7wr">ol7wr 天旋地轉</option>
+					<!--	<option value="iVw1L">iVw1L 喝水唱歌</option>
+							<option value="ol7wr">ol7wr 天旋地轉</option>		-->
 						</select>
 					</td>
 				</tr>
@@ -77,6 +78,32 @@ if($_SESSION['authority']==2 || $_SESSION['authority']==3){
 					<input type="submit" value="佔領據點"/>
 			</form>
 	</p>
+<!--
+	<p style="text-align: center;">
+		<form action="addTempmessage.php" method="post">
+		<center>
+			<table border="1">
+				<tr>
+					<td>Team: </td>
+					<td>
+						<select name="team"/>
+							<option value="A">美洲</option>
+							<option value="B">歐洲</option>
+							<option value="C">亞洲</option>
+							<option value="D">非洲</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Message: </td>
+					<td><textarea name="content" rows="4" cols="40"></textarea></td>
+				</tr>
+			</table>
+			</center>
+					<input type="submit" value="臨時任務回報"/>
+			</form>
+	</p>
+-->
 </div>
 
 <?php

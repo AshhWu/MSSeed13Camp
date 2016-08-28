@@ -789,6 +789,15 @@ function addMessage($time, $client, $content, $color)
 	$stmt->bindValue(4, $color);
 	$stmt->execute();
 }
+function addTempMessage($team, $content)
+{
+	$conn = connect();
+	$sql = "INSERT INTO message (team, content) VALUES (?, ?)";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $team);
+	$stmt->bindValue(2, $content);
+	$stmt->execute();
+}
 function addGMMessage($time, $client, $content, $color)
 {
 	$conn = connect();
