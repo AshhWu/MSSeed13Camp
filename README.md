@@ -1,4 +1,8 @@
-# MSSeed13Camp
+# Microsoft Seed 13th Camp Web App
+
+### - Using Bootstrap, W3.CSS, AngularJS, PHP, MySQL and Micorsoft Azure
+
+
 ## How to use navbar
 1. Include links to Bootstrap  
 ```  
